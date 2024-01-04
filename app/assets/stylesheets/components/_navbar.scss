@@ -1,12 +1,46 @@
-.navbar-lewagon {
+#navbar{
   justify-content: space-between;
-  background: white;
+  /* border: 1px solid red; */
+  height: 25%;
+  align-items: center;
+  display: flex;
+  margin-bottom: 50px;
+  
+  h1 {
+    font-family: Kaisei HarunoUmi;
+    font-size: xx-large;
+    position: relative;
+    top: 19px;
+    /* justify-content: center; */
+    display: flex;
+    text-align: center;
+    left: 70px;
+  }
+  
+  h4 {
+    font-family: Kaisei HarunoUmi;
+    margin: 2px;
+    padding: 2px;
+    font-size: medium;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+#btn-logo {
+
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+#logo {
+  height: 121px;
+  top: 13px;
+  position: relative;
+  right: 13px;
 }
+
+
+#menu {
+  /* border: 1px solid green; */
+  display: flex;
+  bottom: 20px;
+  position: relative;
+}
+
