@@ -1,21 +1,14 @@
 #navbar{
   justify-content: space-between;
   /* border: 1px solid red; */
-  height: 25%;
+
   align-items: center;
   display: flex;
-  margin-bottom: 50px;
-  margin: 0 30px;
+  margin: 10px 50px 10px 50px;
   
   h1 {
     font-family: 'Cormorant', serif;
     font-size: xx-large;
-    position: relative;
-    top: 19px;
-    /* justify-content: center; */
-    display: flex;
-    text-align: center;
-    left: 70px;
     color:#544d4d;
   }
   
@@ -28,6 +21,10 @@
 
   .content {
     font-family: 'Cormorant', serif;
+    display: flex;
+    flex-direction: column;
+    left: 100px;
+    position: relative;
   }
 }
 
@@ -36,17 +33,11 @@
 }
 
 #logo {
-  height: 121px;
-  top: 13px;
-  position: relative;
-  left: 20px;
+  height: 100px;
 }
 
 
 #menu {
-  /* border: 1px solid green; */
-  display: flex;
-  bottom: 20px;
-  position: relative;
+  height: 100px;
 }
 
