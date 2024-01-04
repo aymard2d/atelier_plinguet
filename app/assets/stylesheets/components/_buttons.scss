@@ -4,7 +4,7 @@
 /* CSS */
 .button-48 {
   appearance: none;
-  /* background-color: #FFFFFF; */
+
   border-width: 0;
   box-sizing: border-box;
   color: #544d4d;
@@ -35,7 +35,7 @@
 .button-48:before {
   animation: opacityFallbackOut .5s step-end forwards;
   backface-visibility: hidden;
-  background-color: $rose;
+  background-color: $green-light;
   clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
   content: "";
   height: 100%;
@@ -45,6 +45,7 @@
   transform: translateZ(0);
   transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
   width: 100%;
+  border-radius: 3px;
 }
 
 .button-48:hover:before {
@@ -53,7 +54,7 @@
 }
 
 .button-48:after {
-  background-color: #b71111;
+  background-color: rgb(72, 103, 87);
 }
 
 .button-48 h4 {
