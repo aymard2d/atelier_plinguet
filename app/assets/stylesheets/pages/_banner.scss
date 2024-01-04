@@ -1,4 +1,20 @@
-.main-container-banner {
+.banner-main-container {
   border: solid 1px black;
   height: 600px;
+  background-color:#486757 ;
+  display: flex;
+
+  .banner-photo {
+    height: 600px;
+    margin: 0px;
+  }
+
+  .banner-title {
+    color: white;
+  }
+
+  .banner-description {
+    color: white;
+    text-justify: center;
+  }
 }
