@@ -1,0 +1,9 @@
+meta_product_name: "Atelier Plinguet"
+
+meta_title: "Upcycling et création de meubles sur mesure"
+
+meta_description: "Atelier Plinguet donne uen seconde vie à vos meubles en les modernisant et en les personnalisant."
+
+meta_image: "cover.png" # should exist in `app/assets/images/`
+
+twitter_account: "" # required for Twitter Cards
