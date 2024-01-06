@@ -2,7 +2,9 @@
   // border: solid 1px black;
   height: 600px;
   background-color:#486757 ;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 10px;
 
   .banner-photo {
     height: 600px;
@@ -15,15 +17,78 @@
 
   .banner-description {
     color: white;
-    text-justify: center;
+    justify-content: center;
     text-align: center;
-    margin: 5px 5px;
+    margin: 15px 15px;
     font-size: medium;
     font-family: 'Cormorant', serif;
+    display: flex;
+    flex-direction: column;
 
-    h5 {
-      border-bottom: 1px white solid;
-      padding-bottom: 5px;
+    #banner-title {
+      font-size: medium;
+      font-family: 'Cormorant', serif;
+      font-size: 20px;
+    }
+
+    #banner-text {
+      margin-top: 5px;
+      font-weight: 300;
+    }
+
+    .banner-line {
+      margin: 1rem 2rem;
+      opacity: 1.25;
+    }
+
+    .button-18 {
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 0;
+      border-radius: 100px;
+      box-sizing: border-box;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: 'Cormorant', serif;
+      font-size: 16px;
+      font-weight: 300;
+      justify-content: center;
+      line-height: 20px;
+      max-width: 480px;
+      min-height: 40px;
+      min-width: 0px;
+      overflow: hidden;
+      padding: 0px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 10px;
+      margin-right: 20px;
+      margin-left: 20px;
+      text-align: center;
+      touch-action: manipulation;
+      transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+      user-select: none;
+      -webkit-user-select: none;
+      vertical-align: middle;
+    }
+
+    .button-18:hover,
+    .button-18:focus {
+      background-color: black;
+      color: #ffffff;
+    }
+
+    .button-18:active {
+      background: #3a3a3a;
+      color: rgb(255, 255, 255);
+    }
+
+    .button-18:disabled {
+      cursor: not-allowed;
+      background: rgba(0, 0, 0, .08);
+      color: rgba(0, 0, 0, .3);
     }
   }
+
 }
