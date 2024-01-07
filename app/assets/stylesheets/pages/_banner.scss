@@ -37,17 +37,21 @@
     }
 
     .banner-line {
-      margin: 1rem 2rem;
-      opacity: 1.25;
+      margin: 0 auto;
+
+      height: 1px;
+      color: white;
+      width: 70%;
+      margin-bottom: 20px;
     }
 
     .button-18 {
       align-items: center;
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgb(178, 125, 79);
+      color: white;
       border: 0;
       border-radius: 100px;
       box-sizing: border-box;
-      color: #ffffff;
       cursor: pointer;
       display: inline-flex;
       font-family: 'Cormorant', serif;
@@ -75,7 +79,7 @@
 
     .button-18:hover,
     .button-18:focus {
-      background-color: black;
+      background-color: rgb(94, 52, 33);
       color: #ffffff;
     }
 

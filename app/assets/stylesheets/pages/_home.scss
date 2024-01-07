@@ -3,8 +3,42 @@
 
 @import "banner";
 
+body h2,p {
+  font-family: 'Cormorant', serif;
+  text-align: center;
+}
+
+body h2 {
+  color: $light-wood;
+}
+
 .container {
   height: 400px;
   max-width: 1430px;
 }
 
+.home-description {
+  background-color: $blue;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  width:70%;
+  display: flex;
+  color: white;
+}
+
+.home-last-creations {
+  height: 500px;
+
+  display: flex;
+  justify-content: center;
+  width: 83%;
+  margin: auto;
+  margin-top: 50px;
+
+  img {
+    height: 350px;
+    margin: 10px 8px;
+    width: -webkit-fill-available;
+  }
+}
