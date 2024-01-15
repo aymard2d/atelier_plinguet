@@ -18,23 +18,26 @@ body h2 {
 }
 
 .home-description {
-  background-color: $blue;
+  background-color: $green;
   margin: auto;
   padding: 10px;
   border-radius: 10px;
   width:70%;
   display: flex;
   color: white;
+
+  h2 {
+    color: white;
+  }
 }
 
 .home-last-creations {
-  height: 500px;
-
   display: flex;
   justify-content: center;
   width: 83%;
   margin: auto;
   margin-top: 50px;
+  margin-bottom: 30px;
 
   img {
     height: 350px;
