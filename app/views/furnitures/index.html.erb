@@ -1,7 +1,11 @@
 <% @furnitures.each do |furniture| %>
+  <% furniture.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 280, width: 250, class: "object-fit-cover" %>
+    <% break %>
+  <% end %>
   <%= furniture.name %>
   <%= furniture.material %>
   <%= furniture.color %>
   <%= furniture.type_of_furniture %>
-  <%= furniture.description %>
+
 <% end %>
