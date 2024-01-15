@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 ruby "3.1.2"
+gem "cloudinary"
 gem "importmap-rails"
 gem "jbuilder"
 gem "pg", "~> 1.1"
