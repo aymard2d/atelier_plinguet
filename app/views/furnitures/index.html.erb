@@ -1,10 +1,13 @@
 <div class="index-body">
+  <div class="category">
+    Trier les meubles
+  </div>
   <div class="galerie">
     <% @furnitures.each do |furniture| %>
       <%= link_to furniture_path(furniture) do %>
         <figure>
           <% furniture.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 280, alt: "atelier-plinguet-meuble", class: "index-photo" %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
             <% break %>
           <% end %> 
           <figcaption><%= furniture.name %></figcaption>
