@@ -1,11 +1,16 @@
-<% @furnitures.each do |furniture| %>
-  <% furniture.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 280, width: 250, class: "object-fit-cover" %>
-    <% break %>
-  <% end %>
-  <%= furniture.name %>
-  <%= furniture.material %>
-  <%= furniture.color %>
-  <%= furniture.type_of_furniture %>
-
-<% end %>
+<div class="index-body">
+  <div class="galerie">
+    <% @furnitures.each do |furniture| %>
+      <%= link_to furniture_path(furniture) do %>
+        <figure>
+          <% furniture.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 280, alt: "atelier-plinguet-meuble", class: "index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= furniture.name %></figcaption>
+          
+        </figure>
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -1,4 +1,12 @@
 <!-- app/views/furnitures/show.html.erb -->  
 <% content_for :meta_title, "#{@furniture.name} is on #{DEFAULT_META["meta_product_name"]}" %>  
 <% content_for :meta_description, @furniture.description %>  
-<% content_for :meta_image, cl_image_path(@furniture.photo.path) %>
+<%# content_for :meta_image, cl_image_path(@furniture.photo.path) %>
+
+<% @furniture.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 500, width: 1200, class: "object-fit-cover" %>
+<% end %>
+  <%= @furniture.type_of_furniture %>
+  <%= @furniture.name %>
+  <%= @furniture.material %>
+  <%= @furniture.color %>
