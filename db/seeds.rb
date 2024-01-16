@@ -9,7 +9,7 @@
 #   end
 
 Furniture.destroy_all
-
+puts "Destroy des meubles : OK !"
 # SEED DES MEUBLES
 
 puts "Starting seed des meubles"
@@ -171,198 +171,224 @@ puts "Seed des meubles : OK !"
 
 puts "starting seed des photos"
 
-furniture1.photos.attach(io: File.open('app/assets/images/thalia-1-bibli.jpeg'),filename: 'thalia-1-bibli.jpeg' )
+furniture1.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424414/atelier-plinguet/thalia-1-bibli_zx58iy.jpg'),filename: 'thalia-1-bibliotheque' )
 furniture1.save
-furniture2.photos.attach(io: File.open('app/assets/images/luna-1-vaisselier.jpeg'),filename: 'luna-1-vaisselier.jpeg' )
+
+furniture2.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/luna-1-vaisselier_ekymps.jpg'),filename: 'luna-1-vaisselier.jpeg' )
 furniture2.save
-furniture2.photos.attach(io: File.open('app/assets/images/luna-2-vaisselier.jpeg'),filename: 'luna-2-vaisselier.jpeg' )
+furniture2.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424425/atelier-plinguet/luna-2-vaisselier_i99qpo.jpg'),filename: 'luna-2-vaisselier.jpeg' )
 furniture2.save
-furniture2.photos.attach(io: File.open('app/assets/images/luna-3-vaisselier.jpeg'),filename: 'luna-3-vaisselier.jpeg' )
+furniture2.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424392/atelier-plinguet/luna-3-vaisselier_jfmn7w.jpg'),filename: 'luna-3-vaisselier.jpeg' )
 furniture2.save
-furniture3.photos.attach(io: File.open('app/assets/images/alma-1-bibliotheque.jpeg'),filename: 'alma-1-bibliotheque.jpeg' )
+
+furniture3.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424439/atelier-plinguet/alma-1-bibliotheque_f9zc7r.jpg'),filename: 'alma-1-bibliotheque.jpeg' )
 furniture3.save
-furniture3.photos.attach(io: File.open('app/assets/images/alma-2-bibliotheque.jpeg'),filename: 'alma-2-bibliotheque.jpeg' )
+furniture3.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424441/atelier-plinguet/alma-2-bibliotheque_hqrlfj.jpg'),filename: 'alma-2-bibliotheque.jpeg' )
 furniture3.save
-furniture3.photos.attach(io: File.open('app/assets/images/alma-3-bibliotheque.jpeg'),filename: 'alma-3-bibliotheque.jpeg' )
+furniture3.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424396/atelier-plinguet/alma-3-bibliotheque_sjl4pp.jpg'),filename: 'alma-3-bibliotheque.jpeg' )
 furniture3.save
-furniture3.photos.attach(io: File.open('app/assets/images/alma-4-bibliotheque.jpeg'),filename: 'alma-4-bibliotheque.jpeg' )
+furniture3.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424394/atelier-plinguet/alma-4-bibliotheque_dhzxv3.jpg'),filename: 'alma-4-bibliotheque.jpeg' )
 furniture3.save
-furniture3.photos.attach(io: File.open('app/assets/images/alma-5-bibliotheque.jpeg'),filename: 'alma-5-bibliotheque.jpeg' )
+furniture3.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424440/atelier-plinguet/alma-5-bibliotheque_ajecms.jpg'),filename: 'alma-5-bibliotheque.jpeg' )
 furniture3.save
-furniture3.photos.attach(io: File.open('app/assets/images/alma-6-bibliotheque.jpeg'),filename: 'alma-6-bibliotheque.jpeg' )
+furniture3.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424391/atelier-plinguet/alma-6-bibliotheque_mtv28m.jpg'),filename: 'alma-6-bibliotheque.jpeg' )
 furniture3.save
-furniture3.photos.attach(io: File.open('app/assets/images/alma-7-bibliotheque.jpeg'),filename: 'alma-7-bibliotheque.jpeg' )
+furniture3.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424390/atelier-plinguet/alma-7-bibliotheque_htwt5q.jpg'),filename: 'alma-7-bibliotheque.jpeg' )
 furniture3.save
-furniture4.photos.attach(io: File.open('app/assets/images/matilda-1-bahut.jpeg'),filename: 'matilda-1-bahut.jpeg' )
+
+furniture4.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424413/atelier-plinguet/matilda-1-bahut_hloh1t.jpg'),filename: 'matilda-1-bahut.jpeg' )
 furniture4.save
-furniture4.photos.attach(io: File.open('app/assets/images/matilda-2-bahut.jpeg'),filename: 'matilda-2-bahut.jpeg' )
+furniture4.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424418/atelier-plinguet/mathilda-2-bahut_cevwbe.jpg'),filename: 'matilda-2-bahut.jpeg' )
 furniture4.save
-furniture4.photos.attach(io: File.open('app/assets/images/matilda-3-bahut.jpeg'),filename: 'matilda-3-bahut.jpeg' )
+furniture4.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424425/atelier-plinguet/matilda-3-bahut_iq10qr.jpg'),filename: 'matilda-3-bahut.jpeg' )
 furniture4.save
-furniture5.photos.attach(io: File.open('app/assets/images/lou-1-bahut.jpeg'),filename: 'lou-1-bahut.jpeg' )
+
+furniture5.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424405/atelier-plinguet/lou-1-bahut_pdmmq8.jpg'),filename: 'lou-1-bahut.jpeg' )
 furniture5.save
-furniture5.photos.attach(io: File.open('app/assets/images/lou-2-bahut.jpeg'),filename: 'lou-2-bahut.jpeg' )
+furniture5.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424406/atelier-plinguet/lou-2-bahut_oss09z.jpg'),filename: 'lou-2-bahut.jpeg' )
 furniture5.save
-furniture6.photos.attach(io: File.open('app/assets/images/imany-1-armoire.jpeg'),filename: 'imany-1-armoire.jpeg' )
+
+furniture6.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424430/atelier-plinguet/imany-1-armoire_kyaltd.jpg'),filename: 'imany-1-armoire.jpeg' )
 furniture6.save
-furniture6.photos.attach(io: File.open('app/assets/images/imany-2-armoire.jpeg'),filename: 'imany-2-armoire.jpeg' )
+furniture6.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424406/atelier-plinguet/imany-2-armoire_fvyn7i.jpg'),filename: 'imany-2-armoire.jpeg' )
 furniture6.save
-furniture6.photos.attach(io: File.open('app/assets/images/imany-3-armoire.jpeg'),filename: 'imany-3-armoire.jpeg' )
+furniture6.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424398/atelier-plinguet/imany-3-armoire_p9xmdb.jpg'),filename: 'imany-3-armoire.jpeg' )
 furniture6.save
-furniture6.photos.attach(io: File.open('app/assets/images/imany-4-armoire.jpeg'),filename: 'imany-4-armoire.jpeg' )
+furniture6.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424399/atelier-plinguet/imany-4-armoire_kpjwab.jpg'),filename: 'imany-4-armoire.jpeg' )
 furniture6.save
-furniture7.photos.attach(io: File.open('app/assets/images/adriana-1-meuble.jpeg'),filename: 'adriana-1-meuble.jpeg' )
+
+furniture7.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424394/atelier-plinguet/adriana-1-meuble_ciyl3g.jpg'),filename: 'adriana-1-meuble.jpeg' )
 furniture7.save
-furniture8.photos.attach(io: File.open('app/assets/images/esther-1-commode.jpeg'),filename: 'esther-1-commode.jpeg' )
+
+furniture8.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424401/atelier-plinguet/esther1-commode_g5bnkh.jpg'),filename: 'esther-1-commode.jpeg' )
 furniture8.save
-furniture8.photos.attach(io: File.open('app/assets/images/esther-2-commode.jpeg'),filename: 'esther-2-commode.jpeg' )
+furniture8.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424408/atelier-plinguet/esther2-commode_k9369t.jpg'),filename: 'esther-2-commode.jpeg' )
 furniture8.save
-furniture8.photos.attach(io: File.open('app/assets/images/esther-3-commode.jpeg'),filename: 'esther-3-commode.jpeg' )
+furniture8.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424401/atelier-plinguet/esther-3-commode_b04lb2.jpg'),filename: 'esther-3-commode.jpeg' )
 furniture8.save
-furniture8.photos.attach(io: File.open('app/assets/images/esther-4-commode.jpeg'),filename: 'esther-4-commode.jpeg' )
+furniture8.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424404/atelier-plinguet/esther-4-commode_isize0.jpg'),filename: 'esther-4-commode.jpeg' )
 furniture8.save
-furniture9.photos.attach(io: File.open('app/assets/images/rita-1-meuble.jpeg'),filename: 'rita-1-meuble.jpeg' )
+
+furniture9.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424398/atelier-plinguet/rita-1-meuble_qnpbpp.jpg'),filename: 'rita-1-meuble.jpeg' )
 furniture9.save
-furniture9.photos.attach(io: File.open('app/assets/images/rita-2-meuble.jpeg'),filename: 'rita-2-meuble.jpeg' )
+furniture9.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424392/atelier-plinguet/rita-2-meuble_uc2pcn.jpg'),filename: 'rita-2-meuble.jpeg' )
 furniture9.save
-furniture10.photos.attach(io: File.open('app/assets/images/christina-1-buffet.jpeg'),filename: 'christina-1-buffet.jpeg' )
+furniture9.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424391/atelier-plinguet/rita-3-meuble_g5oywy.jpg'),filename: 'rita-3-meuble.jpeg' )
+furniture9.save
+
+furniture10.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424409/atelier-plinguet/christina-1-buffet_sx8ffl.jpg'),filename: 'christina-1-buffet.jpeg' )
 furniture10.save
-furniture11.photos.attach(io: File.open('app/assets/images/simone-1-commode.jpeg'),filename: 'simone-1-commode.jpeg' )
+
+furniture11.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424390/atelier-plinguet/simone-1-commode_j39j8i.jpg'),filename: 'simone-1-commode.jpeg' )
 furniture11.save
-furniture11.photos.attach(io: File.open('app/assets/images/simone-2-commode.jpeg'),filename: 'simone-2-commode.jpeg' )
+furniture11.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424393/atelier-plinguet/simone-2-commode_t16s1w.jpg'),filename: 'simone-2-commode.jpeg' )
 furniture11.save
-furniture11.photos.attach(io: File.open('app/assets/images/simone-3-commode.jpeg'),filename: 'simone-3-commode.jpeg' )
+furniture11.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424394/atelier-plinguet/simone-3-commode_dslzsr.jpg'),filename: 'simone-3-commode.jpeg' )
 furniture11.save
-furniture12.photos.attach(io: File.open('app/assets/images/nona-1-table.jpeg'),filename: 'nona-1-table.jpeg' )
+
+furniture12.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424439/atelier-plinguet/ona-1-table_mzr4hw.jpg'),filename: 'nona-1-table.jpeg' )
 furniture12.save
-furniture12.photos.attach(io: File.open('app/assets/images/nona-2-table.jpeg'),filename: 'nona-2-table.jpeg' )
+furniture12.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424432/atelier-plinguet/nona-2-table_spg9vy.jpg'),filename: 'nona-2-table.jpeg' )
 furniture12.save
-furniture12.photos.attach(io: File.open('app/assets/images/nona-3-table.jpeg'),filename: 'nona-3-table.jpeg' )
+furniture12.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424437/atelier-plinguet/nona-3-table_kw6lhh.jpg'),filename: 'nona-3-table.jpeg' )
 furniture12.save
-furniture13.photos.attach(io: File.open('app/assets/images/alma-1-meuble.jpeg'),filename: 'alma-1-meuble.jpeg' )
+
+furniture13.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424437/atelier-plinguet/alma-1-meuble_pfolbn.jpg'),filename: 'alma-1-meuble.jpeg' )
 furniture13.save
-furniture13.photos.attach(io: File.open('app/assets/images/alma-2-meuble.jpeg'),filename: 'alma-2-meuble.jpeg' )
+furniture13.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424434/atelier-plinguet/alma-2-meuble_hxkvo5.jpg'),filename: 'alma-2-meuble.jpeg' )
 furniture13.save
-furniture13.photos.attach(io: File.open('app/assets/images/alma-3-meuble.jpeg'),filename: 'alma-3-meuble.jpeg' )
+furniture13.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424433/atelier-plinguet/alma-3-meuble_skcw7z.jpg'),filename: 'alma-3-meuble.jpeg' )
 furniture13.save
-furniture14.photos.attach(io: File.open('app/assets/images/lola-1-bahut.jpeg'),filename: 'lola-1-bahut.jpeg' )
+
+furniture14.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424390/atelier-plinguet/lola-1-bahut_diefil.jpg'),filename: 'lola-1-bahut.jpeg' )
 furniture14.save
-furniture14.photos.attach(io: File.open('app/assets/images/lola-2-bahut.jpeg'),filename: 'lola-2-bahut.jpeg' )
+furniture14.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424418/atelier-plinguet/lola-2-bahut_gax5ro.jpg'),filename: 'lola-2-bahut.jpeg' )
 furniture14.save
-furniture14.photos.attach(io: File.open('app/assets/images/lola-3-bahut.jpeg'),filename: 'lola-3-bahut.jpeg' )
+furniture14.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424422/atelier-plinguet/lola-3-bahut_tb0e3u.jpg'),filename: 'lola-3-bahut.jpeg' )
 furniture14.save
-furniture14.photos.attach(io: File.open('app/assets/images/lola-4-bahut.jpeg'),filename: 'lola-4-bahut.jpeg' )
+furniture14.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424412/atelier-plinguet/lola-4-bahut_bem2p0.jpg'),filename: 'lola-4-bahut.jpeg' )
 furniture14.save
-furniture14.photos.attach(io: File.open('app/assets/images/lola-5-bahut.jpeg'),filename: 'lola-5-bahut.jpeg' )
+furniture14.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424421/atelier-plinguet/lola-5-b_bjkrz7.jpg'),filename: 'lola-5-bahut.jpeg' )
 furniture14.save
-furniture15.photos.attach(io: File.open('app/assets/images/paula-1-commode.jpeg'),filename: 'paula-1-commode.jpeg' )
+
+furniture15.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424437/atelier-plinguet/paula-1-commode_vrowc8.jpg'),filename: 'paula-1-commode.jpeg' )
 furniture15.save
-furniture15.photos.attach(io: File.open('app/assets/images/paula-2-commode.jpeg'),filename: 'paula-2-commode.jpeg' )
+furniture15.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424443/atelier-plinguet/paula-2-commode_i11mey.jpg'),filename: 'paula-2-commode.jpeg' )
 furniture15.save
-furniture15.photos.attach(io: File.open('app/assets/images/paula-3-commode.jpeg'),filename: 'paula-3-commode.jpeg' )
+furniture15.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424439/atelier-plinguet/paula-3-commode_h1hwam.jpg'),filename: 'paula-3-commode.jpeg' )
 furniture15.save
-furniture16.photos.attach(io: File.open('app/assets/images/jade-1-bahut.jpeg'),filename: 'jade-1-bahut.jpeg' )
+
+furniture16.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424440/atelier-plinguet/jade-1-bahut.jpg'),filename: 'jade-1-bahut.jpeg' )
 furniture16.save
-furniture16.photos.attach(io: File.open('app/assets/images/jade-2-bahut.jpeg'),filename: 'jade-2-bahut.jpeg' )
+furniture16.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424429/atelier-plinguet/helene-2-porte-serviettes_pc590v.jpg'),filename: 'jade-2-bahut.jpeg' )
 furniture16.save
-furniture17.photos.attach(io: File.open('app/assets/images/raphaelle-1-bahut.jpeg'),filename: 'raphaelle-1-bahut.jpeg' )
+
+furniture17.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424434/atelier-plinguet/raphaelle-1-bahut_wtipv1.jpg'),filename: 'raphaelle-1-bahut.jpeg' )
 furniture17.save
-furniture17.photos.attach(io: File.open('app/assets/images/raphaelle-2-bahut.jpeg'),filename: 'raphaelle-2-bahut.jpeg' )
+furniture17.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424438/atelier-plinguet/raphaelle-2-bahut_m2dil7.jpg'),filename: 'raphaelle-2-bahut.jpeg' )
 furniture17.save
-furniture17.photos.attach(io: File.open('app/assets/images/raphaelle-3-bahut.jpeg'),filename: 'raphaelle-3-bahut.jpeg' )
+furniture17.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424422/atelier-plinguet/raphaelle-3-bahut_crnosc.jpg'),filename: 'raphaelle-3-bahut.jpeg' )
 furniture17.save
-furniture17.photos.attach(io: File.open('app/assets/images/raphaelle-4-bahut.jpeg'),filename: 'raphaelle-4-bahut.jpeg' )
+furniture17.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705400374/development/1geap8wvifp1m4guitrac3z2qsvs.jpg'),filename: 'raphaelle-4-bahut.jpeg' )
 furniture17.save
-furniture18.photos.attach(io: File.open('app/assets/images/paulina-1-meuble-box.jpeg'),filename: 'paulina-1-meuble-box.jpeg' )
+
+furniture18.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424423/atelier-plinguet/pauline-1-meuble-box_nron3m.jpg'),filename: 'paulina-1-meuble-box.jpeg' )
 furniture18.save
-furniture18.photos.attach(io: File.open('app/assets/images/paulina-2-meuble-box.jpeg'),filename: 'paulina-2-meuble-box.jpeg' )
+furniture18.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424422/atelier-plinguet/pauline-meuble-box_gswo3h.jpg'),filename: 'paulina-2-meuble-box.jpeg' )
 furniture18.save
-furniture19.photos.attach(io: File.open('app/assets/images/philippa-1-commode.jpeg'),filename: 'philippa-1-commode.jpeg' )
+
+furniture19.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424434/atelier-plinguet/philippa-1-commode_yzrtls.jpg'),filename: 'philippa-1-commode.jpeg' )
 furniture19.save
-furniture19.photos.attach(io: File.open('app/assets/images/philippa-2-commode.jpeg'),filename: 'philippa-2-commode.jpeg' )
+furniture19.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424437/atelier-plinguet/philiipa-2-commode_njihrh.jpg'),filename: 'philippa-2-commode.jpeg' )
 furniture19.save
-furniture19.photos.attach(io: File.open('app/assets/images/philippa-3-commode.jpeg'),filename: 'philippa-3-commode.jpeg' )
+furniture19.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424409/atelier-plinguet/philippa-3-commode_vkm8js.jpg'),filename: 'philippa-3-commode.jpeg' )
 furniture19.save
-furniture20.photos.attach(io: File.open('app/assets/images/louison-1-confiturier.jpeg'),filename: 'louison-1-confiturier.jpeg' )
+
+furniture20.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705400386/development/louison-1-confiturier.jpg'),filename: 'louison-1-confiturier.jpeg' )
 furniture20.save
-furniture20.photos.attach(io: File.open('app/assets/images/louison-1-confiturier.jpeg'),filename: 'louison-2-confiturier.jpeg' )
+furniture20.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424409/atelier-plinguet/louison-2-confiturier.jpg'),filename: 'louison-2-confiturier.jpeg' )
 furniture20.save
-furniture20.photos.attach(io: File.open('app/assets/images/louison-1-confiturier.jpeg'),filename: 'louison-3-confiturier.jpeg' )
+furniture20.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424391/atelier-plinguet/louison-1_wdxmy8.jpg'),filename: 'louison-3-confiturier.jpeg' )
 furniture20.save
-furniture21.photos.attach(io: File.open('app/assets/images/sofia-1-confiturier.jpeg'),filename: 'sofia-1-confiturier.jpeg' )
+
+furniture21.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424414/atelier-plinguet/sofia-1-confiturier.jpg'),filename: 'sofia-1-confiturier.jpeg' )
 furniture21.save
-furniture21.photos.attach(io: File.open('app/assets/images/sofia-2-confiturier.jpeg'),filename: 'sofia-2-confiturier.jpeg' )
+furniture21.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424421/atelier-plinguet/sofia-2-confiturier.jpg'),filename: 'sofia-2-confiturier.jpeg' )
 furniture21.save
-furniture22.photos.attach(io: File.open('app/assets/images/chloe-1-enfilade.jpeg'),filename: 'chloe-1-enfilade.jpeg' )
+
+furniture22.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424403/atelier-plinguet/chloe-1-enfilade_uayvn3.jpg'),filename: 'chloe-1-enfilade.jpeg' )
 furniture22.save
-furniture23.photos.attach(io: File.open('app/assets/images/eva-1-buffet.jpeg'),filename: 'eva-1-buffet.jpeg' )
+
+furniture23.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424417/atelier-plinguet/eva-1-commode_hlg7wo.jpg'),filename: 'eva-1-buffet.jpeg' )
 furniture23.save
-furniture23.photos.attach(io: File.open('app/assets/images/eva-2-buffet.jpeg'),filename: 'eva-2-buffet.jpeg' )
+furniture23.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424417/atelier-plinguet/eva-2-commode_g50tc4.jpg'),filename: 'eva-2-buffet.jpeg' )
 furniture23.save
 
 #Rose
-furniture24.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture24.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture24.save
 
-furniture25.photos.attach(io: File.open('app/assets/images/louisa-1-commode.jpeg'),filename: 'louisa-1-commode.jpeg' )
+furniture25.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424417/atelier-plinguet/louisa-1-commode_bpxvld.jpg'),filename: 'louisa-1-commode.jpeg' )
 furniture25.save
 #Chantal
-furniture26.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture26.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture26.save
 
-furniture27.photos.attach(io: File.open('app/assets/images/prune-1-bureau.jpeg'),filename: 'prune-1-bureau.jpeg' )
+furniture27.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424424/atelier-plinguet/prune-1-bureau_wn4b0j.jpg'),filename: 'prune-1-bureau.jpeg' )
 furniture27.save
-furniture28.photos.attach(io: File.open('app/assets/images/victoria-1-commode.jpeg'),filename: 'victoria-1-commode.jpeg' )
+
+furniture28.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424406/atelier-plinguet/victoria-2-commode_zr0jfm.jpg'),filename: 'victoria-1-commode.jpeg' )
 furniture28.save
-furniture28.photos.attach(io: File.open('app/assets/images/victoria-2-commode.jpeg'),filename: 'victoria-2-commode.jpeg' )
+furniture28.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424395/atelier-plinguet/victoria-1-commode_xbs5m1.jpg'),filename: 'victoria-2-commode.jpeg' )
 furniture28.save
 
 #emma
-furniture29.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture29.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture29.save
 
 #holly
-furniture30.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture30.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture30.save
 
 #camille
-furniture31.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture31.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture31.save
 
-furniture32.photos.attach(io: File.open('app/assets/images/louise-meuble-toilettes.jpeg'),filename: 'louise-meuble-toilettes.jpeg' )
+furniture32.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424394/atelier-plinguet/louise--mueble-toilettes_djicx2.jpg'),filename: 'louise-meuble-toilettes.jpeg' )
 furniture32.save
 
 #philippa
-furniture33.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture33.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture33.save
 
 #clemence
-furniture34.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture34.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture34.save
 
 #emma
-furniture35.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture35.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture35.save
 
 #armelle
-furniture36.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture36.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture36.save
 
 #ava
-furniture37.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture37.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture37.save
 
 #suzanne
-furniture38.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture38.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture38.save
 
 #anna
-furniture39.photos.attach(io: File.open('app/assets/images/inspi-.jpeg'),filename: 'inspi-.jpeg' )
+furniture39.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/inspi-2_g1bhwz.jpg'),filename: 'inspi-.jpeg' )
 furniture39.save
 
-furniture40.photos.attach(io: File.open('app/assets/images/eliza-1-console.jpeg'),filename: 'eliza-1-console.jpeg' )
+furniture40.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424433/atelier-plinguet/eliza-1-console_tyrcjs.jpg'),filename: 'eliza-1-console.jpeg' )
 furniture40.save
-furniture40.photos.attach(io: File.open('app/assets/images/eliza-2-console.jpeg'),filename: 'eliza-2-console.jpeg' )
+furniture40.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424427/atelier-plinguet/eliza-2-console_gmu0fl.jpg'),filename: 'eliza-2-console.jpeg' )
 furniture40.save
+
 
 puts "seed des photos : OK"
