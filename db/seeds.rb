@@ -174,7 +174,7 @@ puts "Seed des meubles : OK !"
 
 puts "Starting seed des url"
 
-thalia1 = URI.open"https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424414/atelier-plinguet/thalia-1-bibli_zx58iy.jpg"
+thalia1 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424414/atelier-plinguet/thalia-1-bibli_zx58iy.jpg")
 
 puts "Seed des url : OK !"
 
