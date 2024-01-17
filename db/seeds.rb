@@ -46,6 +46,7 @@ furniture7 = Furniture.create!(name:"Adriana", material: "Bois", color: "Vert de
 Adriana a rejoint son environnement pour le plus grand plaisir de son propriétaire.")
 #varnish: "", teint: "", paint_brand: "Envie", creation_date: "")
 
+=begin 
 furniture8 = Furniture.create!(name:"Esther", material: "Bois", color: "Bleu nuit", type_of_furniture: "Commode", description: "Cette commode typique des années 60 nous est arrivée dans son jus.
 Un gros travail de décapage et de ponçage a été nécéssaire pour enlever l'imposante couche de vernis et pouvoir ainsi lui donner cette jolie teinte bleu nuit de chez @farrowandball . Les pieds ont été changés pour des nouveaux plus modernes.
 Les poignées sont d'origine et ont demandé un bon nettoyage pour retrouver leur brillance.")
@@ -165,7 +166,8 @@ furniture39 = Furniture.create!(name:"Anna", material: "Bois", color: "Bleu nuit
 furniture40 = Furniture.create!(name:"Eliza", material: "Cuivre & Bois - Pin", color: "", type_of_furniture: "Console", description: "Création de l'atelier plinguet pour une commande client.
 Une console toute en cuivre, avec luminaire intégré et tablettes en pin des Landes.
 Design épuré, cette pièce unique a trouvé refuge dans une belle maison Arcachonnaise.")
-#varnish: "", teint: "", paint_brand: "", creation_date: "")
+#varnish: "", teint: "", paint_brand: "", creation_date: "") 
+=end
 
 puts "Seed des meubles : OK !"
 
@@ -220,6 +222,7 @@ furniture6.save
 furniture7.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424394/atelier-plinguet/adriana-1-meuble_ciyl3g.jpg'),filename: 'adriana-1-meuble.jpeg' )
 furniture7.save
 
+=begin 
 furniture8.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424401/atelier-plinguet/esther1-commode_g5bnkh.jpg'),filename: 'esther-1-commode.jpeg' )
 furniture8.save
 furniture8.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424408/atelier-plinguet/esther2-commode_k9369t.jpg'),filename: 'esther-2-commode.jpeg' )
@@ -388,7 +391,8 @@ furniture39.save
 furniture40.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424433/atelier-plinguet/eliza-1-console_tyrcjs.jpg'),filename: 'eliza-1-console.jpeg' )
 furniture40.save
 furniture40.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424427/atelier-plinguet/eliza-2-console_gmu0fl.jpg'),filename: 'eliza-2-console.jpeg' )
-furniture40.save
+furniture40.save 
+=end
 
 
 puts "seed des photos : OK"
