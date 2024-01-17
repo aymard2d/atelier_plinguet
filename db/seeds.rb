@@ -7,6 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require "open-uri"
 
 Furniture.destroy_all
 puts "Destroy des meubles : OK !"
@@ -171,9 +172,15 @@ Design épuré, cette pièce unique a trouvé refuge dans une belle maison Arcac
 
 puts "Seed des meubles : OK !"
 
-puts "starting seed des photos"
+puts "Starting seed des url"
 
-furniture1.photos.attach(io: URI.open('v1705424414/atelier-plinguet/thalia-1-bibli_zx58iy.jpg'),filename: 'thalia-1-bibliotheque' )
+thalia1 = URI.open"https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424414/atelier-plinguet/thalia-1-bibli_zx58iy.jpg"
+
+puts "Seed des url : OK !"
+
+puts "Starting seed des photos.attach"
+
+furniture1.photos.attach(io: thalia1, filename: 'thalia-1-bibliotheque', content_type: "image/jpg" )
 furniture1.save
 
 furniture2.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/luna-1-vaisselier_ekymps.jpg'),filename: 'luna-1-vaisselier.jpeg' )
@@ -395,4 +402,6 @@ furniture40.save
 =end
 
 
-puts "seed des photos : OK"
+puts "seed des photos.attach : OK !"
+
+puts "SEEDS : champion"
