@@ -173,7 +173,7 @@ puts "Seed des meubles : OK !"
 
 puts "starting seed des photos"
 
-furniture1.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424414/atelier-plinguet/thalia-1-bibli_zx58iy.jpg'),filename: 'thalia-1-bibliotheque' )
+furniture1.photos.attach(io: URI.open('v1705424414/atelier-plinguet/thalia-1-bibli_zx58iy.jpg'),filename: 'thalia-1-bibliotheque' )
 furniture1.save
 
 furniture2.photos.attach(io: URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/luna-1-vaisselier_ekymps.jpg'),filename: 'luna-1-vaisselier.jpeg' )
