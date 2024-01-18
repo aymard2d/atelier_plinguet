@@ -188,7 +188,7 @@ alma6 = URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424391/
 alma7 = URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424390/atelier-plinguet/alma-7-bibliotheque_htwt5q.jpg')
 mathilda1 = URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424413/atelier-plinguet/matilda-1-bahut_hloh1t.jpg')
 mathilda2 = URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424418/atelier-plinguet/mathilda-2-bahut_cevwbe.jpg')
-mathilda3 = URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424425/atelier-plinguet/matilda-3-bahut_iq10qr.jpg'),
+mathilda3 = URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424425/atelier-plinguet/matilda-3-bahut_iq10qr.jpg')
 lou1 = URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424405/atelier-plinguet/lou-1-bahut_pdmmq8.jpg')
 lou2 = URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424406/atelier-plinguet/lou-2-bahut_oss09z.jpg')
 imany1 = URI.open('https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424430/atelier-plinguet/imany-1-armoire_kyaltd.jpg')
@@ -570,43 +570,44 @@ puts "seed des photos.attach : OK !"
 puts "start de la seed des accessories"
 
 #nicole
-# accessory1 = Accessory.create!(name: "Nicole", material: "bois", type_of: "lampadaire", description: "Nouvelle création de l’atelier. Pour une cliente bordelaise, nous avons dessiné et fabriqué 2 lampadaires en bois. Pour obtenir ce résultat, il a fallu réaliser un assemblage de 10 planches de contreplaqués collées entre elles en y incorporant 2 ouvertures qui apportent une touche de légèreté. Il y a eu pas mal de travail de ponçage pour arriver à un rendu aussi lisse et harmonieux. ")
+accessory1 = Accessory.create!(name: "Nicole", material: "bois", type_of: "lampadaire", description: "Nouvelle création de l'atelier. Pour une cliente bordelaise, nous avons dessiné et fabriqué 2 lampadaires en bois. Pour obtenir ce résultat, il a fallu réaliser un assemblage de 10 planches de contreplaqués collées entre elles en y incorporant 2 ouvertures qui apportent une touche de légèreté. Il y a eu pas mal de travail de ponçage pour arriver à un rendu aussi lisse et harmonieux. ")
 
-# nicole1 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-3-lampadaire_ugyxor.png")
-# nicole2 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-2-lampadaire_ipu1wm.png")
-# nicole3 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595728/atelier-plinguet/nicole-1-lampadaire_ack2fa.png")
-# accessorie1.photos.attach(io : nicole1, filename: "nicole-1-lampadaire.png", content_type: "image/png")
-# accessorie1.photos.attach(io : nicole2, filename: "nicole-2-lampadaire.png", content_type: "image/png")
-# accessorie1.photos.attach(io : nicole3, filename: "nicole-3-lampadaire.png", content_type: "image/png")
-# accessory1.save
+nicole1 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-3-lampadaire_ugyxor.png")
+nicole2 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-2-lampadaire_ipu1wm.png")
+nicole3 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595728/atelier-plinguet/nicole-1-lampadaire_ack2fa.png")
+
+accessory1.photos.attach(io: nicole1, filename: "nicole-1-lampadaire.png", content_type: "image/png")
+accessory1.photos.attach(io: nicole2, filename: "nicole-2-lampadaire.png", content_type: "image/png")
+accessory1.photos.attach(io: nicole3, filename: "nicole-3-lampadaire.png", content_type: "image/png")
+accessory1.save
 puts "nicole ok"
 
 #helene
-# accessory2 = Accessory.create!(name: "helene", type_f: "porte-serviette", material: "cuivre et bois", description: "Cette semaine à l’atelier, nous avons créé un porte serviette à la demande d’une cliente. Les couleurs du cuivre et du bois s’harmonisent parfaitement avec le sol en travertin de la salle de bain de notre cliente. Si cette pièce vous plait, n’hésitez pas à nous envoyer un DM pour plus d’informations, l’atelier peut la reproduire sur demande et sa taille est ajustable.")
+accessory2 = Accessory.create!(name: "helene", type_of: "porte-serviette", material: "cuivre et bois", description: "Cette semaine à l'atelier, nous avons créé un porte serviette à la demande d'une cliente. Les couleurs du cuivre et du bois s'harmonisent parfaitement avec le sol en travertin de la salle de bain de notre cliente. Si cette pièce vous plait, n'hésitez pas à nous envoyer un DM pour plus d'informations, l'atelier peut la reproduire sur demande et sa taille est ajustable.")
 
-# helene1 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595723/atelier-plinguet/helene-2-porte-serviette_zp5sws.png")
-# helene2 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595723/atelier-plinguet/helene-1-porte-serviette_oonfwt.png")
-# accessory2.photos.attach(io : helene1, filename: "helene-1-porte-serviette.png, content_type: "image/png)
-# accessory2.photos.attach(io : helene2, filename: "helene-2-porte-serviette.png, content_type: "image/png)
-# accessory2.save
+helene1 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595723/atelier-plinguet/helene-2-porte-serviette_zp5sws.png")
+helene2 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595723/atelier-plinguet/helene-1-porte-serviette_oonfwt.png")
+accessory2.photos.attach(io: helene1, filename: "helene-1-porte-serviette.png", content_type: "image/png")
+accessory2.photos.attach(io: helene2, filename: "helene-2-porte-serviette.png", content_type: "image/png")
+accessory2.save
 puts "helene : ok"
 
 #mona
-# accessory3 = Accessory.create!(name: "mona", "material: "bois", type_of: "lampe", description: "Création de l’atelier plinguet pour une commande client.Une structure réalisée en assemblage de bois avec découpes et courbes travaillées. Recouverte d’un enduit de lissage et peint selon les désirs du client.")
+accessory3 = Accessory.create!(name: "mona", material: "bois", type_of: "lampe", description: "Création de atelier plinguet pour une commande client.Une structure réalisée en assemblage de bois avec découpes et courbes travaillées. Recouverte un enduit de lissage et peint selon les désirs du client.")
 
-# mona1 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595728/atelier-plinguet/mona-lampe-1_cxi20h.png")
-# mona2 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595727/atelier-plinguet/mona-lampe-2_ohq69s.png")
-# accessory3.attach.photos(io : mona1, filename: "mona-lampe-1.png", content_type: "image/png")
-# accessory3.attach.photos(io : mona2, filename: "mona-lampe-2.png", content_type: "image/png")
-# accessory3.save
+mona1 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595728/atelier-plinguet/mona-lampe-1_cxi20h.png")
+mona2 = URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595727/atelier-plinguet/mona-lampe-2_ohq69s.png")
+accessory3.attach.photos(io: mona1, filename: "mona-lampe-1.png", content_type: "image/png")
+accessory3.attach.photos(io: mona2, filename: "mona-lampe-2.png", content_type: "image/png")
+accessory3.save
 puts "mona : ok"
 
 #lou
-# accessory4 = Accessory.create!(name: "Lou", type_of: "applique", description: "Création de l’atelier Plinguet pour une commande client. Lot de deux appliques en bois effet métal, avec vitre en Plexiglas, et ampoule Led à filament vintage.", material: "bois")
+accessory4 = Accessory.create!(name: "Lou", type_of: "applique", description: "Création de l'atelier Plinguet pour une commande client. Lot de deux appliques en bois effet métal, avec vitre en Plexiglas, et ampoule Led à filament vintage.", material: "bois")
 
-# accessory4.attach.photos(io: lou1, filename: "lou-1-applique.png", content_type: "image/png")
-# lou1= URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595722/atelier-plinguet/lou-1-applique_ae5qdr.png")
-# accessory4.save
+accessory4.attach.photos(io: lou1, filename: "lou-1-applique.png", content_type: "image/png")
+lou1= URI.open("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595722/atelier-plinguet/lou-1-applique_ae5qdr.png")
+accessory4.save
 puts "lou : ok"
 
 puts "Fin des seeds : everything is updated !"
