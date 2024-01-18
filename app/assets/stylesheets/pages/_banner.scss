@@ -1,7 +1,7 @@
 .banner-main-container {
   // border: solid 1px black;
   height: 600px;
-  background-color:#486757 ;
+
   display: grid;
   grid-template-columns: auto auto auto;
   margin-top: 10px;
@@ -15,6 +15,10 @@
     color: white;
   }
 
+  .banner-description-container {
+    background-color: #486757;
+  }
+
   .banner-description {
     color: white;
     justify-content: center;
@@ -24,6 +28,7 @@
     font-family: 'Cormorant', serif;
     display: flex;
     flex-direction: column;
+ 
 
     #banner-title {
       font-size: medium;
