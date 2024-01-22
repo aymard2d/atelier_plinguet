@@ -54,7 +54,7 @@ figure:hover figcaption{
   --_i: 0%;
 }
 figure:hover img {
-  transform: scale(1.2);
+  //transform: scale(1.2);
 }
 @supports not (-webkit-mask-clip: text) {
   figure figcaption {
