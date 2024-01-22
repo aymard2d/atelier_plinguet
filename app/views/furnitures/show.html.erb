@@ -3,10 +3,25 @@
 <% content_for :meta_description, @furniture.description %>  
 <%# content_for :meta_image, cl_image_path(@furniture.photo.path) %>
 
-<% @furniture.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 500, width: 1200, class: "object-fit-cover" %>
-<% end %>
-  <%= @furniture.type_of_furniture %>
-  <%= @furniture.name %>
-  <%= @furniture.material %>
-  <%= @furniture.color %>
+<%# @furniture.photos.each do |photo| %>
+  <%#= cl_image_tag photo.key, height: 500, width: 1200, class: "object-fit-cover" %>
+<%# end %>
+  <%#= @furniture.type_of_furniture %>
+  <%#= @furniture.name %>
+  <%#= @furniture.material %>
+  <%#= @furniture.color %>
+
+
+<div class="furniture-carousel">
+  <div class="carousel"> 
+    <%@furniture.photos.each do |photo|%>
+    <div>
+      <%= cl_image_tag photo.key, class: "carousel-photos object-fit-cover" %>
+      <h2><%= @furniture.name %></h2>
+    <div class="content">
+      <span><%= @furniture.type_of_furniture %></span>
+    </div>
+    </div>
+      <% end %>
+  </div>
+</div>

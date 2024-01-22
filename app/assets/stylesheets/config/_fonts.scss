@@ -14,3 +14,27 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+//BrightAngels
+@font-face {
+  font-family: "Angels";
+  src: font-url("BrightAngelsPersonalUse-ywZVm.otf-DOJ6x.ttf");
+}
+
+//Milano
+@font-face {
+  font-family: "Milano";
+  src: font-url("Milano-p7ojK.otf");
+}
+
+//Renitta
+@font-face {
+  font-family: "Renitta";
+  src: font-url("Renitta-DOJ6x.ttf");
+}
+
+//Brilliant
+@font-face {
+  font-family: "Brilliant";
+  src: font-url("Brilliant-w1DOZ.ttf");
+}

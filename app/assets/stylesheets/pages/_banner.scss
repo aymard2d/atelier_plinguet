@@ -32,7 +32,7 @@
 
     #banner-title {
       font-size: medium;
-      font-family: 'Cormorant', serif;
+      font-family: renitta;
       font-size: 20px;
     }
 
@@ -43,10 +43,9 @@
 
     .banner-line {
       margin: 0 auto;
-
       height: 1px;
-      color: white;
-      width: 70%;
+      color: $light-wood;
+      width: 50%;
       margin-bottom: 20px;
     }
 

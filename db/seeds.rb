@@ -10,9 +10,10 @@
 require "open-uri"
 
 Furniture.destroy_all
-Accessory.destroy_all
-
 puts "Destroy des meubles : OK !"
+Accessory.destroy_all
+puts "Destroy des fabrications : OK !"
+
 # SEED DES MEUBLES
 
 puts "Starting seed des meubles"
