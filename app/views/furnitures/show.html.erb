@@ -16,7 +16,7 @@
   <div class="carousel"> 
     <%@furniture.photos.each do |photo|%>
     <div>
-      <%= cl_image_tag photo.key, class: "carousel-photos object-fit-cover" %>
+      <%= cl_image_tag photo.key, class: "carousel-photos object-fit-cover", height: 750, height:1260 %>
       <h2><%= @furniture.name %></h2>
     <div class="content">
       <span><%= @furniture.type_of_furniture %></span>
@@ -24,4 +24,32 @@
     </div>
       <% end %>
   </div>
+</div>
+
+<div class="container">
+  <div>
+    <div class="content">
+      <h2>Jane Doe</h2>
+      <span>UI & UX Designer</span>
+    </div>
+  </div>
+  <div>
+    <div class="content">
+      <h2>Jane Doe</h2>
+      <span>UI & UX Designer</span>
+    </div>
+  </div>
+  <div>
+    <div class="content">
+      <h2>Jane Doe</h2>
+      <span>UI & UX Designer</span>
+    </div>
+  </div>
+  <div>
+    <div class="content">
+      <h2>Jane Doe</h2>
+      <span>UI & UX Designer</span>
+    </div>
+  </div>
+
 </div>

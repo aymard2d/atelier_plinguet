@@ -5,23 +5,16 @@
   box-sizing: border-box;
 }
 
-.carousel-photos {
-  border: 1px solid rgb(232, 226, 226);
-  width: 100%;
-  height: 750px;
-}
-
-.furniture-carousel {
+body {
+  min-height: 100vh;
   display: grid;
-  grid-gap: 20px;
-  margin: auto;
-  width: 80%;
-  margin-top: 80px;
-  padding: 20px;
-  background: #c4afeb;
+  place-items: center;
+  background: #100721;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
 }
 
-.carousel {
+.container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -36,6 +29,23 @@
     box-shadow: 1px 5px 15px #1e0e3e;
     position: relative;
     overflow: hidden;
+
+    &:nth-of-type(1) {
+      background: url("https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595722/atelier-plinguet/lou-1-applique_ae5qdr.png")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(2) {
+      background: url("https://images.pexels.com/photos/36469/woman-person-flowers-wreaths.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(3) {
+      background: url("https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(4) {
+      background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        no-repeat 50% / cover;
+    }
 
     .content {
       font-size: 1.5rem;
