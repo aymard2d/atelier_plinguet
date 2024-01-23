@@ -12,16 +12,18 @@
   <%#= @furniture.color %>
 
 
-<div class="furniture-carousel">
-  <div class="carousel"> 
-    <%@furniture.photos.each do |photo|%>
-    <div>
-      <%= cl_image_tag photo.key, class: "carousel-photos object-fit-cover" %>
-      <h2><%= @furniture.name %></h2>
-    <div class="content">
-      <span><%= @furniture.type_of_furniture %></span>
+
+<div class="container">
+  <% @furniture.photos.each do |photo| %>
+    <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
+      <div class="content">
+        <h2><%= @furniture.name %></h2>
+        <span><%= @furniture.type_of_furniture %></span>
+      </div>
     </div>
-    </div>
-      <% end %>
-  </div>
+  <% end %>
 </div>
+
+
+
+
