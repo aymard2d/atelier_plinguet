@@ -31,7 +31,7 @@ figure {
 }
 figure > * {
   grid-area: 1/1;
-  transition: .4s;
+  transition: .5s;
 }
 figure figcaption {
   display: grid;
@@ -39,22 +39,21 @@ figure figcaption {
   font-family: 'Cormorant', serif;
   font-size: 2.3rem;
   font-weight: bold;
-  color: #0000;
-  padding: .75rem;
-  background: var(--c,#0009);
-  clip-path: inset(0 var(--_i,100%) 0 0);
-  -webkit-mask:
-    linear-gradient(#000 0 0),
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  -webkit-mask-clip: text, padding-box;
+  color: #f4fcf8bf;
+  padding: 0.75rem;
+  background: #3e404699;
+  -webkit-clip-path: inset(0 var(--_i, 100%) 0 0);
+  /* clip-path: inset(0 var(--_i, 100%) 0 0); */
+  /* -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0); */
+  /* -webkit-mask-composite: xor; */
+  /* -webkit-mask-clip: text, padding-box; */
   margin: -1px;
 }
 figure:hover figcaption{
   --_i: 0%;
 }
 figure:hover img {
-  //transform: scale(1.2);
+  transform: scale(1.2);
 }
 @supports not (-webkit-mask-clip: text) {
   figure figcaption {
