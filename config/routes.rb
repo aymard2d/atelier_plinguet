@@ -12,6 +12,12 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   #routes des meubles
-  resources :furnitures
+  resources :furnitures do
+    collection do
+      get 'show_by_type/:type', to: 'furnitures#show_by_type', as: 'show_by_type'
+    end
+  end
+
   resources :accessories
+
 end

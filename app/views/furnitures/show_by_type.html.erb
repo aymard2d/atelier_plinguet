@@ -1,0 +1,11 @@
+<!-- app/views/furnitures/show_by_type.html.erb -->
+<h1>Meubles de type <%= @furniture_type %></h1>
+<ul>
+  <% @furnitures.each do |furniture| %>
+    <li><%= furniture.name %></li> <!-- Remplacez 'name' par l'attribut que vous souhaitez afficher -->
+    <% furniture.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+            <% break %>
+  <% end %>
+  <% end %>
+</ul>
