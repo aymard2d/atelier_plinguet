@@ -1,0 +1,200 @@
+.main-container {
+  align-items: center;
+  margin: auto 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-gap: 16px;
+}
+
+.top-show {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  height: 80px;
+  margin-top: 20px;
+  align-content: center;
+
+  .top-show-title {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-self: center;
+  }
+
+  #main-title {
+    grid-column: 1/2;
+    place-self: center start;
+    margin-bottom: 0px;
+    margin-left: 40px;
+  }
+
+  #ranking {
+    grid-column: 3/4;
+    align-self: center;
+    margin-bottom: 0px;
+    margin-right: 40px;
+    font-size: 35px;
+  }
+
+  .fa-ranking-star {
+    margin-right: 10px;
+  }
+}
+.top-show-carousel {
+  grid-column: 1 / 4 ;
+  grid-row: 2 / 3;
+  border-radius: 5px;
+  width: auto
+}
+
+.second-card-show {
+  grid-row: 3/4;
+  grid-column: 1 / 3;
+
+  .main-content-card {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+
+
+    .content {
+      grid-column: 1 / 2;
+      display: grid;
+      grid-template-columns: auto 1fr auto ;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      padding: 20px;
+
+      .card-title {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        place-self: center start;
+      }
+
+      h2 .fa-solid {
+        padding: 10px;
+      }
+
+      #specie {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        justify-self: end;
+        align-self: center;
+        margin-bottom: 0px;
+      }
+
+
+      #description {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+        margin: 20px;
+        place-self: center;
+      }
+
+      #name {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        place-self: center;
+        font-size: 18px;
+      }
+
+      #gender {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+        place-self: center;
+        font-size: 18px;
+      }
+
+      #age {
+        grid-column: 3 / 4;
+        grid-row: 4 / 5;
+        place-self: center;
+        font-size: 18px;
+      }
+
+      #skill {
+        grid-column: 1/ 4;
+        grid-row: 5 / 6;
+        place-self: center;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        width: 300px;
+        height: 80px;
+      }
+    }
+    .form-reservation {
+      background-color: white;
+      grid-column: 3 / 4 ;
+      border: 1px solid rgba(0, 0, 0, 0.236);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 350px;
+      align-self: center;
+      justify-self: center ;
+      margin: 20px;
+
+      .form-inputs {
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.236);
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px 30px 20px 30px;
+
+          .input {
+            border-radius: 5px;
+
+            button-form {
+              border-radius: 5px;
+              padding: 15px;
+              box-shadow: 2px 2px 3px black;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+      #price {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.title {
+ text-align: center;
+ margin: 15px;
+}
+
+
+
+  .owner-card {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    align-items: center;
+    padding: 20px;
+
+    .owner-rating {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .fa-medal {
+      padding-right: 10px;
+      font-size: 22px;
+    }
+    .avatar-large {
+      grid-column: 1/2;
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
