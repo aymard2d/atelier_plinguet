@@ -12,18 +12,67 @@
   <%#= @furniture.color %>
 
 
+<div class="main-container">
 
-<div class="container">
-  <% @furniture.photos.each do |photo| %>
-    <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
+  <div class="container">
+    <% @furniture.photos.each do |photo| %>
+      <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
+        <div class="content">
+          <h2><%= @furniture.name %></h2>
+          <span><%= @furniture.type_of_furniture %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+  <div class="second-card-show">
+    <div class="main-content-card">
       <div class="content">
-        <h2><%= @furniture.name %></h2>
-        <span><%= @furniture.type_of_furniture %></span>
+        <h3 class="card-title"><strong> <%= @furniture.name %></strong></h3>
+        <h2 class="px-2 fa-lg li-ic" id="gender"><i class="fa-solid fa-venus-mars"></i>  <%= @furniture.date_of_manufacture  %></h2>
+        <h2 class="px-2 fa-lg tw-ic" id="age"><i class="fa-solid fa-cake-candles"></i>  <%= @furniture.type_of_furniture %></h2>
+        <h2 class="px-2 fa-lg fb-ic" id="specie"><i class="fa-solid fa-paw"></i> <%= @furniture.color %></h2>
+        <h2 class="px-2 fa-lg fb-ic" id="name"><i class="fa-solid fa-address-card"></i> <%= @furniture.material %></h2>
+
+        <div class="owner-card">
+          <img class="avatar-large" alt="avatar-large" src="<%= image_path "cover.png" %>">
+          <div class="owner-identity">
+          <%=@furniture.name%>
+          <%=@furniture.name%>
+          </div>
+          <div class="owner-rating">
+          <i class="fa-solid fa-medal"></i> <%=@furniture.name%> / 10
+          </div>
+        </div>
+
+        <p id="description"> <%= @furniture.description %></p>
+        <button class="button-57" id="skill" role="button"><span > SECRETE SKILL </span><span><h2 class="px-2 fa-lg fb-ic" ><i class="fa-solid fa-user-ninja"></i>  <%= @furniture.type_of_furniture %></h2></span></button>
       </div>
     </div>
-  <% end %>
+  </div>
+
 </div>
 
-
-
-
+<div class="container-a">
+  <div class="container-b">
+    <div class="wrapper">
+      <div class="banner-image"> </div>
+        <h1> <%= @furniture.name %></h1>
+          <% @furniture.photos.each do |photo| %>
+      <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
+        <div class="content">
+          <h2><%= @furniture.name %></h2>
+          <span><%= @furniture.type_of_furniture %></span>
+        </div>
+      </div>
+    <% end %>
+        <p>Lorem ipsum dolor sit amet, <br/>
+          consectetur adipiscing elit.</p>
+    </div>
+    <div class="button-wrapper"> 
+      <button class="btn outline">DETAILS</button>
+      <button class="btn fill">BUY NOW</button>
+    </div>
+  </div>
+  </div>

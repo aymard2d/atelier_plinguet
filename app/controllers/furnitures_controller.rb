@@ -6,6 +6,12 @@ class FurnituresController < ApplicationController
 
   def index
     @furnitures = Furniture.all
+    @furniture_types = Furniture.pluck(:type_of_furniture).uniq
+  end
+
+  def show_by_type
+    @furniture_type = params[:type]
+    @furnitures = Furniture.where(type_of_furniture: @furniture_type)
   end
 
   def show

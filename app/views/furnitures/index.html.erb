@@ -1,5 +1,14 @@
 <div class="index-body">
 
+  <div class="category-search">
+    Rechercher par type de meuble : 
+  <% @furniture_types.each do |type| %>
+      <%= link_to type, show_by_type_furnitures_path(type) %>
+
+  <% end %>
+
+  </div>
+
   <div class="galerie">
     <% @furnitures.each do |furniture| %>
       <%= link_to furniture_path(furniture) do %>

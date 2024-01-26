@@ -20,7 +20,7 @@ body h2 {
 .home-description {
   background-color: $green;
   margin: auto;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   width:70%;
   display: flex;
@@ -28,6 +28,9 @@ body h2 {
 
   h2 {
     color: white;
+    margin: 15px;
+    font-size: x-large;
+    font-family: 'Renitta';
   }
 }
 
