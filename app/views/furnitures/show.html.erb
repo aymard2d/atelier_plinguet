@@ -1,5 +1,5 @@
 <!-- app/views/furnitures/show.html.erb -->  
-<% content_for :meta_title, "#{@furniture.name} is on #{DEFAULT_META["meta_product_name"]}" %>  
+<% content_for :meta_title, "#{@furniture.type_of_furniture} is on #{DEFAULT_META["meta_product_name"]}" %>  
 <% content_for :meta_description, @furniture.description %>  
 <%# content_for :meta_image, cl_image_path(@furniture.photo.path) %>
 
@@ -14,7 +14,7 @@
 
 <div class="main-container">
 
-  <div class="container">
+  <div class="galery-container">
     <% @furniture.photos.each do |photo| %>
       <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
         <div class="content">
@@ -26,7 +26,21 @@
   </div>
 
 
-  <div class="second-card-show">
+  <div class="furniture-details">
+    <div class="card">
+      <ul>
+        <li>Type de meuble : <%= @furniture.type_of_furniture %></li>
+        <li>Matériau(x) : <%= @furniture.material %></li>
+        <li>Couleurs : <%= @furniture.color %> de chez : logo de la marque</li>
+        <li>Date de création : <%= @furniture.date_of_manufacture %></li>
+        <li>Teinte du meuble :<%=  %></li>
+        <li>Vernis :<%=  %></li>
+      </ul>
+      <p class="card-footer">Created by <em>Atelier Plinguet</em></p>
+    </div>
+  </div>  
+
+  <!--<div class="second-card-show">
     <div class="main-content-card">
       <div class="content">
         <h3 class="card-title"><strong> <%= @furniture.name %></strong></h3>
@@ -51,28 +65,8 @@
       </div>
     </div>
   </div>
+  -->
 
 </div>
 
-<div class="container-a">
-  <div class="container-b">
-    <div class="wrapper">
-      <div class="banner-image"> </div>
-        <h1> <%= @furniture.name %></h1>
-          <% @furniture.photos.each do |photo| %>
-      <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
-        <div class="content">
-          <h2><%= @furniture.name %></h2>
-          <span><%= @furniture.type_of_furniture %></span>
-        </div>
-      </div>
-    <% end %>
-        <p>Lorem ipsum dolor sit amet, <br/>
-          consectetur adipiscing elit.</p>
-    </div>
-    <div class="button-wrapper"> 
-      <button class="btn outline">DETAILS</button>
-      <button class="btn fill">BUY NOW</button>
-    </div>
-  </div>
-  </div>
+
