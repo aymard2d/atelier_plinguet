@@ -14,20 +14,10 @@
 
 <div class="main-container">
 
-  <div class="galery-container">
-    <% @furniture.photos.each do |photo| %>
-      <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
-        <div class="content">
-          <h2><%= @furniture.name %></h2>
-          <span><%= @furniture.type_of_furniture %></span>
-        </div>
-      </div>
-    <% end %>
-  </div>
 
 
   <div class="furniture-details">
-    <div class="card">
+    <div class="show-card">
       <ul>
         <li>Type de meuble : <%= @furniture.type_of_furniture %></li>
         <li>Matériau(x) : <%= @furniture.material %></li>
@@ -40,6 +30,16 @@
     </div>
   </div>  
 
+  <div class="galery-container">
+    <% @furniture.photos.each do |photo| %>
+      <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
+        <div class="content">
+          <h2><%= @furniture.name %></h2>
+          <span><%= @furniture.type_of_furniture %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
   <!--<div class="second-card-show">
     <div class="main-content-card">
       <div class="content">

@@ -11,7 +11,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  /* height: 500px; */
+  height: 80%;
   gap: 10px;
   margin: 25px auto;
   padding: 20px 20px;
@@ -21,7 +21,7 @@
     border-radius: 0.5rem;
     transition: 0.5s ease-in-out;
     cursor: pointer;
-    box-shadow: 1px 5px 15px $light-wood;
+    
     position: relative;
     overflow: hidden;
 
@@ -56,7 +56,7 @@
 
     &:hover {
       flex: 0 0 450px;
-      box-shadow: 1px 3px 15px $light-wood;
+      box-shadow: 1px 3px 15px rgb(130, 120, 177);
       transform: translatey(-30px);
     }
 
