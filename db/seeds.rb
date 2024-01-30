@@ -20,8 +20,8 @@ puts "Destroy des fabrications : OK !"
 
 puts "Starting seed des meubles"
 
-furniture1 = Furniture.create!(name:"Thalia", material: "Bois", color: "", type_of_furniture: "Bibliothèque", description: "Attention transformation ! On avait chiné cette armoire, il y a quelque temps, et le moins que l'on puisse dire, c'est qu'il fallait se projeter… Il nous a fallu pas mal de travail pour la transformer en bibliothèque, mais le résultat en valait la peine ! Un grand merci à @colibripeinture qui nous a fourni de supers produits et peintures pour la transformation de ce meuble!", date_of_manufacture: date)
-#varnish: "", teint: "", paint_brand: "Colibri", date_of_manufacture: "")
+furniture1 = Furniture.create!(name:"Thalia", material: "Bois", color: "Bleu Atlantide", type_of_furniture: "Bibliothèque", date_of_manufacture: date, description: "Attention transformation ! On avait chiné cette armoire, il y a quelque temps, et le moins que l'on puisse dire, c'est qu'il fallait se projeter… Il nous a fallu pas mal de travail pour la transformer en bibliothèque, mais le résultat en valait la peine ! Un grand merci à @colibripeinture qui nous a fourni de supers produits et peintures pour la transformation de ce meuble!")
+#varnish: "Laque écologique", teint: "", paint_brand: "Colibri")
 
 furniture2 = Furniture.create!(name:"Luna", material: "Bois", color: "Blanc glacier & Vert de gris", type_of_furniture: "Vaisselier", description: "Initialement Luna était le haut d'un vaisselier. Lorsque nous l'avons récupérée, on s'est dit que la partie haute et basse de ce vaisselier pouvaient faire 2 meubles à part entière.
 Pour que cela soit possible, il nous a fallu rajouter des pieds en conservant le style du meuble, décaper à la machine le meuble, à la main les portes et leurs motifs et changer le plateau du haut qui était trop abimé.
@@ -114,11 +114,11 @@ C'est donc dans cette nouvelle couleur et avec de nouvelles poignées que ce con
 #varnish: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
 
 furniture22 = Furniture.create!(name:"Chloé", material: "Bois", color: "Bleu Hague blue", type_of_furniture: "Enfilade", description: "La semaine dernière, l'atelier Plinguet a eu le plaisir de travailler à Paris sur une superbe enfilade scandinave des années 60. Le propriétaire de ce meuble l'avait chiné sur le site Selency qui regorge de pépites pour que nous le restaurions à son goût. De nombreuses heures de travail ont permis de lui donner une seconde jeunesse. Un papier peint intissé au motif floral dans les parties secrétaires ainsi que le bleu Hague Blue de chez Farrow&ball ont permis de rapporter cette sublime enfilade dans notre siècle ")
-#varnish: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
+#varnish: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "2022-03-21")
 
 furniture23 = Furniture.create!(name:"Eva", material: "Bois", color: "Bleu Nîmes", type_of_furniture: "Buffet", description: "La semaine dernière, l'atelier Plinguet a travaillé sur la restauration d'un buffet Parisien vintage. Apres un décapage intensif pour le dévêtir de sa peinture glycéro blanche, puis un traitement du bois, le buffet arbore dorénavant un magnifique bleu de Nimes de chez Farrow&Ball, qui est en réalité un sublime gris/bleu.
 Son plateau et ses étagères ont eux été laissés bruts puis vernis pour les protéger dans le temps. Enfin de nouvelles poignées complètent son look pour ramener cette pièce vintage à notre époque.") 
-#varnish: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
+#varnish: "Incolore", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
 
 furniture24 = Furniture.create!(name:"Rose", material: "Bois", color: "Lin velours", type_of_furniture: "Armoire", description: "Et voici la première restauration de l'atelier Plinguet pour cette année 2022. Lorsque l'on a vu arriver cette armoire asymétrique dans notre atelier, on s'est dit 2 choses. La première: qu'il y avait un travail de titan à réaliser dessus tant de pièces étaient à changer. La seconde : que malgré son look actuel, cette armoire vintage avait un potentiel énorme ! Avec un nouveau placage, un changement de serrure, la réparation de 3 tiroirs, un décapage plus que compliqué pour certaines zones et surtout avec une teinte couleur lin velours magnifique, un changement de poignées et d'entrée de clés, cette armoire vintage revient directement dans notre siècle pour enjoliver la chambre d'un enfant.") 
 #varnish: "", teint: "", paint_brand: "", date_of_manufacture: "")
@@ -178,12 +178,35 @@ Design épuré, cette pièce unique a trouvé refuge dans une belle maison Arcac
 
 puts "Seed des meubles : OK !"
 
-puts "Starting seed des url"
+puts "Starting seed des accessoires"
+
+accessory1 = Accessory.create!(name: "Nicole", material: "bois", type_of: "lampadaire", description: "Nouvelle création de l'atelier. Pour une cliente bordelaise, nous avons dessiné et fabriqué 2 lampadaires en bois. Pour obtenir ce résultat, il a fallu réaliser un assemblage de 10 planches de contreplaqués collées entre elles en y incorporant 2 ouvertures qui apportent une touche de légèreté. Il y a eu pas mal de travail de ponçage pour arriver à un rendu aussi lisse et harmonieux.")
+
+accessory2 = Accessory.create!(name: "helene", type_of: "porte-serviette", material: "cuivre et bois", description: "Cette semaine à l'atelier, nous avons créé un porte serviette à la demande d'une cliente. Les couleurs du cuivre et du bois s'harmonisent parfaitement avec le sol en travertin de la salle de bain de notre cliente. Si cette pièce vous plait, n'hésitez pas à nous envoyer un DM pour plus d'informations, l'atelier peut la reproduire sur demande et sa taille est ajustable.")
+
+accessory3 = Accessory.create!(name: "mona", material: "bois", type_of: "lampe", description: "Création de atelier plinguet pour une commande client.Une structure réalisée en assemblage de bois avec découpes et courbes travaillées. Recouverte un enduit de lissage et peint selon les désirs du client.")
+
+accessory4 = Accessory.create!(name: "Lou", type_of: "applique", description: "Création de l'atelier Plinguet pour une commande client. Lot de deux appliques en bois effet métal, avec vitre en Plexiglas, et ampoule Led à filament vintage.", material: "bois")
+
+accessory5 = Accessory.create!(name: "Augusta", type_of: "chaise", description: "Création de l'atelier Plinguet pour une commande client. Magnifique fauteuil en cuivre aux lignes épurées et au designe original.", material: "cuivre")
+
+puts "Seed des accessoires : OK !"
+
+puts "Starting seed des réalisations"
+
+# realisation1 = Realisation.create!(name: "Le Friedland", type_of_realisation: "Décoration murale", date_of_realisation: date,description: "Depuis 3 semaines, l'atelier Plinguet s'est lancé dans un nouveau projet, la modernisation d'éléments d'un bistrot Parisien. Au programme la restauration de 26 tables de bistrot! À la base teintées en bois noir, il a fallu de nombreuses heures de décapage et ponçage pour retrouver la belle teinte initiale et les veines du bois. Le tout a été vernis avec une finition spéciale bistrot pour résister aux nombreux clients qui utiliseront ces tables. L'atelier a également restauré un vieux meuble de service dans des teintes de bois doré et la superbe couleur #inchyra de chez Farrow&ball. Enfin, nous avons procédé à la création d'un élément de déco murale alliant coffrage en bois peint dans cette même teinte Inchyra, flocage en contreplaqué réalisé à la découpe laser et ampoules design pour un rendu vraiment sympa!")
+
+puts "Seed des réalisations : OK !"
+
+
+puts "Starting seed des url furnitures"
 
 thalia1 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424414/atelier-plinguet/thalia-1-bibli_zx58iy.jpg"
+
 luna1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/luna-1-vaisselier_ekymps.jpeg'
 luna2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424425/atelier-plinguet/luna-2-vaisselier_i99qpo.jpeg'
 luna3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424392/atelier-plinguet/luna-3-vaisselier_jfmn7w.jpeg'
+
 alma1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424439/atelier-plinguet/alma-1-bibliotheque_f9zc7r.jpg'
 alma2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424441/atelier-plinguet/alma-2-bibliotheque_hqrlfj.jpg'
 alma3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424396/atelier-plinguet/alma-3-bibliotheque_sjl4pp.jpg'
@@ -191,15 +214,19 @@ alma4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424394/atelier-p
 alma5 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424440/atelier-plinguet/alma-5-bibliotheque_ajecms.jpg'
 alma6 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424391/atelier-plinguet/alma-6-bibliotheque_mtv28m.jpg'
 alma7 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424390/atelier-plinguet/alma-7-bibliotheque_htwt5q.jpg'
+
 mathilda1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424413/atelier-plinguet/matilda-1-bahut_hloh1t.jpg'
 mathilda2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424418/atelier-plinguet/mathilda-2-bahut_cevwbe.jpg'
 mathilda3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424425/atelier-plinguet/matilda-3-bahut_iq10qr.jpg'
+
 lou1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424405/atelier-plinguet/lou-1-bahut_pdmmq8.jpg'
 lou2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424406/atelier-plinguet/lou-2-bahut_oss09z.jpg'
+
 imany1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424430/atelier-plinguet/imany-1-armoire_kyaltd.jpg'
 imany2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424406/atelier-plinguet/imany-2-armoire_fvyn7i.jpg'
 imany3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424398/atelier-plinguet/imany-3-armoire_p9xmdb.jpg'
 imany4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424399/atelier-plinguet/imany-4-armoire_kpjwab.jpg'
+
 adriana1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424394/atelier-plinguet/adriana-1-meuble_ciyl3g.jpg'
 =begin
 esther1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424401/atelier-plinguet/esther1-commode_g5bnkh.jpg'
@@ -279,12 +306,18 @@ holly2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595723/atelier-
 
 philippa-semainier1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/philippa-1-semainier_rtrhda.png'
 philippa-semainier2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595698/atelier-plinguet/philippa-2-semainier_duo7hf.png'
+philippa-semainier3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622664/atelier-plinguet/philippa-3-semainier_gvoemk.png'
+philippa-semainier4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622664/atelier-plinguet/philippa-4-semainier_enip8c.png'
+
 
 clemence1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595712/atelier-plinguet/clemence-1-secretaire_deykxk.png'
 clemence2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595718/atelier-plinguet/clemence-2-secretaire_ojb8vb.png'
+clemence3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622664/atelier-plinguet/clemence-3-secretaire_n5fyow.png'
 
-emma21 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595719/atelier-plinguet/emma2-1-meuble-chaussure_sndmld.png'
-emma22 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595721/atelier-plinguet/emma2-2-meuble-chaussure_x4tz5a.png'
+emma2-1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595719/atelier-plinguet/emma2-1-meuble-chaussure_sndmld.png'
+emma2-2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622665/atelier-plinguet/emma2-3-meuble-chaussure_gq6jxw.png'
+emma2-3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622664/atelier-plinguet/emma2-4-meuble-chaussure_gv4qgy.png'
+emma2-old = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595721/atelier-plinguet/emma2-2-meuble-chaussure_x4tz5a.png'
 
 armelle1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595708/atelier-plinguet/armelle-1-coffre_n6acvc.png'
 armelle2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595709/atelier-plinguet/armelle-2-coffre_dg2itd.png'
@@ -305,6 +338,7 @@ suzanne1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595699/atelie
 suzanne2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595703/atelier-plinguet/suzanne-2-bar_td4put.png'
 suzanne3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595705/atelier-plinguet/suzanne-3-bar_dsqa5q.png'
 
+nicole4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622658/atelier-plinguet/nicole-4-lampadaire_n2v5za.png'
 nicole1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-3-lampadaire_ugyxor.png'
 nicole2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-2-lampadaire_ipu1wm.png'
 nicole3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595727/atelier-plinguet/mona-lampe-2_ohq69s.png'
@@ -316,13 +350,26 @@ eliza3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595716/atelier-
 louisa1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424417/atelier-plinguet/louisa-1-commode_bpxvld.jpg'
 
 prune1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424424/atelier-plinguet/prune-1-bureau_wn4b0j.jpg'
+prune2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622659/atelier-plinguet/prune-2-bureau_vkrwo4.png'
+prune3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622659/atelier-plinguet/prune-3-bureau_m6vcl5.png'
+prune4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622659/atelier-plinguet/prune-4-bureau_dbdgc3.png'
+prune5 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622658/atelier-plinguet/prune-_-bureau_wz5yki.png'
 
 victoria1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424406/atelier-plinguet/victoria-2-commode_zr0jfm.jpg'
 victoria2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424395/atelier-plinguet/victoria-1-commode_xbs5m1.jpg'
+victoria3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622658/atelier-plinguet/victoria-0-commode_oqzr7u.png'
+Victoria1-old = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622659/atelier-plinguet/victoria-01-commode_yir3ho.png'
 
 louise1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424394/atelier-plinguet/louise--mueble-toilettes_djicx2.jpg'
-
+louise2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622667/atelier-plinguet/louise-4-meuble-toilettes_aj6ctl.png'
+louise3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622667/atelier-plinguet/louise-2-meuble-toilettes_jlioz7.png'
+louise4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622668/atelier-plinguet/louise-3-meuble-toilettes_jorxvl.png'
 =end
+puts "Seed des url furnitures : OK !"
+
+# Url accessories
+
+puts "Starting seed url accessories"
 
 nicole1 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-3-lampadaire_ugyxor.png"
 nicole2 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-2-lampadaire_ipu1wm.png"
@@ -336,309 +383,343 @@ mona2 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595727/atelier-p
 
 louacc = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595722/atelier-plinguet/lou-1-applique_ae5qdr.png"
 
-puts "Seed des url : OK !"
-puts "Starting seed des photos.attach"
+puts "Seed des url accessories : OK !"
 
-#thalia
+# Url des réalisations
+puts "Starting seed des urls réalisations"
+
+friedland1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424433/atelier-plinguet/Lefriendland-1-bar_bvbydt.jpg'
+friedland2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622663/atelier-plinguet/friendland-1-luminaire_mmhrzq.png'
+friedland3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622659/atelier-plinguet/friendland-4-table_zidi83.png'
+friedland4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622659/atelier-plinguet/friendland-3-meuble_ukdbfu.png'
+friedland5 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622660/atelier-plinguet/friendland-2-decoration-murale_gte1zm.png'
+
+puts "Seed des url réalisations : OK !"
+
+puts "Seed de toutes les url : OK !"
+
+#Photos attach des meubles
+puts "Starting seed des furnitures photos.attach"
+
+#Thalia
 furniture1.photos.attach(io: URI.open(thalia1), filename: 'thalia-1-bibliotheque', content_type: "image/jpg" )
 furniture1.save
 puts "thalia : ok"
 
-#luna
-furniture2.photos.attach(io: URI.open( luna1), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
-furniture2.photos.attach(io: URI.open( luna2), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
-furniture2.photos.attach(io: URI.open( luna3), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
+#Luna
+furniture2.photos.attach(io: URI.open(luna1), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
+furniture2.photos.attach(io: URI.open(luna2), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
+furniture2.photos.attach(io: URI.open(luna3), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
 furniture2.save
 puts "luna : ok"
 
-#alma
-furniture3.photos.attach(io: URI.open( alma1), filename: 'alma-1-bibliotheque', content_type: "image/jpg" )
-furniture3.photos.attach(io: URI.open( alma2), filename: 'alma-2-bibliotheque', content_type: "image/jpg" )
-furniture3.photos.attach(io: URI.open( alma3), filename: 'alma-3-bibliotheque', content_type: "image/jpg" )
-furniture3.photos.attach(io: URI.open( alma4), filename: 'alma-4-bibliotheque', content_type: "image/jpg" )
-furniture3.photos.attach(io: URI.open( alma5), filename: 'alma-5-bibliotheque', content_type: "image/jpg" )
-furniture3.photos.attach(io: URI.open( alma6), filename: 'alma-6-bibliotheque', content_type: "image/jpg" )
-furniture3.photos.attach(io: URI.open( alma7), filename: 'alma-7-bibliotheque', content_type: "image/jpg" )
+#Alma
+furniture3.photos.attach(io: URI.open(alma1), filename: 'alma-1-bibliotheque', content_type: "image/jpg" )
+furniture3.photos.attach(io: URI.open(alma2), filename: 'alma-2-bibliotheque', content_type: "image/jpg" )
+furniture3.photos.attach(io: URI.open(alma3), filename: 'alma-3-bibliotheque', content_type: "image/jpg" )
+furniture3.photos.attach(io: URI.open(alma4), filename: 'alma-4-bibliotheque', content_type: "image/jpg" )
+furniture3.photos.attach(io: URI.open(alma5), filename: 'alma-5-bibliotheque', content_type: "image/jpg" )
+furniture3.photos.attach(io: URI.open(alma6), filename: 'alma-6-bibliotheque', content_type: "image/jpg" )
+furniture3.photos.attach(io: URI.open(alma7), filename: 'alma-7-bibliotheque', content_type: "image/jpg" )
 furniture3.save
 puts "alma : ok"
 
-#mathilda
-furniture4.photos.attach(io: URI.open( mathilda1), filename: 'mathilda-1-bahut', content_type: "image/jpg" )
-furniture4.photos.attach(io: URI.open( mathilda2), filename: 'mathilda-2-bahut', content_type: "image/jpg" )
-furniture4.photos.attach(io: URI.open( mathilda3), filename: 'mathilda-3-bahut', content_type: "image/jpg" )
+#Mathilda
+furniture4.photos.attach(io: URI.open(mathilda1), filename: 'mathilda-1-bahut', content_type: "image/jpg" )
+furniture4.photos.attach(io: URI.open(mathilda2), filename: 'mathilda-2-bahut', content_type: "image/jpg" )
+furniture4.photos.attach(io: URI.open(mathilda3), filename: 'mathilda-3-bahut', content_type: "image/jpg" )
 furniture4.save
 puts "mathilda : ok"
 
-#lou
-furniture5.photos.attach(io: URI.open( lou1), filename: 'lou-1-bahut', content_type: "image/jpeg" )
-furniture5.photos.attach(io: URI.open( lou2), filename: 'lou-2-bahut', content_type: "image/jpeg" )
+#Lou-bahut
+furniture5.photos.attach(io: URI.open(lou1), filename: 'lou-1-bahut', content_type: "image/jpeg" )
+furniture5.photos.attach(io: URI.open(lou2), filename: 'lou-2-bahut', content_type: "image/jpeg" )
 furniture5.save
 puts "lou : ok"
 
-#imany
-furniture6.photos.attach(io: URI.open( imany1), filename: 'imany-1-armoire', content_type: "image/jpg" )
-furniture6.photos.attach(io: URI.open( imany2), filename: 'imany-2-armoire', content_type: "image/jpg" )
-furniture6.photos.attach(io: URI.open( imany3), filename: 'imany-3-armoire', content_type: "image/jpg" )
-furniture6.photos.attach(io: URI.open( imany4), filename: 'imany-4-armoire', content_type: "image/jpg" )
+#Imany
+furniture6.photos.attach(io: URI.open(imany1), filename: 'imany-1-armoire', content_type: "image/jpg" )
+furniture6.photos.attach(io: URI.open(imany2), filename: 'imany-2-armoire', content_type: "image/jpg" )
+furniture6.photos.attach(io: URI.open(imany3), filename: 'imany-3-armoire', content_type: "image/jpg" )
+furniture6.photos.attach(io: URI.open(imany4), filename: 'imany-4-armoire', content_type: "image/jpg" )
 furniture6.save
 puts "imany : ok"
 
-#adriana
-furniture7.photos.attach(io: URI.open( adriana1), filename: 'adriana-1-meuble.jpeg', content_type: "image/jpeg" )
+#Adriana
+furniture7.photos.attach(io: URI.open(adriana1), filename: 'adriana-1-meuble.jpeg', content_type: "image/jpeg" )
 furniture7.save
 puts "adriana : ok"
 
 =begin
-#esther
-furniture8.photos.attach(io: URI.open( esther1 ), filename: 'esther-1-commode.jpeg', content_type: "image/jpg" )
-furniture8.photos.attach(io: URI.open( esther2), filename: 'esther-2-commode.jpg', content_type: "image/jpg )
-furniture8.photos.attach(io: URI.open( esther3), filename: 'esther-3-commode.jpg', content_type: "image/jpg )
-furniture8.photos.attach(io: URI.open( esther4), filename: 'esther-4-commode.jpg', content_type: "image/jpg )
+#Esther
+furniture8.photos.attach(io: URI.open(esther1 ), filename: 'esther-1-commode.jpeg', content_type: "image/jpg" )
+furniture8.photos.attach(io: URI.open(esther2), filename: 'esther-2-commode.jpg', content_type: "image/jpg )
+furniture8.photos.attach(io: URI.open(esther3), filename: 'esther-3-commode.jpg', content_type: "image/jpg )
+furniture8.photos.attach(io: URI.open(esther4), filename: 'esther-4-commode.jpg', content_type: "image/jpg )
 furniture8.save
 puts "esther : ok"
 
-#rita
-furniture9.photos.attach(io: URI.open( rita1), filename: 'rita-1-meuble.jpg', content_type: "image/jpg )
-furniture9.photos.attach(io: URI.open( rita2), filename: 'rita-2-meuble.jpg', content_type: "image/jpg )
-furniture9.photos.attach(io: URI.open( rita3), filename: 'rita-3-meuble.jpg', content_type: "image/jpg )
+#Rita
+furniture9.photos.attach(io: URI.open(rita1), filename: 'rita-1-meuble.jpg', content_type: "image/jpg )
+furniture9.photos.attach(io: URI.open(rita2), filename: 'rita-2-meuble.jpg', content_type: "image/jpg )
+furniture9.photos.attach(io: URI.open(rita3), filename: 'rita-3-meuble.jpg', content_type: "image/jpg )
 furniture9.save
 puts "rita : ok"
 
-#christina
-furniture10.photos.attach(io: URI.open( christina1), filename: 'christina-1-buffet.jpg', content_type: "image/jpg )
+#Christina
+furniture10.photos.attach(io: URI.open(christina1), filename: 'christina-1-buffet.jpg', content_type: "image/jpg )
 furniture10.save
 puts "christina : ok"
 
-#simone
-furniture11.photos.attach(io: URI.open( simone1), filename: 'simone-1-commode.jpg', content_type: "image/jpg )
-furniture11.photos.attach(io: URI.open( simone2), filename: 'simone-2-commode.jpg', content_type: "image/jpg )
-furniture11.photos.attach(io: URI.open( simone3), filename: 'simone-3-commode.jpg', content_type: "image/jpg )
+#Simone
+furniture11.photos.attach(io: URI.open(simone1), filename: 'simone-1-commode.jpg', content_type: "image/jpg )
+furniture11.photos.attach(io: URI.open(simone2), filename: 'simone-2-commode.jpg', content_type: "image/jpg )
+furniture11.photos.attach(io: URI.open(simone3), filename: 'simone-3-commode.jpg', content_type: "image/jpg )
 furniture11.save
 puts "simone : ok"
 
-#nona
-furniture12.photos.attach(io: URI.open( nona1), filename: 'nona-1-table.jpg', content_type: "image/jpg )
-furniture12.photos.attach(io: URI.open( nona2), filename: 'nona-2-table.jpg', content_type: "image/jpg )
-furniture12.photos.attach(io: URI.open( nona3), filename: 'nona-3-table.jpg', content_type: "image/jpg )
+#Mona
+furniture12.photos.attach(io: URI.open(mona1), filename: 'mona-1-table.jpg', content_type: "image/jpg )
+furniture12.photos.attach(io: URI.open(mona2), filename: 'mona-2-table.jpg', content_type: "image/jpg )
 furniture12.save
 puts "nona : ok"
 
-#alma
-furniture13.photos.attach(io: URI.open( alma1), filename: 'alma-1-meuble.jpg', content_type: "image/jpg )
-furniture13.photos.attach(io: URI.open( alma2), filename: 'alma-2-meuble.jpg', content_type: "image/jpg )
-furniture13.photos.attach(io: URI.open( alma3), filename: 'alma-3-meuble.jpg', content_type: "image/jpg )
+#Alma
+furniture13.photos.attach(io: URI.open(alma1), filename: 'alma-1-meuble.jpg', content_type: "image/jpg )
+furniture13.photos.attach(io: URI.open(alma2), filename: 'alma-2-meuble.jpg', content_type: "image/jpg )
+furniture13.photos.attach(io: URI.open(alma3), filename: 'alma-3-meuble.jpg', content_type: "image/jpg )
 furniture13.save
 puts "alma : ok"
 
-#lola
-furniture14.photos.attach(io: URI.open( lola1), filename: 'lola-1-bahut.jpg', content_type: "image/jpg )
-furniture14.photos.attach(io: URI.open( lola2), filename: 'lola-2-bahut.jpg', content_type: "image/jpg )
-furniture14.photos.attach(io: URI.open( lola3), filename: 'lola-3-bahut.jpg', content_type: "image/jpg )
-furniture14.photos.attach(io: URI.open( lola4), filename: 'lola-4-bahut.jpg', content_type: "image/jpg )
-furniture14.photos.attach(io: URI.open( lola5), filename: 'lola-5-bahut.jpg', content_type: "image/jpg )
+#Lola
+furniture14.photos.attach(io: URI.open(lola1), filename: 'lola-1-bahut.jpg', content_type: "image/jpg )
+furniture14.photos.attach(io: URI.open(lola2), filename: 'lola-2-bahut.jpg', content_type: "image/jpg )
+furniture14.photos.attach(io: URI.open(lola3), filename: 'lola-3-bahut.jpg', content_type: "image/jpg )
+furniture14.photos.attach(io: URI.open(lola4), filename: 'lola-4-bahut.jpg', content_type: "image/jpg )
+furniture14.photos.attach(io: URI.open(lola5), filename: 'lola-5-bahut.jpg', content_type: "image/jpg )
 furniture14.save
 puts "lola : ok"
 
-#paula
-furniture15.photos.attach(io: URI.open( paula1,filename: 'paula-1-commode.jpg', content_type: "image/jpg )
-furniture15.photos.attach(io: URI.open( paula2,filename: 'paula-2-commode.jpg', content_type: "image/jpg )
-furniture15.photos.attach(io: URI.open( paula3,filename: 'paula-3-commode.jpg', content_type: "image/jpg )
+#Paula
+furniture15.photos.attach(io: URI.open(paula1,filename: 'paula-1-commode.jpg', content_type: "image/jpg )
+furniture15.photos.attach(io: URI.open(paula2,filename: 'paula-2-commode.jpg', content_type: "image/jpg )
+furniture15.photos.attach(io: URI.open(paula3,filename: 'paula-3-commode.jpg', content_type: "image/jpg )
 furniture15.save
 puts "paula : ok"
 
-#jade
-furniture16.photos.attach(io: URI.open( jade1), filename: 'jade-1-bahut.jpg', content_type: "image/jpg )
-furniture16.photos.attach(io: URI.open( jade2), filename: 'jade-2-bahut.jpg', content_type: "image/jpg )
+#Jade
+furniture16.photos.attach(io: URI.open(jade1), filename: 'jade-1-bahut.jpg', content_type: "image/jpg )
+furniture16.photos.attach(io: URI.open(jade2), filename: 'jade-2-bahut.jpg', content_type: "image/jpg )
 furniture16.save
 puts "jade : ok"
 
-#raphaelle
-furniture17.photos.attach(io: URI.open( raphaelle1), filename: 'raphaelle-1-bahut.jpg', content_type: "image/jpg )
-furniture17.photos.attach(io: URI.open( raphaelle2), filename: 'raphaelle-2-bahut.jpg', content_type: "image/jpg )
-furniture17.photos.attach(io: URI.open( raphaelle3), filename: 'raphaelle-3-bahut.jpg', content_type: "image/jpg )
-furniture17.photos.attach(io: URI.open( raphaelle4), filename: 'raphaelle-4-bahut.jpg', content_type: "image/jpg )
+#Raphaelle
+furniture17.photos.attach(io: URI.open(raphaelle1), filename: 'raphaelle-1-bahut.jpg', content_type: "image/jpg )
+furniture17.photos.attach(io: URI.open(raphaelle2), filename: 'raphaelle-2-bahut.jpg', content_type: "image/jpg )
+furniture17.photos.attach(io: URI.open(raphaelle3), filename: 'raphaelle-3-bahut.jpg', content_type: "image/jpg )
+furniture17.photos.attach(io: URI.open(raphaelle4), filename: 'raphaelle-4-bahut.jpg', content_type: "image/jpg )
 furniture17.save
 puts "raphaelle : ok"
 
-#pauline
-furniture18.pho4os.attach(io: URI.open( pauline1), filename: 'paulina-1-meuble-box.jpg', content_type: "image/jpg )
-furniture18.photos.attach(io: URI.open( pauline2), filename: 'paulina-2-meuble-box.jpg', content_type: "image/jpg )
+#Pauline
+furniture18.pho4os.attach(io: URI.open(pauline1), filename: 'paulina-1-meuble-box.jpg', content_type: "image/jpg )
+furniture18.photos.attach(io: URI.open(pauline2), filename: 'paulina-2-meuble-box.jpg', content_type: "image/jpg )
 furniture18.save
 puts "paulina : ok"
 
-#philippa
-furniture19.photos.attach(io: URI.open( philippa1), filename: 'philippa-1-commode.jpg', content_type: "image/jpg )
-furniture19.photos.attach(io: URI.open( philippa2), filename: 'philippa-2-commode.jpg', content_type: "image/jpg )
-furniture19.photos.attach(io: URI.open( philippa3), filename: 'philippa-3-commode.jpg', content_type: "image/jpg )
+#Philippa-commode
+furniture19.photos.attach(io: URI.open(philippa1), filename: 'philippa-1-commode.jpg', content_type: "image/jpg )
+furniture19.photos.attach(io: URI.open(philippa2), filename: 'philippa-2-commode.jpg', content_type: "image/jpg )
+furniture19.photos.attach(io: URI.open(philippa3), filename: 'philippa-3-commode.jpg', content_type: "image/jpg )
 furniture19.save
 puts "philippa : ok"
 
-#louison
-furniture20.photos.attach(io: URI.open( louison1), filename: 'louison-1-confiturier.jpg', content_type: "image/jpg )
-furniture20.photos.attach(io: URI.open( louison2), filename: 'louison-2-confiturier.jpg', content_type: "image/jpg )
-furniture20.photos.attach(io: URI.open( louison3), filename: 'louison-3-confiturier.jpg', content_type: "image/jpg )
+#Louison
+furniture20.photos.attach(io: URI.open(louison1), filename: 'louison-1-confiturier.jpg', content_type: "image/jpg )
+furniture20.photos.attach(io: URI.open(louison2), filename: 'louison-2-confiturier.jpg', content_type: "image/jpg )
+furniture20.photos.attach(io: URI.open(louison3), filename: 'louison-3-confiturier.jpg', content_type: "image/jpg )
 furniture20.save
 puts "louison : ok"
 
-#sofia
-furniture21.photos.attach(io: URI.open( sofia1), filename: 'sofia-1-confiturier.jpg', content_type: "image/jpg )
-furniture21.photos.attach(io: URI.open( sofia2), filename: 'sofia-2-confiturier.jpg', content_type: "image/jpg )
+#Sofia
+furniture21.photos.attach(io: URI.open(sofia1), filename: 'sofia-1-confiturier.jpg', content_type: "image/jpg )
+furniture21.photos.attach(io: URI.open(sofia2), filename: 'sofia-2-confiturier.jpg', content_type: "image/jpg )
 furniture21.save
 puts "sofia : ok"
 
-#chloe
-furniture22.photos.attach(io: URI.open( chloe1), filename: 'chloe-1-enfilade.jpg', content_type: "image/jpg )
+#Chloe
+furniture22.photos.attach(io: URI.open(chloe1), filename: 'chloe-1-enfilade.jpg', content_type: "image/jpg )
 furniture22.save
 puts "chloe : ok"
 
-#eva
-furniture23.photos.attach(io: URI.open( eva1), filename: 'eva-1-buffet.jpg', content_type: "image/jpg )
-furniture23.photos.attach(io: URI.open( eva2), filename: 'eva-2-buffet.jpg', content_type: "image/jpg )
+#Eva
+furniture23.photos.attach(io: URI.open(eva1), filename: 'eva-1-buffet.jpg', content_type: "image/jpg )
+furniture23.photos.attach(io: URI.open(eva2), filename: 'eva-2-buffet.jpg', content_type: "image/jpg )
 furniture23.save
 puts "eva : ok"
 
-#rose
-furniture24.photos.attach(io: URI.open( rose1,filename: 'rose-1-armoire.png', content_type: "image/png )
-furniture24.photos.attach(io: URI.open( rose2,filename: 'rose-2-armoire.png', content_type: "image/png )
-furniture24.photos.attach(io: URI.open( rose3,filename: 'rose-3-armoire.png', content_type: "image/png )
+#Rose
+furniture24.photos.attach(io: URI.open(rose1,filename: 'rose-1-armoire.png', content_type: "image/png )
+furniture24.photos.attach(io: URI.open(rose2,filename: 'rose-2-armoire.png', content_type: "image/png )
+furniture24.photos.attach(io: URI.open(rose3,filename: 'rose-3-armoire.png', content_type: "image/png )
 furniture24.save
 puts "rose : ok"
 
-#louisa
-furniture25.photos.attach(io: URI.open( louisa1), filename: 'louisa-1-commode.jpeg', content_type: "image/jpg )
+#Louisa
+furniture25.photos.attach(io: URI.open(louisa1), filename: 'louisa-1-commode.jpeg', content_type: "image/jpg )
 furniture25.save
 puts "louisa : ok"
 
-#chantal
-furniture26.photos.attach(io: URI.open( chantal1,filename: 'chantal-1-bahut.png', content_type: "image/png )
-furniture26.photos.attach(io: URI.open( chantal2,filename: 'chantal-2-bahut.png', content_type: "image/png )
-furniture26.photos.attach(io: URI.open( chantal3,filename: 'chantal-3-bahut.png', content_type: "image/png )
+#Chantal
+furniture26.photos.attach(io: URI.open(chantal1,filename: 'chantal-1-bahut.png', content_type: "image/png )
+furniture26.photos.attach(io: URI.open(chantal2,filename: 'chantal-2-bahut.png', content_type: "image/png )
+furniture26.photos.attach(io: URI.open(chantal3,filename: 'chantal-3-bahut.png', content_type: "image/png )
 furniture26.save
 puts "chantal : ok"
 
-#prune
-furniture27.photos.attach(io: URI.open( prune1), filename: 'prune-1-bureau.jpeg', content_type: "image/jpg )
+#Prune
+furniture27.photos.attach(io: URI.open(prune1), filename: 'prune-1-bureau.jpeg', content_type: "image/jpg )
+furniture27.photos.attach(io: URI.open(prune2), filename: 'prune-2-bureau.jpeg', content_type: "image/jpg )
+furniture27.photos.attach(io: URI.open(prune3), filename: 'prune-3-bureau.jpeg', content_type: "image/jpg )
+furniture27.photos.attach(io: URI.open(prune4), filename: 'prune-4-bureau.jpeg', content_type: "image/jpg )
+furniture27.photos.attach(io: URI.open(prune5), filename: 'prune-5-bureau.jpeg', content_type: "image/jpg )
 furniture27.save
 puts "prune : ok"
 
-#victoria
-furniture28.photos.attach(io: URI.open( victoria1), filename: 'victoria-1-commode.jpeg', content_type: "image/jpg )
-furniture28.photos.attach(io: URI.open( victoria2), filename: 'victoria-2-commode.jpeg', content_type: "image/jpg )
+#Victoria
+furniture28.photos.attach(io: URI.open(victoria1), filename: 'victoria-1-commode.jpeg', content_type: "image/jpg )
+furniture28.photos.attach(io: URI.open(victoria2), filename: 'victoria-2-commode.jpeg', content_type: "image/jpg )
+furniture28.photos.attach(io: URI.open(victoria3), filename: 'victoria-3-commode.jpeg', content_type: "image/jpg )
+furniture28.photos.attach(io: URI.open(victoria1-old), filename: 'victoria-3-commode.jpeg', content_type: "image/jpg )
 furniture28.save
 puts "victoria : ok"
 
-#emma
-furniture29.photos.attach(io: URI.open( emma1), filename: 'emma-1-meuble.png', content_type: "image/png )
-furniture29.photos.attach(io: URI.open( emma1), filename: 'emma-2-meuble.png', content_type: "image/png )
+#Emma1
+furniture29.photos.attach(io: URI.open(emma1), filename: 'emma-1-meuble.png', content_type: "image/png )
 furniture29.save
 puts "emma : ok"
 
-#holly
-furniture30.photos.attach(io: URI.open( holly1), filename: 'holly-1-semainier.png', content_type: "image/png )
-furniture30.photos.attach(io: URI.open( holly2), filename: 'holly-2-semainier.png', content_type: "image/png )
+#Holly
+furniture30.photos.attach(io: URI.open(holly1), filename: 'holly-1-semainier.png', content_type: "image/png )
+furniture30.photos.attach(io: URI.open(holly2), filename: 'holly-2-semainier.png', content_type: "image/png )
 furniture30.save
 puts "holly : ok"
 
-#camille
-furniture31.photos.attach(io: URI.open( camille1), filename: 'camille-1-console.png', content_type: "image/png )
+#Camille
+furniture31.photos.attach(io: URI.open(camille1), filename: 'camille-1-console.png', content_type: "image/png )
 furniture31.save
 puts "camille : ok"
 
-#louise
-furniture32.photos.attach(io: URI.open( louise1,filename: 'louise-1-meuble-toilettes.jpg', content_type: "image/jpg )
+#Louise
+furniture32.photos.attach(io: URI.open(louise1,filename: 'louise-1-meuble-toilettes.jpg', content_type: "image/jpg )
+furniture32.photos.attach(io: URI.open(louise2,filename: 'louise-2-meuble-toilettes.jpg', content_type: "image/jpg )
+furniture32.photos.attach(io: URI.open(louise3,filename: 'louise-3-meuble-toilettes.jpg', content_type: "image/jpg )
+furniture32.photos.attach(io: URI.open(louise4,filename: 'louise-4-meuble-toilettes.jpg', content_type: "image/jpg )
 furniture32.save
 puts "louise : ok"
 
-#philippa
-furniture33.photos.attach(io: URI.open( philippa-semainier1 ,filename: 'philippa-1-semainier.png', content_type: "image/png )
-furniture33.photos.attach(io: URI.open( philippa-semainier2), filename: "philippa-2-semainier.png", content_type: "image/png )
+#Philippa-semainier
+furniture33.photos.attach(io: URI.open(philippa-semainier1 ,filename: 'philippa-1-semainier.png', content_type: "image/png )
+furniture33.photos.attach(io: URI.open(philippa-semainier2), filename: "philippa-2-semainier.png", content_type: "image/png )
+furniture33.photos.attach(io: URI.open(philippa-semainier3), filename: "philippa-2-semainier.png", content_type: "image/png )
+furniture33.photos.attach(io: URI.open(philippa-semainier4), filename: "philippa-2-semainier.png", content_type: "image/png )
 furniture33.save
 puts "philippa : ok"
 
-#clemence
-furniture34.photos.attach(io: URI.open( clemence1,filename: 'clemence-1-secretaire.png', content_type: "image/png )
-furniture34.photos.attach(io: URI.open( clemence2,filename: 'clemence-2-secretaire.png', content_type: "image/png )
+#Clemence
+furniture34.photos.attach(io: URI.open(clemence1,filename: 'clemence-1-secretaire.png', content_type: "image/png )
+furniture34.photos.attach(io: URI.open(clemence2,filename: 'clemence-2-secretaire.png', content_type: "image/png )
+furniture34.photos.attach(io: URI.open(clemence3,filename: 'clemence-3-secretaire.png', content_type: "image/png )
 furniture34.save
 puts "clemence : ok"
 
-#emma
-furniture35.photos.attach(io: URI.open( emma1,filename: 'emma-1-meuble-chaussure.png', content_type: "image/png )
+#Emma2
+furniture35.photos.attach(io: URI.open(emma2-1,filename: 'emma2-1-meuble-chaussure.png', content_type: "image/png )
+furniture35.photos.attach(io: URI.open(emma2-2,filename: 'emma2-2-meuble-chaussure.png', content_type: "image/png )
+furniture35.photos.attach(io: URI.open(emma2-3,filename: 'emma2-3-meuble-chaussure.png', content_type: "image/png )
+furniture35.photos.attach(io: URI.open(emma2-old,filename: 'emma2-old-meuble-chaussure.png', content_type: "image/png )
 furniture35.save
+
 puts "emma2 : ok"
 
-#armelle
-furniture36.photos.attach(io: URI.open( armelle1,filename: 'armelle-1-table.png', content_type: "image/png )
-furniture36.photos.attach(io: URI.open( armelle2,filename: 'armelle-2-table.png', content_type: "image/png )
+#Armelle
+furniture36.photos.attach(io: URI.open(armelle1,filename: 'armelle-1-table.png', content_type: "image/png )
+furniture36.photos.attach(io: URI.open(armelle2,filename: 'armelle-2-table.png', content_type: "image/png )
 furniture36.save
 puts "armelle ok"
 
-#ava
-furniture37.photos.attach(io: URI.open( ava1,filename: 'ava-1-commode.jpg', content_type: "image/jpg )
-furniture37.photos.attach(io: URI.open( ava2,filename: 'ava-2-commode.jpg', content_type: "image/jpg )
-furniture37.photos.attach(io: URI.open( ava3,filename: 'ava-3-commode.jpg', content_type: "image/jpg )
+#Ava
+furniture37.photos.attach(io: URI.open(ava1,filename: 'ava-1-commode.jpg', content_type: "image/jpg )
+furniture37.photos.attach(io: URI.open(ava2,filename: 'ava-2-commode.jpg', content_type: "image/jpg )
+furniture37.photos.attach(io: URI.open(ava3,filename: 'ava-3-commode.jpg', content_type: "image/jpg )
 furniture37.save
 puts "ava : ok"
 
-#suzanne
-furniture38.photos.attach(io: URI.open( suzanne1 ,filename: 'suzanne-1-bar.png', content_type: "image/png )
-furniture38.photos.attach(io: URI.open( suzanne2 ,filename: 'suzanne-2-bar.png', content_type: "image/png )
-furniture38.photos.attach(io: URI.open( suzanne3 ,filename: 'suzanne-3-bar.png', content_type: "image/png )
+#Suzanne
+furniture38.photos.attach(io: URI.open(suzanne1 ,filename: 'suzanne-1-bar.png', content_type: "image/png )
+furniture38.photos.attach(io: URI.open(suzanne2 ,filename: 'suzanne-2-bar.png', content_type: "image/png )
+furniture38.photos.attach(io: URI.open(suzanne3 ,filename: 'suzanne-3-bar.png', content_type: "image/png )
 furniture382sav3
 puts "suzan3e : ok"
 
-#anna
-furniture39.photos.attach(io: URI.open( anna1,filename: 'anna-1-commode.png', content_type: "image/png )
-furniture39.photos.attach(io: URI.open( anna2,filename: 'anna-2-commode.png', content_type: "image/png )
-furniture39.photos.attach(io: URI.open( anna3,filename: 'anna-3-commode.png', content_type: "image/png )
-furniture39.photos.attach(io: URI.open( anna4,filename: 'anna-4-commode.png', content_type: "image/png )
+#Anna
+furniture39.photos.attach(io: URI.open(anna1,filename: 'anna-1-commode.png', content_type: "image/png )
+furniture39.photos.attach(io: URI.open(anna2,filename: 'anna-2-commode.png', content_type: "image/png )
+furniture39.photos.attach(io: URI.open(anna3,filename: 'anna-3-commode.png', content_type: "image/png )
+furniture39.photos.attach(io: URI.open(anna4,filename: 'anna-4-commode.png', content_type: "image/png )
 furniture392save
 puts "anna 3 ok"
 
-#eliza
-furniture40.photos.attach(io: URI.open( eliza1,filename: 'eliza-1-console.jpeg', content_type: "image/jpg )
-furniture40.photos.attach(io: URI.open( eliza2,filename: 'eliza-2-console.jpeg', content_type: "image/jpg )
-furniture40.photos.attach(io: URI.open( eliza3,filename: 'eliza-2-console.png', content_type: "image/png )
+#Eliza
+furniture40.photos.attach(io: URI.open(eliza1,filename: 'eliza-1-console.jpeg', content_type: "image/jpg )
+furniture40.photos.attach(io: URI.open(eliza2,filename: 'eliza-2-console.jpeg', content_type: "image/jpg )
+furniture40.photos.attach(io: URI.open(eliza3,filename: 'eliza-2-console.png', content_type: "image/png )
 furniture40.save
 puts "eliza : ok"
 =end
 
-puts "seed des photos.attach : OK !"
+puts "seed des furnitures photos.attach : OK !"
 
+#SEED des photos des accessoires
 
-#SEED des accessoires
+puts "start des accessories photos.attach"
 
-puts "start de la seed des accessories"
-
-#nicole
-accessory1 = Accessory.create!(name: "Nicole", material: "bois", type_of: "lampadaire", description: "Nouvelle création de l'atelier. Pour une cliente bordelaise, nous avons dessiné et fabriqué 2 lampadaires en bois. Pour obtenir ce résultat, il a fallu réaliser un assemblage de 10 planches de contreplaqués collées entre elles en y incorporant 2 ouvertures qui apportent une touche de légèreté. Il y a eu pas mal de travail de ponçage pour arriver à un rendu aussi lisse et harmonieux. ")
-
-accessory1.photos.attach(io: URI.open( nicole1), filename: "nicole-1-lampadaire.png", content_type: "image/png")
-accessory1.photos.attach(io: URI.open( nicole2), filename: "nicole-2-lampadaire.png", content_type: "image/png")
-accessory1.photos.attach(io: URI.open( nicole3), filename: "nicole-3-lampadaire.png", content_type: "image/png")
+#Nicole
+accessory1.photos.attach(io: URI.open(nicole1), filename: "nicole-1-lampadaire.png", content_type: "image/png")
+accessory1.photos.attach(io: URI.open(nicole2), filename: "nicole-2-lampadaire.png", content_type: "image/png")
+accessory1.photos.attach(io: URI.open(nicole3), filename: "nicole-3-lampadaire.png", content_type: "image/png")
+accessory1.photos.attach(io: URI.open(nicole4), filename: "nicole-4-lampadaire.png", content_type: "image/png")
 accessory1.save
 puts "nicole ok"
 
-#helene
-accessory2 = Accessory.create!(name: "helene", type_of: "porte-serviette", material: "cuivre et bois", description: "Cette semaine à l'atelier, nous avons créé un porte serviette à la demande d'une cliente. Les couleurs du cuivre et du bois s'harmonisent parfaitement avec le sol en travertin de la salle de bain de notre cliente. Si cette pièce vous plait, n'hésitez pas à nous envoyer un DM pour plus d'informations, l'atelier peut la reproduire sur demande et sa taille est ajustable.")
-
-accessory2.photos.attach(io: URI.open( helene1), filename: "helene-1-porte-serviette.png", content_type: "image/png")
-accessory2.photos.attach(io: URI.open( helene2), filename: "helene-2-porte-serviette.png", content_type: "image/png")
+#Helene
+accessory2.photos.attach(io: URI.open(helene1), filename: "helene-1-porte-serviette.png", content_type: "image/png")
+accessory2.photos.attach(io: URI.open(helene2), filename: "helene-2-porte-serviette.png", content_type: "image/png")
 accessory2.save
 puts "helene : ok"
 
-#mona
-accessory3 = Accessory.create!(name: "mona", material: "bois", type_of: "lampe", description: "Création de atelier plinguet pour une commande client.Une structure réalisée en assemblage de bois avec découpes et courbes travaillées. Recouverte un enduit de lissage et peint selon les désirs du client.")
-
-accessory3.photos.attach(io: URI.open( mona1), filename: "mona-lampe-1.png", content_type: "image/png")
-accessory3.photos.attach(io: URI.open( mona2), filename: "mona-lampe-2.png", content_type: "image/png")
+#Mona
+accessory3.photos.attach(io: URI.open(mona1), filename: "mona-lampe-1.png", content_type: "image/png")
+accessory3.photos.attach(io: URI.open(mona2), filename: "mona-lampe-2.png", content_type: "image/png")
 accessory3.save
 puts "mona : ok"
 
-#lou
-accessory4 = Accessory.create!(name: "Lou", type_of: "applique", description: "Création de l'atelier Plinguet pour une commande client. Lot de deux appliques en bois effet métal, avec vitre en Plexiglas, et ampoule Led à filament vintage.", material: "bois")
-
-accessory4.photos.attach(io: URI.open( louacc), filename: "lou-1-applique.png", content_type: "image/png")
+#Lou-lampe
+accessory4.photos.attach(io: URI.open(louacc), filename: "lou-1-applique.png", content_type: "image/png")
 accessory4.save
 puts "lou : ok"
+
+puts "Seed des accessories photos.attach : OK!"
+
+# Photos des réalisations
+puts "Starting seed des realisations photos.attach"
+
+realisation1.photos.attach(io: URI.open(friedland1), filename: "friedland-decoration-1")
+realisation1.photos.attach(io: URI.open(friedland2), filename: "friedland-decoration-2")
+realisation1.photos.attach(io: URI.open(friedland3), filename: "friedland-decoration-3")
+realisation1.photos.attach(io: URI.open(friedland4), filename: "friedland-decoration-4")
+realisation1.photos.attach(io: URI.open(friedland5), filename: "friedland-decoration-5")
+
+puts "Seed des realisations photos.attach: OK!"
 
 puts "Fin des seeds : everything is updated !"
