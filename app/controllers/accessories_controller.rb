@@ -31,6 +31,6 @@ class AccessoriesController < ApplicationController
   private
 
   def accesory_params
-    params.require(:furniture).permit(:name, :description, :material, :type_of)
+    params.require(:furniture).permit(:name, :description, :material, :type_of, :manufacture_date)
   end
 end

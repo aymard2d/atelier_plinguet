@@ -1,0 +1,2 @@
+class Realisation < ApplicationRecord
+end

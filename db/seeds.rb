@@ -15,7 +15,7 @@ Furniture.destroy_all
 puts "Destroy des meubles : OK !"
 Accessory.destroy_all
 puts "Destroy des fabrications : OK !"
-
+date = Date.today
 # SEED DES MEUBLES
 
 puts "Starting seed des meubles"

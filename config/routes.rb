@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'realisations/new'
+  get 'realisations/index'
+  get 'realisations/show'
+  get 'realisations/create'
+  get 'realisations/update'
+  get 'realisations/edit'
+  get 'realisations/delete'
 
   devise_for :users
   root to: "pages#home"
