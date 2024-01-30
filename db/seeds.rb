@@ -15,8 +15,11 @@ Furniture.destroy_all
 puts "Destroy des meubles : OK !"
 Accessory.destroy_all
 puts "Destroy des fabrications : OK !"
+Realisation.destroy_all
+puts "Destroy des réalisations : OK !"
 date = Date.today
-# SEED DES MEUBLES
+
+# ---------- SEED DES MEUBLES -----------
 
 puts "Starting seed des meubles"
 
@@ -178,13 +181,15 @@ Design épuré, cette pièce unique a trouvé refuge dans une belle maison Arcac
 
 puts "Seed des meubles : OK !"
 
+# -------- Seed des accessories -------------- 
+
 puts "Starting seed des accessoires"
 
 accessory1 = Accessory.create!(name: "Nicole", material: "bois", type_of: "lampadaire", description: "Nouvelle création de l'atelier. Pour une cliente bordelaise, nous avons dessiné et fabriqué 2 lampadaires en bois. Pour obtenir ce résultat, il a fallu réaliser un assemblage de 10 planches de contreplaqués collées entre elles en y incorporant 2 ouvertures qui apportent une touche de légèreté. Il y a eu pas mal de travail de ponçage pour arriver à un rendu aussi lisse et harmonieux.")
 
-accessory2 = Accessory.create!(name: "helene", type_of: "porte-serviette", material: "cuivre et bois", description: "Cette semaine à l'atelier, nous avons créé un porte serviette à la demande d'une cliente. Les couleurs du cuivre et du bois s'harmonisent parfaitement avec le sol en travertin de la salle de bain de notre cliente. Si cette pièce vous plait, n'hésitez pas à nous envoyer un DM pour plus d'informations, l'atelier peut la reproduire sur demande et sa taille est ajustable.")
+accessory2 = Accessory.create!(name: "Hélène", type_of: "porte-serviette", material: "cuivre et bois", description: "Cette semaine à l'atelier, nous avons créé un porte serviette à la demande d'une cliente. Les couleurs du cuivre et du bois s'harmonisent parfaitement avec le sol en travertin de la salle de bain de notre cliente. Si cette pièce vous plait, n'hésitez pas à nous envoyer un DM pour plus d'informations, l'atelier peut la reproduire sur demande et sa taille est ajustable.")
 
-accessory3 = Accessory.create!(name: "mona", material: "bois", type_of: "lampe", description: "Création de atelier plinguet pour une commande client.Une structure réalisée en assemblage de bois avec découpes et courbes travaillées. Recouverte un enduit de lissage et peint selon les désirs du client.")
+accessory3 = Accessory.create!(name: "Mona", material: "bois", type_of: "lampe", description: "Création de atelier plinguet pour une commande client.Une structure réalisée en assemblage de bois avec découpes et courbes travaillées. Recouverte un enduit de lissage et peint selon les désirs du client.")
 
 accessory4 = Accessory.create!(name: "Lou", type_of: "applique", description: "Création de l'atelier Plinguet pour une commande client. Lot de deux appliques en bois effet métal, avec vitre en Plexiglas, et ampoule Led à filament vintage.", material: "bois")
 
@@ -192,12 +197,15 @@ accessory5 = Accessory.create!(name: "Augusta", type_of: "chaise", description: 
 
 puts "Seed des accessoires : OK !"
 
+# ----------- Seed des réalisations -----------
+
 puts "Starting seed des réalisations"
 
-# realisation1 = Realisation.create!(name: "Le Friedland", type_of_realisation: "Décoration murale", date_of_realisation: date,description: "Depuis 3 semaines, l'atelier Plinguet s'est lancé dans un nouveau projet, la modernisation d'éléments d'un bistrot Parisien. Au programme la restauration de 26 tables de bistrot! À la base teintées en bois noir, il a fallu de nombreuses heures de décapage et ponçage pour retrouver la belle teinte initiale et les veines du bois. Le tout a été vernis avec une finition spéciale bistrot pour résister aux nombreux clients qui utiliseront ces tables. L'atelier a également restauré un vieux meuble de service dans des teintes de bois doré et la superbe couleur #inchyra de chez Farrow&ball. Enfin, nous avons procédé à la création d'un élément de déco murale alliant coffrage en bois peint dans cette même teinte Inchyra, flocage en contreplaqué réalisé à la découpe laser et ampoules design pour un rendu vraiment sympa!")
+realisation1 = Realisation.create!(name: "Le Friedland", localisation: "Paris", type_of_realisation: "Décoration murale", date_of_realisation: date, description: "Depuis 3 semaines, l'atelier Plinguet s'est lancé dans un nouveau projet, la modernisation d'éléments d'un bistrot Parisien. Au programme la restauration de 26 tables de bistrot! À la base teintées en bois noir, il a fallu de nombreuses heures de décapage et ponçage pour retrouver la belle teinte initiale et les veines du bois. Le tout a été vernis avec une finition spéciale bistrot pour résister aux nombreux clients qui utiliseront ces tables. L'atelier a également restauré un vieux meuble de service dans des teintes de bois doré et la superbe couleur #inchyra de chez Farrow&ball. Enfin, nous avons procédé à la création d'un élément de déco murale alliant coffrage en bois peint dans cette même teinte Inchyra, flocage en contreplaqué réalisé à la découpe laser et ampoules design pour un rendu vraiment sympa!")
 
 puts "Seed des réalisations : OK !"
 
+# ------------ URL des meubles -------------
 
 puts "Starting seed des url furnitures"
 
@@ -309,7 +317,6 @@ philippa-semainier2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v170559
 philippa-semainier3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622664/atelier-plinguet/philippa-3-semainier_gvoemk.png'
 philippa-semainier4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622664/atelier-plinguet/philippa-4-semainier_enip8c.png'
 
-
 clemence1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595712/atelier-plinguet/clemence-1-secretaire_deykxk.png'
 clemence2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595718/atelier-plinguet/clemence-2-secretaire_ojb8vb.png'
 clemence3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622664/atelier-plinguet/clemence-3-secretaire_n5fyow.png'
@@ -367,9 +374,9 @@ louise4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622668/atelier
 =end
 puts "Seed des url furnitures : OK !"
 
-# Url accessories
+# --------- Url accessories ------------
 
-puts "Starting seed url accessories"
+puts "Starting seed des url accessories"
 
 nicole1 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-3-lampadaire_ugyxor.png"
 nicole2 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-2-lampadaire_ipu1wm.png"
@@ -383,9 +390,13 @@ mona2 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595727/atelier-p
 
 louacc = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595722/atelier-plinguet/lou-1-applique_ae5qdr.png"
 
+augusta1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424410/atelier-plinguet/chaise-1-cuivre_miib6p.jpg'
+augusta2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424403/atelier-plinguet/chaise-2-cuivre_m338wp.jpg'
+
 puts "Seed des url accessories : OK !"
 
-# Url des réalisations
+# --------- Url des réalisations ----------
+
 puts "Starting seed des urls réalisations"
 
 friedland1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424433/atelier-plinguet/Lefriendland-1-bar_bvbydt.jpg'
@@ -398,7 +409,8 @@ puts "Seed des url réalisations : OK !"
 
 puts "Seed de toutes les url : OK !"
 
-#Photos attach des meubles
+# -------- Photos des meubles ------------
+
 puts "Starting seed des furnitures photos.attach"
 
 #Thalia
@@ -680,7 +692,7 @@ puts "eliza : ok"
 
 puts "seed des furnitures photos.attach : OK !"
 
-#SEED des photos des accessoires
+# ------------ Photos des accessoires ---------------
 
 puts "start des accessories photos.attach"
 
@@ -709,9 +721,12 @@ accessory4.photos.attach(io: URI.open(louacc), filename: "lou-1-applique.png", c
 accessory4.save
 puts "lou : ok"
 
+accessory5.photos.attach(io: URI.open(augusta1), filename: "augusta-1-chaise", content_type: "image/jpg")
+accessory5.photos.attach(io: URI.open(augusta2), filename: "augusta-2-chaise", content_type: "image/jpg")
+
 puts "Seed des accessories photos.attach : OK!"
 
-# Photos des réalisations
+# ------------ Photos des réalisations ------------------
 puts "Starting seed des realisations photos.attach"
 
 realisation1.photos.attach(io: URI.open(friedland1), filename: "friedland-decoration-1")

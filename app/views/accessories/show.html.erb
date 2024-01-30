@@ -1,27 +1,68 @@
-<div class="container">
-  <div>
-    <div class="content">
-      <h2><%= @accessory.name %></h2>
-      <span><%= @accessory.type_of %></span>
-    </div>
-  </div>
-  <div>
-    <div class="content">
-      <h2><%= @accessory.name %></h2>
-      <span><%= @accessory.type_of %></span>
-    </div>
-  </div>
-  <div>
-    <div class="content">
-      <h2><%= @accessory.name %></h2>
-      <span><%= @accessory.type_of %></span>
+<!-- app/views/furnitures/show.html.erb -->  
+<% content_for :meta_title, "#{@accessory.type_of} is on #{DEFAULT_META["meta_product_name"]}" %>  
+<% content_for :meta_description, @accessory.description %>  
+<%# content_for :meta_image, cl_image_path(@accessory.photo.path) %>
 
-    </div>
+<%# @accessory.photos.each do |photo| %>
+  <%#= cl_image_tag photo.key, height: 500, width: 1200, class: "object-fit-cover" %>
+<%# end %>
+  <%#= @accessory.type_of_accessory %>
+  <%#= @accessory.name %>
+  <%#= @accessory.material %>
+  <%#= @accessory.color %>
+<div class="main-container">
+  <div class="galery-container">
+    <% @accessory.photos.each do |photo| %>
+      <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
+        <div class="content">
+          <h2><%= @accessory.name %></h2>
+          <span><%= @accessory.type_of %></span>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <div>
-    <div class="content">
-      <h2><%= @accessory.name %></h2>
-      <span><%= @accessory.type_of %></span>
+
+  <div class="furniture-container">
+    <div class="furniture-details">
+      <div class="furniture-card">
+        <ul>
+          <li>Type de meuble : <%= @accessory.type_of %></li>
+          <li>Matériau(x) : <%= @accessory.material %></li>
+          <li>Date de création : <%= @accessory.manufacture_date %></li>
+        </ul>
+        <p class="card-footer">Created by <em>Atelier Plinguet</em></p>
+      </div>
+    </div>  
+      <%# <div class="accessory-desc"> %>
+        <div class="nft">
+          <div class='main'>
+            <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+            <h2>Kibertopiks #4269</h2>
+            <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+            <div class='tokenInfo'>
+              <div class="price">
+                <ins>◘</ins>
+                <p>0.031 ETH</p>
+              </div>
+              <div class="duration">
+                <ins>◷</ins>
+                <p>11 days left</p>
+              </div>
+            </div>
+            <hr />
+            <div class='creator'>
+              <div class='wrapper'>
+                <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+              </div>
+              <p><ins>Creation of</ins> Kiberbash</p>
+            </div>
+          </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+
+
+
