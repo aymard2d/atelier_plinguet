@@ -26,18 +26,33 @@
 <div class="home-last-creations">
 	<% @last_creations.each do |furniture| %>
     <%= link_to furniture_path(furniture) do %>
-      <img src="<%= furniture.photos.first.url %>" alt="<%= furniture.name %>">
+        <figure>
+          <% furniture.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= furniture.name %></figcaption>
+
+        </figure>
+      <% end %>
     <% end %>
-  <% end %>
+
 </div>
 
 <h2 style="color:black">Nos dernières réalisations</h2>
 <div class="home-last-creations">
 	<% @last_realisations.each do |accessory| %>
-    <%= link_to accessory_path(accessory) do %>
-      <img src="<%= accessory.photos.first.url %>" alt="<%= accessory.name %>">
+      <%= link_to accessory_path(accessory) do %>
+        <figure>
+          <% accessory.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= accessory.name %></figcaption>
+
+        </figure>
+      <% end %>
     <% end %>
-  <% end %>
 </div>
 
 
