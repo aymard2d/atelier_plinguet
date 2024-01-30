@@ -24,9 +24,35 @@
 
 <h2 style="color:black">Nos dernières créations</h2>
 <div class="home-last-creations">
-	<img src="https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424401/atelier-plinguet/esther1-commode_g5bnkh.jpg", alt="meuble upcyclé">
-	<img src="https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424424/atelier-plinguet/prune-1-bureau_wn4b0j.jpg", alt="meuble upcyclé">
-	<img src="https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424400/atelier-plinguet/saj1-buffet_puzsmf.jpg", alt="meuble upcyclé">
+	<% @last_creations.each do |furniture| %>
+    <%= link_to furniture_path(furniture) do %>
+        <figure>
+          <% furniture.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= furniture.name %></figcaption>
+
+        </figure>
+      <% end %>
+    <% end %>
+
+</div>
+
+<h2 style="color:black">Nos dernières réalisations</h2>
+<div class="home-last-creations">
+	<% @last_realisations.each do |accessory| %>
+      <%= link_to accessory_path(accessory) do %>
+        <figure>
+          <% accessory.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= accessory.name %></figcaption>
+
+        </figure>
+      <% end %>
+    <% end %>
 </div>
 
 
