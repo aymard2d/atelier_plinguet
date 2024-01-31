@@ -25,6 +25,15 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :accessories
+  resources :accessories do 
+    collection do
+      get "show_by_type/:type", to: 'accessories#show_by_type', as: "show_by_type"
+    end
+  end
 
+  resources :realisations do
+    collection do
+      get "show_by_type/:type", to: "realisations#show_by_type", as: "show_by_type"
+    end
+  end
 end

@@ -345,7 +345,6 @@ suzanne1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595699/atelie
 suzanne2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595703/atelier-plinguet/suzanne-2-bar_td4put.png'
 suzanne3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595705/atelier-plinguet/suzanne-3-bar_dsqa5q.png'
 
-nicole4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622658/atelier-plinguet/nicole-4-lampadaire_n2v5za.png'
 nicole1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-3-lampadaire_ugyxor.png'
 nicole2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-2-lampadaire_ipu1wm.png'
 nicole3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595727/atelier-plinguet/mona-lampe-2_ohq69s.png'
@@ -381,6 +380,7 @@ puts "Starting seed des url accessories"
 nicole1 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-3-lampadaire_ugyxor.png"
 nicole2 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595697/atelier-plinguet/nicole-2-lampadaire_ipu1wm.png"
 nicole3 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595728/atelier-plinguet/nicole-1-lampadaire_ack2fa.png"
+nicole4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622658/atelier-plinguet/nicole-4-lampadaire_n2v5za.png'
 
 helene1 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595723/atelier-plinguet/helene-2-porte-serviette_zp5sws.png"
 helene2 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595723/atelier-plinguet/helene-1-porte-serviette_oonfwt.png"
@@ -694,7 +694,7 @@ puts "seed des furnitures photos.attach : OK !"
 
 # ------------ Photos des accessoires ---------------
 
-puts "start des accessories photos.attach"
+puts "Start des accessories photos.attach"
 
 #Nicole
 accessory1.photos.attach(io: URI.open(nicole1), filename: "nicole-1-lampadaire.png", content_type: "image/png")
@@ -729,11 +729,11 @@ puts "Seed des accessories photos.attach : OK!"
 # ------------ Photos des réalisations ------------------
 puts "Starting seed des realisations photos.attach"
 
-realisation1.photos.attach(io: URI.open(friedland1), filename: "friedland-decoration-1")
-realisation1.photos.attach(io: URI.open(friedland2), filename: "friedland-decoration-2")
-realisation1.photos.attach(io: URI.open(friedland3), filename: "friedland-decoration-3")
-realisation1.photos.attach(io: URI.open(friedland4), filename: "friedland-decoration-4")
-realisation1.photos.attach(io: URI.open(friedland5), filename: "friedland-decoration-5")
+realisation1.photos.attach(io: URI.open(friedland1), filename: "friedland-decoration-1", content_type: "image/jpg")
+realisation1.photos.attach(io: URI.open(friedland2), filename: "friedland-decoration-2", content_type: "image/jpg")
+realisation1.photos.attach(io: URI.open(friedland3), filename: "friedland-decoration-3", content_type: "image/jpg")
+realisation1.photos.attach(io: URI.open(friedland4), filename: "friedland-decoration-4", content_type: "image/jpg")
+realisation1.photos.attach(io: URI.open(friedland5), filename: "friedland-decoration-5", content_type: "image/jpg")
 
 puts "Seed des realisations photos.attach: OK!"
 
