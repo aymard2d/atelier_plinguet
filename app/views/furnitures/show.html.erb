@@ -28,10 +28,22 @@
         <ul>
           <li>Type de meuble : <%= @furniture.type_of_furniture %></li>
           <li>Matériau(x) : <%= @furniture.material %></li>
-          <li>Couleurs : <%= @furniture.color %> de chez : logo de la marque</li>
-          <li>Date de création : <%= @furniture.date_of_manufacture %></li>
-          <li>Teinte du meuble :<%=  %></li>
-          <li>Vernis :<%=  %></li>
+          <li>Couleurs : <%= @furniture.color %> 
+            <% if @furniture.paint_brand.present? %>
+              de chez : <%= @furniture.paint_brand %></li>
+            <% end %>
+          <% if @furniture.teint.present? %>
+            <li>Teinte du meuble : <%= @furniture.teint %></li>
+          <% end %>
+          <% if @furniture.varnish.present? %></li>
+            <li>Vernis : <%= @furniture.varnish %></li>
+          <% end %>
+          <% if @furniture.created_at.present? %>
+            <li> Date de création : <%= @furniture.created_at.strftime("%Y-%m-%d") %></li>
+          <% else %>
+            <li> Date du cration : <%= Time.now.strftime("%Y-%m-%d") %></li>
+          <% end %>
+
         </ul>
         <p class="card-footer">Created by <em>Atelier Plinguet</em></p>
       </div>

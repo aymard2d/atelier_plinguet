@@ -1,2 +1,28 @@
-<h1>Realisations#index</h1>
-<p>Find me in app/views/realisations/index.html.erb</p>
+<div class="index-body">
+
+  <div class="category-search">
+    Rechercher par type de meuble : 
+  <% @realisation_types.each do |type| %>
+      <%= link_to type, show_by_type_realisations_path(type) %>
+
+  <% end %>
+
+  </div>
+
+  <div class="galerie">
+    <% @realisations.each do |realisation| %>
+      <%= link_to realisation_path(realisation) do %>
+        <figure>
+          <% realisation.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= realisation.name %></figcaption>
+
+        </figure>
+      <% end %>
+    <% end %>
+
+  </div>
+</div>
+
