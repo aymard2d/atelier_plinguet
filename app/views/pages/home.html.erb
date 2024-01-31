@@ -10,7 +10,7 @@
 	</div>
 	<div class="vl"></div>
 	<div class="atelier">
-	<h2>L'Atelier</h2>
+	<h2>Nos rénovations</h2>
 	<p>Spécialiste de la rénovation de meubles, je redonne vie à tous types de pièces, qu'ils soient vintages, démodés ou abîmés. Transformez votre mobilier avec expertise et élégance.Spécialiste de la rénovation de meubles, je redonne vie à tous types de pièces, qu'ils soient vintages, démodés ou abîmés. Transformez votre mobilier avec expertise et élégance.</p>
 	</div>
 	<div class="vl"></div>
@@ -22,9 +22,9 @@
 
 <hr id="home-line">
 
-<h2 style="color:black">Nos dernières créations</h2>
+<h2 style="color:black">Nos dernières rénovations</h2>
 <div class="home-last-creations">
-	<% @last_creations.each do |furniture| %>
+	<% @last_furnitures.each do |furniture| %>
     <%= link_to furniture_path(furniture) do %>
         <figure>
           <% furniture.photos.each do |photo| %>
@@ -39,9 +39,9 @@
 
 </div>
 
-<h2 style="color:black">Nos dernières réalisations</h2>
+<h2 style="color:black">Nos dernières créations</h2>
 <div class="home-last-creations">
-	<% @last_realisations.each do |accessory| %>
+	<% @last_accessories.each do |accessory| %>
       <%= link_to accessory_path(accessory) do %>
         <figure>
           <% accessory.photos.each do |photo| %>
@@ -49,6 +49,22 @@
             <% break %>
           <% end %> 
           <figcaption><%= accessory.name %></figcaption>
+
+        </figure>
+      <% end %>
+    <% end %>
+</div>
+
+<h2 style="color:black">Nos dernières réalisations</h2>
+<div class="home-last-creations">
+	<% @last_realisations.each do |realisation| %>
+      <%= link_to realisation_path(realisation) do %>
+        <figure>
+          <% realisation.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= realisation.name %></figcaption>
 
         </figure>
       <% end %>

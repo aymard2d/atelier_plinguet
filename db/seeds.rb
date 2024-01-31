@@ -17,7 +17,6 @@ Accessory.destroy_all
 puts "Destroy des fabrications : OK !"
 Realisation.destroy_all
 puts "Destroy des réalisations : OK !"
-date = Date.today
 
 # ---------- SEED DES MEUBLES -----------
 
@@ -210,6 +209,7 @@ puts "Seed des réalisations : OK !"
 puts "Starting seed des url furnitures"
 
 thalia1 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424414/atelier-plinguet/thalia-1-bibli_zx58iy.jpg"
+thalia_before = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716693/atelier-plinguet/thalia-2-bibliotheque_lmrumn.png'
 
 luna1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-plinguet/luna-1-vaisselier_ekymps.jpeg'
 luna2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424425/atelier-plinguet/luna-2-vaisselier_i99qpo.jpeg'
@@ -241,12 +241,15 @@ esther1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424401/atelier
 esther2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424408/atelier-plinguet/esther2-commode_k9369t.jpg'
 esther3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424401/atelier-plinguet/esther-3-commode_b04lb2.jpg'
 esther4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424404/atelier-plinguet/esther-4-commode_isize0.jpg'
+esther5 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716693/atelier-plinguet/esther-2-commode_g0mpo4.png'
 
 rita1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424398/atelier-plinguet/rita-1-meuble_qnpbpp.jpg'
 rita2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424392/atelier-plinguet/rita-2-meuble_uc2pcn.jpg'
 rita3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424391/atelier-plinguet/rita-3-meuble_g5oywy.jpg'
 
 christina1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424409/atelier-plinguet/christina-1-buffet_sx8ffl.jpg'
+christina2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716693/atelier-plinguet/sofia-3-confiturier_nuxuku.png'
+christina_before = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716693/atelier-plinguet/christina-3-buffet_cgls7z.png'
 
 simone1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424390/atelier-plinguet/simone-1-commode_j39j8i.jpg'
 simone2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424393/atelier-plinguet/simone-2-commode_t16s1w.jpg'
@@ -291,11 +294,20 @@ louison3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424391/atelie
 
 sofia1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424414/atelier-plinguet/sofia-1-confiturier.jpg'
 sofia2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424421/atelier-plinguet/sofia-2-confiturier.jpg'
+sofia3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716693/atelier-plinguet/sofia-3-confiturier_nuxuku.png'
+sofia4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716691/atelier-plinguet/sofia-4-confiturier_ggqccf.png'
 
 chloe1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424403/atelier-plinguet/chloe-1-enfilade_uayvn3.jpg'
+chloe2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716688/atelier-plinguet/chloe-4-enfilade_iejtkj.png'
+chloe3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716688/atelier-plinguet/chloe-3-enfilade_yfde8n.png'
+chloe4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716688/atelier-plinguet/chloe-2-enfilade_zo3kmq.png'
+chloe5 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716688/atelier-plinguet/chloe-5-enfilade_p790ar.png'
 
 eva1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424417/atelier-plinguet/eva-1-commode_hlg7wo.jpg'
 eva2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424417/atelier-plinguet/eva-2-commode_g50tc4.jpg'
+eva3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716688/atelier-plinguet/eva-3-commode_xpr53d.png'
+eva4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716688/atelier-plinguet/eva-4-commode_en0xtt.png'
+eva-before = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716687/atelier-plinguet/eva-before-1-commode_v8zye9.png'
 
 rose1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595698/atelier-plinguet/rose-1-armoire_om4ogs.png'
 rose2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595698/atelier-plinguet/rose-2-armoire_epya1k.png'
@@ -354,6 +366,8 @@ eliza2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424427/atelier-
 eliza3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595716/atelier-plinguet/eliza-3-console_pvne5a.png'
 
 louisa1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424417/atelier-plinguet/louisa-1-commode_bpxvld.jpg'
+louisa2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716687/atelier-plinguet/louisa-2-commode_bkmaw9.png'
+louisa3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716687/atelier-plinguet/louisa-3-commode_wu1tdu.png'
 
 prune1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424424/atelier-plinguet/prune-1-bureau_wn4b0j.jpg'
 prune2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622659/atelier-plinguet/prune-2-bureau_vkrwo4.png'
@@ -407,6 +421,15 @@ friedland5 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622660/atel
 
 puts "Seed des url réalisations : OK !"
 
+puts "Starting seed des url inspi"
+
+inspi_window = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716692/atelier-plinguet/inspi-9-canage_mfmxkj.png'
+inspi_panthere = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716692/atelier-plinguet/inspi-8-panthere_rguikf.png'
+inspi_redpaint = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716692/atelier-plinguet/inspi-10-peinture_uusmlg.png'
+inspi_wood_1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716692/atelier-plinguet/inspi-10-peinture_uusmlg.png'
+
+puts "Seed des url inspi : OK !"
+
 puts "Seed de toutes les url : OK !"
 
 # -------- Photos des meubles ------------
@@ -415,6 +438,7 @@ puts "Starting seed des furnitures photos.attach"
 
 #Thalia
 furniture1.photos.attach(io: URI.open(thalia1), filename: 'thalia-1-bibliotheque', content_type: "image/jpg" )
+furniture1.photos.attach(io: URI.open(thalia_before), filename: 'thalia-2-bibliotheque', content_type: "image/jpg" )
 furniture1.save
 puts "thalia : ok"
 
@@ -468,6 +492,7 @@ furniture8.photos.attach(io: URI.open(esther1 ), filename: 'esther-1-commode.jpe
 furniture8.photos.attach(io: URI.open(esther2), filename: 'esther-2-commode.jpg', content_type: "image/jpg )
 furniture8.photos.attach(io: URI.open(esther3), filename: 'esther-3-commode.jpg', content_type: "image/jpg )
 furniture8.photos.attach(io: URI.open(esther4), filename: 'esther-4-commode.jpg', content_type: "image/jpg )
+furniture8.photos.attach(io: URI.open(esther5), filename: 'esther-5-commode.jpg', content_type: "image/jpg )
 furniture8.save
 puts "esther : ok"
 
@@ -480,6 +505,8 @@ puts "rita : ok"
 
 #Christina
 furniture10.photos.attach(io: URI.open(christina1), filename: 'christina-1-buffet.jpg', content_type: "image/jpg )
+furniture10.photos.attach(io: URI.open(christina2), filename: 'christina-2-buffet.jpg', content_type: "image/jpg )
+furniture10.photos.attach(io: URI.open(christina_before), filename: 'christina-1-before-buffet.jpg', content_type: "image/jpg )
 furniture10.save
 puts "christina : ok"
 
@@ -556,17 +583,26 @@ puts "louison : ok"
 #Sofia
 furniture21.photos.attach(io: URI.open(sofia1), filename: 'sofia-1-confiturier.jpg', content_type: "image/jpg )
 furniture21.photos.attach(io: URI.open(sofia2), filename: 'sofia-2-confiturier.jpg', content_type: "image/jpg )
+furniture21.photos.attach(io: URI.open(sofia3), filename: 'sofia-3-confiturier.jpg', content_type: "image/jpg )
+furniture21.photos.attach(io: URI.open(sofia4), filename: 'sofia-4-confiturier.jpg', content_type: "image/jpg )
 furniture21.save
 puts "sofia : ok"
 
 #Chloe
 furniture22.photos.attach(io: URI.open(chloe1), filename: 'chloe-1-enfilade.jpg', content_type: "image/jpg )
+furniture22.photos.attach(io: URI.open(chloe2), filename: 'chloe-2-enfilade.jpg', content_type: "image/jpg )
+furniture22.photos.attach(io: URI.open(chloe3), filename: 'chloe-3-enfilade.jpg', content_type: "image/jpg )
+furniture22.photos.attach(io: URI.open(chloe4), filename: 'chloe-4-enfilade.jpg', content_type: "image/jpg )
+furniture22.photos.attach(io: URI.open(chloe5), filename: 'chloe-5-enfilade.jpg', content_type: "image/jpg )
 furniture22.save
 puts "chloe : ok"
 
 #Eva
 furniture23.photos.attach(io: URI.open(eva1), filename: 'eva-1-buffet.jpg', content_type: "image/jpg )
 furniture23.photos.attach(io: URI.open(eva2), filename: 'eva-2-buffet.jpg', content_type: "image/jpg )
+furniture23.photos.attach(io: URI.open(eva3), filename: 'eva-3-buffet.jpg', content_type: "image/jpg )
+furniture23.photos.attach(io: URI.open(eva4), filename: 'eva-4-buffet.jpg', content_type: "image/jpg )
+furniture23.photos.attach(io: URI.open(eva-before), filename: 'eva-1-before-buffet.jpg', content_type: "image/jpg )
 furniture23.save
 puts "eva : ok"
 
@@ -579,6 +615,8 @@ puts "rose : ok"
 
 #Louisa
 furniture25.photos.attach(io: URI.open(louisa1), filename: 'louisa-1-commode.jpeg', content_type: "image/jpg )
+furniture25.photos.attach(io: URI.open(louisa2), filename: 'louisa-2-commode.jpeg', content_type: "image/jpg )
+furniture25.photos.attach(io: URI.open(louisa3), filename: 'louisa-3-commode.jpeg', content_type: "image/jpg )
 furniture25.save
 puts "louisa : ok"
 

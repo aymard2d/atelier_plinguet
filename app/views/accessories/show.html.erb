@@ -28,7 +28,11 @@
         <ul>
           <li>Type de meuble : <%= @accessory.type_of %></li>
           <li>Matériau(x) : <%= @accessory.material %></li>
-          <li>Date de création : <%= @accessory.manufacture_date %></li>
+          <% if @accessory.created_at.present? %>
+            <li> Date de création : <%= @accessory.created_at.strftime("%d-%m-%Y") %></li>
+          <% else %>
+            <li> Date de création : <%= Time.now.strftime("%d-%m-%Y") %></li>
+          <% end %>
         </ul>
         <p class="card-footer">Created by <em>Atelier Plinguet</em></p>
       </div>

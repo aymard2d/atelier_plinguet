@@ -39,9 +39,9 @@
             <li>Vernis : <%= @furniture.varnish %></li>
           <% end %>
           <% if @furniture.created_at.present? %>
-            <li> Date de création : <%= @furniture.created_at.strftime("%Y-%m-%d") %></li>
+            <li> Date de réalisation : <%= @furniture.created_at.strftime("%d-%m-%Y") %></li>
           <% else %>
-            <li> Date du cration : <%= Time.now.strftime("%Y-%m-%d") %></li>
+            <li> Date de réalisation : <%= Time.now.strftime("%d-%m-%Y") %></li>
           <% end %>
 
         </ul>
