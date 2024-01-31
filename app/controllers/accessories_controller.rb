@@ -2,6 +2,7 @@ class AccessoriesController < ApplicationController
   
   def index
     @accessories = Accessory.all
+    @accessory_types = Accessory.pluck(:type_of).uniq
   end
   
   def show
