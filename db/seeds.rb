@@ -206,6 +206,7 @@ puts "Seed des réalisations : OK !"
 
 # ------------ URL des meubles -------------
 
+lilas = 'https://www.campingsgrandsud.fr/wp-content/uploads/2019/04/foret-des-landes.jpg'
 puts "Starting seed des url furnitures"
 
 thalia1 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424414/atelier-plinguet/thalia-1-bibli_zx58iy.jpg"
