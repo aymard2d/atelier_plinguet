@@ -27,8 +27,8 @@
       <div class="furniture-card">
         <ul>
           <li>Type de réalisation : <%= @realisation.type_of_realisation %></li>
-          <% if @furniture.created_at.present? %>
-            <li> Date de réalisation : <%= @furniture.created_at.strftime("%d-%m-%Y") %></li>
+          <% if @realisation.created_at.present? %>
+            <li> Date de réalisation : <%= @realisation.created_at.strftime("%d-%m-%Y") %></li>
           <% else %>
             <li> Date de réalisation : <%= Time.now.strftime("%d-%m-%Y") %></li>
           <% end %>
