@@ -1,0 +1,10 @@
+<h1>Liste des <%= @accessory_type %>s</h1>
+<ul>
+  <% @accessories.each do |accessory| %>
+    <li><%= accessory.name %></li>
+    <% accessory.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+      <% break %>
+    <% end %>
+  <% end %>
+</ul>

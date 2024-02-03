@@ -1,5 +1,11 @@
 <div class="index-body">
 
+  <div class="category-search">
+    <% @accessory_types.each do |type| %>
+        <%= link_to type, show_by_type_accessories_path(type) %>
+    <% end %>
+  </div>
+
   <div class="galerie">
     <% @accessories.each do |accessory| %>
       <%= link_to accessory_path(accessory) do %>
@@ -9,10 +15,7 @@
             <% break %>
           <% end %> 
           <figcaption><%= accessory.name %></figcaption>
-
         </figure>
       <% end %>
     <% end %>
-
-  </div>
 </div>

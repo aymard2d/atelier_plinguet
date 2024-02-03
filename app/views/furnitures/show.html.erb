@@ -26,9 +26,9 @@
     <div class="furniture-details">
       <div class="furniture-card">
         <ul>
-          <li>Type de meuble : <%= @furniture.type_of_furniture %></li>
+          <li><i class="fa-solid fa-screwdriver-wrench"></i> Type de meuble : <%= @furniture.type_of_furniture %></li>
           <li>Matériau(x) : <%= @furniture.material %></li>
-          <li>Couleurs : <%= @furniture.color %> 
+          <li><i class="fa-solid fa-palette"></i> Couleurs : <%= @furniture.color %> 
             <% if @furniture.paint_brand.present? %>
               de chez : <%= @furniture.paint_brand %></li>
             <% end %>
@@ -36,12 +36,12 @@
             <li>Teinte du meuble : <%= @furniture.teint %></li>
           <% end %>
           <% if @furniture.varnish.present? %></li>
-            <li>Vernis : <%= @furniture.varnish %></li>
+            <li><i class="fa-solid fa-paintbrush"></i> Vernis : <%= @furniture.varnish %></li>
           <% end %>
           <% if @furniture.created_at.present? %>
-            <li> Date de création : <%= @furniture.created_at.strftime("%Y-%m-%d") %></li>
+            <li> <i class="fa-regular fa-calendar"></i> Date de réalisation : <%= @furniture.created_at.strftime("%d-%m-%Y") %></li>
           <% else %>
-            <li> Date du cration : <%= Time.now.strftime("%Y-%m-%d") %></li>
+            <li> <i class="fa-regular fa-calendar"></i> Date de réalisation : <%= Time.now.strftime("%d-%m-%Y") %></li>
           <% end %>
 
         </ul>

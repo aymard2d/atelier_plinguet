@@ -27,7 +27,11 @@
       <div class="furniture-card">
         <ul>
           <li>Type de réalisation : <%= @realisation.type_of_realisation %></li>
-          <li>Date de création : <%= @realisation.date_of_realisation %></li>
+          <% if @realisation.created_at.present? %>
+            <li> Date de réalisation : <%= @realisation.created_at.strftime("%d-%m-%Y") %></li>
+          <% else %>
+            <li> Date de réalisation : <%= Time.now.strftime("%d-%m-%Y") %></li>
+          <% end %>
           <li>Lieu : <%= @realisation.localisation %></li>
         </ul>
         <p class="card-footer">Created by <em>Atelier Plinguet</em></p>
