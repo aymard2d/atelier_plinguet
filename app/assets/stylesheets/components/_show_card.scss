@@ -5,8 +5,6 @@
   // background: url(https://res.cloudinary.com/dnqkzzqga/image/upload/v1706874593/atelier-plinguet/inspi-7-bois-2_jbsaqh.png) center / cover no-repeat fixed;
 }
 
-
-
 :root {
   font-size: 20px;
 }
@@ -15,10 +13,6 @@
 *:before,
 *:after {
   box-sizing: border-box;
-}
-
-p {
-  margin: 0;
 }
 
 p:not(:last-child) {
@@ -47,109 +41,119 @@ p:not(:last-child) {
   font-family: Cormorant-serif;
   font-size: larger;
   align-items: center;
+  hr {
+    width: 100%;
+    margin: 20px auto;
+    height: 3px;
+    border-radius: 10px;
+    background-color: $green-light;
+    opacity: 1;
+    color: $green-light
+  }
+  .fa-solid {
+    color:$light-wood;
+    display: flex;
+    justify-content: center;
+  }
 
+  .fa-regular {
+    color:$light-wood;
+    display: flex;
+    justify-content: center;
+  }
   .tokenImage{
-    border-radius: .5rem;
+    border-radius: 5px;
     max-width: 100%;
     height: 250px;
     object-fit: cover;
+    margin: auto;
+    display: flex;
   }
 
   .furniture-card {
     font-family: Cormorant;
   }
-  
-  .creator{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    ins{
-      color: $light-wood;
-      text-decoration: none;
-    }
-    .wrapper{
-      display: flex;
-      align-items: center;
-      border: 1px solid #ffffff22;
-      padding: .3rem;
-      margin: 0;
-      margin-right: .5rem;
-      border-radius: 100%;
-      box-shadow: inset 0 0 0 2px $green;
-      img{
-        border-radius: 100%;
-        border: 1px solid #ffffff22;
-        width: 2rem;
-        height: 2rem;
-        object-fit: cover;
-        margin: 0;
-      }
-    }
-  }
-}
-#bullet {
-  color: $light-wood;
+
 }
 
-.furniture-photo {
+.title-show {
   display: flex;
+  align-items: center;
+
+  h2 {
+    flex: 1; /* Makes the heading flexible to take remaining space */
+    text-align: center; /* Centers the text horizontally */
+    margin: 0;
+  }
+}
+
+#bullet {
+  // font-family: 'circular';
+  color: white;
+  font-family: 'Cormorant';
+  justify-content: flex-start;
+  display: flex;
+}
+
+
+.furniture-photo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   justify-content: space-between;
+  margin: 15px 10px;
 }
 
 .furniture-details-photo {
+}
 
+
+.furniture-details {
+  border-radius: 10px;
+  .vl {
+    color: $green;
+  }
+  li {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  align-items: center;
+  }
+  ul {
+    margin-top: 5px;
+  }
+  p {
+    color: $green;
+    justify-content: flex-start;
+    display: flex;
+    text-align: left;
+  }
+  hr {
+    width: 100%;
+    margin: 3px auto;
+    height: 1px;
+    border-radius: 10px;
+    background-color: $green;
+    opacity: 0.4;
+  }
 }
 
 .furniture-description {
+  //border: 1px $blue2 dotted;
+  border-radius: 10px;
+  margin: 10px 0px;
+  color: white;
+  // background: $blue2;
+  background: $green-light;
+  padding: 15px;
 
+  p{
+    text-align: left;
+  }
 }
 
-.furniture-details {
-  border: 1px solid black;
-}
+
 
 .card-footer {
   font-size: 0.65em;
-  color: #446;
+  color: $green-light;
 }
-
-
-.top-show {
-  grid-column: 1 / 4;
-  grid-row: 1 / 2;
-  height: 80px;
-  margin-top: 20px;
-  align-content: center;
-
-  .top-show-title {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-self: center;
-  }
-
-  #main-title {
-    grid-column: 1/2;
-    place-self: center start;
-    margin-bottom: 0px;
-    margin-left: 40px;
-  }
-
-  #ranking {
-    grid-column: 3/4;
-    align-self: center;
-    margin-bottom: 0px;
-    margin-right: 40px;
-    font-size: 35px;
-  }
-
-  .fa-ranking-star {
-    margin-right: 10px;
-  }
-}
-.top-show-carousel {
-  grid-column: 1 / 4 ;
-  grid-row: 2 / 3;
-  border-radius: 5px;
-  width: auto
-}
-

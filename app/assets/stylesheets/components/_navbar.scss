@@ -1,16 +1,17 @@
 #navbar{
   justify-content: space-between;
   /* border: 1px solid red; */
-
   align-items: center;
-  display: flex;
-  margin: 10px 50px 10px 50px;
+  display: grid;
+  margin: 10px 50px 20px 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  box-shadow: 2px 2px 6px 0px #486757;
 
   h1 {
     font-family: "renitta" ;
     font-size: xx-large;
     color: $light-wood;
-
+    align-items: center;
 
   }
   
@@ -43,5 +44,7 @@
 
 #menu {
   height: 100px;
+  display: flex;
+  justify-content: end;
 }
 

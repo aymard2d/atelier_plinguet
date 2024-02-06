@@ -1,8 +1,12 @@
 .category-search {
   font: bold 14px/1.4 monospace, arial, sans-serif;
-  background: $green;
-  padding-bottom: 10px;
+  background-image: linear-gradient(to bottom, #486757, #486757c7);
+  margin: 10px auto;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 55%;
+  border-radius: 5px;
+  padding: 4px;
 
   ul { 
     margin: 150px auto 0; 

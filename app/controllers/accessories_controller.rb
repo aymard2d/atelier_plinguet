@@ -9,6 +9,11 @@ class AccessoriesController < ApplicationController
     @accessory = Accessory.find(params[:id])
   end
 
+  def show_by_type
+    @accessory_type = params[:type]
+    @accessories = Accessory.where(type_of: @accessory_type)
+  end
+
   def new
     @accessory = Accessory.new
   end

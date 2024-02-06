@@ -3,13 +3,6 @@
 <% content_for :meta_description, @accessory.description %>  
 <%# content_for :meta_image, cl_image_path(@accessory.photo.path) %>
 
-<%# @accessory.photos.each do |photo| %>
-  <%#= cl_image_tag photo.key, height: 500, width: 1200, class: "object-fit-cover" %>
-<%# end %>
-  <%#= @accessory.type_of_accessory %>
-  <%#= @accessory.name %>
-  <%#= @accessory.material %>
-  <%#= @accessory.color %>
 <div class="main-container">
   <div class="galery-container">
     <% @accessory.photos.each do |photo| %>
@@ -24,7 +17,8 @@
 
   <div class="furniture-container">
     <div class="furniture-glass">
-      <h2><%= @accessory.name %></h2>
+      <h2>Caractéristiques de "<%= @accessory.name %>"</h2>
+      <hr>
       <div class="furniture-card">
         <div class="furniture-photo">
           <div class="furniture-details-photo">
@@ -35,30 +29,31 @@
               <p>Aucune image disponible</p>
             <% end %>
           </div>
+          <%# <div class="vl"></div> %>
           <div class="furniture-details">
-            <h5>Caractéristiques</h5>
             <ul>
-              <li><i class="fa-solid fa-screwdriver-wrench"></i> <span id="bullet">Type de meuble :</span> <%= @accessory.type_of %></li>
-              <li><i class="fa-regular fa-gem"></i> Matériau(x) : <%= @accessory.material %></li>
+              <li><i class="fa-solid fa-screwdriver-wrench"></i><span id="bullet">Type de meuble</span> <p> <%= @accessory.type_of %></p></li>
+              <!-- <hr> -->
+              <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériaux</span> | <p><%= @accessory.material %></p></li>
+              <!-- <hr> -->
               <% if @accessory.created_at.present? %>
-                <li> <i class="fa-regular fa-calendar"></i> Date de création : <%= @accessory.created_at.strftime("%d-%m-%Y") %></li>
+                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= @accessory.created_at.strftime("%d-%m-%Y") %></p></li>
               <% else %>
-                <li> <i class="fa-regular fa-calendar"></i> Date de création : <%= Time.now.strftime("%d-%m-%Y") %></li>
+                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
               <% end %>
             </ul>
           </div>
         </div>
         <div class="furniture-description">  
-          <h5>Description de <%= @accessory.name %></h5>
-          <i class="fa-solid fa-scroll"></i> <%= @accessory.description %>
+          <p><%= @accessory.description %></p>
         </div>
+        <hr>
       </div>
   
       <div class='creator'>
         <div class='wrapper'>
           <%= image_tag "logo-plinguet-01.png" %>
         </div>
-      <p>Création originale de l'<ins>Atelier Plinguet</ins></p>
       </div>
     </div>
   </div>         
