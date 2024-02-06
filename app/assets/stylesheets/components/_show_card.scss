@@ -46,8 +46,9 @@ p:not(:last-child) {
     margin: 20px auto;
     height: 3px;
     border-radius: 10px;
-    background-color: #6c7eac;
+    background-color: $green-light;
     opacity: 1;
+    color: $green-light
   }
   .fa-solid {
     color:$light-wood;
@@ -55,6 +56,11 @@ p:not(:last-child) {
     justify-content: center;
   }
 
+  .fa-regular {
+    color:$light-wood;
+    display: flex;
+    justify-content: center;
+  }
   .tokenImage{
     border-radius: 5px;
     max-width: 100%;
@@ -67,41 +73,24 @@ p:not(:last-child) {
   .furniture-card {
     font-family: Cormorant;
   }
-  
-  .creator{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    color: white;
-    ins{
-      color: $light-wood;
-      text-decoration: none;
-      font-family: renitta;
-    }
-    .wrapper{
-      display: flex;
-      align-items: center;
-      border: 1px solid #ffffff22;
-      padding: .3rem;
-      margin: 0;
-      margin-right: .5rem;
-      border-radius: 100%;
-      box-shadow: inset 0 0 0 2px $blue2;
-      img{
-        border-radius: 100%;
-        border: 1px solid #ffffff22;
-        width: 2rem;
-        height: 2rem;
-        object-fit: cover;
-        margin: 0;
-      }
-    }
+
+}
+
+.title-show {
+  display: flex;
+  align-items: center;
+
+  h2 {
+    flex: 1; /* Makes the heading flexible to take remaining space */
+    text-align: center; /* Centers the text horizontally */
+    margin: 0;
   }
 }
+
 #bullet {
   // font-family: 'circular';
   color: white;
-  font-family: 'Renitta';
+  font-family: 'Cormorant';
   justify-content: flex-start;
   display: flex;
 }
@@ -126,39 +115,45 @@ p:not(:last-child) {
   li {
   margin: 10px;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 2fr;
+  grid-template-columns: 1fr 3fr 2fr;
+  align-items: center;
   }
   ul {
     margin-top: 5px;
   }
   p {
-    color: $blue2;
+    color: $green;
     justify-content: flex-start;
     display: flex;
+    text-align: left;
   }
   hr {
     width: 100%;
     margin: 3px auto;
     height: 1px;
     border-radius: 10px;
-    background-color: #6c7eac;
+    background-color: $green;
     opacity: 0.4;
   }
 }
 
 .furniture-description {
-  border: 1px $blue2 dotted;
+  //border: 1px $blue2 dotted;
   border-radius: 10px;
   margin: 10px 0px;
   color: white;
   // background: $blue2;
-  background: #6c7eac57;
+  background: $green-light;
   padding: 15px;
+
+  p{
+    text-align: left;
+  }
 }
 
 
 
 .card-footer {
   font-size: 0.65em;
-  color: #446;
+  color: $green-light;
 }

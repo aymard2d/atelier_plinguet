@@ -3,13 +3,6 @@
 <% content_for :meta_description, @furniture.description %>  
 <%# content_for :meta_image, cl_image_path(@furniture.photo.path) %>
 
-<%# @furniture.photos.each do |photo| %>
-  <%#= cl_image_tag photo.key, height: 500, width: 1200, class: "object-fit-cover" %>
-<%# end %>
-  <%#= @furniture.type_of_furniture %>
-  <%#= @furniture.name %>
-  <%#= @furniture.material %>
-  <%#= @furniture.color %>
 <div class="main-container">
   <div class="galery-container">
     <% @furniture.photos.each do |photo| %>
@@ -21,57 +14,63 @@
       </div>
     <% end %>
   </div>
-
+    
   <div class="furniture-container">
-    <div class="furniture-details">
+    <div class="furniture-glass">
+        <h2>Caractéristiques de "<%= @furniture.name %>"</h2>      
+      <hr>
       <div class="furniture-card">
-        <ul>
-          <li><i class="fa-solid fa-screwdriver-wrench"></i> Type de meuble : <%= @furniture.type_of_furniture %></li>
-          <li>Matériau(x) : <%= @furniture.material %></li>
-          <li><i class="fa-solid fa-palette"></i> Couleurs : <%= @furniture.color %> 
-            <% if @furniture.paint_brand.present? %>
-              de chez : <%= @furniture.paint_brand %></li>
+        <div class="furniture-photo">
+          <div class="furniture-details-photo">
+            <% if @furniture.photos.attached? %>
+              <img src="<%= url_for(@furniture.photos.first) %>" class="tokenImage" alt="#{@furniture.type_of_furniture} de l'Atelier Plinguet">
+            <% else %>
+              <!-- Gérer le cas où aucune image n'est attachée -->
+              <p>Aucune image disponible</p>
             <% end %>
-          <% if @furniture.teint.present? %>
-            <li>Teinte du meuble : <%= @furniture.teint %></li>
-          <% end %>
-          <% if @furniture.varnish.present? %></li>
-            <li><i class="fa-solid fa-paintbrush"></i> Vernis : <%= @furniture.varnish %></li>
-          <% end %>
-          <% if @furniture.created_at.present? %>
-            <li> <i class="fa-regular fa-calendar"></i> Date de réalisation : <%= @furniture.created_at.strftime("%d-%m-%Y") %></li>
-          <% else %>
-            <li> <i class="fa-regular fa-calendar"></i> Date de réalisation : <%= Time.now.strftime("%d-%m-%Y") %></li>
-          <% end %>
-
-        </ul>
-        <p class="card-footer">Created by <em>Atelier Plinguet</em></p>
-      </div>
-    </div>  
-      <%# <div class="furniture-desc"> %>
-        <div class="nft">
-          <div class='main'>
-            <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
-            <h2>Kibertopiks #4269</h2>
-            <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
-            <div class='tokenInfo'>
-              <div class="price">
-                <ins>◘</ins>
-                <p>0.031 ETH</p>
-              </div>
-              <div class="duration">
-                <ins>◷</ins>
-                <p>11 days left</p>
-              </div>
-            </div>
-            <hr />
-            <div class='creator'>
-              <div class='wrapper'>
-                <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
-              </div>
-              <p><ins>Creation of</ins> Kiberbash</p>
-            </div>
           </div>
+          <%# <div class="vl"></div> %>
+          <div class="furniture-details">
+            <ul>
+              <li><i class="fa-solid fa-screwdriver-wrench"></i><span id="bullet">Type de meuble</span> <p> <%= @furniture.type_of_furniture %></p></li>
+              <!-- <hr> -->
+              <!-- <hr> -->
+              <li><i class="fa-solid fa-palette"></i><span id="bullet">Couleurs</span> <p><%= @furniture.color %>
+              <% if @furniture.paint_brand.present? %>
+                <li><i class="fa-solid fa-palette"></i><span id="bullet">Marque de peinture</span>
+              <% end %>
+              <% if @furniture.paint_brand == "Colibri" %>
+                <%= image_tag @colibri, class: "colibri-logo" %>
+              <% elsif @furniture.paint_brand == "Farrow & Ball" %>
+                <%= image_tag @farrow_and_ball, class: "fb-logo" %>
+              <% elsif @furniture.paint_brand == "Envie" %>
+                <%= image_tag @little_green, class: "envie-logo" %>
+              <% elsif @furniture.paint_brand == "Little Green" %>
+                <%= image_tag @envie, class: "lg-logo" %>
+              <% elsif @furniture.paint_brand == "Pure & Paint" %>
+                <%= image_tag @pure_and_paint, class: "pp-logo" %>
+              <% elsif @furniture.paint_brand == "Libéron" %>
+                <%= image_tag @liberon, class: "liberon-logo" %>
+              <% end %></li>
+              <% if @furniture.teint.present? %>
+                <li><i class="fa-solid fa-paintbrush"></i><span id="bullet">Teinte du meuble</span> <p><%= @furniture.teint %></p></li>
+              <% end %>
+              <% if @furniture.varnish.present? %>
+                <li><i class="fa-solid fa-paintbrush"></i><span id="bullet">Vernis</span> <p><%= @furniture.varnish %></p></li>
+              <% end %>
+              <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériaux</span>  <p><%= @furniture.material %></p></li>
+              <% if @furniture.created_at.present? %>
+                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span> <p><%= @furniture.created_at.strftime("%d-%m-%Y") %></p></li>
+              <% else %>
+                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span> <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
+              <% end %>
+              <li><i class="fa-regular fa-copyright"></i><span id="bullet">Créé par</span> <%= image_tag "logo-plinguet-01.png", class: "ap-logo" %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="furniture-description">  
+          <p><%= @furniture.description %></p>
+        </div>
       </div>
     </div>
   </div>

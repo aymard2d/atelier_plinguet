@@ -3,13 +3,6 @@
 <% content_for :meta_description, @accessory.description %>  
 <%# content_for :meta_image, cl_image_path(@accessory.photo.path) %>
 
-<%# @accessory.photos.each do |photo| %>
-  <%#= cl_image_tag photo.key, height: 500, width: 1200, class: "object-fit-cover" %>
-<%# end %>
-  <%#= @accessory.type_of_accessory %>
-  <%#= @accessory.name %>
-  <%#= @accessory.material %>
-  <%#= @accessory.color %>
 <div class="main-container">
   <div class="galery-container">
     <% @accessory.photos.each do |photo| %>
@@ -39,14 +32,14 @@
           <%# <div class="vl"></div> %>
           <div class="furniture-details">
             <ul>
-              <li><i class="fa-solid fa-screwdriver-wrench"></i><span id="bullet">Type de meuble</span>| <p> <%= @accessory.type_of %></p></li>
+              <li><i class="fa-solid fa-screwdriver-wrench"></i><span id="bullet">Type de meuble</span> <p> <%= @accessory.type_of %></p></li>
               <!-- <hr> -->
-              <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériau(x)</span> | <p><%= @accessory.material %></p></li>
+              <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériaux</span> | <p><%= @accessory.material %></p></li>
               <!-- <hr> -->
               <% if @accessory.created_at.present? %>
-                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span> | <p><%= @accessory.created_at.strftime("%d-%m-%Y") %></p></li>
+                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= @accessory.created_at.strftime("%d-%m-%Y") %></p></li>
               <% else %>
-                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span> | <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
+                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
               <% end %>
             </ul>
           </div>
@@ -61,7 +54,6 @@
         <div class='wrapper'>
           <%= image_tag "logo-plinguet-01.png" %>
         </div>
-        <p><ins>Atelier Plinguet</ins></p>
       </div>
     </div>
   </div>         

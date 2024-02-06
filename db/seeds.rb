@@ -22,37 +22,37 @@ puts "Destroy des réalisations : OK !"
 
 puts "Starting seed des meubles"
 
-furniture1 = Furniture.create!(name:"Thalia", material: "Bois", color: "Bleu Atlantide", type_of_furniture: "Bibliothèque", date_of_manufacture: date, description: "Attention transformation ! On avait chiné cette armoire, il y a quelque temps, et le moins que l'on puisse dire, c'est qu'il fallait se projeter… Il nous a fallu pas mal de travail pour la transformer en bibliothèque, mais le résultat en valait la peine ! Un grand merci à @colibripeinture qui nous a fourni de supers produits et peintures pour la transformation de ce meuble!")
-#varnish: "Laque écologique", teint: "", paint_brand: "Colibri")
+furniture1 = Furniture.create!(name:"Thalia", material: "Bois", color: "Bleu Atlantide", paint_brand: "Colibri", teint: "", type_of_furniture: "Bibliothèque", date_of_manufacture: date, varnish: "Laque écologique", description: "Attention transformation ! On avait chiné cette armoire, il y a quelque temps, et le moins que l'on puisse dire, c'est qu'il fallait se projeter… Il nous a fallu pas mal de travail pour la transformer en bibliothèque, mais le résultat en valait la peine ! Un grand merci à @colibripeinture qui nous a fourni de supers produits et peintures pour la transformation de ce meuble!")
+#  )
 
-furniture2 = Furniture.create!(name:"Luna", material: "Bois", color: "Blanc glacier & Vert de gris", type_of_furniture: "Vaisselier", description: "Initialement Luna était le haut d'un vaisselier. Lorsque nous l'avons récupérée, on s'est dit que la partie haute et basse de ce vaisselier pouvaient faire 2 meubles à part entière.
+furniture2 = Furniture.create!(name:"Luna", material: "Bois", color: "Blanc glacier & Vert de gris", type_of_furniture: "Vaisselier", varnish: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Initialement Luna était le haut d'un vaisselier. Lorsque nous l'avons récupérée, on s'est dit que la partie haute et basse de ce vaisselier pouvaient faire 2 meubles à part entière.
 Pour que cela soit possible, il nous a fallu rajouter des pieds en conservant le style du meuble, décaper à la machine le meuble, à la main les portes et leurs motifs et changer le plateau du haut qui était trop abimé.
 Pour lui donner plus de style, une porte a été retirée pour créer cette niche. Pour les couleurs, c'est un blanc glacier de chez @farrowandball , et un magnifique vert de gris de chez @farrowandballfr que vous reverrez surement sur d'autres réalisations tant on l'aime!") 
-#varnish: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
+#)
 
-furniture3 = Furniture.create!(name:"Alma", material: "Bois", color: "Vert livid", type_of_furniture: "Bibliothèque", description: "Bibliothèque sur mesure Alma 📚📚
+furniture3 = Furniture.create!(name:"Alma", material: "Bois", color: "Vert livid", type_of_furniture: "Bibliothèque", varnish: "", teint: "", paint_brand: "Little Green", date_of_manufacture: "", description: "Bibliothèque sur mesure Alma 📚📚
 On était plutôt discret dernièrement, c'est parce l'atelier s'est exporté à Paris pour travailler sur la conception d'une bibliothèque sur mesure dans un appartement hausmanien. Au programme meuble design arrondi avec pliage de bois. Toute la fabrication a été faite sur place. Pour la peinture, on a choisi avec l'aide de @nelscouleurs , la superbe teinte #Livid de chez @littlegreene.fr @littlegreenepaintcompany .
 Le reste de la rénovation de l'appartement à été effectué par le talentueux @antinomik_design .")
-#varnish: "", teint: "", paint_brand: "Little green", date_of_manufacture: "")
+#)
 
-furniture4 = Furniture.create!(name:"Matilda", material: "Bois", color: "Vert Kaki", type_of_furniture: "Bahut", description: "Une fois n'est pas coutume, un client a flashé sur le bahut Raphaëlle que nous avions refait et vendu il y a quelques mois.
+furniture4 = Furniture.create!(name:"Matilda", material: "Bois", color: "Vert Kaki", type_of_furniture: "Bahut", varnish: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Une fois n'est pas coutume, un client a flashé sur le bahut Raphaëlle que nous avions refait et vendu il y a quelques mois.
 Il nous a demandé de lui en trouver un autre et de le restaurer en vert kaki.
 C'est chose faite !
 Après avoir chiné le bahut, démonté, poncé, réparé, enlevé les panneaux de portes et les remplacés par du cannage, nous avons appliqué un magnifique vert kaki de chez @farrowandball et un couche de vernis incolore @liberon_officiel pour protéger le bois brut.")
-#varnish: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
+#)
 
 furniture5 = Furniture.create!(name:"Lou", material: "Bois", color: "Vert Rivage
-", type_of_furniture: "Bahut", description: "Lou est un superbe bahut comme on les aime.
+", type_of_furniture: "Bahut", varnish: "", teint: "Naturelle", paint_brand: "Envie", date_of_manufacture: "", description: "Lou est un superbe bahut comme on les aime.
 Arrivé peint avec une couche plus qu'épaisse de peinture glycero saumon, il a fallu de nombreuses heures de ponçage pour le dénuder entièrement et révéler sa magnifique essence.
-Les parties trop abimées ont été remplacées, les pieds refait sur mesure. Pour ce qui est de la teinte, nous avons choisi de lui laisser sa teinte naturel sur l'extérieur (protégé par un vernis de chez @liberon_officiel ) et le peindre en vert rivage de chez envie.") #varnish: "", teint: "Naturelle", paint_brand: "Envie", date_of_manufacture: "")
+Les parties trop abimées ont été remplacées, les pieds refait sur mesure. Pour ce qui est de la teinte, nous avons choisi de lui laisser sa teinte naturel sur l'extérieur (protégé par un vernis de chez @liberon_officiel ) et le peindre en vert rivage de chez envie.") #)
 
-furniture6 = Furniture.create!(name:"Imany", material: "Bois", color: "Bleu Mystere", type_of_furniture: "Armoire", description: "Imany est une armoire très mignonne Arrivée à l'atelier dans un vernis vieillissant couleur acajou qui ne lui allait pas spécialement, nous avons décidé de la changer d'époque! Après un gros décapage, quelques réparations, et le changement des étagères, nous l'avons vêtue du très beau bleu « Mystère » de chez @pure_and_paint . Assortie à un très joli papier peint de la savane, Imany retrouve un cachet fou!")
-#varnish: "", teint: "", paint_brand: "Pure & Paint", date_of_manufacture: "")
+furniture6 = Furniture.create!(name:"Imany", material: "Bois", color: "Bleu Mystere", type_of_furniture: "Armoire", varnish: "", teint: "", paint_brand: "Pure & Paint", date_of_manufacture: "", description: "Imany est une armoire très mignonne. Arrivée à l'atelier dans un vernis vieillissant couleur acajou qui ne lui allait pas spécialement, nous avons décidé de la changer d'époque ! Après un gros décapage, quelques réparations, et le changement des étagères, nous l'avons vêtue du très beau bleu « Mystère » de chez @pure_and_paint . Assortie à un très joli papier peint de la savane, Imany retrouve un cachet fou!")
+#)
 
 furniture7 = Furniture.create!(name:"Adriana", material: "Bois", color: "Vert de gris
-", type_of_furniture: "Meuble de rangement", description: "Adriana était un petit meuble de machine à coudre qui avait été transformé par son ancien propriétaire en meuble de télévision. Un plateau sur glissière avait été rajouté pour rehausser le meuble et permettre à la télévision de se déporter. A l'atelier nous avons choisi d'en faire un meuble de rangement. Glissière et rehausse du plateau ont été déposées. Pour la teinte nous avons choisi un très beau vert de gris, et une poignée laitonné vient sublimer la couleur.
+", type_of_furniture: "Meuble de rangement",varnish: "", teint: "", paint_brand: "Envie", date_of_manufacture: "" , description: "Adriana était un petit meuble de machine à coudre qui avait été transformé par son ancien propriétaire en meuble de télévision. Un plateau sur glissière avait été rajouté pour rehausser le meuble et permettre à la télévision de se déporter. A l'atelier nous avons choisi d'en faire un meuble de rangement. Glissière et rehausse du plateau ont été déposées. Pour la teinte nous avons choisi un très beau vert de gris, et une poignée laitonné vient sublimer la couleur.
 Adriana a rejoint son environnement pour le plus grand plaisir de son propriétaire.")
-#varnish: "", teint: "", paint_brand: "Envie", date_of_manufacture: "")
+#)
 
 =begin 
 furniture8 = Furniture.create!(name:"Esther", material: "Bois", color: "Bleu nuit", type_of_furniture: "Commode", description: "Cette commode typique des années 60 nous est arrivée dans son jus.
@@ -68,7 +68,7 @@ furniture10 = Furniture.create!(name:"Christina", material: "Bois", color: "Blan
 Il était sombre, avec des motifs de vitraux sur tout le coffre, cela avait son charme à l'époque mais aujourd'hui ce n'est plus trop le cas. C'est pourquoi nous avons décidé de le démonter entièrement pour le refaire à la sauce Atelier Plinguet. Une fois chaque pièce poncée afin de retrouver la couleur naturelle du bois qui entre nous est beaucoup plus douce et jolie, nous avons décidé de remplacer les vitraux par des panneaux simples mais mis en valeur par le blanc albâtre de chez @liberon_officiel . Ainsi le coffre change d'époque, et s'adaptera parfaitement dans son nouvel environnement.")
 #varnish: "", teint: "Bois", paint_brand: "Libéron", date_of_manufacture: "")
 
-furniture11 = Furniture.create!(name:"Simone", material: "Bois - pin", color: "Rose boréal", type_of_furniture: "commode", description: "Aujourd'hui c'est une commode qui est passée à l'atelier pour un relooking.
+furniture11 = Furniture.create!(name:"Simone", material: "Bois - pin", color: "Rose boréal", type_of_furniture: "Commode", description: "Aujourd'hui c'est une commode qui est passée à l'atelier pour un relooking.
 Cette commode en pin pouvait paraitre « basique », mais était plutôt en bon état, donc le travail a été moins important que d'habitude. Aussi, nous avons décidé de lui donner plus d'originalité, en y appliquant la teinte « rose boréal » de chez #enviepeinture, mais uniquement sur l'intérieur de la façade des tiroirs et sur les côtés du meuble. Le plateau lui a été protégé au vernis mat de chez @liberon_officiel.
 Les poignées d'origine qui étaient en bois, ont été remplacées par de jolies poignées laitonnées. On apprécie également sa grande capacité avec ses 6 tiroirs.")
 #varnish: "Mat - Libéron", teint: "", paint_brand: "Envie", date_of_manufacture: "")
@@ -87,7 +87,7 @@ Le but étant de prendre une couleur s'accordant avec beaucoup d'autres pour per
 furniture14 = Furniture.create!(name:"Lola", material: "Bois - Pin", color: "Banc crème", type_of_furniture: "Bahut", description: "Nous avons chiné dernièrement un bahut en pin assez commun. L'idée était de changer l'utilité de ce meuble. La personne chez qui nous l'avions acheté s'en servait de vaisselier. Apres l'avoir décapé entièrement, nous avons décidé d'enlever les portes pour en faire un bahut ouvert. Apres avoir choisi ce blanc crème de chez Farrow&ball, nous avons laissé sa teinte naturelle au plateau et à l'étagère, que nous avons passée au vernis incolore afin de les protéger. L'association de ces deux couleurs avec ses nouvelles poignées rendent ce meuble unique. Il peut aussi bien séjourner dans un salon, une salle à manger, une entrée ou bien une cuisine et ça c'est quand même pratique")
 #varnish: "Incolore", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
 
-furniture15 = Furniture.create!(name:"Paula", material: "Bois", color: "Vert", type_of_furniture: "commode", description: "En ce mois janvier, l'atelier Plinguet vous présente ses voeux ainsi que ce nouveau bijou. Jade est un bahut avec deux portes qui a bien souffert durant son passé. De nombreux petits habitants xylophages ont apprécié son bois. L'atelier a passé beaucoup de temps sur l'assainissement du meuble et sa reconstruction. De nombreuses heures ont été passés à traiter et réparer les dégâts causés par les vrillettes.
+furniture15 = Furniture.create!(name:"Paula", material: "Bois", color: "Vert", type_of_furniture: "Commode", description: "En ce mois janvier, l'atelier Plinguet vous présente ses voeux ainsi que ce nouveau bijou. Jade est un bahut avec deux portes qui a bien souffert durant son passé. De nombreux petits habitants xylophages ont apprécié son bois. L'atelier a passé beaucoup de temps sur l'assainissement du meuble et sa reconstruction. De nombreuses heures ont été passés à traiter et réparer les dégâts causés par les vrillettes.
 Aujourd'hui, nous avons un magnifique bahut à deux portes, peint dans un gris bleu de chez @farrowandballfr , avec un plateau et un intérieur en pin qui font ressortir cette magnifique teinte. De nouvelles poignées terminent cette restauration pour parfaire le résultat.")
 #varnish: "", teint: "Vernis bois noyer", paint_brand: "", date_of_manufacture: "")
 
@@ -99,11 +99,11 @@ furniture17 = Furniture.create!(name:"Raphaëlle", material: "Bois", color: "Ver
 ", type_of_furniture: "Bahut", description: "Aujourd'hui à l'atelier, nous avons chiné un nouveau bahut parisien dans l'idée d'en faire un meuble ultra design après avoir décapé, et repeint toute la structure du meuble dans un vert rivage de chez #envie sauf le plateau que nous avons passé au vernis incolore pour le protéger. Nous avons tapissé le fond du meuble avec un papier peint style « savane » sur les tons de gris qui contraste parfaitement avec le vert. Enfin pour donner du cachet à ce meuble, nous avons découpé les panneaux des portes pour les remplacer par du canage qui termine cette restauration en donnant un style unique à ce bahut parisien")
 #varnish: "", teint: "", paint_brand: "Envie", date_of_manufacture: "")
 
-furniture18 = Furniture.create!(name:"Paulina", material: "Bois", color: "Vert Rivage", type_of_furniture: "meuble box tv", description: "A l'atelier cette semaine nous avons cherché pour un client un tout petit meuble pour cacher sa box internet. Il y avait deux contraintes à respecter pour cette commande : la taille, pas plus de 40 cm de large et de profondeur, et l'ouverture, la box a besoin d'air pour ne pas surchauffer.
+furniture18 = Furniture.create!(name:"Paulina", material: "Bois", color: "Vert Rivage", type_of_furniture: "Meuble box tv", description: "A l'atelier cette semaine nous avons cherché pour un client un tout petit meuble pour cacher sa box internet. Il y avait deux contraintes à respecter pour cette commande : la taille, pas plus de 40 cm de large et de profondeur, et l'ouverture, la box a besoin d'air pour ne pas surchauffer.
 Alors quand on a chiné cette petit table de nuit avec son marbre qui pouvait aussi servir de meuble d'appoint, on s'est dit que c'était parfait! Après avoir découpé la porte, pour y incruster du canage afin de laisser la box respirer, nous avons traité le meuble contre les insectes xylophages, puis préparé pour la mise en peinture ce meuble. C'est sur le vert rivage que se porte le choix du client, et à l'atelier on trouve qu'avec le marbre et le canage c'est très réussi! Dernière étape de cette restauration, nettoyer ce beau marbre en profondeur et le récoler pour éviter toute casse possible.")
 #varnish: "incolore", teint: "", paint_brand: "", date_of_manufacture: "")
 
-furniture19 = Furniture.create!(name:"Philippa", material: "Bois", color: "", type_of_furniture: "commode", description: "Cette commode est arrivée à l'atelier dans un bien piteux état. Initialement pourvue d'un rose bonbon plus qu'écaillé, d'un seul bouton central par tiroir et surtout de long pieds sculptés style Louis XV, nous avons décidé de changer totalement son style pour en faire une commode pour enfant.
+furniture19 = Furniture.create!(name:"Philippa", material: "Bois", color: "", type_of_furniture: "Commode", description: "Cette commode est arrivée à l'atelier dans un bien piteux état. Initialement pourvue d'un rose bonbon plus qu'écaillé, d'un seul bouton central par tiroir et surtout de long pieds sculptés style Louis XV, nous avons décidé de changer totalement son style pour en faire une commode pour enfant.
 Apres un décapage, une réparation du bois à certains endroits, nous avons changé le piétement, pour en fabriquer un en pieds compas teinte acajou, cela a pour but de rabaisser le meuble et de faire ressortir son nouveau rose poudré.
 Ultime détail de nouvelles poignées en laiton disposées en chevrons pour parfaire son style.")
 #varnish: "", teint: "", paint_brand: "", date_of_manufacture: "")
@@ -165,7 +165,7 @@ furniture36 = Furniture.create!(name:"Armelle", material: "Bois", color: "Bleu C
 furniture37 = Furniture.create!(name:"Ava", material: "Bois", color: "Vert d'eau", type_of_furniture: "Coffre à jouets", description: "Restauration : Coffre à jouets entièrement en bois, restauré dans les tons vert d'eau et bois pour un rendu doux et naturel.")
 #varnish: "", teint: "", paint_brand: "", date_of_manufacture: "")
 
-furniture38 = Furniture.create!(name:"Suzanne", material: "Bois", color: "vert", type_of_furniture: "Mini-bar", description: "Restauration : bar vintage des années 60 sur roulettes, restauré et remis au goût du jour dans deux tons de vert.")
+furniture38 = Furniture.create!(name:"Suzanne", material: "Bois", color: "Vert", type_of_furniture: "Mini-bar", description: "Restauration : bar vintage des années 60 sur roulettes, restauré et remis au goût du jour dans deux tons de vert.")
 #varnish: "", teint: "", paint_brand: "", date_of_manufacture: "")
 
 furniture39 = Furniture.create!(name:"Anna", material: "Bois", color: "Bleu nuit", type_of_furniture: "Commode", description: "Restauration : Commode restaurée dans les tons bleu nuit avec poignées cuivrées pour un design chic et épuré")
@@ -184,15 +184,15 @@ puts "Seed des meubles : OK !"
 
 puts "Starting seed des accessoires"
 
-accessory1 = Accessory.create!(name: "Nicole", material: "bois", type_of: "lampadaire", description: "Nouvelle création de l'atelier. Pour une cliente bordelaise, nous avons dessiné et fabriqué 2 lampadaires en bois. Pour obtenir ce résultat, il a fallu réaliser un assemblage de 10 planches de contreplaqués collées entre elles en y incorporant 2 ouvertures qui apportent une touche de légèreté. Il y a eu pas mal de travail de ponçage pour arriver à un rendu aussi lisse et harmonieux.")
+accessory1 = Accessory.create!(name: "Nicole", material: "Bois", type_of: "Lampadaire", description: "Nouvelle création de l'atelier. Pour une cliente bordelaise, nous avons dessiné et fabriqué 2 lampadaires en bois. Pour obtenir ce résultat, il a fallu réaliser un assemblage de 10 planches de contreplaqués collées entre elles en y incorporant 2 ouvertures qui apportent une touche de légèreté. Il y a eu pas mal de travail de ponçage pour arriver à un rendu aussi lisse et harmonieux.")
 
-accessory2 = Accessory.create!(name: "Hélène", type_of: "porte-serviette", material: "cuivre et bois", description: "Cette semaine à l'atelier, nous avons créé un porte serviette à la demande d'une cliente. Les couleurs du cuivre et du bois s'harmonisent parfaitement avec le sol en travertin de la salle de bain de notre cliente. Si cette pièce vous plait, n'hésitez pas à nous envoyer un DM pour plus d'informations, l'atelier peut la reproduire sur demande et sa taille est ajustable.")
+accessory2 = Accessory.create!(name: "Hélène", type_of: "Porte-serviette", material: "Cuivre et Bois", description: "Cette semaine à l'atelier, nous avons créé un porte serviette à la demande d'une cliente. Les couleurs du cuivre et du bois s'harmonisent parfaitement avec le sol en travertin de la salle de bain de notre cliente. Si cette pièce vous plait, n'hésitez pas à nous envoyer un DM pour plus d'informations, l'atelier peut la reproduire sur demande et sa taille est ajustable.")
 
-accessory3 = Accessory.create!(name: "Mona", material: "bois", type_of: "lampe", description: "Création de atelier plinguet pour une commande client.Une structure réalisée en assemblage de bois avec découpes et courbes travaillées. Recouverte un enduit de lissage et peint selon les désirs du client.")
+accessory3 = Accessory.create!(name: "Mona", material: "Bois", type_of: "Lampe", description: "Création de atelier plinguet pour une commande client.Une structure réalisée en assemblage de bois avec découpes et courbes travaillées. Recouverte un enduit de lissage et peint selon les désirs du client.")
 
-accessory4 = Accessory.create!(name: "Lou", type_of: "applique", description: "Création de l'atelier Plinguet pour une commande client. Lot de deux appliques en bois effet métal, avec vitre en Plexiglas, et ampoule Led à filament vintage.", material: "bois")
+accessory4 = Accessory.create!(name: "Lou", type_of: "Applique", description: "Création de l'atelier Plinguet pour une commande client. Lot de deux appliques en bois effet métal, avec vitre en Plexiglas, et ampoule Led à filament vintage.", material: "Bois")
 
-accessory5 = Accessory.create!(name: "Augusta", type_of: "chaise", description: "Création de l'atelier Plinguet pour une commande client. Magnifique fauteuil en cuivre aux lignes épurées et au designe original.", material: "cuivre")
+accessory5 = Accessory.create!(name: "Augusta", type_of: "Chaise", description: "Création de l'atelier Plinguet pour une commande client. Magnifique fauteuil en cuivre aux lignes épurées et au designe original.", material: "cuivre")
 
 puts "Seed des accessoires : OK !"
 
@@ -430,6 +430,17 @@ inspi_redpaint = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716692/
 inspi_wood_1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706716692/atelier-plinguet/inspi-10-peinture_uusmlg.png'
 
 puts "Seed des url inspi : OK !"
+
+puts "Starting seed des url logo"
+
+pure_and_paint = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/pure_and_paint_logo_qgsn1x.png"
+farrow_and_ball = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/farrow_and_ball_logo_meo66k.png"
+envie = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231823/atelier-plinguet/logo-envie_jfziwl.jpg"
+little_green = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/little_green_logo_dardnn.jpg"
+colibri = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/colibri_logo_cujxhq.png"
+liberon = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707238807/atelier-plinguet/liberon-logo_rvtwfa.jpg"
+
+puts "Seed des url Logo : OK !"
 
 puts "Seed de toutes les url : OK !"
 
