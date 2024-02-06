@@ -31,7 +31,16 @@ class FurnituresController < ApplicationController
   end
 
   def create
-    @furniture = Furniture.find(furniture_params)
+    @furniture = Furniture.new(furniture_params)
+    @furniture.user = current_user
+    respond_to do |format|
+      if @furniture.save
+        format.html { redirect_to furnitures_path }
+        format.text { render partial: "furnitures/list", locals: { furniture: @furniture }, formats: [:html] }
+      else
+        render :index, status: :unprocessable_entity
+      end
+    end
   end
 
   def edit

@@ -1,0 +1,15 @@
+<div>
+  <%= simple_form_for (furniture), html: {class: furniture.errors.any? ? "" : "d-none form-file container ", data: { add_furniture_target: "form", action: "submit->add-furniture#add turbo:submit-end->add-furniture#resetForm" }} do |f| %>
+    <%= f.input :name, label: "Nom" %>
+    <%= f.input :description, as: :text, label: "Description" %>
+    <%= f.input :type_of_furniture, collection: ["Commode", "Bibliothèque", "Bahut", "Armoire", "Confiturier", "Meuble de rangement", "Vaisselier", "Armoire", "Semainier", "Table basse", "Secrétaire", "Meuble à chaussures", "Coffre", "Console" ], label: "Sélectionnez une catégorie" %>
+    <%= f.input :color, label: "Couleurs du meuble" %>
+    <%= f.input :paint_brand, collection: ["Envie", "Farrow & Ball", "Pure & Paint", "Colibri", "Little Green", "Unknown brand", ] %>
+    <%= f.input :varnish, label: "Vernis" %>
+    <%= f.input :teint, label: "Teinte" %>
+    <%= f.input :material, collection: ["Bois", "Cuivre", "Cuivre & Bois", "Pin", "Chène", "Autre"] %>
+    <%= f.input_field :created_at, as: :hidden, value: Date.today %>
+    <%= f.input_field :user_id, as: :hidden, value: params[:id] %>
+    <%= f.submit "Share!", class: "" %>
+  <% end %>
+</div>
