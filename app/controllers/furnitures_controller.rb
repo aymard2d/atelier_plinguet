@@ -6,6 +6,7 @@ class FurnituresController < ApplicationController
 
   def index
     @furnitures = Furniture.all
+    @furniture = Furniture.new
     @furniture_types = Furniture.pluck(:type_of_furniture).uniq
   end
 

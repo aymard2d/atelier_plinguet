@@ -28,3 +28,39 @@
 .ap-logo {
   width: 75px;
 }
+
+.nft-logo {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  max-width: 230px;
+  /* margin: 5rem auto; */
+  /* border: 1px solid #ffffff22; */
+  /* background-color: #282c34; */
+  /* background: linear-gradient(0deg, #282c34 0%, rgba(17, 0, 32, 0.5) 100%); */
+  /* box-shadow: 0 7px 20px 5px #00000088; */
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(2px);
+  overflow: hidden;
+  transition: 0.5s all;
+
+  ::before{
+    position: fixed;
+    content: "";
+    box-shadow: 0 0 100px 40px $light-wood;
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: 1.4s all;
+  }
+  &:hover{
+    filter: brightness(1.3);
+    ::before{
+      filter: brightness(.5);
+      top: -100%;
+      left: 200%;
+    }
+  }
+
+}
