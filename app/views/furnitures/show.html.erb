@@ -38,25 +38,34 @@
               <li><i class="fa-solid fa-palette"></i><span id="bullet">Couleurs</span> <p><%= @furniture.color %>
               <% if @furniture.paint_brand.present? %>
                 <li><i class="fa-solid fa-palette"></i><span id="bullet">Marque de peinture</span>
+                  <p><%= @furniture.paint_brand %></p>
+                  <div>
+                    <% if @furniture.paint_brand == "Colibri" %>
+                      <%= image_tag @colibri, class: "colibri-logo" %>
+                    <% elsif @furniture.paint_brand == "Farrow & Ball" %>
+                      <%= image_tag @farrow_and_ball, class: "fb-logo" %>
+                    <% elsif @furniture.paint_brand == "Envie" %>
+                      <%= image_tag @little_green, class: "envie-logo" %>
+                    <% elsif @furniture.paint_brand == "Little Green" %>
+                      <%= image_tag @envie, class: "lg-logo" %>
+                    <% elsif @furniture.paint_brand == "Pure & Paint" %>
+                      <%= image_tag @pure_and_paint, class: "pp-logo" %>
+                    <% elsif @furniture.paint_brand == "Libéron" %>
+                      <%= image_tag @liberon, class: "liberon-logo" %>
+                    <% end %>
+                  </div>
               <% end %>
-              <% if @furniture.paint_brand == "Colibri" %>
-                <%= image_tag @colibri, class: "colibri-logo" %>
-              <% elsif @furniture.paint_brand == "Farrow & Ball" %>
-                <%= image_tag @farrow_and_ball, class: "fb-logo" %>
-              <% elsif @furniture.paint_brand == "Envie" %>
-                <%= image_tag @little_green, class: "envie-logo" %>
-              <% elsif @furniture.paint_brand == "Little Green" %>
-                <%= image_tag @envie, class: "lg-logo" %>
-              <% elsif @furniture.paint_brand == "Pure & Paint" %>
-                <%= image_tag @pure_and_paint, class: "pp-logo" %>
-              <% elsif @furniture.paint_brand == "Libéron" %>
-                <%= image_tag @liberon, class: "liberon-logo" %>
-              <% end %></li>
+                </li>
               <% if @furniture.teint.present? %>
                 <li><i class="fa-solid fa-paintbrush"></i><span id="bullet">Teinte du meuble</span> <p><%= @furniture.teint %></p></li>
               <% end %>
               <% if @furniture.varnish.present? %>
-                <li><i class="fa-solid fa-paintbrush"></i><span id="bullet">Vernis</span> <p><%= @furniture.varnish %></p></li>
+                <li><i class="fa-solid fa-paintbrush"></i><span id="bullet">Vernis</span> <p><%= @furniture.varnish %></p>
+                <div>
+                <% if @furniture.varnish_brand == "Libéron"%>
+                  <%= image_tag @liberon, class: "liberon-logo" %>
+                <% end %>
+                </div></li>
               <% end %>
               <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériaux</span>  <p><%= @furniture.material %></p></li>
               <% if @furniture.created_at.present? %>
@@ -64,7 +73,12 @@
               <% else %>
                 <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span> <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
               <% end %>
-              <li><i class="fa-regular fa-copyright"></i><span id="bullet">Créé par</span> <%= image_tag "logo-plinguet-01.png", class: "ap-logo" %></li>
+              <li><i class="fa-regular fa-copyright"></i><span id="bullet">Créé par</span> 
+              <p>Atelier Plinguet</p>
+              <div>
+                <%= image_tag "logo-plinguet-01.png", class: "ap-logo" %>
+              </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -76,32 +90,6 @@
   </div>
 </div>
 
-  <!--<div class="second-card-show">
-    <div class="main-content-card">
-      <div class="content">
-        <h3 class="card-title"><strong> <%= @furniture.name %></strong></h3>
-        <h2 class="px-2 fa-lg li-ic" id="gender"><i class="fa-solid fa-venus-mars"></i>  <%= @furniture.date_of_manufacture  %></h2>
-        <h2 class="px-2 fa-lg tw-ic" id="age"><i class="fa-solid fa-cake-candles"></i>  <%= @furniture.type_of_furniture %></h2>
-        <h2 class="px-2 fa-lg fb-ic" id="specie"><i class="fa-solid fa-paw"></i> <%= @furniture.color %></h2>
-        <h2 class="px-2 fa-lg fb-ic" id="name"><i class="fa-solid fa-address-card"></i> <%= @furniture.material %></h2>
-
-        <div class="owner-card">
-          <img class="avatar-large" alt="avatar-large" src="<%= image_path "cover.png" %>">
-          <div class="owner-identity">
-          <%=@furniture.name%>
-          <%=@furniture.name%>
-          </div>
-          <div class="owner-rating">
-          <i class="fa-solid fa-medal"></i> <%=@furniture.name%> / 10
-          </div>
-        </div>
-
-        <p id="description"> <%= @furniture.description %></p>
-        <button class="button-57" id="skill" role="button"><span > SECRETE SKILL </span><span><h2 class="px-2 fa-lg fb-ic" ><i class="fa-solid fa-user-ninja"></i>  <%= @furniture.type_of_furniture %></h2></span></button>
-      </div>
-    </div>
-  </div>
-  -->
 
 
 

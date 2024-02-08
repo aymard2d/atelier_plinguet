@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_30_191733) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_08_211235) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -64,6 +64,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_191733) do
     t.string "varnish"
     t.string "teint"
     t.string "paint_brand"
+    t.string "varnish_brand"
   end
 
   create_table "realisations", force: :cascade do |t|

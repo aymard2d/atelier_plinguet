@@ -6,6 +6,7 @@ class FurnituresController < ApplicationController
 
   def index
     @furnitures = Furniture.all
+    @furniture = Furniture.new
     @furniture_types = Furniture.pluck(:type_of_furniture).uniq
   end
 
@@ -31,7 +32,15 @@ class FurnituresController < ApplicationController
   end
 
   def create
-    @furniture = Furniture.find(furniture_params)
+    @furniture = Furniture.new(furniture_params)
+    respond_to do |format|
+      if @furniture.save
+        format.html { redirect_to furnitures_path }
+        format.text { render partial: "furnitures/list", locals: { furniture: @furniture }, formats: [:html] }
+      else
+        render :index, status: :unprocessable_entity
+      end
+    end
   end
 
   def edit
@@ -46,6 +55,6 @@ class FurnituresController < ApplicationController
   private
 
   def furniture_params
-    params.require(:furniture).permit(:name, :description, :color, :material, :date_of_manufacture, :type_of_furniture, :varnish, :teint, :paint_brand)
+    params.require(:furniture).permit(:name, :description, :color, :material, :date_of_manufacture, :type_of_furniture, :varnish, :varnish_brand, :teint, :paint_brand, :photos)
   end
 end

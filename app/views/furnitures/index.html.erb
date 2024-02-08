@@ -1,13 +1,16 @@
-<div class="index-body">
-
-  <div class="category-search">
-  <% @furniture_types.each do |type| %>
-      <%= link_to type, show_by_type_furnitures_path(type) %>
-  <% end %>
-
-  </div>
-
-  <div class="galerie">
+<div data-controller="add-furniture" class="index-body">
+  <div class="index-top">
+    <div class="category-search">
+      <% @furniture_types.each do |type| %>
+          <%= link_to type, show_by_type_furnitures_path(type) %>
+      <% end %>
+    </div>
+      <button data-action="click->add-furniture#displayForm" class="btn btn-outline-primary">Ajouter un nouveau meuble</button>
+      <div>
+        <%= render "furnitures/add_furniture_form", furniture: @furniture %>
+      </div>
+    </div>
+  <div class="galerie" data-add-furniture-target="list">
     <% @furnitures.each do |furniture| %>
       <%= link_to furniture_path(furniture) do %>
         <figure>
@@ -16,10 +19,8 @@
             <% break %>
           <% end %> 
           <figcaption><%= furniture.name %></figcaption>
-
         </figure>
       <% end %>
     <% end %>
-
   </div>
 </div>
