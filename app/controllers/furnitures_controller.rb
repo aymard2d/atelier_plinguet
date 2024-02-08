@@ -33,7 +33,6 @@ class FurnituresController < ApplicationController
 
   def create
     @furniture = Furniture.new(furniture_params)
-    @furniture.user = current_user
     respond_to do |format|
       if @furniture.save
         format.html { redirect_to furnitures_path }
@@ -56,6 +55,6 @@ class FurnituresController < ApplicationController
   private
 
   def furniture_params
-    params.require(:furniture).permit(:name, :description, :color, :material, :date_of_manufacture, :type_of_furniture, :varnish, :teint, :paint_brand)
+    params.require(:furniture).permit(:name, :description, :color, :material, :date_of_manufacture, :type_of_furniture, :varnish, :teint, :paint_brand, :photos)
   end
 end
