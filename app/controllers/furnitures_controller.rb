@@ -55,6 +55,6 @@ class FurnituresController < ApplicationController
   private
 
   def furniture_params
-    params.require(:furniture).permit(:name, :description, :color, :material, :date_of_manufacture, :type_of_furniture, :varnish, :teint, :paint_brand, :photos)
+    params.require(:furniture).permit(:name, :description, :color, :material, :date_of_manufacture, :type_of_furniture, :varnish, :varnish_brand, :teint, :paint_brand, :photos)
   end
 end

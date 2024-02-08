@@ -35,7 +35,7 @@ On était plutôt discret dernièrement, c'est parce l'atelier s'est exporté à
 Le reste de la rénovation de l'appartement à été effectué par le talentueux @antinomik_design .")
 #)
 
-furniture4 = Furniture.create!(name:"Matilda", material: "Bois", color: "Vert Kaki", type_of_furniture: "Bahut", varnish: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Une fois n'est pas coutume, un client a flashé sur le bahut Raphaëlle que nous avions refait et vendu il y a quelques mois.
+furniture4 = Furniture.create!(name:"Matilda", material: "Bois", color: "Vert Kaki", type_of_furniture: "Bahut", varnish: "Incolore", varnish_brand: "Libéron", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Une fois n'est pas coutume, un client a flashé sur le bahut Raphaëlle que nous avions refait et vendu il y a quelques mois.
 Il nous a demandé de lui en trouver un autre et de le restaurer en vert kaki.
 C'est chose faite !
 Après avoir chiné le bahut, démonté, poncé, réparé, enlevé les panneaux de portes et les remplacés par du cannage, nous avons appliqué un magnifique vert kaki de chez @farrowandball et un couche de vernis incolore @liberon_officiel pour protéger le bois brut.")
