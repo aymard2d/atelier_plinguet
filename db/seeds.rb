@@ -10,7 +10,8 @@
 require "open-uri"
 date = Date.today
 
-
+User.destroy_all
+puts "Destroy des users : OK !"
 Furniture.destroy_all
 puts "Destroy des meubles : OK !"
 Accessory.destroy_all
@@ -18,6 +19,8 @@ puts "Destroy des fabrications : OK !"
 Realisation.destroy_all
 puts "Destroy des réalisations : OK !"
 
+aymard = User.create!(email: "aymard@atelier-plinguet.fr", password: "bricorigolo")
+tanguy = User.create!(email: "tanguy@atelier-plinguet.fr", password: "bricorigolo")
 # ---------- SEED DES MEUBLES -----------
 
 puts "Starting seed des meubles"
