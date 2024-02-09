@@ -1,13 +1,19 @@
-<div class="index-body">
-
-
+<div data-controller="add-accessory">
+  <div class="add-furniture">
+    <% if user_signed_in? %>
+      <button data-action="click->add-accessory#displayForm" class="btn btn-outline-primary">Ajouter une nouvelle création</button>
+    <% end %>
+  </div>
   <div class="category-search">
     <% @accessory_types.each do |type| %>
         <%= link_to type, show_by_type_accessories_path(type) %>
     <% end %>
   </div>
+  <div>
+    <%= render "accessories/add_accessory_form", accessory: @accessory %>
+  </div>
 
-  <div class="galerie">
+  <div class="galerie" data-add-accessory-target="list">
     <% @accessories.each do |accessory| %>
       <%= link_to accessory_path(accessory) do %>
         <figure>

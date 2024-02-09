@@ -1,7 +1,9 @@
 class AccessoriesController < ApplicationController
-  
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @accessories = Accessory.all
+    @accessory = Accessory.new
     @accessory_types = Accessory.pluck(:type_of).uniq
   end
   
@@ -19,7 +21,15 @@ class AccessoriesController < ApplicationController
   end
 
   def create
-    @accessory = Accessory.create(accessory_params)
+    @accessory = Accessory.new(accessory_params)
+    respond_to do |format|
+      if @accessory.save
+        format.html { redirect_to accessories_path }
+        format.text { render partial: "accessories/list", locals: { accessory: @accessory }, formats: [:html] }
+      else
+        render :index, status: :unprocessable_entity
+      end
+    end
   end
   
   def edit
@@ -37,6 +47,6 @@ class AccessoriesController < ApplicationController
   private
 
   def accesory_params
-    params.require(:furniture).permit(:name, :description, :material, :type_of, :manufacture_date)
+    params.require(:accessory).permit(:name, :description, :material, :type_of, :manufacture_date, :photos)
   end
 end
