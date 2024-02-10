@@ -7,6 +7,7 @@ class RealisationsController < ApplicationController
 
   def index
     @realisations = Realisation.all
+    @realisation = Realisation.new
     @realisation_types = Realisation.pluck(:type_of_realisation).uniq
   end
 
@@ -20,7 +21,15 @@ class RealisationsController < ApplicationController
   end
 
   def create
-    @realisation = Realisation.create(realisation_params)
+    @realisation = Realisation.new(realisation_params)
+    respond_to do |format|
+      if @realisation.save
+        format.html { redirect_to realisations_path }
+        format.text { render partial: "realisations/list", locals: { realisation: @realisation }, formats: [:html] }
+      else
+        render :index, status: :unprocessable_entity
+      end
+    end
   end
 
   def update
@@ -35,6 +44,6 @@ class RealisationsController < ApplicationController
   private
 
   def realisation_params
-    params.require(:realisations).permit(:name, :description, :manufacture_date, :type_of_realisation)
+    params.require(:realisation).permit(:name, :description, :localisation,  :manufacture_date, :type_of_realisation, photos: [])
   end
 end

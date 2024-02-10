@@ -3,15 +3,15 @@
     <% if user_signed_in? %>
       <button data-action="click->add-furniture#displayForm" class="btn btn-outline-primary">Ajouter un nouveau meuble</button>
     <% end %>
+    <div>
+      <%= render "furnitures/add_furniture_form", furniture: @furniture %>
+    </div>
   </div>
   
   <div class="category-search">
     <% @furniture_types.each do |type| %>
         <%= link_to type, show_by_type_furnitures_path(type) %>
     <% end %>
-  </div>
-  <div>
-    <%= render "furnitures/add_furniture_form", furniture: @furniture %>
   </div>
   
   <div class="galerie" data-add-furniture-target="list">

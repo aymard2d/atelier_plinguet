@@ -45,6 +45,7 @@ class FurnituresController < ApplicationController
   end
 
   def edit
+    @furniture = Furniture.find(params[:id])
   end
 
   def update
@@ -56,6 +57,6 @@ class FurnituresController < ApplicationController
   private
 
   def furniture_params
-    params.require(:furniture).permit(:name, :description, :color, :material, :date_of_manufacture, :type_of_furniture, :varnish, :varnish_brand, :teint, :paint_brand, :photos)
+    params.require(:furniture).permit(:name, :description, :color, :material, :date_of_manufacture, :type_of_furniture, :varnish, :varnish_brand, :teint, :paint_brand, photos: [])
   end
 end

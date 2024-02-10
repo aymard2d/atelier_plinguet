@@ -1,15 +1,20 @@
-<div class="index-body">
-
-  <div class="category-search">
-    Rechercher par type de meuble : 
-  <% @realisation_types.each do |type| %>
-      <%= link_to type, show_by_type_realisations_path(type) %>
-
-  <% end %>
-
+<div data-controller="add-realisation">
+  <div class="add-furniture">
+    <% if user_signed_in? %>
+      <button data-action="click->add-realisation#displayForm" class="btn btn-outline-primary">Ajouter une nouvelle réalisation</button>
+    <% end %>
+    <div>
+      <%= render "realisations/add_realisation_form", realisation: @realisation %>
+    </div>
   </div>
 
-  <div class="galerie">
+  <div class="category-search">
+  <% @realisation_types.each do |type| %>
+      <%= link_to type, show_by_type_realisations_path(type) %>
+  <% end %>
+  </div>
+
+  <div class="galerie" data-add-realisation-target="list">
     <% @realisations.each do |realisation| %>
       <%= link_to realisation_path(realisation) do %>
         <figure>
@@ -18,11 +23,9 @@
             <% break %>
           <% end %> 
           <figcaption><%= realisation.name %></figcaption>
-
         </figure>
       <% end %>
     <% end %>
-
   </div>
 </div>
 
