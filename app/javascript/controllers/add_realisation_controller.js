@@ -1,10 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="add-furniture"
+// Connects to data-controller="add-realisation"
 export default class extends Controller {
   static targets = ["form", "list"]
   connect() {
-    console.log("hello my love")
+    console.log("hello my dear")
   }
 
   displayForm() {
@@ -16,7 +16,7 @@ export default class extends Controller {
     const url = this.formTarget.action
     fetch(url, {
       method: "POST",
-      headers: { "Accept": "text/plain" },
+      headers: { "Accept": "text/plain"},
       body: new FormData(this.formTarget)
     })
       .then(response => response.text())
@@ -26,6 +26,6 @@ export default class extends Controller {
         this.formTarget.classList.add("d-none")
       })
       event.target.reset()
-      window.scrollTo(0, 10)
+      window.scroll(0, 10)
   }
 }

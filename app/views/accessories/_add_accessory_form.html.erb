@@ -6,7 +6,7 @@
     <%= f.input :material, label: "Sélectionnez un matériau", collection: ["Bois", "Cuivre", "Cuivre & Bois", "Pin", "Chène", "Autre"] %>
     <%= f.input_field :created_at, as: :hidden, value: Date.today %>
     <%= f.input_field :user_id, as: :hidden, value: params[:id] %>
-    <%= f.input :photos, as: :file, label: "Ajoutez une ou plusieurs photos" %>
+    <%= f.input :photos, as: :file, label: "Ajoutez une ou plusieurs photos", input_html: { multiple: true } %>
     <button class="button-85" role="button">
       <%= f.submit "Share!", class: "share-button" %>
     </button>

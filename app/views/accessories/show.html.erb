@@ -34,13 +34,19 @@
             <ul>
               <li><i class="fa-solid fa-screwdriver-wrench"></i><span id="bullet">Type de meuble</span> <p> <%= @accessory.type_of %></p></li>
               <!-- <hr> -->
-              <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériaux</span> | <p><%= @accessory.material %></p></li>
+              <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériaux</span><p><%= @accessory.material %></p></li>
               <!-- <hr> -->
               <% if @accessory.created_at.present? %>
                 <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= @accessory.created_at.strftime("%d-%m-%Y") %></p></li>
               <% else %>
                 <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
               <% end %>
+              <li><i class="fa-regular fa-copyright"></i><span id="bullet">Créé par</span> 
+              <p>Atelier Plinguet</p>
+              <div>
+                <%= image_tag "logo-plinguet-01.png", class: "ap-logo" %>
+              </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -48,12 +54,6 @@
           <p><%= @accessory.description %></p>
         </div>
         <hr>
-      </div>
-  
-      <div class='creator'>
-        <div class='wrapper'>
-          <%= image_tag "logo-plinguet-01.png" %>
-        </div>
       </div>
     </div>
   </div>         

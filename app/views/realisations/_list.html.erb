@@ -1,0 +1,9 @@
+<%= link_to realisation_path(realisation) do %>
+  <figure>
+    <% realisation.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+      <% break %>
+    <% end %>
+    <figcaption><%= realisation.name %></figcaption>
+  </figure>
+<% end %>
