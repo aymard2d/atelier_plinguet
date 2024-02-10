@@ -1,15 +1,19 @@
-<div data-controller="add-furniture" class="index-body">
-  <div class="index-top">
-    <div class="category-search">
-      <% @furniture_types.each do |type| %>
-          <%= link_to type, show_by_type_furnitures_path(type) %>
-      <% end %>
-    </div>
+<div data-controller="add-furniture">
+  <div class="add-furniture">
+    <% if user_signed_in? %>
       <button data-action="click->add-furniture#displayForm" class="btn btn-outline-primary">Ajouter un nouveau meuble</button>
-      <div>
-        <%= render "furnitures/add_furniture_form", furniture: @furniture %>
-      </div>
-    </div>
+    <% end %>
+  </div>
+  
+  <div class="category-search">
+    <% @furniture_types.each do |type| %>
+        <%= link_to type, show_by_type_furnitures_path(type) %>
+    <% end %>
+  </div>
+  <div>
+    <%= render "furnitures/add_furniture_form", furniture: @furniture %>
+  </div>
+  
   <div class="galerie" data-add-furniture-target="list">
     <% @furnitures.each do |furniture| %>
       <%= link_to furniture_path(furniture) do %>
@@ -23,4 +27,4 @@
       <% end %>
     <% end %>
   </div>
-</div>rails generate devise:install
+</div>
