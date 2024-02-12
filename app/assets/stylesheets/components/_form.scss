@@ -12,6 +12,19 @@
   font-size: large;
   margin-bottom: 150px;
 
+  input, select, textarea {
+    font-family: 'cormorant';
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  img {
+    vertical-align: middle;
+    /* height: 151px; */
+    width: 18%;
+    margin: auto;
+  }
+
   .share-button {
     background: white;
     border: none;
