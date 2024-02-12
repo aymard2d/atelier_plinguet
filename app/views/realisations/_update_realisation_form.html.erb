@@ -1,0 +1,19 @@
+<div>
+  <%= simple_form_for (realisation), html: {class: realisation.errors.any? ? "" : "d-none add-form", data: { update_realisation_target: "form", action: "submit->add-realisation#add turbo:submit-end->add-realisation#resetForm" }} do |f| %>
+    <%= f.input :name, label: "Nom" %>
+    <%= f.input :description, as: :text, label: "Description" %>
+    <%= f.input :type_of_realisation, label: "Type de réalisation" %>
+    <%= f.input :localisation, label: "Lieu de la réalisation" %>
+    <%= f.input_field :created_at, as: :hidden, value: Date.today %>
+    <%= f.input_field :user_id, as: :hidden, value: params[:id] %>
+    <% if @realisation.photos.attached? %>
+      <% @realisation.photos.each do |ph| %>
+        <%= f.hidden_field :photos, multiple: true, value: ph.signed_id %>
+      <% end %>
+    <% end %>
+    <%= f.input :photos, as: :file, label: "Ajoutez une ou plusieurs photos", input_html: { multiple: true } %>
+    <button class="button-85" role="button">
+      <%= f.submit "Share!", class: "share-button" %>
+    </button>
+  <% end %>
+</div>

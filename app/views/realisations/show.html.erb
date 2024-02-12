@@ -3,58 +3,68 @@
 <% content_for :meta_description, @realisation.description %>  
 <%# content_for :meta_image, cl_image_path(@realisation.photo.path) %>
 
-<div class="main-container">
-  <div class="galery-container">
-    <% @realisation.photos.each do |photo| %>
-      <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
-        <div class="content">
-          <h2><%= @realisation.name %></h2>
-          <span><%= @realisation.type_of_realisation %></span>
-        </div>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="furniture-container">
-    <div class="furniture-glass">
-      <h2>Caractéristiques de "<%= @realisation.name %>"</h2>
-      <hr>
-      <div class="furniture-card">
-        <div class="furniture-photo">
-          <div class="furniture-details-photo">
-            <% if @realisation.photos.attached? %>
-              <img src="<%= url_for(@realisation.photos.first) %>" class="tokenImage" alt="Description de l'image">
-            <% else %>
-              <!-- Gérer le cas où aucune image n'est attachée -->
-              <p>Aucune image disponible</p>
-            <% end %>
-          </div>
-          <%# <div class="vl"></div> %>
-          <div class="furniture-details">
-            <ul>
-              <li><i class="fa-solid fa-screwdriver-wrench"></i><span id="bullet">Type de réalisation</span> <p> <%= @realisation.type_of_realisation %></p></li>
-              <!-- <hr> -->
-              <li><i class="fa-solid fa-gem"></i> <span id="bullet">Lieu de réalisation</span> <p><%= @realisation.localisation %></p></li>
-              <!-- <hr> -->
-              <% if @realisation.created_at.present? %>
-                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= @realisation.created_at.strftime("%d-%m-%Y") %></p></li>
-              <% else %>
-                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
-              <% end %>
-              <li><i class="fa-regular fa-copyright"></i><span id="bullet">Créé par</span> 
-              <p>Atelier Plinguet</p>
-              <div>
-                <%= image_tag "logo-plinguet-01.png", class: "ap-logo" %>
-              </div>
-              </li>
-            </ul>
+  <div data-controller="update-realisation">
+  <div class="main-container">
+    <div class="galery-container">
+      <% @realisation.photos.each do |photo| %>
+        <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
+          <div class="content">
+            <h2><%= @realisation.name %></h2>
+            <span><%= @realisation.type_of_realisation %></span>
           </div>
         </div>
-        <div class="furniture-description">  
-          <p><%= @realisation.description %></p>
-        </div>
-        <hr>
-      </div>
+      <% end %>
     </div>
-  </div>         
+
+    <div class="furniture-container">
+      <div class="furniture-glass">
+        <h2>Caractéristiques de "<%= @realisation.name %>"</h2>
+        <hr>
+        <div class="furniture-card">
+          <div class="furniture-photo">
+            <div class="furniture-details-photo">
+              <% if @realisation.photos.attached? %>
+                <img src="<%= url_for(@realisation.photos.first) %>" class="tokenImage" alt="Description de l'image">
+              <% else %>
+                <!-- Gérer le cas où aucune image n'est attachée -->
+                <p>Aucune image disponible</p>
+              <% end %>
+            </div>
+            <%# <div class="vl"></div> %>
+            <div class="furniture-details">
+              <ul>
+                <li><i class="fa-solid fa-screwdriver-wrench"></i><span id="bullet">Type de réalisation</span> <p> <%= @realisation.type_of_realisation %></p></li>
+                <!-- <hr> -->
+                <li><i class="fa-solid fa-gem"></i> <span id="bullet">Lieu de réalisation</span> <p><%= @realisation.localisation %></p></li>
+                <!-- <hr> -->
+                <% if @realisation.created_at.present? %>
+                  <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= @realisation.created_at.strftime("%d-%m-%Y") %></p></li>
+                <% else %>
+                  <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
+                <% end %>
+                <li><i class="fa-regular fa-copyright"></i><span id="bullet">Créé par</span> 
+                <p>Atelier Plinguet</p>
+                <div>
+                  <%= image_tag "logo-plinguet-01.png", class: "ap-logo" %>
+                </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="furniture-description">  
+            <p><%= @realisation.description %></p>
+          </div>
+          <hr>
+        </div>
+        <div style="text-align: center; margin-top: 2rem">
+          <% if user_signed_in? %>
+            <button data-action="click->update-realisation#displayForm" class="btn btn-outline-primary update-button">Modifier <%= @realisation.name %></button>
+          <% end %>
+          <div>
+            <%= render "realisations/update_realisation_form", realisation: @realisation %>
+          </div>
+        </div>
+      </div>
+    </div>         
+  </div>
 </div>

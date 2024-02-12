@@ -3,60 +3,70 @@
 <% content_for :meta_description, @accessory.description %>  
 <%# content_for :meta_image, cl_image_path(@accessory.photo.path) %>
 
-<div class="main-container">
-  <div class="galery-container">
-    <% @accessory.photos.each do |photo| %>
-      <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
-        <div class="content">
-          <h2><%= @accessory.name %></h2>
-          <span><%= @accessory.type_of %></span>
-        </div>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="furniture-container">
-    <div class="furniture-glass">
-      <h2>Caractéristiques de "<%= @accessory.name %>"</h2>
-      <hr>
-      <div class="furniture-card">
-        <div class="furniture-photo">
-          <div class="furniture-details-photo">
-            <% if @accessory.photos.attached? %>
-              <img src="<%= url_for(@accessory.photos.first) %>" class="tokenImage" alt="Description de l'image">
-            <% else %>
-              <!-- Gérer le cas où aucune image n'est attachée -->
-              <p>Aucune image disponible</p>
-            <% end %>
-          </div>
-          <%# <div class="vl"></div> %>
-          <div class="furniture-details">
-            <ul>
-              <li><i class="fa-solid fa-screwdriver-wrench"></i><span id="bullet">Type de meuble</span> <p> <%= @accessory.type_of %></p></li>
-              <!-- <hr> -->
-              <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériaux</span><p><%= @accessory.material %></p></li>
-              <!-- <hr> -->
-              <% if @accessory.created_at.present? %>
-                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= @accessory.created_at.strftime("%d-%m-%Y") %></p></li>
-              <% else %>
-                <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
-              <% end %>
-              <li><i class="fa-regular fa-copyright"></i><span id="bullet">Créé par</span> 
-              <p>Atelier Plinguet</p>
-              <div>
-                <%= image_tag "logo-plinguet-01.png", class: "ap-logo" %>
-              </div>
-              </li>
-            </ul>
+<div data-controller="update-accessory">
+  <div class="main-container">
+    <div class="galery-container">
+      <% @accessory.photos.each do |photo| %>
+        <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
+          <div class="content">
+            <h2><%= @accessory.name %></h2>
+            <span><%= @accessory.type_of %></span>
           </div>
         </div>
-        <div class="furniture-description">  
-          <p><%= @accessory.description %></p>
-        </div>
-        <hr>
-      </div>
+      <% end %>
     </div>
-  </div>         
+
+    <div class="furniture-container">
+      <div class="furniture-glass">
+        <h2>Caractéristiques de "<%= @accessory.name %>"</h2>
+        <hr>
+        <div class="furniture-card">
+          <div class="furniture-photo">
+            <div class="furniture-details-photo">
+              <% if @accessory.photos.attached? %>
+                <img src="<%= url_for(@accessory.photos.first) %>" class="tokenImage" alt="Description de l'image">
+              <% else %>
+                <!-- Gérer le cas où aucune image n'est attachée -->
+                <p>Aucune image disponible</p>
+              <% end %>
+            </div>
+            <%# <div class="vl"></div> %>
+            <div class="furniture-details">
+              <ul>
+                <li><i class="fa-solid fa-screwdriver-wrench"></i><span id="bullet">Type de meuble</span> <p> <%= @accessory.type_of %></p></li>
+                <!-- <hr> -->
+                <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériaux</span><p><%= @accessory.material %></p></li>
+                <!-- <hr> -->
+                <% if @accessory.created_at.present? %>
+                  <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= @accessory.created_at.strftime("%d-%m-%Y") %></p></li>
+                <% else %>
+                  <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
+                <% end %>
+                <li><i class="fa-regular fa-copyright"></i><span id="bullet">Créé par</span> 
+                <p>Atelier Plinguet</p>
+                <div>
+                  <%= image_tag "logo-plinguet-01.png", class: "ap-logo" %>
+                </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="furniture-description">  
+            <p><%= @accessory.description %></p>
+          </div>
+          <hr>
+        </div>
+        <div style="text-align: center; margin-top: 2rem">
+          <% if user_signed_in? %>
+            <button data-action="click->update-accessory#displayForm" class="btn btn-outline-primary update-button">Modifier <%= @accessory.name %></button>
+          <% end %>
+          <div>
+            <%= render "accessories/update_accessory_form", accessory: @accessory %>
+          </div>
+        </div>
+      </div>
+    </div>         
+  </div>
 </div>
 
 

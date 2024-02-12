@@ -50,33 +50,12 @@ class FurnituresController < ApplicationController
 
   def update
     @furniture = Furniture.find(params[:id])
-    puts "Received params: #{params.inspect}"
-    # Retrieve existing photo IDs
-    existing_photo_ids = params[:furniture].delete(:existing_photo_ids)&.split(',')
-  
-    # Update the furniture attributes
     if @furniture.update(furniture_params)
-      # If successful, re-attach existing photos
-      reattach_existing_photos(existing_photo_ids)
       redirect_to furniture_path(@furniture)
     else
       render :edit
     end
   end
-  
-  private
-  
-  def reattach_existing_photos(photo_ids)
-    return unless photo_ids.present?
-  
-    photo_ids.each do |photo_id|
-      photo = ActiveStorage::Blob.find_by(id: photo_id)
-      next unless photo
-  
-      @furniture.photos.attach(photo)
-    end
-  end
-
 
   def destroy
   end
