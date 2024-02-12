@@ -59,6 +59,7 @@
         <div style="text-align: center; margin-top: 2rem">
           <% if user_signed_in? %>
             <button data-action="click->update-realisation#displayForm" class="btn btn-outline-primary update-button">Modifier <%= @realisation.name %></button>
+            <%= link_to "Supprimer #{@realisation.name}",realisation_path(@realisation),data: {turbo_method: :delete, turbo_confirm: "t'es sûr mon couz ?"}, class: "btn btn-outline-primary update-button" %>
           <% end %>
           <div>
             <%= render "realisations/update_realisation_form", realisation: @realisation %>

@@ -91,6 +91,7 @@
       <div style="text-align: center; margin-top: 2rem">
         <% if user_signed_in? %>
           <button data-action="click->update-furniture#displayForm" class="btn btn-outline-primary update-button">Modifier <%= @furniture.name %></button>
+          <%= link_to "Supprimer #{@furniture.name}",furniture_path(@furniture),data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?"}, class: "btn btn-outline-primary update-button" %>
         <% end %>
         <div>
           <%= render "furnitures/update_furniture_form", furniture: @furniture %>

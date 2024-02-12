@@ -1,5 +1,6 @@
 class AccessoriesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_accessory, only: [:show, :edit, :destroy, :update]
 
   def index
     @accessories = Accessory.all
@@ -8,7 +9,6 @@ class AccessoriesController < ApplicationController
   end
   
   def show
-    @accessory = Accessory.find(params[:id])
   end
 
   def show_by_type
@@ -33,11 +33,9 @@ class AccessoriesController < ApplicationController
   end
   
   def edit
-    @accessory = Accessory.find(params[:id])
   end
 
   def update
-    @accessory = Accessory.find(params[:id])
     if @accessory.update(accessory_params)
       redirect_to accessory_path(@accessory)
     else
@@ -45,12 +43,17 @@ class AccessoriesController < ApplicationController
     end
   end
 
-  def delete
-    @accessory = Accessory.find(params[:id])
+  def destroy
+    @accessory.destroy
+    redirect_to accessories_path, status: :see_other
   end
 
 
   private
+
+  def set_accessory
+    @accessory = Accessory.find(params[:id])
+  end
 
   def accessory_params
     params.require(:accessory).permit(:name, :description, :material, :type_of, :manufacture_date, photos: [])

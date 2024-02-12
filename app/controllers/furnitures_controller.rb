@@ -1,5 +1,6 @@
 class FurnituresController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_furniture, only: [:show, :edit, :destroy, :update]
 
   def new
     @furniture = Furniture.new
@@ -17,7 +18,6 @@ class FurnituresController < ApplicationController
   end
 
   def show
-    @furniture = Furniture.find(params[:id])
     colibri = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/colibri_logo_cujxhq.png"
     pure_and_paint = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/pure_and_paint_logo_qgsn1x.png"
     farrow_and_ball = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/farrow_and_ball_logo_meo66k.png"
@@ -45,11 +45,9 @@ class FurnituresController < ApplicationController
   end
 
   def edit
-    @furniture = Furniture.find(params[:id])
   end
 
   def update
-    @furniture = Furniture.find(params[:id])
     if @furniture.update(furniture_params)
       redirect_to furniture_path(@furniture)
     else
@@ -58,9 +56,15 @@ class FurnituresController < ApplicationController
   end
 
   def destroy
+    @furniture.destroy
+    redirect_to furnitures_path, status: :see_other
   end
 
   private
+
+  def set_furniture
+    @furniture = Furniture.find(params[:id])
+  end
 
   def furniture_params
     params.require(:furniture).permit(:name, :description, :color, :material, :date_of_manufacture, :type_of_furniture, :varnish, :varnish_brand, :teint, :paint_brand, :existing_photos_ids, photos: [])
