@@ -33,6 +33,12 @@ class RealisationsController < ApplicationController
   end
 
   def update
+    @realisation = Realisation.find(params[:id])
+    if @realisation.update(realisation_params)
+      redirect_to realisation_path(@realisation)
+    else
+      render :edit
+    end
   end
 
   def edit

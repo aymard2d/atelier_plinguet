@@ -1,0 +1,19 @@
+<div>
+  <%= simple_form_for (accessory), html: {class: accessory.errors.any? ? "" : "d-none add-form", data: { update_accessory_target: "form", action: "submit->add-accessory#add turbo:submit-end->add-accessory#resetForm" }} do |f| %>
+    <%= f.input :name, label: "Nom" %>
+    <%= f.input :description, as: :text, label: "Description" %>
+    <%= f.input :type_of, collection: ["Lampe", "Luminaire", "Cadeau de naissance", "Porte-Serviette", "Porte_livre", "Table", "Chaise", "Autre" ], label: "Sélectionnez un type de création" %>
+    <%= f.input :material, label: "Sélectionnez un matériau", collection: ["Bois", "Cuivre", "Cuivre & Bois", "Pin", "Chène", "Autre"] %>
+    <%= f.input_field :created_at, as: :hidden, value: Date.today %>
+    <%= f.input_field :user_id, as: :hidden, value: params[:id] %>
+    <% if @accessory.photos.attached? %>
+      <% @accessory.photos.each do |ph| %>
+        <%= f.hidden_field :photos, multiple: true, value: ph.signed_id %>
+      <% end %>
+    <% end %>
+    <%= f.input :photos, as: :file, label: "Ajoutez une ou plusieurs photos", input_html: { multiple: true } %>
+    <button class="button-85" role="button">
+      <%= f.submit "Share!", class: "share-button" %>
+    </button>
+  <% end %>
+</div>

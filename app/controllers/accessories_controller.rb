@@ -37,6 +37,12 @@ class AccessoriesController < ApplicationController
   end
 
   def update
+    @accessory = Accessory.find(params[:id])
+    if @accessory.update(accessory_params)
+      redirect_to accessory_path(@accessory)
+    else
+      render :edit
+    end
   end
 
   def delete
@@ -46,7 +52,7 @@ class AccessoriesController < ApplicationController
 
   private
 
-  def accesory_params
+  def accessory_params
     params.require(:accessory).permit(:name, :description, :material, :type_of, :manufacture_date, photos: [])
   end
 end
