@@ -61,3 +61,16 @@
   z-index: 1;
   position: relative;
 }
+
+.update-button {
+  margin: auto;
+
+  border-radius: 10px;
+  color: $blue;
+  background-color: $light-wood;
+
+  &:hover {
+    background-color: $blue;
+    color: $light-wood;
+  }
+}
