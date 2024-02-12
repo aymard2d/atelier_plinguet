@@ -59,6 +59,7 @@
         <div style="text-align: center; margin-top: 2rem">
           <% if user_signed_in? %>
             <button data-action="click->update-accessory#displayForm" class="btn btn-outline-primary update-button">Modifier <%= @accessory.name %></button>
+            <%= link_to "Supprimer #{@accessory.name}", accessory_path(@accessory), data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?" }, class: "btn btn-outline-primary update-button" %>
           <% end %>
           <div>
             <%= render "accessories/update_accessory_form", accessory: @accessory %>

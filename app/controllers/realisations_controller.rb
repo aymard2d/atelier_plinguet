@@ -1,5 +1,6 @@
 class RealisationsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_realisation, only: [:show, :destroy, :edit, :update]
 
   def new
     @realisation = Realisation.new
@@ -12,7 +13,6 @@ class RealisationsController < ApplicationController
   end
 
   def show
-    @realisation = Realisation.find(params[:id])
   end
 
   def show_by_type
@@ -33,7 +33,6 @@ class RealisationsController < ApplicationController
   end
 
   def update
-    @realisation = Realisation.find(params[:id])
     if @realisation.update(realisation_params)
       redirect_to realisation_path(@realisation)
     else
@@ -44,10 +43,16 @@ class RealisationsController < ApplicationController
   def edit
   end
 
-  def delete
+  def destroy
+    @realisation.destroy
+    redirect_to realisations_path, status: :see_other
   end
 
   private
+
+  def set_realisation
+    @realisation = Realisation.find(params[:id])
+  end
 
   def realisation_params
     params.require(:realisation).permit(:name, :description, :localisation,  :manufacture_date, :type_of_realisation, photos: [])
