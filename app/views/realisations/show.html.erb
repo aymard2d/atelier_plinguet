@@ -28,6 +28,11 @@
               <% else %>
                 <!-- Gérer le cas où aucune image n'est attachée -->
                 <p>Aucune image disponible</p>
+                <% if user_signed_in? %>
+                  <%= link_to 'Remove', delete_image_attachment_collections_url(image.signed_id),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+                <% end %>
               <% end %>
             </div>
             <%# <div class="vl"></div> %>

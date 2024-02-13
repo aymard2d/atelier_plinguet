@@ -64,6 +64,15 @@ class FurnituresController < ApplicationController
     redirect_to furnitures_path, status: :see_other
   end
 
+  def delete_photo_attachment
+    @furniture = Furniture.find(params[:id])
+    @photo = @furniture.photos.find_by_blob_id(params[:photo_id])
+    @photo.detach if @photo
+    redirect_to @furniture, notice: 'Photo attachment was successfully removed.'
+  end
+  
+  
+  
   private
 
   def set_furniture
