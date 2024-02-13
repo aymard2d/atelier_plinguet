@@ -10,6 +10,12 @@ class RealisationsController < ApplicationController
     @realisations = Realisation.all
     @realisation = Realisation.new
     @realisation_types = Realisation.pluck(:type_of_realisation).uniq
+    sql_subquery = "type_of_realisation ILIKE :query OR description ILIKE :query"
+    @realisations = @realisations.where(sql_subquery, query: "%#{params[:query]}%")
+    respond_to do |format|
+      format.html
+      format.text { render partial: "realisations/realisation_filtered", locals: {realisations: @realisations}, formats: [:html] }
+    end
   end
 
   def show

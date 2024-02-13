@@ -13,16 +13,21 @@
     <%= render "accessories/add_accessory_form", accessory: @accessory %>
   </div>
 
-  <div class="galerie" data-add-accessory-target="list">
-    <% @accessories.each do |accessory| %>
-      <%= link_to accessory_path(accessory) do %>
-        <figure>
-          <% accessory.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, alt: "atelier-plinguet-fabrication", class: "object-fit-cover index-photo" %>
-            <% break %>
-          <% end %> 
-          <figcaption><%= accessory.name %></figcaption>
-        </figure>
+  <div class="row justify-content-center" data-controller= "furniture-search-filter">
+    <div class="col-sm-8 my-3">
+      <%= form_with url: accessories_path, method: :get, class: "d-flex", data: { furniture_search_filter_target: "filter"} do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Entrez un mot-clef",
+          data: { action: "keyup->furniture-search-filter#filter",
+              furniture_search_filter_target: "input" }
+          %>
+        <%= button_tag(type: "submit", class: "btn btn-link text-info") do %>
+        <i class="fa fa-search"></i>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
+    <%= render "accessory_filtered", accessories: @accessories%>
+  </div>
 </div>

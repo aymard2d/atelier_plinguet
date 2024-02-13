@@ -8,24 +8,23 @@
     </div>
   </div>
 
-  <div class="category-search">
-  <% @realisation_types.each do |type| %>
-      <%= link_to type, show_by_type_realisations_path(type) %>
-  <% end %>
-  </div>
-
-  <div class="galerie" data-add-realisation-target="list">
-    <% @realisations.each do |realisation| %>
-      <%= link_to realisation_path(realisation) do %>
-        <figure>
-          <% realisation.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
-            <% break %>
-          <% end %> 
-          <figcaption><%= realisation.name %></figcaption>
-        </figure>
+  <div class="row justify-content-center" data-controller= "furniture-search-filter">
+    <div class="col-sm-8 my-3">
+      <%= form_with url: realisations_path, method: :get, class: "d-flex", data: { furniture_search_filter_target: "filter"} do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Entrez un mot-clef",
+          data: { action: "keyup->furniture-search-filter#filter",
+              furniture_search_filter_target: "input" }
+          %>
+        <%= button_tag(type: "submit", class: "btn btn-link text-info") do %>
+        <i class="fa fa-search"></i>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
+      <%= render "realisation_filtered", realisations: @realisations%>
+    </div>
   </div>
 </div>
 

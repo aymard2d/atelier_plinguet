@@ -1,0 +1,15 @@
+<div class="user-cards" data-furniture-search-filter-target="furnitures" > 
+  <div class="galerie" data-add-realisation-target="list">
+    <% @realisations.each do |realisation| %>
+      <%= link_to realisation_path(realisation) do %>
+        <figure>
+          <% realisation.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= realisation.name %></figcaption>
+        </figure>
+      <% end %>
+    <% end %>
+  </div>
+</div>

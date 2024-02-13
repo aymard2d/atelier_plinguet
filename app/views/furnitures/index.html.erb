@@ -8,23 +8,30 @@
     </div>
   </div>
   
-  <div class="category-search">
-    <% @furniture_types.each do |type| %>
-        <%= link_to type, show_by_type_furnitures_path(type) %>
-    <% end %>
-  </div>
-  
-  <div class="galerie" data-add-furniture-target="list">
-    <% @furnitures.each do |furniture| %>
-      <%= link_to furniture_path(furniture) do %>
-        <figure>
-          <% furniture.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
-            <% break %>
-          <% end %> 
-          <figcaption><%= furniture.name %></figcaption>
-        </figure>
+  <%# <div class="category-search"> %>
+    <%# @furniture_types.each do |type| %>
+      <%#= link_to type, show_by_type_furnitures_path(type) %>
+    <%# end %>
+ <%#  </div> %>
+  <div class="row justify-content-center" data-controller= "furniture-search-filter">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: furnitures_path, method: :get, class: "d-flex", data: { furniture_search_filter_target: "filter"} do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Entrez un mot-clef",
+        data: { action: "keyup->furniture-search-filter#filter",
+            furniture_search_filter_target: "input" }
+        %>
+      <%= button_tag(type: "submit", class: "btn btn-link text-info") do %>
+      <i class="fa fa-search"></i>
       <% end %>
     <% end %>
+    </div>
+      <%= render "furniture_filtered", furnitures: @furnitures%>
+    </div>
   </div>
+</div>
+  
+
 </div>

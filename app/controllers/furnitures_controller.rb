@@ -7,14 +7,18 @@ class FurnituresController < ApplicationController
   end
 
   def index
-    @furnitures = Furniture.all
     @furniture = Furniture.new
+    @furnitures = Furniture.all.order("created_at DESC")
     @furniture_types = Furniture.pluck(:type_of_furniture).uniq
-  end
-
-  def show_by_type
-    @furniture_type = params[:type]
-    @furnitures = Furniture.where(type_of_furniture: @furniture_type)
+    #if params[:query].present?
+      #@furnitures = @furnitures.where(type_of_furniture: params[:query])
+    #end
+    sql_subquery = "type_of_furniture ILIKE :query OR description ILIKE :query OR color ILIKE :query"
+    @furnitures = @furnitures.where(sql_subquery, query: "%#{params[:query]}%")
+    respond_to do |format|
+      format.html
+      format.text { render partial: "furnitures/furniture_filtered", locals: {furnitures: @furnitures}, formats: [:html] }
+    end
   end
 
   def show
