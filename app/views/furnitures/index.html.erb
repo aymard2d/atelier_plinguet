@@ -1,4 +1,4 @@
-<div data-controller="add-furniture">
+<div data-controller="add-furniture furniture-search-filter">
   <div class="add-furniture">
     <% if user_signed_in? %>
       <button data-action="click->add-furniture#displayForm" class="btn btn-outline-primary">Ajouter un nouveau meuble</button>
@@ -10,9 +10,21 @@
   
   <div class="category-search">
     <% @furniture_types.each do |type| %>
-        <%= link_to type, show_by_type_furnitures_path(type) %>
+      <%= link_to type, show_by_type_furnitures_path(type) %>
     <% end %>
   </div>
+  <div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: furnitures_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Entrez un mot-clef"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
   
   <div class="galerie" data-add-furniture-target="list">
     <% @furnitures.each do |furniture| %>

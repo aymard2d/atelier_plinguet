@@ -10,11 +10,14 @@ class FurnituresController < ApplicationController
     @furnitures = Furniture.all
     @furniture = Furniture.new
     @furniture_types = Furniture.pluck(:type_of_furniture).uniq
+    if params[:query].present?
+      @furnitures = @furnitures.where(type_of_furniture: params[:query])
+    end
   end
 
   def show_by_type
-    @furniture_type = params[:type]
-    @furnitures = Furniture.where(type_of_furniture: @furniture_type)
+    @furnitures = Furniture.where(type_of_furniture: params[:type])
+
   end
 
   def show

@@ -1,0 +1,10 @@
+
+  <% furnitures.each do |furniture|  %>
+    <%= link_to "furnitures/#{furniture.id}", data: { action:  "click->display-furniture-card#display" }, style: 'text-decoration: none' do %>
+      <div class="furniture-card">
+        <%= cl_image_tag furniture.photos.first.key, width: 250,crop: :fill,  class: "avatar-large", alt: "avatar-large" %>
+        <h5 class="furniture-title"><%= furniture.name %> </h5>
+      </div>
+    <% end %>
+  <% end %>
+
