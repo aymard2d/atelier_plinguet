@@ -31,7 +31,7 @@ class RealisationsController < ApplicationController
     respond_to do |format|
       if @realisation.save
         format.html { redirect_to realisations_path }
-        format.text { render partial: "realisations/list", locals: { realisation: @realisation }, formats: [:html] }
+        format.text { render partial: "realisations/realisation_filtered", locals: { realisation: @realisation }, formats: [:html] }
       else
         render :index, status: :unprocessable_entity
       end

@@ -41,7 +41,7 @@ class FurnituresController < ApplicationController
     respond_to do |format|
       if @furniture.save
         format.html { redirect_to furnitures_path }
-        format.text { render partial: "furnitures/list", locals: { furniture: @furniture }, formats: [:html] }
+        format.text { render partial: "furnitures/furniture_filtered", locals: { furniture: @furniture }, formats: [:html] }
       else
         render :index, status: :unprocessable_entity
       end

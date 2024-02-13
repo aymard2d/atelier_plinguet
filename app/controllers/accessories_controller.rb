@@ -26,7 +26,7 @@ class AccessoriesController < ApplicationController
     respond_to do |format|
       if @accessory.save
         format.html { redirect_to accessories_path }
-        format.text { render partial: "accessories/list", locals: { accessory: @accessory }, formats: [:html] }
+        format.text { render partial: "accessories/filtered", locals: { accessory: @accessory }, formats: [:html] }
       else
         render :index, status: :unprocessable_entity
       end
