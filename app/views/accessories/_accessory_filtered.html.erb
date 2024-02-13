@@ -1,0 +1,15 @@
+<div class="user-cards" data-furniture-search-filter-target="furnitures" > 
+  <div class="galerie" data-add-accessory-target="list">
+    <% @accessories.each do |accessory| %>
+      <%= link_to accessory_path(accessory) do %>
+        <figure>
+          <% accessory.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-fabrication", class: "object-fit-cover index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= accessory.name %></figcaption>
+        </figure>
+      <% end %>
+    <% end %>
+  </div>
+</div>

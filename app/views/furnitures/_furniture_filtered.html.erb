@@ -1,10 +1,15 @@
-
-  <% furnitures.each do |furniture|  %>
-    <%= link_to "furnitures/#{furniture.id}", data: { action:  "click->display-furniture-card#display" }, style: 'text-decoration: none' do %>
-      <div class="furniture-card">
-        <%= cl_image_tag furniture.photos.first.key, width: 250,crop: :fill,  class: "avatar-large", alt: "avatar-large" %>
-        <h5 class="furniture-title"><%= furniture.name %> </h5>
-      </div>
+<div class="user-cards" data-furniture-search-filter-target="furnitures" >
+  <div class="galerie" data-add-furniture-target= "list"  >
+    <% @furnitures.each do |furniture| %>
+      <%= link_to furniture_path(furniture) do %>
+        <figure>
+          <% furniture.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= furniture.name %></figcaption>
+        </figure>
+      <% end %>
     <% end %>
-  <% end %>
-
+  </div>
+</div>
