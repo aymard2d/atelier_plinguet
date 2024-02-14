@@ -2,9 +2,13 @@ class AccessoriesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_accessory, only: [:show, :edit, :destroy, :update]
 
-  def index
-    @accessories = Accessory.all
+  def new
     @accessory = Accessory.new
+  end
+
+  def index
+    @accessory = Accessory.new
+    @accessories = Accessory.all.order("created_at DESC")
     @accessory_types = Accessory.pluck(:type_of).uniq
     sql_subquery = "type_of ILIKE :query OR description ILIKE :query OR material ILIKE :query"
     @accessories = @accessories.where(sql_subquery, query: "%#{params[:query]}%")
@@ -17,16 +21,14 @@ class AccessoriesController < ApplicationController
   def show
   end
 
-  def new
-    @accessory = Accessory.new
-  end
 
   def create
     @accessory = Accessory.new(accessory_params)
+    @accessories = Accessory.all
     respond_to do |format|
       if @accessory.save
         format.html { redirect_to accessories_path }
-        format.text { render partial: "accessories/list", locals: { accessory: @accessory }, formats: [:html] }
+        format.text { render partial: "accessories/accessory_filtered", locals: { accessory: @accessory }, formats: [:html] }
       else
         render :index, status: :unprocessable_entity
       end

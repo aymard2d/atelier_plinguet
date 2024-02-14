@@ -7,8 +7,8 @@ class RealisationsController < ApplicationController
   end
 
   def index
-    @realisations = Realisation.all
     @realisation = Realisation.new
+    @realisations = Realisation.all.order("created_at DESC")
     @realisation_types = Realisation.pluck(:type_of_realisation).uniq
     sql_subquery = "type_of_realisation ILIKE :query OR description ILIKE :query"
     @realisations = @realisations.where(sql_subquery, query: "%#{params[:query]}%")
@@ -28,10 +28,11 @@ class RealisationsController < ApplicationController
 
   def create
     @realisation = Realisation.new(realisation_params)
+    @realisations = Realisation.all
     respond_to do |format|
       if @realisation.save
         format.html { redirect_to realisations_path }
-        format.text { render partial: "realisations/list", locals: { realisation: @realisation }, formats: [:html] }
+        format.text { render partial: "realisations/realisation_filtered", locals: { realisation: @realisation }, formats: [:html] }
       else
         render :index, status: :unprocessable_entity
       end

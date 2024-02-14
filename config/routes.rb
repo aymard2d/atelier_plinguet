@@ -40,4 +40,6 @@ Rails.application.routes.draw do
       get "show_by_type/:type", to: "realisations#show_by_type", as: "show_by_type"
     end
   end
+
+  resources :contact_form, only: %i[new create]
 end
