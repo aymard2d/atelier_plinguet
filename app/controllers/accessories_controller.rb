@@ -6,7 +6,7 @@ class AccessoriesController < ApplicationController
     @accessories = Accessory.all
     @accessory = Accessory.new
     @accessory_types = Accessory.pluck(:type_of).uniq
-    sql_subquery = "type_of ILIKE :query OR description ILIKE :query"
+    sql_subquery = "type_of ILIKE :query OR description ILIKE :query OR material ILIKE :query"
     @accessories = @accessories.where(sql_subquery, query: "%#{params[:query]}%")
     respond_to do |format|
       format.html
