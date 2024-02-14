@@ -13,7 +13,7 @@ class FurnituresController < ApplicationController
     #if params[:query].present?
       #@furnitures = @furnitures.where(type_of_furniture: params[:query])
     #end
-    sql_subquery = "type_of_furniture ILIKE :query OR description ILIKE :query OR color ILIKE :query"
+    sql_subquery = "type_of_furniture ILIKE :query OR color ILIKE :query OR material ILIKE :query OR paint_brand ILIKE :query"
     @furnitures = @furnitures.where(sql_subquery, query: "%#{params[:query]}%")
     respond_to do |format|
       format.html
@@ -64,6 +64,15 @@ class FurnituresController < ApplicationController
     redirect_to furnitures_path, status: :see_other
   end
 
+  def delete_photo_attachment
+    @furniture = Furniture.find(params[:id])
+    @photo = @furniture.photos.find_by_blob_id(params[:photo_id])
+    @photo.detach if @photo
+    redirect_to @furniture, notice: 'Photo attachment was successfully removed.'
+  end
+  
+  
+  
   private
 
   def set_furniture

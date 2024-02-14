@@ -20,9 +20,13 @@ Rails.application.routes.draw do
 
   #routes des meubles
   resources :furnitures do
+    member do
+      delete :delete_photo_attachment
+    end
     collection do
       get 'show_by_type/:type', to: 'furnitures#show_by_type', as: 'show_by_type'
     end
+
   end
 
   resources :accessories do 

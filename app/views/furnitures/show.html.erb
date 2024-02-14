@@ -13,8 +13,16 @@
             <span><%= @furniture.type_of_furniture %></span>
           </div>
         </div>
+        <%= button_to 'Remove', delete_photo_attachment_furniture_url(@furniture, photo.blob_id),
+              method: :delete,
+              data: { confirm: 'Are you sure?' },
+              class: 'btn btn-danger',
+              form_class: 'd-inline' %>
+
       <% end %>
     </div>
+  </div>
+</div>
       
     <div class="furniture-container">
       <div class="furniture-glass">
