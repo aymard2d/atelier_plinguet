@@ -18,15 +18,18 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+
+
   #routes des meubles
+  delete "attachments/:id/purge", to: "attachments#purge", as: "purge_attachment"
+  
   resources :furnitures do
-    member do
-      delete :delete_photo_attachment
-    end
+    #member do
+      #delete :delete_photo
+    #end
     collection do
       get 'show_by_type/:type', to: 'furnitures#show_by_type', as: 'show_by_type'
     end
-
   end
 
   resources :accessories do 
@@ -42,4 +45,5 @@ Rails.application.routes.draw do
   end
 
   resources :contact_form, only: %i[new create]
+
 end

@@ -8,6 +8,7 @@ export default class extends Controller {
   }
 
   displayForm() {
+    console.log("sarah")
     this.formTarget.classList.toggle("d-none");
   }
 
