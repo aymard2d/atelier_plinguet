@@ -6,11 +6,12 @@
   <div data-controller="update-realisation">
   <div class="main-container">
     <div class="galery-container">
-      <% @realisation.photos.each do |photo| %>
-        <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
+      <% @realisation.photos.each do |attachment| %>
+        <div style="<%= "background: url('#{url_for(attachment)}') no-repeat 50% / cover;" %>">
           <div class="content">
             <h2><%= @realisation.name %></h2>
             <span><%= @realisation.type_of_realisation %></span>
+            <%= link_to 'Supprimer', purge_attachment_path(attachment), data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?"} %>
           </div>
         </div>
       <% end %>
@@ -28,11 +29,6 @@
               <% else %>
                 <!-- Gérer le cas où aucune image n'est attachée -->
                 <p>Aucune image disponible</p>
-                <% if user_signed_in? %>
-                  <%= link_to 'Remove', delete_image_attachment_collections_url(image.signed_id),
-                  method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
-                <% end %>
               <% end %>
             </div>
             <%# <div class="vl"></div> %>

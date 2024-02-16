@@ -48,9 +48,14 @@ class AccessoriesController < ApplicationController
 
   def destroy
     @accessory.destroy
-    redirect_to accessories_path, status: :see_other
+    redirect_to accessories_path, status: :see_other, notice: "#{@accessory.name.capitalize} a bien été supprimé(e) !}"
   end
 
+  def delete_photo_attachment
+    @accessory = Accessory.find(params[:id])
+    @accessory.photo.purge
+    redirect_back fallback_location: root_path, notice: 'Photo attachment was successfully deleted.'
+  end
 
   private
 

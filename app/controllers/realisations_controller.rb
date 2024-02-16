@@ -52,7 +52,13 @@ class RealisationsController < ApplicationController
 
   def destroy
     @realisation.destroy
-    redirect_to realisations_path, status: :see_other
+    redirect_to realisations_path, status: :see_other, notice: "#{@realisation.name.capitalize} a bien été supprimé(e) !"
+  end
+
+  def delete_photo_attachment
+    @realisation = Realisation.find(params[:id])
+    @realisation.photo.purge
+    redirect_back fallback_location: root_path, notice: 'Photo attachment was successfully deleted.'
   end
 
   private

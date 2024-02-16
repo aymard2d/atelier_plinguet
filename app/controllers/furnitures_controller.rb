@@ -62,15 +62,15 @@ class FurnituresController < ApplicationController
 
   def destroy
     @furniture.destroy
-    redirect_to furnitures_path, status: :see_other
+    redirect_to furnitures_path, status: :see_other, notice: "#{@furniture.name.capitalize} a bien été supprimée."
   end
 
   def delete_photo_attachment
     @furniture = Furniture.find(params[:id])
-    @photo = @furniture.photos.find_by_blob_id(params[:photo_id])
-    @photo.detach if @photo
-    redirect_to @furniture, notice: 'Photo attachment was successfully removed.'
+    @furniture.photo.purge
+    redirect_back fallback_location: root_path, notice: 'Photo attachment was successfully deleted.'
   end
+  
   
   
   

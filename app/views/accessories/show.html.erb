@@ -6,11 +6,12 @@
 <div data-controller="update-accessory">
   <div class="main-container">
     <div class="galery-container">
-      <% @accessory.photos.each do |photo| %>
-        <div style="<%= "background: url('#{url_for(photo)}') no-repeat 50% / cover;" %>">
+      <% @accessory.photos.each do |attachment| %>
+        <div style="<%= "background: url('#{url_for(attachment)}') no-repeat 50% / cover;" %>">
           <div class="content">
             <h2><%= @accessory.name %></h2>
             <span><%= @accessory.type_of %></span>
+            <%= link_to 'Supprimer', purge_attachment_path(attachment), data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?"} %>
           </div>
         </div>
       <% end %>
