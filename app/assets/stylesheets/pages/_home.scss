@@ -23,7 +23,8 @@ body h2 {
   padding: 20px;
   border-radius: 10px;
   width:70%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
   color: white;
 
   h2 {
