@@ -11,6 +11,8 @@ gem "rails", "~> 7.1.2"
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
+gem 'mail_form'
+gem 'mailgun-ruby', '~>1.2.14'
 
 # gem "redis", ">= 4.0.1"
 

@@ -1,9 +1,13 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
+  config.action_mailer_default_url_options = { host: 'https://www.atelier-plinguet.fr' }
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: 'ENV["408f32f3-e6bda8a7"]',
+    domain: 'atelier-plinguet.fr',
+  }
   # Code is not reloaded between requests.
   config.enable_reloading = false
 

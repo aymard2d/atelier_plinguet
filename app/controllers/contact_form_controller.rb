@@ -1,12 +1,24 @@
 class ContactFormController < ApplicationController
-  def create
-    @name = params[:contact_form][:name]
-    @last_name = params[:contact_form][:last_name]
-    @email = params[:contact_form][:email]
-    @message = params[:contact_form][:message]
+  
+  def new
+    @message = Message.new
+  end
 
-    # Perform any necessary actions with the form data
-    flash[:success] = "Votre message a bien été envoyé !"
-    redirect_to :root
+  def create
+      @message = Message.new message_params
+    if @message.valid?
+      MessageMailer.contact(@message).deliver_now
+      redirect_to new_message_url
+      flash[:notice] = "Nous avons bien reçu votre message. Nous allons en prendre connaissance rapidement et revenir vers vous."
+    else
+      flash[:notice] = "Une erreur s'est produite lors de l'envoi du message. Merci de bien vouloir essayer à nouveau."
+      render :new
+    end
+  end
+
+  private
+  
+  def message_params
+    params.require(:message).permit(:name, :email, :body)
   end
 end
