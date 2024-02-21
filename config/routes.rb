@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
-  get 'realisations/new'
-  get 'realisations/index'
-  get 'realisations/show'
-  get 'realisations/create'
-  get 'realisations/update'
-  get 'realisations/edit'
-  get 'realisations/delete'
+  #get 'realisations/new'
+  #get 'realisations/index'
+  #get 'realisations/show'
+  #get 'realisations/create'
+  #get 'realisations/update'
+  #get 'realisations/edit'
+  #get 'realisations/delete'
 
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  #static pages
+  get 'atelier', to: 'pages#atelier'
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
@@ -44,6 +47,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :contact_form, only: %i[new create]
+  resources :contacts , only: [:new, :create]
+  get 'contact', to: 'contacts#new'
 
 end

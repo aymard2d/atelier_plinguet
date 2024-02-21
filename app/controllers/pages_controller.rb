@@ -5,4 +5,8 @@ class PagesController < ApplicationController
     @last_accessories = Accessory.last(3)
     @last_realisations = Realisation.last(3)
   end
+
+  def atelier
+  end
+  
 end
