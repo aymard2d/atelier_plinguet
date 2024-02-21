@@ -47,6 +47,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :messages, only: %i[new create]
+  resources :contact_form, only: [:new]
 
 end
