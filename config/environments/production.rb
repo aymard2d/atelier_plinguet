@@ -1,13 +1,20 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.action_mailer_default_url_options = { host: 'https://www.atelier-plinguet.fr' }
-  # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {
-    api_key: 'ENV["408f32f3-e6bda8a7"]',
-    domain: 'atelier-plinguet.fr',
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'gmail.com',
+    user_name: 'aymard.de.dieu@gmail.com',
+    password: 'nncu fswc hxpo dwwo',
+    authentication: 'plain',
+    enable_starttls_auto: true
   }
+  
+  
   # Code is not reloaded between requests.
   config.enable_reloading = false
 
