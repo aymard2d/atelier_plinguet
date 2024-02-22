@@ -1,32 +1,41 @@
-<%= form_with(model: @contact, url: contacts_path, local: true) do |form| %>
-  <% if @contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+<div class="contact-container">
+  <div class="contact-card">
+    <div class="contact-photo">
+      </div>
+          <div class="contact-form">
+        <%= form_with(model: @contact, url: contacts_path, local: true) do |form| %>
+          <% if @contact.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
 
-      <ul>
-      <% @contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+              <ul>
+              <% @contact.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= form.label :name, "Nom" %>
+            <%= form.text_field :name, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= form.label :email, "E-mail" %>
+            <%= form.email_field :email %>
+          </div>
+
+          <div class="field">
+            <%= form.label :message, "Votre message" %>
+            <%= form.text_area :message %>
+          </div>
+
+          <div class="actions">
+            <%= form.submit "Envoyer mon message" %>
+          </div>
+        <% end %>
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name, "Nom" %>
-    <%= form.text_field :name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email, "E-mail" %>
-    <%= form.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :message, "Votre message" %>
-    <%= form.text_area :message %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit "Envoyer mon message" %>
-  </div>
-<% end %>
+</div>

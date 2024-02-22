@@ -12,7 +12,9 @@
           <div class="content">
             <h2><%= @furniture.name %></h2>
             <span><%= @furniture.type_of_furniture %></span>
-            <%= link_to 'Supprimer', purge_attachment_path(attachment), data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?"} %>
+            <% if user_signed_in? %>
+              <%= link_to 'Supprimer', purge_attachment_path(attachment), data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?"} %>
+            <% end %>
           </div>
         </div>
       <% end %>
