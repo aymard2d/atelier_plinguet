@@ -95,17 +95,12 @@ p:not(:last-child) {
   display: flex;
 }
 
-
 .furniture-photo {
   display: grid;
   grid-template-columns: 1fr 2fr;
   justify-content: space-between;
   margin: 15px 10px;
 }
-
-.furniture-details-photo {
-}
-
 
 .furniture-details {
   border-radius: 10px;
@@ -151,8 +146,6 @@ p:not(:last-child) {
     text-align: left;
   }
 }
-
-
 
 .card-footer {
   font-size: 0.65em;

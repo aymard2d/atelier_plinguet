@@ -1,9 +1,15 @@
-<%= link_to furniture_path(furniture) do %>
-  <figure>
-    <% furniture.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
-      <% break %>
-    <% end %> 
-    <figcaption><%= furniture.name %></figcaption>
-  </figure>
-<% end %>
+<div data-furniture-search-filter-target="furnitures" > 
+  <div class="galerie" data-add-realisation-target="list">
+    <% @furnitures.each do |furniture| %>
+      <%= link_to furniture_path(furniture) do %>
+        <figure>
+          <% furniture.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= furniture.name %></figcaption>
+        </figure>
+      <% end %>
+    <% end %>
+  </div>
+</div>

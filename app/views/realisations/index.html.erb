@@ -1,20 +1,11 @@
 <div data-controller="add-realisation">
-  <div class="add-furniture">
-    <% if user_signed_in? %>
-      <button data-action="click->add-realisation#displayForm" class="btn btn-outline-primary">Ajouter une nouvelle réalisation</button>
-    <% end %>
-    <div>
-      <%= render "realisations/add_realisation_form", realisation: @realisation %>
-    </div>
-  </div>
-
   <div class="row justify-content-center" data-controller= "furniture-search-filter">
     <div class="col-sm-8 my-3">
       <%= form_with url: realisations_path, method: :get, class: "d-flex", data: { furniture_search_filter_target: "filter"} do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
-          placeholder: "Entrez un mot-clef",
+          class: "form-control category-search",
+          placeholder: "Rechercher une réalisation",
           data: { action: "keyup->furniture-search-filter#filter",
               furniture_search_filter_target: "input" }
           %>
@@ -23,6 +14,16 @@
         <% end %>
       <% end %>
     </div>
+    <div class="add-furniture">
+      <% if user_signed_in? %>
+        <button data-action="click->add-realisation#displayForm" class="btn btn-add btn-outline-primary">Ajouter une nouvelle réalisation</button>
+      <% end %>
+    <div>
+      <%= render "realisations/add_realisation_form", realisation: @realisation %>
+    </div>
+  </div>
+
+    <div>
       <%= render "realisation_filtered", realisations: @realisations%>
     </div>
   </div>

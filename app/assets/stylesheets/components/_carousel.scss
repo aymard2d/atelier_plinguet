@@ -53,6 +53,14 @@
         margin-top: 5px;
         font-size: 1.2rem;
       }
+
+      a {
+        color: $creme;
+      }
+
+      a:hover {
+        color: $light-wood;
+      }
     }
 
     &:hover {

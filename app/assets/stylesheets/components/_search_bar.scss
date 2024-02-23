@@ -1,0 +1,32 @@
+.search-bar {
+  width: 55%;
+  display: flex;
+  margin: auto;
+  height: 3rem;
+}
+
+.fa-search {
+  color: $light-wood;
+}
+
+.category-search {
+  font-family: Cormorant;
+  background-image: linear-gradient(to bottom, $creme, $creme);
+  margin: 10px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 4px;
+  font-size: larger;
+  font-style: oblique;
+
+  @media screen and (max-height: 300px) {
+    ul {
+      margin-top: 40px;
+    }
+  }
+}
+
+.index-top {
+  display: flex;
+}

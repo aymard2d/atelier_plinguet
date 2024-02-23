@@ -1,12 +1,11 @@
-<div data-controller="add-furniture">
-  
+<div data-controller="add-furniture"> 
   <div class="row justify-content-center" data-controller= "furniture-search-filter">
     <div class="col-sm-8 my-3">
-      <%= form_with url: furnitures_path, method: :get, class: "d-flex", data: { furniture_search_filter_target: "filter"} do %>
+      <%= form_with url: furnitures_path, method: :get, class: "search-bar", data: { furniture_search_filter_target: "filter"} do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
-          placeholder: "Entrez un mot-clef",
+          class: "form-control category-search",
+          placeholder: "Rechercher un meuble",
           data: { action: "keyup->furniture-search-filter#filter",
               furniture_search_filter_target: "input" }
           %>
@@ -23,18 +22,8 @@
         <%= render "furnitures/add_furniture_form", furniture: @furniture %>
       </div>
     </div>
-    <div class="galerie" data-furniture-search-filter-target="furnitures" data-add-furniture-target= "list"  >
-      <% @furnitures.each do |furniture| %>
-        <%= link_to furniture_path(furniture) do %>
-          <figure>
-            <% furniture.photos.each do |photo| %>
-              <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
-              <% break %>
-            <% end %> 
-            <figcaption><%= furniture.name %></figcaption>
-          </figure>
-        <% end %>
-      <% end %>
+    <div>
+      <%= render "furniture_filtered", furnitures: @furnitures%>
     </div>
   </div>
 </div>
