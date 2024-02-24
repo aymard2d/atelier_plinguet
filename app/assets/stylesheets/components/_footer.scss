@@ -22,6 +22,23 @@ body{
   padding-top: 2rem;
   padding-bottom: 80px;
   box-shadow: 0px -1px 6px 0px #486757;
+
+  .logo-footer {
+    align-items: center;
+    display: flex;
+  }
+
+  a {
+    &:hover {
+    color: $light-wood;
+    }
+  }
+
+  i {
+    &:hover {
+      color: $red;
+    }
+  }
 }
 
 .logo-footer{
@@ -60,17 +77,15 @@ body{
   margin-right: 18px;
   color: #777777;
 } */
-/* .social-icons a:hover{
-  color: #000;
-}
+
 .social-icons a i{
-  box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
-  padding: 0.4rem 1rem 0.4rem 1rem;
+  //box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
   border-radius: 3px;
   color: #82074a;
   font-size: 16px;
   margin-right: 12px;
-} */
+} 
+
 li{
   list-style: none;
 }
@@ -126,10 +141,8 @@ li{
 }
 .address-links .address1{
   font-weight: 500;
-  font-size: 15px;
 }
 .address-links{
-  line-height: 32px;
   color: $green;
 }
 .copy-right-sec{
@@ -155,8 +168,9 @@ a{
 
 .fa-brands {
   color: $green;
+  
 }
 
 .fa-solid {
-  color:white;
+  
 }

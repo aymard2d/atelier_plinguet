@@ -10,10 +10,15 @@
       </svg>
     </div>
           <%= simple_form_for @contact, url: contacts_path, method: :post do |f| %>
-            <%= f.input :name, label: "Name", placeholder: "Votre nom", class: "nom", required: true %>
-            <%= f.input :email, label: "Email", placeholder: "Votre Email", lass: "email", required: true %>
+            <div class="contact-infos">
+              <%= f.input :name , label: false, placeholder: "Votre nom *", class: "name" %>
+            
+              <%= f.input :email, label: false, placeholder: "Votre Email *", class: "email", required: true %>
+            </div>
             <%#= f.input :subject, label: "Subject", class: "subject", collection: ["I'd like to start a project", "I'd like to ask a question", "I'd like to make a proposal"], prompt: "Select a subject", required: true %>
-            <%= f.input :message, label: "Message", placeholder: "Votre message", class: "message", required: true %>
+            <div class="contact-message">
+              <%= f.input :message, label: false, placeholder: "Votre message", class: "message", required: true %>
+            </div>
             <%= f.button :submit, "Envoyer", id: "form_button" %>
           <% end %>
           </div>
