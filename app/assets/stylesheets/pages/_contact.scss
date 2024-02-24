@@ -28,6 +28,18 @@
 
 .contact-container {
   background: #F2F3EB;
+}
+
+.contact-infos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-form {
+    border: solid 3px #474544;
+    max-width: 768px;
+    background: #F2F3EB;
+    margin: 10px auto;
 
   html {
     -ms-text-size-adjust: 100%;
@@ -56,17 +68,7 @@
     overflow: auto;
   }
   
-  .contact-form {
-    border: solid 3px #474544;
-    max-width: 768px;
-    margin: 60px auto;
-    position: relative;
-    background: #F2F3EB;
-  }
-  
   form {
-    padding: 37.5px;
-    margin: 50px 0;
   }
   
   h1 {
@@ -97,10 +99,6 @@
     width: 50px;
   }
   
-  .email {
-    float: right;
-    width: 45%;
-  }
   
   input[type='text'], [type='email'], select, textarea {
     background: none;
