@@ -1,6 +1,6 @@
 <div class="contact-container">
   <div class="contact-form">
-    <h1>&bull; L'Atelier vous répond &bull;</h1>
+    <h1><span style="color: rgb(77, 102, 113)"> &bull;</span> L'Atelier vous répond <span style="color: rgb(77, 102, 113)">&bull;</span></h1>
     <div class="underline">
     </div>
     <div class="icon_wrapper">
@@ -13,13 +13,18 @@
             <div class="contact-infos">
               <%= f.input :name , label: false, placeholder: "Votre nom *", class: "name", required: true %>
             
-              <%= f.input :email, label: false, placeholder: "Votre Email *", class: "email", required: true %>
+              <%= f.input :email, label: false, placeholder: "Votre email *", class: "email", required: true %>
+              <%= f.input :telephone, label: false, placeholder: "Votre téléphone", class: "telephone" %>
+              <%= f.input :subject, label: false, placeholder: "L'objet de votre message", collection: ["Demande de devis", "Demande de partenariat", "Demande d'informations", "Autre"], include_blank: "Quel est l'objet de votre message ?", input_html: { class: "subject" } %>
+
             </div>
             <%#= f.input :subject, label: "Subject", class: "subject", collection: ["I'd like to start a project", "I'd like to ask a question", "I'd like to make a proposal"], prompt: "Select a subject", required: true %>
             <div class="contact-message">
-              <%= f.input :message, label: false, placeholder: "Votre message", class: "message", required: true %>
+              <%= f.input :message, label: false, placeholder: "Votre message *", class: "message", required: true %>
             </div>
-            <%= f.button :submit, "Envoyer", id: "form_button" %>
+            <div class="submit">
+              <%= f.button :submit, "Envoyer", id: "form_button" %>
+            </div>
           <% end %>
           </div>
         </div>
