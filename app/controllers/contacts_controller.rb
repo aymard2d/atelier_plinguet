@@ -11,14 +11,14 @@ class ContactsController < ApplicationController
       puts "Email sent to: #{ENV['CONTACT_EMAIL']}" # Check if this prints
       redirect_to new_contact_path, notice: "Merci pour votre message ! L'Atelier va en prendre rapidement connaissance et revenir vers vous."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
   private
 
   def contact_params
-    params.require(:contact).permit(:name, :email, :message)
+    params.require(:contact).permit(:name, :email, :message, :subject, :telephone)
   end
 
 end

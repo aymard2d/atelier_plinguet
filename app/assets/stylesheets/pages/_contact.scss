@@ -28,6 +28,7 @@
 
 .contact-container {
   background: #F2F3EB;
+  padding: 40px;
 }
 
 .contact-infos {
@@ -36,7 +37,7 @@
 }
 
 .contact-form {
-    border: solid 3px #474544;
+    border: solid 3px $blue;
     max-width: 768px;
     background: #F2F3EB;
     margin: 10px auto;
@@ -61,7 +62,7 @@
   }
   
   input {
-    line-height: normal;
+    //line-height: normal;
   }
   
   textarea {
@@ -72,16 +73,17 @@
   }
   
   h1 {
-    color: #474544;
+    color: $light-wood;
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 7px;
     text-align: center;
     text-transform: uppercase;
+    font-family: monospace;
   }
   
   .underline {
-    border-bottom: solid 2px #474544;
+    border-bottom: solid 2px $blue;
     margin: -0.512em auto;
     width: 80px;
   }
@@ -93,25 +95,25 @@
   
   .icon {
     display: block;
-    fill: #474544;
+    fill: $blue;
     height: 50px;
     margin: 0 auto;
     width: 50px;
   }
   
   
-  input[type='text'], [type='email'], select, textarea {
+  input[type='text'], [type='email'], [type='subject'], select, textarea {
     background: none;
     border: none;
-    border-bottom: solid 2px #474544;
-    color: #474544;
+    border: solid 2px $blue;
+    color: $blue;
     font-size: 1.000em;
     font-weight: 400;
     letter-spacing: 1px;
     margin: 2em auto;
-    padding: 0 0 0.875em 0;
-    text-transform: capitalize;
-    width: 70%;
+    //padding: 0 0 0.875em 0;
+    //text-transform: capitalize;
+    width: 80%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -128,6 +130,7 @@
   input[type='text']:focus, [type='email']:focus, textarea:focus {
     outline: none;
     padding: 0 0 0.875em 0;
+    color: $blue;
   }
   
   .message {
@@ -152,7 +155,7 @@
   }
   
   .subject {
-    width: 100%;
+    width: 80%;
   }
   
   .telephone {
@@ -161,13 +164,13 @@
   
   textarea {
     line-height: 150%;
-    height: 150px;
+    height: 90px;
     resize: none;
-    width: 100%;
+    width: 90%;
   }
   
   ::-webkit-input-placeholder {
-    color: #474544;
+    color: $light-wood;
   }
   
   :-moz-placeholder { 
@@ -184,18 +187,24 @@
     color: #474544;
   }
   
+.submit {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
   #form_button {
     background: none;
-    border: solid 2px #474544;
-    color: #474544;
+    border: solid 2px $blue;
+    color: $light-wood;
     cursor: pointer;
     display: inline-block;
-    font-family: 'Helvetica', Arial, sans-serif;
+    font-family: 'monospace', Arial, sans-serif;
     font-size: 0.875em;
     font-weight: bold;
     outline: none;
     padding: 20px 35px;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -204,8 +213,8 @@
   }
   
   #form_button:hover {
-    background: #474544;
-    color: #F2F3EB;
+    //background: $light-wood;
+    color: $blue;
   }
   
   @media screen and (max-width: 768px) {
