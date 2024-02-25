@@ -11,7 +11,7 @@
     </div>
           <%= simple_form_for @contact, url: contacts_path, method: :post do |f| %>
             <div class="contact-infos">
-              <%= f.input :name , label: false, placeholder: "Votre nom *", class: "name" %>
+              <%= f.input :name , label: false, placeholder: "Votre nom *", class: "name", required: true %>
             
               <%= f.input :email, label: false, placeholder: "Votre Email *", class: "email", required: true %>
             </div>
