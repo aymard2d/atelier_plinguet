@@ -27,10 +27,11 @@
   margin-left: 20px;
   text-align: center;
   touch-action: manipulation;
-  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 1s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
+  transition: 1s;
 }
 
 .button-18:hover,
@@ -145,6 +146,11 @@
   align-items: center;
   display: flex;
   justify-content: center;
+
+  &:hover {
+    color: white;
+    background-color: $light-wood;
+  }
 }
 
 .button-85:before {

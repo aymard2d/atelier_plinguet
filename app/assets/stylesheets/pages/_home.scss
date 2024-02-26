@@ -33,6 +33,25 @@ body h2 {
     font-size: x-large;
     font-family: 'Renitta';
   }
+
+  h4 {
+    font-family: Cormorant;
+    border: solid 4px $light-wood;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    font-size: x-large;
+    background: white;
+    color: $light-wood;
+    border-radius: 10px;
+    transition: 1s;
+
+    &:hover {
+      color: white;
+      background: $light-wood;
+      border: solid 4px white;
+    }
+  }
 }
 
 .home-last-creations {
