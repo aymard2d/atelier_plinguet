@@ -7,6 +7,10 @@
 
 .fa-search {
   color: $light-wood;
+
+  &:hover {
+    color: $blue;
+  }
 }
 
 .category-search {

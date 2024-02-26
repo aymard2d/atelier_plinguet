@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
     if @contact.save
       ContactMailer.with(contact: @contact).new_contact_email.deliver_now
       puts "Email sent to: #{ENV['CONTACT_EMAIL']}" # Check if this prints
-      redirect_to new_contact_path, notice: "Merci pour votre message ! L'Atelier va en prendre rapidement connaissance et revenir vers vous."
+      redirect_to root_path, notice: "Merci pour votre message ! L'Atelier va en prendre rapidement connaissance et revenir vers vous."
     else
       render :new, status: :unprocessable_entity
     end

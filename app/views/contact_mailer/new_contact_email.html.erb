@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>New Contact Form Submission</title>
+  <title>Atelier Plinguet : <%= @contact.name %> </title>
 </head>
 <body>
-  <h1>New Contact Form Submission</h1>
-  <p>Nom: <%= @contact.name %></p>
-  <p>Email: <%= @contact.email %></p>
-  <p>Sujet: <%= @contact.subject %></p>
-  <p>Tel : <%= @contact.telephone %></p>
-  <p>Message: </p>
-  <p><%= @contact.message %></p>
+  <h1>Nouveau message pour l'Atelier : <%= @contact.subject %></h1>
+  <p>Hello mon couz ! 
+    Voici une nouvelle <%= @contact.subject %> envoyée par <%= @contact.name %>.
+  <p>Son email est : <%= @contact.email %>
+    <% if @contact.telephone.present? %>
+      et son tel : <%= @contact.telephone %>.
+    <% end %>
+  <p>Voici son message :</p>
+  <%= @contact.message %></p>
+  <p>Signé : <%= @contact.name %>
 </body>
 </html>

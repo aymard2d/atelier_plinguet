@@ -1,7 +1,7 @@
 <div data-controller="add-realisation">
   <div class="row justify-content-center" data-controller= "furniture-search-filter">
     <div class="col-sm-8 my-3">
-      <%= form_with url: realisations_path, method: :get, class: "d-flex", data: { furniture_search_filter_target: "filter"} do %>
+      <%= form_with url: realisations_path, method: :get, class: "search-bar", data: { furniture_search_filter_target: "filter"} do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control category-search",
