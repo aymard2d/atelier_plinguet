@@ -13,7 +13,7 @@ class FurnituresController < ApplicationController
     #if params[:query].present?
       #@furnitures = @furnitures.where(type_of_furniture: params[:query])
     #end
-    sql_subquery = "type_of_furniture ILIKE :query OR color ILIKE :query OR material ILIKE :query OR paint_brand ILIKE :query"
+    sql_subquery = "type_of_furniture ILIKE :query OR color ILIKE :query OR material ILIKE :query OR paint_brand ILIKE :query OR name ILIKE :query OR varnish ILIKE :query"
     @furnitures = @furnitures.where(sql_subquery, query: "%#{params[:query]}%")
     respond_to do |format|
       format.html
