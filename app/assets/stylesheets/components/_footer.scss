@@ -36,7 +36,7 @@ body{
 
   i {
     &:hover {
-      color: $red;
+      color: $light-wood;
     }
   }
 }
@@ -81,7 +81,7 @@ body{
 .social-icons a i{
   //box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
   border-radius: 3px;
-  color: #82074a;
+  color: $green;
   font-size: 16px;
   margin-right: 12px;
 } 
@@ -144,6 +144,10 @@ li{
 }
 .address-links{
   color: $green;
+
+  i {
+    margin-right: 5px;
+  }
 }
 .copy-right-sec{
   padding: 1.8rem;
@@ -173,4 +177,14 @@ a{
 
 .fa-solid {
   
+}
+
+.signin {
+  float: right;
+}
+
+.signout-link {
+  border: none;
+  background: none;
+  color: $light-wood;
 }

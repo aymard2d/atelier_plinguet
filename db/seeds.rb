@@ -19,13 +19,13 @@ puts "Destroy des fabrications : OK !"
 Realisation.destroy_all
 puts "Destroy des réalisations : OK !"
 
-aymard = User.create!(email: "aymard@atelier-plinguet.fr", password: "bricorigolo")
-tanguy = User.create!(email: "tanguy@atelier-plinguet.fr", password: "bricorigolo")
+aymard = User.create!(email: "aymard@atelier-plinguet.fr", password: "Bricorigolo40")
+tanguy = User.create!(email: "tanguy@atelier-plinguet.fr", password: "Bricorigolo40")
 # ---------- SEED DES MEUBLES -----------
 
 puts "Starting seed des meubles"
 
-furniture1 = Furniture.create!(name:"Thalia", material: "Bois", color: "Bleu Atlantide", paint_brand: "Colibri", varnish_brand: "", teint: "", type_of_furniture: "Bibliothèque", date_of_manufacture: date, varnish: "Laque écologique", description: "Attention transformation ! On avait chiné cette armoire, il y a quelque temps, et le moins que l'on puisse dire, c'est qu'il fallait se projeter… Il nous a fallu pas mal de travail pour la transformer en bibliothèque, mais le résultat en valait la peine ! Un grand merci à @colibripeinture qui nous a fourni de supers produits et peintures pour la transformation de ce meuble!")
+furniture1 = Furniture.create!(name:"Thalia", material: "Bois", color: "Bleu Atlantide", paint_brand: "Colibri", varnish_brand: "", teint: "", type_of_furniture: "Bibliothèque", date_of_manufacture: Date.new(2024, 02, 25), varnish: "Laque écologique", description: "Attention transformation ! On avait chiné cette armoire, il y a quelque temps, et le moins que l'on puisse dire, c'est qu'il fallait se projeter… Il nous a fallu pas mal de travail pour la transformer en bibliothèque, mais le résultat en valait la peine ! Un grand merci à @colibripeinture qui nous a fourni de supers produits et peintures pour la transformation de ce meuble!")
 #  )
 
 furniture2 = Furniture.create!(name:"Luna", material: "Bois", color: "Blanc glacier & Vert de gris", type_of_furniture: "Vaisselier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Initialement Luna était le haut d'un vaisselier. Lorsque nous l'avons récupérée, on s'est dit que la partie haute et basse de ce vaisselier pouvaient faire 2 meubles à part entière.
@@ -45,7 +45,7 @@ Après avoir chiné le bahut, démonté, poncé, réparé, enlevé les panneaux 
 #)
 
 furniture5 = Furniture.create!(name:"Lou", material: "Bois", color: "Vert Rivage
-", type_of_furniture: "Bahut", varnish: "", varnish_brand: "", teint: "Naturelle", paint_brand: "Envie", date_of_manufacture: "", description: "Lou est un superbe bahut comme on les aime.
+", type_of_furniture: "Bahut", varnish: "Incolore", varnish_brand: "Libéron", teint: "Naturelle", paint_brand: "Envie", date_of_manufacture: "", description: "Lou est un superbe bahut comme on les aime.
 Arrivé peint avec une couche plus qu'épaisse de peinture glycero saumon, il a fallu de nombreuses heures de ponçage pour le dénuder entièrement et révéler sa magnifique essence.
 Les parties trop abimées ont été remplacées, les pieds refait sur mesure. Pour ce qui est de la teinte, nous avons choisi de lui laisser sa teinte naturel sur l'extérieur (protégé par un vernis de chez @liberon_officiel ) et le peindre en vert rivage de chez envie.") #)
 
@@ -650,8 +650,8 @@ furniture27.save
 puts "Prune : ok"
 
 #Victoria
-furniture28.photos.attach(io: URI.open(victoria1), filename: 'victoria-1-commode.jpeg', content_type: "image/jpeg" )
-furniture28.photos.attach(io: URI.open(victoria2), filename: 'victoria-2-commode.jpeg', content_type: "image/jpeg" )
+#furniture28.photos.attach(io: URI.open(victoria1), filename: 'victoria-1-commode.jpeg', content_type: "image/jpeg" )
+#furniture28.photos.attach(io: URI.open(victoria2), filename: 'victoria-2-commode.jpeg', content_type: "image/jpeg" )
 furniture28.photos.attach(io: URI.open(victoria3), filename: 'victoria-3-commode.jpeg', content_type: "image/jpeg" )
 furniture28.photos.attach(io: URI.open(victoria1_old), filename: 'victoria1_old-commode.jpeg', content_type: "image/jpeg" )
 furniture28.save
@@ -716,8 +716,6 @@ puts "Armelle ok"
 #Ava
 furniture37.photos.attach(io: URI.open(ava1), filename: 'ava-1-commode.jpg', content_type: "image/jpg" )
 furniture37.photos.attach(io: URI.open(ava2), filename: 'ava-2-commode.jpg', content_type: "image/jpg" )
-furniture37.photos.attach(io: URI.open(ava3), filename: 'ava-3-commode.jpg', content_type: "image/jpg" )
-furniture37.photos.attach(io: URI.open(ava4), filename: 'ava-4-commode.jpg', content_type: "image/jpg" )
 furniture37.photos.attach(io: URI.open(ava_before), filename: 'ava_before-3-commode.jpg', content_type: "image/jpg" )
 furniture37.save
 puts "Ava : ok"
