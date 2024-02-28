@@ -12,7 +12,7 @@
           <div class="content">
             <h2><%= @furniture.name %></h2>
             <span><%= @furniture.type_of_furniture %></span>
-            <% if user_signed_in? %>
+            <% if user_signed_in? && current_user.admin? %>
               <%= link_to 'Supprimer', purge_attachment_path(attachment), data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?"} %>
             <% end %>
           </div>
@@ -94,7 +94,7 @@
       </div>
     </div>
     <div style="text-align: center; margin-top: 2rem">
-      <% if user_signed_in? %>
+      <% if user_signed_in? && current_user.admin? %>
         <button data-action="click->update-furniture#displayForm" class="btn btn-outline-primary update-button">Modifier <%= @furniture.name %></button>
         <%= link_to "Supprimer #{@furniture.name}",furniture_path(@furniture),data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?"}, class: "btn btn-outline-primary update-button" %>
       <% end %>

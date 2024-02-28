@@ -11,7 +11,7 @@
           <div class="content">
             <h2><%= @accessory.name %></h2>
             <span><%= @accessory.type_of %></span>
-            <% if user_signed_in? %>
+            <% if user_signed_in? && current_user.admin? %>
               <%= link_to 'Supprimer', purge_attachment_path(attachment), data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?"} %>
             <% end %>
           </div>
@@ -60,7 +60,7 @@
           <hr>
         </div>
         <div style="text-align: center; margin-top: 2rem">
-          <% if user_signed_in? %>
+          <% if user_signed_in? && current_user.admin? %>
             <button data-action="click->update-accessory#displayForm" class="btn btn-outline-primary update-button">Modifier <%= @accessory.name %></button>
             <%= link_to "Supprimer #{@accessory.name}", accessory_path(@accessory), data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?" }, class: "btn btn-outline-primary update-button" %>
           <% end %>

@@ -15,7 +15,7 @@
       <% end %>
     </div>
     <div class="add-furniture">
-      <% if user_signed_in? %>
+      <% if user_signed_in? && current_user.admin? %>
         <button data-action="click->add-accessory#displayForm" class="btn btn-add btn-outline-primary">Ajouter une nouvelle création</button>
       <% end %>
   </div>

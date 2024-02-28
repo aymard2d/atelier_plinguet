@@ -15,13 +15,13 @@
       <% end %>
     </div>
     <div class="add-furniture">
-      <% if user_signed_in? %>
+      <% if user_signed_in? && current_user.admin? %>
         <button data-action="click->add-realisation#displayForm" class="btn btn-add btn-outline-primary">Ajouter une nouvelle réalisation</button>
+      <div>
+        <%= render "realisations/add_realisation_form", realisation: @realisation %>
+      </div>
       <% end %>
-    <div>
-      <%= render "realisations/add_realisation_form", realisation: @realisation %>
     </div>
-  </div>
 
     <div>
       <%= render "realisation_filtered", realisations: @realisations%>
