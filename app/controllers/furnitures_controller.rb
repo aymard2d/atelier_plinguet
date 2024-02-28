@@ -1,6 +1,7 @@
 class FurnituresController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_furniture, only: [:show, :edit, :destroy, :update]
+  before_action :check_admin, only: [:new, :create, :edit, :update, :destroy]
 
   def new
     @furniture = Furniture.new
@@ -37,7 +38,7 @@ class FurnituresController < ApplicationController
   end
 
   def create
-    @furnitures = Furniture.all.order("created_at DESC")
+    @furnitures = Furniture.all.order("created_at ASC")
     @furniture = Furniture.new(furniture_params)
     respond_to do |format|
       if @furniture.save
@@ -83,4 +84,11 @@ class FurnituresController < ApplicationController
   def furniture_params
     params.require(:furniture).permit(:name, :description, :color, :material, :date_of_manufacture, :type_of_furniture, :varnish, :varnish_brand, :teint, :paint_brand, :existing_photos_ids, photos: [])
   end
+
+  def check_admin
+    unless current_user.admin?
+      redirect_to root_path, alert: "You are not authorized to perform this action."
+    end
+  end
+  
 end
