@@ -29,11 +29,27 @@
 .contact-container {
   background: #F2F3EB;
   padding: 40px;
+
+  p {
+    font-family: 'Barokah';
+    font-size: xx-small;
+  }
 }
 
 .contact-infos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  color: #b27d4f;
+  font-family: 'Autography';
+  font-size: xx-large;
+}
+
+.contact-signature {
+  display: flex;
+  justify-content: end;
+  color: $light-wood;
+  font-family: "Barokah";
 }
 
 .contact-form {
@@ -73,19 +89,19 @@
   }
   
   h1 {
-    color: $light-wood;
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 7px;
+    color: #b27d4f;
+    font-size: large;
+    /* font-weight: 700; */
+    letter-spacing: 5px;
     text-align: center;
-    text-transform: uppercase;
-    font-family: monospace;
+    font-family: "Barokah";
+    margin-top: 35px;
   }
   
   .underline {
     border-bottom: solid 2px $blue;
-    margin: -0.512em auto;
-    width: 80px;
+    margin: 0.490em auto;
+    width: 20%;
   }
   
   .icon_wrapper {
@@ -199,7 +215,7 @@
     color: $light-wood;
     cursor: pointer;
     display: inline-block;
-    font-family: 'monospace', Arial, sans-serif;
+    font-family: 'barokah', Arial, sans-serif;
     font-size: 0.875em;
     font-weight: bold;
     outline: none;
