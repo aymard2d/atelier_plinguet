@@ -3,15 +3,15 @@
 
 .button-18 {
   align-items: center;
-  background-color: rgb(178, 125, 79);
-  color: white;
+  background-color: white;
+  color: $light-wood;
   border: 0;
-  border-radius: 100px;
+  border-radius: 10px;
   box-sizing: border-box;
   cursor: pointer;
   display: inline-flex;
-  font-family: 'Cormorant', serif;
-  font-size: 16px;
+  font-family: 'beyond', serif;
+  font-size: 25px;
   font-weight: 300;
   justify-content: center;
   line-height: 20px;
@@ -31,13 +31,15 @@
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
-  transition: 1s;
+  transition: 1.4s;
+  border: 2px solid $light-wood;
 }
 
 .button-18:hover,
 .button-18:focus {
-  background-color: $creme;
-  color: $light-wood;
+  background-color: $light-wood;
+  color: $creme;
+  border: solid 2px white;
 }
 
 .button-18:active {

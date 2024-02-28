@@ -17,6 +17,13 @@ body h2 {
   max-width: 1430px;
 }
 
+h3 {
+  color: $light-wood;
+  font-family: "Beyond";
+  font-size: xxx-large;
+  text-align: center;
+}
+
 .home-description {
   background-color: $green;
   margin: auto;
@@ -35,21 +42,21 @@ body h2 {
   }
 
   h4 {
-    font-family: Cormorant;
-    border: solid 4px $light-wood;
+    font-family: 'beyond';
+    border: solid 3px $light-wood;
     text-align: center;
     margin: 15px;
     padding: 10px;
-    font-size: x-large;
+    font-size: 40px;
     background: white;
     color: $light-wood;
     border-radius: 10px;
-    transition: 1s;
+    transition: 1.4s;
 
     &:hover {
-      color: white;
+      color: $creme;
       background: $light-wood;
-      border: solid 4px white;
+      border: solid 3px white;
     }
   }
 }

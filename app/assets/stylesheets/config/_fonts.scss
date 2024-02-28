@@ -18,7 +18,7 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //BrightAngels
 @font-face {
   font-family: "Angels";
-  src: font-url("BrightAngelsPersonalUse-ywZVm.otf-DOJ6x.ttf");
+  src: font-url("BrightAngelsPersonalUse-ywZVm.otf");
 }
 
 //Milano
@@ -38,3 +38,24 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
   font-family: "Brilliant";
   src: font-url("Brilliant-w1DOZ.ttf");
 }
+
+@font-face {
+  font-family: "Beyond";
+  src: font-url("Beyond-Infinity-400.ttf");
+}
+
+@font-face {
+  font-family: "Astagina";
+  src: font-url("Astagina-Signature.otf");
+}
+
+@font-face {
+  font-family: "Autography";
+  src: font-url("Autography.otf");
+}
+
+@font-face {
+  font-family: "Barokah";
+  src: font-url("Barokah-Signature.ttf");
+}
+//format("trueType")
