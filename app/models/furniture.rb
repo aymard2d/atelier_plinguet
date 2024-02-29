@@ -6,4 +6,7 @@ class Furniture < ApplicationRecord
   using: {
     tsearch: { prefix: true } # <-- now `superman batm` will return something!
   }
+
+  validates :name, :description, :material, :type_of_furniture, presence: true
+
 end

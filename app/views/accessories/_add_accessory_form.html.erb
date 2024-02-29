@@ -3,6 +3,11 @@
     <%= f.input :name, label: "Nom" %>
     <%= f.input :description, as: :text, label: "Description" %>
     <%= f.input :type_of, collection: ["Lampe", "Luminaire", "Cadeau de naissance", "Porte-Serviette", "Porte_livre", "Table", "Chaise", "Autre" ], label: "Sélectionnez un type de création" %>
+    <%= f.input :color, label: "Couleurs du meuble" %>
+    <%= f.input :paint_brand, label: "Sélectionnez une marque de peinture", collection: ["Envie", "Farrow & Ball", "Pure & Paint", "Colibri", "Little Green", "Unknown brand", ] %>
+    <%= f.input :varnish, label: "Vernis" %>
+    <%= f.input :varnish_brand, label: "Sélectionnez une marque de Vernis", collection: ["Libéron", "v33"] %>
+    <%= f.input :tint, label: "Teinte" %>
     <%= f.input :material, label: "Sélectionnez un matériau", collection: ["Bois", "Cuivre", "Cuivre & Bois", "Pin", "Chène", "Autre"] %>
     <%= f.input_field :created_at, as: :hidden, value: Date.today %>
     <%= f.input_field :user_id, as: :hidden, value: params[:id] %>

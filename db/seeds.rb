@@ -176,26 +176,26 @@ accessory1 = Accessory.create!(name: "Mona", color: "Blanc tout court", paint_br
 
 accessory2 = Accessory.create!(name: "Lou", type_of: "Applique", color: "Noir fusain", paint_brand: "Envie", description: "Création de l'atelier Plinguet pour une commande client. Lot de deux appliques en bois effet métal, avec vitre en Plexiglas, et ampoule Led à filament vintage.", material: "Bois")
 
-accessory3 = Accessory.create!(name:"Eliza", material: "Cuivre & Bois - Pin", color: "", type_of_furniture: "Console", varnish: "Mat", varnish_brand: "Libéron", teint: "Chêne doré", paint_brand: "", date_of_manufacture: "", description: "Création de l'atelier plinguet pour une commande client.
+accessory3 = Accessory.create!(name:"Eliza", material: "Cuivre & Bois - Pin", color: "", type_of: "Console", varnish: "Mat", varnish_brand: "Libéron", tint: "Chêne doré", paint_brand: "", description: "Création de l'atelier plinguet pour une commande client.
 Une console toute en cuivre, avec luminaire intégré et tablettes en pin des Landes.
 Design épuré, cette pièce unique a trouvé refuge dans une belle maison Arcachonnaise.")
-#varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "")
+#varnish: "", varnish_brand: "", teint: "", paint_brand: "")
 
 accessory4 = Accessory.create!(name: "Hélène", type_of: "Porte-serviette", varnish: "Incolore mat", varnish_brand: "3v3", material: "Cuivre et Bois", description: "Cette semaine à l'atelier, nous avons créé un porte serviette à la demande d'une cliente. Les couleurs du cuivre et du bois s'harmonisent parfaitement avec le sol en travertin de la salle de bain de notre cliente. Si cette pièce vous plait, n'hésitez pas à nous envoyer un DM pour plus d'informations, l'atelier peut la reproduire sur demande et sa taille est ajustable.")
 
 accessory5 = Accessory.create!(name: "Augusta", type_of: "Chaise", varnish: "Brillant - métal", varnish_brand: "Libéron", description: "Création de l'atelier Plinguet pour une commande client. Magnifique fauteuil en cuivre aux lignes épurées et au designe original.", material: "cuivre")
 
-accessory6 = Accessory.create!(name:"Camille", material: "Cuivre & Bois", color: "Blanc écru", type_of_furniture: "Console", varnish: "Brillant - métal", varnish_brand: "Libéron", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Voici une nouvelle création de l'atelier. Cette semaine, nous avons travaillé sur une superbe console en cuivre et bois de couleur blanc écru. Son design élégant et épuré nous plait vraiment beaucoup! Bonne nouvelle cette pièce est disponible à l'adoption.")
-#varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "")
+accessory6 = Accessory.create!(name:"Camille", material: "Cuivre & Bois", color: "Blanc écru", type_of: "Console", varnish: "Brillant - métal", varnish_brand: "Libéron", tint: "", paint_brand: "Farrow & Ball", description: "Voici une nouvelle création de l'atelier. Cette semaine, nous avons travaillé sur une superbe console en cuivre et bois de couleur blanc écru. Son design élégant et épuré nous plait vraiment beaucoup! Bonne nouvelle cette pièce est disponible à l'adoption.")
+#varnish: "", varnish_brand: "", teint: "", paint_brand: "")
 
-accessory7 = Accessory.create!(name: "Nicole", material: "Bois", type_of: "Lampadaire", varnish: "Incolore - mat", varnish_brand: "3v3",description: "Nouvelle création de l'atelier. Pour une cliente bordelaise, nous avons dessiné et fabriqué 2 lampadaires en bois. Pour obtenir ce résultat, il a fallu réaliser un assemblage de 10 planches de contreplaqués collées entre elles en y incorporant 2 ouvertures qui apportent une touche de légèreté. Il y a eu pas mal de travail de ponçage pour arriver à un rendu aussi lisse et harmonieux.")
+accessory7 = Accessory.create!(name: "Nicole", material: "Bois", type_of: "Lampadaire", varnish: "Incolore - mat", varnish_brand: "v33",description: "Nouvelle création de l'atelier. Pour une cliente bordelaise, nous avons dessiné et fabriqué 2 lampadaires en bois. Pour obtenir ce résultat, il a fallu réaliser un assemblage de 10 planches de contreplaqués collées entre elles en y incorporant 2 ouvertures qui apportent une touche de légèreté. Il y a eu pas mal de travail de ponçage pour arriver à un rendu aussi lisse et harmonieux.")
 
-accessory8 = Accessory.create!(name:"Nona", material: "Bois", color: "Pitch Black n°256", type_of: "Table basse", varnish: "Incolore - Mat", varnish_brand: "Libéron", teint: "", paint_brand: "Farow&Ball", date_of_manufacture: "", description: "Aujourd'hui nous ne parlerons pas de restauration mais de fabrication avec cette commande qui sort de l'atelier.
+accessory8 = Accessory.create!(name:"Nona", material: "Bois", color: "Pitch Black n°256", type_of: "Table basse", varnish: "Incolore - Mat", varnish_brand: "Libéron", tint: "", paint_brand: "Farrow & Ball", description: "Aujourd'hui nous ne parlerons pas de restauration mais de fabrication avec cette commande qui sort de l'atelier.
 Réalisée pour une cliente bordelaise, cette grand table basse est un assemblage d'une trentaine de tasseaux en pin, sapin et chêne. Il s'agit uniquement de bois de récupération, issu de palettes et de chutes d'autres projets…
 Les pieds sont également réalisés en bois et peints en noir donnant l'illusion de pieds métalliques.
 Après de nombreuses heures de découpage, dégauchissage rabotage de chaque tasseau, puis d'assemblage et bien évidemment de ponçage, le plateau est passé au vernis bistrot de chez @liberon_officiel pour une protection totale dans le temps!
 C'est le genre de projet que l'on adore, respectueux de l'environnement, avec un objectif de réduction de déchets. D'autres modèles devraient suivre, avec différents pieds, mais surtout différents plateaux, c'est ça qui est bien aussi avec la récup, il n'y aura donc jamais 2 fois la même table ;)")
-#varnish: "Vernis bistrot - Libéron", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "")
+#varnish: "Vernis bistrot - Libéron", varnish_brand: "", teint: "", paint_brand: "")
 
 puts "Seed des accessoires : OK !"
 
@@ -454,7 +454,7 @@ puts "Thalia : ok"
 
 #Luna
 furniture39.photos.attach(io: URI.open(luna1), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
-furniture39.photos.attach(io: URI.open(luna39), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
+furniture39.photos.attach(io: URI.open(luna2), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
 furniture39.photos.attach(io: URI.open(luna3), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
 furniture39.save
 puts "Luna : ok"
