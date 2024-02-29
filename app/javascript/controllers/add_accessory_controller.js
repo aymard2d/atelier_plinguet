@@ -23,10 +23,12 @@ export default class extends Controller {
       .then(response => response.text())
       .then((data) => {
         console.log(data);
-        this.listTarget.insertAdjacentHTML("afterbegin", data)
+        this.listTarget.insertAdjacentHTML("afterbegin", data);
         this.formTarget.classList.add("d-none")
       })
       event.target.reset()
       window.scrollTo(0, 10)
   }
+
+  
 }
