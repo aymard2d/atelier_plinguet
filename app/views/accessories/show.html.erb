@@ -40,6 +40,41 @@
                 <!-- <hr> -->
                 <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériaux</span><p><%= @accessory.material %></p></li>
                 <!-- <hr> -->
+                <li><i class="fa-solid fa-palette"></i><span id="bullet">Couleurs</span> <p><%= @accessory.color %>
+                <% if @accessory.paint_brand.present? %>
+                  <li><i class="fa-solid fa-palette"></i><span id="bullet">Marque de peinture</span>
+                    <p><%= @accessory.paint_brand %></p>
+                    <div>
+                      <% if @accessory.paint_brand == "Colibri" %>
+                        <%= image_tag @colibri, class: "colibri-logo" %>
+                      <% elsif @accessory.paint_brand == "Farrow & Ball" %>
+                        <%= image_tag @farrow_and_ball, class: "fb-logo" %>
+                      <% elsif @accessory.paint_brand == "Envie" %>
+                        <%= image_tag @envie, class: "envie-logo" %>
+                      <% elsif @accessory.paint_brand == "Little Green" %>
+                        <%= image_tag @little_green, class: "lg-logo" %>
+                      <% elsif @accessory.paint_brand == "Pure & Paint" %>
+                        <%= image_tag @pure_and_paint, class: "pp-logo" %>
+                      <% elsif @accessory.paint_brand == "Libéron" %>
+                        <%= image_tag @liberon, class: "liberon-logo" %>
+                      <% end %>
+                    </div>
+                  </li>
+                <% end %>
+                <% if @accessory.tint.present? %>
+                  <li><i class="fa-solid fa-paintbrush"></i><span id="bullet">Teinte du meuble</span> <p><%= @accessory.tint %></p></li>
+                <% end %>
+                <% if @accessory.varnish.present? %>
+                  <li><i class="fa-solid fa-paintbrush"></i><span id="bullet">Vernis</span> <p><%= @accessory.varnish %></p>
+                    <div>
+                      <% if @accessory.varnish_brand == "Libéron"%>
+                        <%= image_tag @liberon, class: "liberon-logo" %>
+                      <% elsif @accessory.varnish_brand == "v33" %>
+                        <%= image_tag @v33, class: "v33-logo" %>
+                      <% end %>
+                    </div>
+                  </li>
+                <% end %>
                 <% if @accessory.created_at.present? %>
                   <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= @accessory.created_at.strftime("%d-%m-%Y") %></p></li>
                 <% else %>
