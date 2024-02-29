@@ -62,9 +62,24 @@ h3 {
 }
 
 .home-last-creations {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  img {
+    height: 350px;
+    margin: 10px 8px;
+    width: -webkit-fill-available;
+  }
+}
+.home-last-realisations {
   display: flex;
   justify-content: center;
-  width: 83%;
+  width: 75%;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 30px;

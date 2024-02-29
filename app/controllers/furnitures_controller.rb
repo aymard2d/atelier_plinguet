@@ -9,7 +9,7 @@ class FurnituresController < ApplicationController
 
   def index
     @furniture = Furniture.new
-    @furnitures = Furniture.all.order("created_at ASC")
+    @furnitures = Furniture.all.order("created_at DESC")
     @furniture_types = Furniture.pluck(:type_of_furniture).uniq
     #if params[:query].present?
       #@furnitures = @furnitures.where(type_of_furniture: params[:query])
