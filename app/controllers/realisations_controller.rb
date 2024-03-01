@@ -68,6 +68,6 @@ class RealisationsController < ApplicationController
   end
 
   def realisation_params
-    params.require(:realisation).permit(:name, :description, :localisation,  :manufacture_date, :type_of_realisation, photos: [])
+    params.require(:realisation).permit(:name, :description, :localisation,  :manufacture_date, :type_of_realisation, :varnish, :varnish_brand, :tint, :color, :paint_brand, photos: [])
   end
 end

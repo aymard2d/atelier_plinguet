@@ -114,57 +114,52 @@ Aujourd'hui, nous avons un magnifique bahut à deux portes, peint dans un gris b
 furniture27 = Furniture.create!(name:"Lola", material: "Bois - Pin", color: "Banc crème", type_of_furniture: "Bahut", varnish: "Incolore", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Nous avons chiné dernièrement un bahut en pin assez commun. L'idée était de changer l'utilité de ce meuble. La personne chez qui nous l'avions acheté s'en servait de vaisselier. Apres l'avoir décapé entièrement, nous avons décidé d'enlever les portes pour en faire un bahut ouvert. Apres avoir choisi ce blanc crème de chez Farrow&ball, nous avons laissé sa teinte naturelle au plateau et à l'étagère, que nous avons passée au vernis incolore afin de les protéger. L'association de ces deux couleurs avec ses nouvelles poignées rendent ce meuble unique. Il peut aussi bien séjourner dans un salon, une salle à manger, une entrée ou bien une cuisine et ça c'est quand même pratique")
 #varnish: "Incolore", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
 
-furniture28 = Furniture.create!(name:"Alma", material: "Bois", color: "Lin velours", type_of_furniture: "Meuble de rangement / meuble TV / meuble d'enfant", varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "", description: "Cette semaine à l'atelier nous avons chiné un meuble assez atypique qui nous a bien plu. Apres avoir entièrement décapé cette petite merveille, et réparé ses tiroirs qui étaitent bien abimés. Nous avons choisi de peindre ce meuble dans une teinte très belle teinte Lin velours avec de nouvelles poignées et entrée de clé.
-Le but étant de prendre une couleur s'accordant avec beaucoup d'autres pour permettre à ce meuble atypique qui peut servir de console, meuble tv, meuble d'enfant, petit meuble de rangement, et on en passe, de s'accorder dans beaucoup de pièces. Une chose est sûre, il aura sa place dans beaucoup de décos différentes")
-#varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "")
 
 furniture30 = Furniture.create!(name:"Simone", material: "Bois - pin", color: "Rose boréal", type_of_furniture: "Commode", varnish: "Mat", varnish_brand: "Libéron", teint: "", paint_brand: "Envie", date_of_manufacture: "", description: "Aujourd'hui c'est une commode qui est passée à l'atelier pour un relooking.
 Cette commode en pin pouvait paraitre « basique », mais était plutôt en bon état, donc le travail a été moins important que d'habitude. Aussi, nous avons décidé de lui donner plus d'originalité, en y appliquant la teinte « rose boréal » de chez #enviepeinture, mais uniquement sur l'intérieur de la façade des tiroirs et sur les côtés du meuble. Le plateau lui a été protégé au vernis mat de chez @liberon_officiel.
 Les poignées d'origine qui étaient en bois, ont été remplacées par de jolies poignées laitonnées. On apprécie également sa grande capacité avec ses 6 tiroirs.")
 #varnish: "Mat - Libéron", varnish_brand: "", teint: "", paint_brand: "Envie", date_of_manufacture: "")
 
-furniture31 = Furniture.create!(name:"Christina", material: "Bois", color: "Blanc Albâtre", type_of_furniture: "Coffre", varnish: "", varnish_brand: "", teint: "", paint_brand: "Libéron", date_of_manufacture: "", description: "À l'atelier c'est un vieux coffre qui est passé entre nos mains cette semaine.
-Il était sombre, avec des motifs de vitraux sur tout le coffre, cela avait son charme à l'époque mais aujourd'hui ce n'est plus trop le cas. C'est pourquoi nous avons décidé de le démonter entièrement pour le refaire à la sauce Atelier Plinguet. Une fois chaque pièce poncée afin de retrouver la couleur naturelle du bois qui entre nous est beaucoup plus douce et jolie, nous avons décidé de remplacer les vitraux par des panneaux simples mais mis en valeur par le blanc albâtre de chez @liberon_officiel . Ainsi le coffre change d'époque, et s'adaptera parfaitement dans son nouvel environnement.")
-
-furniture32 = Furniture.create!(name:"Rita", material: "Bois", color: "Soir de Sienne", type_of_furniture: "Meuble de rangement", varnish: "Chêne", varnish_brand: "Libéron", teint: "Chêne", paint_brand: "Pure & Paint", date_of_manufacture: "", description: "Arrivé à l'atelier dans un état déplorable, ce meuble de machine à coudre était bon pour la déchetterie. Le plateau, ou encore les portes ont subi de très très gros dégâts dont des coups de scie des anciens propriétaires. Il aura fallu de nombreuses heures de travail pour enlever le mécanisme rouillé supportant la machine à coudre, remplacer le plateau par un nouveau, et reboucher tous les trous qui avaient été faits dans les portes, mais cela en valait la peine. Nous avons immédiatement perçu le charme que pourrait avoir ce meuble une fois restauré, et nous ne sommes pas déçus d'y avoir passé du temps!
-Habillé de la superbe teinte « soir de sienne » de chez @pure_and_paint , et d'une teinte chêne moyen de chez @liberon_officiel pour le plateau, les poignées et les pieds, ce meuble retrouve de sa superbe! Il est beau, unique, atypique et surtout il pourrait trouver sa place dans n'importe quelle pièce de la maison. Bref c'est un vrai coup de coeur pour l'atelier!")
-
-furniture33 = Furniture.create!(name:"Esther", material: "Bois", color: "Bleu nuit", type_of_furniture: "Commode", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Cette commode typique des années 60 nous est arrivée dans son jus. Un gros travail de décapage et de ponçage a été nécéssaire pour enlever l'imposante couche de vernis et pouvoir ainsi lui donner cette jolie teinte bleu nuit de chez @farrowandball . Les pieds ont été changés pour des nouveaux plus modernes.
-Les poignées sont d'origine et ont demandé un bon nettoyage pour retrouver leur brillance.")
-#varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
-
-furniture34 = Furniture.create!(name:"Adriana", material: "Bois", color: "Vert de gris
+furniture28 = Furniture.create!(name:"Adriana", material: "Bois", color: "Vert de gris
 ", type_of_furniture: "Meuble de rangement",varnish: "", varnish_brand: "", teint: "", paint_brand: "Envie", date_of_manufacture: "" , description: "Adriana était un petit meuble de machine à coudre qui avait été transformé par son ancien propriétaire en meuble de télévision. Un plateau sur glissière avait été rajouté pour rehausser le meuble et permettre à la télévision de se déporter. A l'atelier nous avons choisi d'en faire un meuble de rangement. Glissière et rehausse du plateau ont été déposées. Pour la teinte nous avons choisi un très beau vert de gris, et une poignée laitonné vient sublimer la couleur.
 Adriana a rejoint son environnement pour le plus grand plaisir de son propriétaire.")
 #)
 
-furniture35 = Furniture.create!(name:"Imany", material: "Bois", color: "Bleu Mystere", type_of_furniture: "Armoire", varnish: "", varnish_brand: "", teint: "", paint_brand: "Pure & Paint", date_of_manufacture: "", description: "Imany est une armoire très mignonne. Arrivée à l'atelier dans un vernis vieillissant couleur acajou qui ne lui allait pas spécialement, nous avons décidé de la changer d'époque ! Après un gros décapage, quelques réparations, et le changement des étagères, nous l'avons vêtue du très beau bleu « Mystère » de chez @pure_and_paint . Assortie à un très joli papier peint de la savane, Imany retrouve un cachet fou!")
-#)
-
-furniture36 = Furniture.create!(name:"Lou", material: "Bois", color: "Vert Rivage
-", type_of_furniture: "Bahut", varnish: "Incolore", varnish_brand: "Libéron", teint: "Naturelle", paint_brand: "Envie", date_of_manufacture: "", description: "Lou est un superbe bahut comme on les aime.
-Arrivé peint avec une couche plus qu'épaisse de peinture glycero saumon, il a fallu de nombreuses heures de ponçage pour le dénuder entièrement et révéler sa magnifique essence.
-Les parties trop abimées ont été remplacées, les pieds refait sur mesure. Pour ce qui est de la teinte, nous avons choisi de lui laisser sa teinte naturel sur l'extérieur (protégé par un vernis de chez @liberon_officiel ) et le peindre en vert rivage de chez envie.") #)
-
-furniture37 = Furniture.create!(name:"Matilda", material: "Bois", color: "Vert Kaki", type_of_furniture: "Bahut", varnish: "Incolore", varnish_brand: "Libéron", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Une fois n'est pas coutume, un client a flashé sur le bahut Raphaëlle que nous avions refait et vendu il y a quelques mois.
+furniture31 = Furniture.create!(name:"Matilda", material: "Bois", color: "Vert Kaki", type_of_furniture: "Bahut", varnish: "Incolore", varnish_brand: "Libéron", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Une fois n'est pas coutume, un client a flashé sur le bahut Raphaëlle que nous avions refait et vendu il y a quelques mois.
 Il nous a demandé de lui en trouver un autre et de le restaurer en vert kaki.
 C'est chose faite !
 Après avoir chiné le bahut, démonté, poncé, réparé, enlevé les panneaux de portes et les remplacés par du cannage, nous avons appliqué un magnifique vert kaki de chez @farrowandball et un couche de vernis incolore @liberon_officiel pour protéger le bois brut.")
 #)
 
-furniture38 = Furniture.create!(name:"Alma", material: "Bois", color: "Vert livid", type_of_furniture: "Bibliothèque", varnish: "", varnish_brand: "", teint: "", paint_brand: "Little Green", date_of_manufacture: "", description: "Bibliothèque sur mesure Alma 📚📚
-On était plutôt discret dernièrement, c'est parce l'atelier s'est exporté à Paris pour travailler sur la conception d'une bibliothèque sur mesure dans un appartement hausmanien. Au programme meuble design arrondi avec pliage de bois. Toute la fabrication a été faite sur place. Pour la peinture, on a choisi avec l'aide de @nelscouleurs , la superbe teinte #Livid de chez @littlegreene.fr @littlegreenepaintcompany .
-Le reste de la rénovation de l'appartement à été effectué par le talentueux @antinomik_design .")
-#)
-
-furniture39 = Furniture.create!(name:"Luna", material: "Bois", color: "Blanc glacier & Vert de gris", type_of_furniture: "Vaisselier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Initialement Luna était le haut d'un vaisselier. Lorsque nous l'avons récupérée, on s'est dit que la partie haute et basse de ce vaisselier pouvaient faire 2 meubles à part entière.
+furniture32 = Furniture.create!(name:"Luna", material: "Bois", color: "Blanc glacier & Vert de gris", type_of_furniture: "Vaisselier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Initialement Luna était le haut d'un vaisselier. Lorsque nous l'avons récupérée, on s'est dit que la partie haute et basse de ce vaisselier pouvaient faire 2 meubles à part entière.
 Pour que cela soit possible, il nous a fallu rajouter des pieds en conservant le style du meuble, décaper à la machine le meuble, à la main les portes et leurs motifs et changer le plateau du haut qui était trop abimé.
 Pour lui donner plus de style, une porte a été retirée pour créer cette niche. Pour les couleurs, c'est un blanc glacier de chez @farrowandball , et un magnifique vert de gris de chez @farrowandballfr que vous reverrez surement sur d'autres réalisations tant on l'aime!") 
 #)
 
-furniture40 = Furniture.create!(name:"Thalia", material: "Bois", color: "Bleu Atlantide", paint_brand: "Colibri", varnish_brand: "", teint: "", type_of_furniture: "Bibliothèque", date_of_manufacture: Date.new(2024, 02, 25), varnish: "Laque écologique", description: "Attention transformation ! On avait chiné cette armoire, il y a quelque temps, et le moins que l'on puisse dire, c'est qu'il fallait se projeter… Il nous a fallu pas mal de travail pour la transformer en bibliothèque, mais le résultat en valait la peine ! Un grand merci à @colibripeinture qui nous a fourni de supers produits et peintures pour la transformation de ce meuble!")
+furniture33 = Furniture.create!(name:"Esther", material: "Bois", color: "Bleu nuit", type_of_furniture: "Commode", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Cette commode typique des années 60 nous est arrivée dans son jus. Un gros travail de décapage et de ponçage a été nécéssaire pour enlever l'imposante couche de vernis et pouvoir ainsi lui donner cette jolie teinte bleu nuit de chez @farrowandball . Les pieds ont été changés pour des nouveaux plus modernes.
+Les poignées sont d'origine et ont demandé un bon nettoyage pour retrouver leur brillance.")
+#varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
+
+furniture34 = Furniture.create!(name:"Imany", material: "Bois", color: "Bleu Mystere", type_of_furniture: "Armoire", varnish: "", varnish_brand: "", teint: "", paint_brand: "Pure & Paint", date_of_manufacture: "", description: "Imany est une armoire très mignonne. Arrivée à l'atelier dans un vernis vieillissant couleur acajou qui ne lui allait pas spécialement, nous avons décidé de la changer d'époque ! Après un gros décapage, quelques réparations, et le changement des étagères, nous l'avons vêtue du très beau bleu « Mystère » de chez @pure_and_paint . Assortie à un très joli papier peint de la savane, Imany retrouve un cachet fou!")
+#)
+
+furniture35 = Furniture.create!(name:"Alma", material: "Bois", color: "Lin velours", type_of_furniture: "Meuble de rangement / meuble TV / meuble d'enfant", varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "", description: "Cette semaine à l'atelier nous avons chiné un meuble assez atypique qui nous a bien plu. Apres avoir entièrement décapé cette petite merveille, et réparé ses tiroirs qui étaitent bien abimés. Nous avons choisi de peindre ce meuble dans une teinte très belle teinte Lin velours avec de nouvelles poignées et entrée de clé.
+Le but étant de prendre une couleur s'accordant avec beaucoup d'autres pour permettre à ce meuble atypique qui peut servir de console, meuble tv, meuble d'enfant, petit meuble de rangement, et on en passe, de s'accorder dans beaucoup de pièces. Une chose est sûre, il aura sa place dans beaucoup de décos différentes")
+#varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "")
+
+furniture36 = Furniture.create!(name:"Thalia", material: "Bois", color: "Bleu Atlantide", paint_brand: "Colibri", varnish_brand: "", teint: "", type_of_furniture: "Bibliothèque", date_of_manufacture: "", varnish: "Laque écologique", description: "Attention transformation ! On avait chiné cette armoire, il y a quelque temps, et le moins que l'on puisse dire, c'est qu'il fallait se projeter… Il nous a fallu pas mal de travail pour la transformer en bibliothèque, mais le résultat en valait la peine ! Un grand merci à @colibripeinture qui nous a fourni de supers produits et peintures pour la transformation de ce meuble!")
 #  )
 
+furniture37 = Furniture.create!(name:"Christina", material: "Bois", color: "Blanc Albâtre", type_of_furniture: "Coffre", varnish: "", varnish_brand: "", teint: "", paint_brand: "Libéron", date_of_manufacture: "", description: "À l'atelier c'est un vieux coffre qui est passé entre nos mains cette semaine.
+Il était sombre, avec des motifs de vitraux sur tout le coffre, cela avait son charme à l'époque mais aujourd'hui ce n'est plus trop le cas. C'est pourquoi nous avons décidé de le démonter entièrement pour le refaire à la sauce Atelier Plinguet. Une fois chaque pièce poncée afin de retrouver la couleur naturelle du bois qui entre nous est beaucoup plus douce et jolie, nous avons décidé de remplacer les vitraux par des panneaux simples mais mis en valeur par le blanc albâtre de chez @liberon_officiel . Ainsi le coffre change d'époque, et s'adaptera parfaitement dans son nouvel environnement.")
+
+furniture39 = Furniture.create!(name:"Rita", material: "Bois", color: "Soir de Sienne", type_of_furniture: "Meuble de rangement", varnish: "Chêne", varnish_brand: "Libéron", teint: "Chêne", paint_brand: "Pure & Paint", date_of_manufacture: "", description: "Arrivé à l'atelier dans un état déplorable, ce meuble de machine à coudre était bon pour la déchetterie. Le plateau, ou encore les portes ont subi de très très gros dégâts dont des coups de scie des anciens propriétaires. Il aura fallu de nombreuses heures de travail pour enlever le mécanisme rouillé supportant la machine à coudre, remplacer le plateau par un nouveau, et reboucher tous les trous qui avaient été faits dans les portes, mais cela en valait la peine. Nous avons immédiatement perçu le charme que pourrait avoir ce meuble une fois restauré, et nous ne sommes pas déçus d'y avoir passé du temps!
+Habillé de la superbe teinte « soir de sienne » de chez @pure_and_paint , et d'une teinte chêne moyen de chez @liberon_officiel pour le plateau, les poignées et les pieds, ce meuble retrouve de sa superbe! Il est beau, unique, atypique et surtout il pourrait trouver sa place dans n'importe quelle pièce de la maison. Bref c'est un vrai coup de coeur pour l'atelier!")
+
+furniture40 = Furniture.create!(name:"Lou", material: "Bois", color: "Vert Rivage
+", type_of_furniture: "Bahut", varnish: "Incolore", varnish_brand: "Libéron", teint: "Naturelle", paint_brand: "Envie", date_of_manufacture: "", description: "Lou est un superbe bahut comme on les aime.
+Arrivé peint avec une couche plus qu'épaisse de peinture glycero saumon, il a fallu de nombreuses heures de ponçage pour le dénuder entièrement et révéler sa magnifique essence.
+Les parties trop abimées ont été remplacées, les pieds refait sur mesure. Pour ce qui est de la teinte, nous avons choisi de lui laisser sa teinte naturel sur l'extérieur (protégé par un vernis de chez @liberon_officiel ) et le peindre en vert rivage de chez envie.") #)
 
 puts "Seed des meubles : OK !"
 
@@ -204,7 +199,12 @@ puts "Seed des accessoires : OK !"
 
 puts "Starting seed des réalisations"
 
-realisation1 = Realisation.create!(name: "Le Friedland", localisation: "Paris", type_of_realisation: "Décoration murale", date_of_realisation: date, description: "Depuis 3 semaines, l'atelier Plinguet s'est lancé dans un nouveau projet, la modernisation d'éléments d'un bistrot Parisien. Au programme la restauration de 26 tables de bistrot! À la base teintées en bois noir, il a fallu de nombreuses heures de décapage et ponçage pour retrouver la belle teinte initiale et les veines du bois. Le tout a été vernis avec une finition spéciale bistrot pour résister aux nombreux clients qui utiliseront ces tables. L'atelier a également restauré un vieux meuble de service dans des teintes de bois doré et la superbe couleur #inchyra de chez Farrow&ball. Enfin, nous avons procédé à la création d'un élément de déco murale alliant coffrage en bois peint dans cette même teinte Inchyra, flocage en contreplaqué réalisé à la découpe laser et ampoules design pour un rendu vraiment sympa!")
+realisation1 = Realisation.create!(name:"Alma", color: "Vert livid", type_of_realisation: "Bibliothèque sur mesure", varnish: "", varnish_brand: "", tint: "", paint_brand: "Little Green", date_of_realisation: "", localisation: "Paris", description: "Bibliothèque sur mesure Alma 📚📚
+On était plutôt discret dernièrement, c'est parce l'atelier s'est exporté à Paris pour travailler sur la conception d'une bibliothèque sur mesure dans un appartement hausmanien. Au programme meuble design arrondi avec pliage de bois. Toute la fabrication a été faite sur place. Pour la peinture, on a choisi avec l'aide de @nelscouleurs , la superbe teinte #Livid de chez @littlegreene.fr @littlegreenepaintcompany .
+Le reste de la rénovation de l'appartement à été effectué par le talentueux @antinomik_design .")
+#)
+
+realisation2 = Realisation.create!(name: "Le Friedland", localisation: "Paris", type_of_realisation: "Décoration murale", date_of_realisation: date, description: "Depuis 3 semaines, l'atelier Plinguet s'est lancé dans un nouveau projet, la modernisation d'éléments d'un bistrot Parisien. Au programme la restauration de 26 tables de bistrot! À la base teintées en bois noir, il a fallu de nombreuses heures de décapage et ponçage pour retrouver la belle teinte initiale et les veines du bois. Le tout a été vernis avec une finition spéciale bistrot pour résister aux nombreux clients qui utiliseront ces tables. L'atelier a également restauré un vieux meuble de service dans des teintes de bois doré et la superbe couleur #inchyra de chez Farrow&ball. Enfin, nous avons procédé à la création d'un élément de déco murale alliant coffrage en bois peint dans cette même teinte Inchyra, flocage en contreplaqué réalisé à la découpe laser et ampoules design pour un rendu vraiment sympa!")
 
 puts "Seed des réalisations : OK !"
 
@@ -344,14 +344,12 @@ emma2_2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622665/atelier
 emma2_3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1706622664/atelier-plinguet/emma2-4-meuble-chaussure_gv4qgy.png'
 emma2_4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595721/atelier-plinguet/emma2-2-meuble-chaussure_x4tz5a.png'
 
-armelle1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595708/atelier-plinguet/armelle-1-coffre_n6acvc.png'
-armelle2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595709/atelier-plinguet/armelle-2-coffre_dg2itd.png'
-armelle3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595708/atelier-plinguet/armelle-1-table_eoadwa.png'
-armelle4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595711/atelier-plinguet/armelle-2-table_o9jct9.png'
+armelle1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595708/atelier-plinguet/armelle-1-table_eoadwa.png'
+armelle2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595711/atelier-plinguet/armelle-2-table_o9jct9.png'
 
-ava1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1708929191/atelier-plinguet/ava-3-commode_vw7oqm.png'
-ava2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1708929191/atelier-plinguet/ava-4-commode_xfkfm4.png'
-ava3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1708929191/atelier-plinguet/ava-before-1_dhxd2w.png'
+ava1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595708/atelier-plinguet/armelle-1-coffre_n6acvc.png'
+ava2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595709/atelier-plinguet/armelle-2-coffre_dg2itd.png'
+ava3 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595712/atelier-plinguet/armelle-3-coffre_dlq592.png"
 
 anna1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595704/atelier-plinguet/anna-1-commode_neqv11.png'
 anna2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705595704/atelier-plinguet/anna-2-commode_fcedyz.png'
@@ -447,53 +445,43 @@ puts "Seed de toutes les url : OK !"
 puts "Starting seed des furnitures photos.attach"
 
 #Thalia
-furniture40.photos.attach(io: URI.open(thalia1), filename: 'thalia-1-bibliotheque', content_type: "image/jpg" )
-furniture40.photos.attach(io: URI.open(thalia2), filename: 'thalia-2-bibliotheque', content_type: "image/jpg" )
-furniture40.save
+furniture36.photos.attach(io: URI.open(thalia1), filename: 'thalia-1-bibliotheque', content_type: "image/jpg" )
+furniture36.photos.attach(io: URI.open(thalia2), filename: 'thalia-2-bibliotheque', content_type: "image/jpg" )
+furniture36.save
 puts "Thalia : ok"
 
 #Luna
-furniture39.photos.attach(io: URI.open(luna1), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
-furniture39.photos.attach(io: URI.open(luna2), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
-furniture39.photos.attach(io: URI.open(luna3), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
-furniture39.save
+furniture32.photos.attach(io: URI.open(luna1), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
+furniture32.photos.attach(io: URI.open(luna2), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
+furniture32.photos.attach(io: URI.open(luna3), filename: 'luna-1-vaisselier', content_type: "image/jpg" )
+furniture32.save
 puts "Luna : ok"
 
-#Alma
-furniture38.photos.attach(io: URI.open(almab1), filename: 'alma-1-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(almab2), filename: 'alma-2-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(almab3), filename: 'alma-3-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(almab4), filename: 'alma-4-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(almab5), filename: 'alma-5-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(almab6), filename: 'alma-6-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(almab7), filename: 'alma-7-bibliotheque', content_type: "image/jpg" )
-furniture38.save
-puts "Alma : ok"
 
 #Mathilda
-furniture37.photos.attach(io: URI.open(mathilda1), filename: 'mathilda-1-bahut', content_type: "image/jpg" )
-furniture37.photos.attach(io: URI.open(mathilda2), filename: 'mathilda-2-bahut', content_type: "image/jpg" )
-furniture37.photos.attach(io: URI.open(mathilda3), filename: 'mathilda-3-bahut', content_type: "image/jpg" )
-furniture37.save
+furniture31.photos.attach(io: URI.open(mathilda1), filename: 'mathilda-1-bahut', content_type: "image/jpg" )
+furniture31.photos.attach(io: URI.open(mathilda2), filename: 'mathilda-2-bahut', content_type: "image/jpg" )
+furniture31.photos.attach(io: URI.open(mathilda3), filename: 'mathilda-3-bahut', content_type: "image/jpg" )
+furniture31.save
 puts "mathilda : ok"
 
 #Lou-bahut
-furniture36.photos.attach(io: URI.open(lou1), filename: 'lou-1-bahut', content_type: "image/jpeg" )
-furniture36.photos.attach(io: URI.open(lou2), filename: 'lou-2-bahut', content_type: "image/jpeg" )
-furniture36.save
+furniture40.photos.attach(io: URI.open(lou1), filename: 'lou-1-bahut', content_type: "image/jpeg" )
+furniture40.photos.attach(io: URI.open(lou2), filename: 'lou-2-bahut', content_type: "image/jpeg" )
+furniture40.save
 puts "Lou : ok"
 
 #Imany
-furniture35.photos.attach(io: URI.open(imany1), filename: 'imany-1-armoire', content_type: "image/jpg" )
-furniture35.photos.attach(io: URI.open(imany2), filename: 'imany-2-armoire', content_type: "image/jpg" )
-furniture35.photos.attach(io: URI.open(imany3), filename: 'imany-3-armoire', content_type: "image/jpg" )
-furniture35.photos.attach(io: URI.open(imany4), filename: 'imany-4-armoire', content_type: "image/jpg" )
-furniture35.save
+furniture34.photos.attach(io: URI.open(imany1), filename: 'imany-1-armoire', content_type: "image/jpg" )
+furniture34.photos.attach(io: URI.open(imany2), filename: 'imany-2-armoire', content_type: "image/jpg" )
+furniture34.photos.attach(io: URI.open(imany3), filename: 'imany-3-armoire', content_type: "image/jpg" )
+furniture34.photos.attach(io: URI.open(imany4), filename: 'imany-4-armoire', content_type: "image/jpg" )
+furniture34.save
 puts "Imany : ok"
 
 #Adriana
-furniture34.photos.attach(io: URI.open(adriana1), filename: 'adriana-1-meuble.jpeg', content_type: "image/jpeg" )
-furniture34.save
+furniture28.photos.attach(io: URI.open(adriana1), filename: 'adriana-1-meuble.jpeg', content_type: "image/jpeg" )
+furniture28.save
 puts "Adriana : ok"
 
 #Esther
@@ -506,17 +494,17 @@ furniture33.save
 puts "Esther : ok"
 
 #Rita
-furniture32.photos.attach(io: URI.open(rita1), filename: 'rita-1-meuble.jpg', content_type: "image/jpg" )
-furniture32.photos.attach(io: URI.open(rita2), filename: 'rita-2-meuble.jpg', content_type: "image/jpg" )
-furniture32.photos.attach(io: URI.open(rita3), filename: 'rita-3-meuble.jpg', content_type: "image/jpg" )
-furniture32.save
+furniture39.photos.attach(io: URI.open(rita1), filename: 'rita-1-meuble.jpg', content_type: "image/jpg" )
+furniture39.photos.attach(io: URI.open(rita2), filename: 'rita-2-meuble.jpg', content_type: "image/jpg" )
+furniture39.photos.attach(io: URI.open(rita3), filename: 'rita-3-meuble.jpg', content_type: "image/jpg" )
+furniture39.save
 puts "Rita : ok"
 
 #Christina
-furniture31.photos.attach(io: URI.open(christina1), filename: 'christina-1-buffet.jpg', content_type: "image/jpg" )
-furniture31.photos.attach(io: URI.open(christina2), filename: 'christina-2-buffet.jpg', content_type: "image/jpg" )
-furniture31.photos.attach(io: URI.open(christina3), filename: 'christina-3-buffet.jpg', content_type: "image/jpg" )
-furniture31.save
+furniture37.photos.attach(io: URI.open(christina1), filename: 'christina-1-buffet.jpg', content_type: "image/jpg" )
+furniture37.photos.attach(io: URI.open(christina2), filename: 'christina-2-buffet.jpg', content_type: "image/jpg" )
+furniture37.photos.attach(io: URI.open(christina3), filename: 'christina-3-buffet.jpg', content_type: "image/jpg" )
+furniture37.save
 puts "Christina : ok"
 
 #Simone
@@ -527,10 +515,10 @@ furniture30.save
 puts "Simone : ok"
 
 #Alma
-furniture28.photos.attach(io: URI.open(alma1), filename: 'alma-1-meuble.jpg', content_type: "image/jpg" )
-furniture28.photos.attach(io: URI.open(alma2), filename: 'alma-2-meuble.jpg', content_type: "image/jpg" )
-furniture28.photos.attach(io: URI.open(alma3), filename: 'alma-3-meuble.jpg', content_type: "image/jpg" )
-furniture28.save
+furniture35.photos.attach(io: URI.open(alma1), filename: 'alma-1-meuble.jpg', content_type: "image/jpg" )
+furniture35.photos.attach(io: URI.open(alma2), filename: 'alma-2-meuble.jpg', content_type: "image/jpg" )
+furniture35.photos.attach(io: URI.open(alma3), filename: 'alma-3-meuble.jpg', content_type: "image/jpg" )
+furniture35.save
 puts "Alma : ok"
 
 #Lola
@@ -691,8 +679,6 @@ puts "Emma2 : ok"
 #Armelle
 furniture5.photos.attach(io: URI.open(armelle1), filename: 'armelle-1-table.png', content_type: "image/png" )
 furniture5.photos.attach(io: URI.open(armelle2), filename: 'armelle-2-table.png', content_type: "image/png" )
-furniture5.photos.attach(io: URI.open(armelle3), filename: 'armelle-2-table.png', content_type: "image/png" )
-furniture5.photos.attach(io: URI.open(armelle4), filename: 'armelle-2-table.png', content_type: "image/png" )
 furniture5.save
 puts "Armelle ok"
 
@@ -783,12 +769,23 @@ puts "Seed des accessories photos.attach : OK!"
 # ------------ Photos des réalisations ------------------
 puts "Starting seed des realisations photos.attach"
 
-realisation1.photos.attach(io: URI.open(friedland1), filename: "friedland-decoration-1", content_type: "image/jpg")
-realisation1.photos.attach(io: URI.open(friedland2), filename: "friedland-decoration-2", content_type: "image/jpg")
-realisation1.photos.attach(io: URI.open(friedland3), filename: "friedland-decoration-3", content_type: "image/jpg")
-realisation1.photos.attach(io: URI.open(friedland4), filename: "friedland-decoration-4", content_type: "image/jpg")
-realisation1.photos.attach(io: URI.open(friedland5), filename: "friedland-decoration-5", content_type: "image/jpg")
-realisation1.save 
+#Alma
+realisation1.photos.attach(io: URI.open(almab1), filename: 'alma-1-bibliotheque', content_type: "image/jpg" )
+realisation1.photos.attach(io: URI.open(almab2), filename: 'alma-2-bibliotheque', content_type: "image/jpg" )
+realisation1.photos.attach(io: URI.open(almab3), filename: 'alma-3-bibliotheque', content_type: "image/jpg" )
+realisation1.photos.attach(io: URI.open(almab4), filename: 'alma-4-bibliotheque', content_type: "image/jpg" )
+realisation1.photos.attach(io: URI.open(almab5), filename: 'alma-5-bibliotheque', content_type: "image/jpg" )
+realisation1.photos.attach(io: URI.open(almab6), filename: 'alma-6-bibliotheque', content_type: "image/jpg" )
+realisation1.photos.attach(io: URI.open(almab7), filename: 'alma-7-bibliotheque', content_type: "image/jpg" )
+realisation1.save
+puts "Alma : ok"
+
+realisation2.photos.attach(io: URI.open(friedland1), filename: "friedland-decoration-1", content_type: "image/jpg")
+realisation2.photos.attach(io: URI.open(friedland2), filename: "friedland-decoration-2", content_type: "image/jpg")
+realisation2.photos.attach(io: URI.open(friedland3), filename: "friedland-decoration-3", content_type: "image/jpg")
+realisation2.photos.attach(io: URI.open(friedland4), filename: "friedland-decoration-4", content_type: "image/jpg")
+realisation2.photos.attach(io: URI.open(friedland5), filename: "friedland-decoration-5", content_type: "image/jpg")
+realisation2.save 
 
 puts "Seed des realisations photos.attach: OK!"
 
