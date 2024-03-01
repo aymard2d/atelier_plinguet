@@ -82,6 +82,7 @@
   touch-action: manipulation;
   vertical-align: baseline;
   white-space: nowrap;
+  margin: auto;
 }
 
 .button-48:before {
@@ -90,7 +91,7 @@
   background-color: $green-light;
   clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
   content: "";
-  height: 45%;
+  height: 100%;
   left: 0;
   position: absolute;
   top: 0;

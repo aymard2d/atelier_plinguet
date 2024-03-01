@@ -45,8 +45,20 @@
 
 #menu {
   height: 100px;
-  display: flex;
   justify-content: end;
+}
+
+.menu-work {
+  display: grid;
+  margin: auto;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.menu-contact {
+  display: flex;
+  width: 68%;
+  margin: auto;
 }
 
 .signout {
