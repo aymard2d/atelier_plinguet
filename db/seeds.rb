@@ -220,13 +220,13 @@ luna1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424397/atelier-p
 luna2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424425/atelier-plinguet/luna-2-vaisselier_i99qpo.jpeg'
 luna3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424392/atelier-plinguet/luna-3-vaisselier_jfmn7w.jpeg'
 
-alma1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424439/atelier-plinguet/alma-1-bibliotheque_f9zc7r.jpg'
-alma2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424441/atelier-plinguet/alma-2-bibliotheque_hqrlfj.jpg'
-alma3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424396/atelier-plinguet/alma-3-bibliotheque_sjl4pp.jpg'
-alma4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424394/atelier-plinguet/alma-4-bibliotheque_dhzxv3.jpg'
-alma5 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424440/atelier-plinguet/alma-5-bibliotheque_ajecms.jpg'
-alma6 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424391/atelier-plinguet/alma-6-bibliotheque_mtv28m.jpg'
-alma7 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424390/atelier-plinguet/alma-7-bibliotheque_htwt5q.jpg'
+almab1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424439/atelier-plinguet/alma-1-bibliotheque_f9zc7r.jpg'
+almab2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424441/atelier-plinguet/alma-2-bibliotheque_hqrlfj.jpg'
+almab3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424396/atelier-plinguet/alma-3-bibliotheque_sjl4pp.jpg'
+almab4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424394/atelier-plinguet/alma-4-bibliotheque_dhzxv3.jpg'
+almab5 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424440/atelier-plinguet/alma-5-bibliotheque_ajecms.jpg'
+almab6 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424391/atelier-plinguet/alma-6-bibliotheque_mtv28m.jpg'
+almab7 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424390/atelier-plinguet/alma-7-bibliotheque_htwt5q.jpg'
 
 mathilda1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424413/atelier-plinguet/matilda-1-bahut_hloh1t.jpg'
 mathilda2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424418/atelier-plinguet/mathilda-2-bahut_cevwbe.jpg'
@@ -460,13 +460,13 @@ furniture39.save
 puts "Luna : ok"
 
 #Alma
-furniture38.photos.attach(io: URI.open(alma1), filename: 'alma-1-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(alma2), filename: 'alma-2-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(alma3), filename: 'alma-3-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(alma4), filename: 'alma-4-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(alma5), filename: 'alma-5-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(alma6), filename: 'alma-6-bibliotheque', content_type: "image/jpg" )
-furniture38.photos.attach(io: URI.open(alma7), filename: 'alma-7-bibliotheque', content_type: "image/jpg" )
+furniture38.photos.attach(io: URI.open(almab1), filename: 'alma-1-bibliotheque', content_type: "image/jpg" )
+furniture38.photos.attach(io: URI.open(almab2), filename: 'alma-2-bibliotheque', content_type: "image/jpg" )
+furniture38.photos.attach(io: URI.open(almab3), filename: 'alma-3-bibliotheque', content_type: "image/jpg" )
+furniture38.photos.attach(io: URI.open(almab4), filename: 'alma-4-bibliotheque', content_type: "image/jpg" )
+furniture38.photos.attach(io: URI.open(almab5), filename: 'alma-5-bibliotheque', content_type: "image/jpg" )
+furniture38.photos.attach(io: URI.open(almab6), filename: 'alma-6-bibliotheque', content_type: "image/jpg" )
+furniture38.photos.attach(io: URI.open(almab7), filename: 'alma-7-bibliotheque', content_type: "image/jpg" )
 furniture38.save
 puts "Alma : ok"
 

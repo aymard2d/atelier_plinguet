@@ -133,6 +133,22 @@ p:not(:last-child) {
   }
 }
 
+
+.furniture-details-photo {
+  flex: 0 0 150px;
+  border-radius: 10px;
+  transition: 0.8s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  &:hover {
+    box-shadow: 1px 3px 15px $light-wood;
+    transform: scale3d(2.8, 2.8, 1.5);
+    transform-origin: left;
+  }
+}
+
 .furniture-description {
   //border: 1px $blue2 dotted;
   border-radius: 10px;
