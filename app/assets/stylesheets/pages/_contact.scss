@@ -38,6 +38,14 @@
 
 .contact-infos {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  color: #b27d4f;
+  font-family: 'Autography';
+  font-size: xx-large;
+}
+.contact-tel {
+  display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   color: #b27d4f;
@@ -272,4 +280,13 @@
       font-size: 0.875em;
     }
   }
+}
+
+// ALERTES 
+
+.invalid-feedback {
+  text-align: center;
+  font-family: "cormorant";
+  font-size: small;
+  color: $light-wood;
 }
