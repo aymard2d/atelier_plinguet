@@ -60,6 +60,10 @@
   font-family: "Barokah";
 }
 
+.contact-message {
+  font-family: 'Autography';
+  font-size: xx-large;
+}
 .contact-form {
     border: solid 3px $blue;
     max-width: 768px;
@@ -131,7 +135,7 @@
     border: none;
     border: solid 2px $blue;
     color: $blue;
-    font-size: 1.000em;
+    font-size: x-large;
     font-weight: 400;
     letter-spacing: 1px;
     margin: 2em auto;

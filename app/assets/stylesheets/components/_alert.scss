@@ -10,11 +10,12 @@
     justify-content: center;
     /* margin-top: 5px; */
     border-radius: 10px;
-    color: white;
-    background-color: $blue2;
+    color: $light-wood;
+    background-color: rgb(193, 208, 221);
     font-size: larger;
+
 }
 
 .m-1 {
-  margin: 10px auto;
+  margin: 10px auto !important;
 }
