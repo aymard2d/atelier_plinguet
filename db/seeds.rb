@@ -84,11 +84,11 @@ Son plateau et ses étagères ont eux été laissés bruts puis vernis pour les 
 furniture19 = Furniture.create!(name:"Chloé", material: "Bois", color: "Bleu Hague blue", type_of_furniture: "Enfilade", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "La semaine dernière, l'atelier Plinguet a eu le plaisir de travailler à Paris sur une superbe enfilade scandinave des années 60. Le propriétaire de ce meuble l'avait chiné sur le site Selency qui regorge de pépites pour que nous le restaurions à son goût. De nombreuses heures de travail ont permis de lui donner une seconde jeunesse. Un papier peint intissé au motif floral dans les parties secrétaires ainsi que le bleu Hague Blue de chez Farrow&ball ont permis de rapporter cette sublime enfilade dans notre siècle ")
 #varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "2022-03-21")
 
-furniture20 = Furniture.create!(name:"Sofia", material: "Bois - chène massif", color: "Red Earth", type_of_furniture: "Confiturier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Cette semaine nous vous avons chiné un vieux confiturier vintage comme on les aime! À la base dans une teinte blanc cassé assez abimé, nous avons décidé après avoir effectué un travail sur le bois de le repeindre dans la teinte Red Earth de chez @farrowandball .
+furniture21 = Furniture.create!(name:"Sofia", material: "Bois - chène massif", color: "Red Earth", type_of_furniture: "Confiturier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Cette semaine nous vous avons chiné un vieux confiturier vintage comme on les aime! À la base dans une teinte blanc cassé assez abimé, nous avons décidé après avoir effectué un travail sur le bois de le repeindre dans la teinte Red Earth de chez @farrowandball .
 C'est donc dans cette nouvelle couleur et avec de nouvelles poignées que ce confiturier devient un meuble ultra tendance.")
 #varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
 
-furniture21 = Furniture.create!(name:"Louison", material: "Bois", color: "Rouge Terracotta", type_of_furniture: "Confiturier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Le confiturier était un des meubles préférés de ma grand mère. À l'époque je le trouvais imposant, trop sombre et sans intérêt. Aujourd'hui, je vois tout le potentiel de ce meuble. Quel joie de retomber sur un similaire à celui de chez ma grand mère. Ce confiturier en chêne massif pese son poids. Il a fallu beaucoup d'efforts pour le ramener dans notre époque, mais revêtue de cette peinture Rouge Terracotta respectueuse de l'environnement avec son bouton laitonné et texturé, il sera parfait dans une entrée, ou un séjour.")
+furniture20 = Furniture.create!(name:"Louison", material: "Bois", color: "Rouge Terracotta", type_of_furniture: "Confiturier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Le confiturier était un des meubles préférés de ma grand mère. À l'époque je le trouvais imposant, trop sombre et sans intérêt. Aujourd'hui, je vois tout le potentiel de ce meuble. Quel joie de retomber sur un similaire à celui de chez ma grand mère. Ce confiturier en chêne massif pese son poids. Il a fallu beaucoup d'efforts pour le ramener dans notre époque, mais revêtue de cette peinture Rouge Terracotta respectueuse de l'environnement avec son bouton laitonné et texturé, il sera parfait dans une entrée, ou un séjour.")
 
 furniture22 = Furniture.create!(name:"Philippa", material: "Bois", color: "", type_of_furniture: "Commode", varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "", description: "Cette commode est arrivée à l'atelier dans un bien piteux état. Initialement pourvue d'un rose bonbon plus qu'écaillé, d'un seul bouton central par tiroir et surtout de long pieds sculptés style Louis XV, nous avons décidé de changer totalement son style pour en faire une commode pour enfant.
 Apres un décapage, une réparation du bois à certains endroits, nous avons changé le piétement, pour en fabriquer un en pieds compas teinte acajou, cela a pour but de rabaisser le meuble et de faire ressortir son nouveau rose poudré.
@@ -285,7 +285,7 @@ jade2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424429/atelier-p
 raphaelle1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424434/atelier-plinguet/raphaelle-1-bahut_wtipv1.jpg'
 raphaelle2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424438/atelier-plinguet/raphaelle-2-bahut_m2dil7.jpg'
 raphaelle3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424422/atelier-plinguet/raphaelle-3-bahut_crnosc.jpg'
-raphaelle4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705400374/development/1geap8wvifp1m4guitrac3z2qsvs.jpg'
+raphaelle4 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424445/atelier-plinguet/raphaelle-4-bahut_wug1b0.jpg'
 
 pauline1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424423/atelier-plinguet/pauline-1-meuble-box_nron3m.jpg'
 pauline2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424422/atelier-plinguet/pauline-meuble-box_gswo3h.jpg'
@@ -294,7 +294,7 @@ philippa1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424434/ateli
 philippa2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424437/atelier-plinguet/philiipa-2-commode_njihrh.jpg'
 philippa3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424409/atelier-plinguet/philippa-3-commode_vkm8js.jpg'
 
-louison1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705400386/development/louison-1-confiturier.jpg'
+louison1 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1709906729/atelier-plinguet/louison-1-confiturier_adtjg8.png'
 louison2 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424409/atelier-plinguet/louison-2-confiturier.jpg'
 louison3 = 'https://res.cloudinary.com/dnqkzzqga/image/upload/v1705424391/atelier-plinguet/louison-1_wdxmy8.jpg'
 
@@ -564,23 +564,26 @@ furniture22.photos.attach(io: URI.open(philippa3), filename: 'philippa-3-commode
 furniture22.save
 puts "Philippa : ok"
 
-#Louison
-furniture21.photos.attach(io: URI.open(louison1), filename: 'louison-1-confiturier.jpg', content_type: "image/jpg" )
-furniture21.photos.attach(io: URI.open(louison2), filename: 'louison-2-confiturier.jpg', content_type: "image/jpg" )
-furniture21.photos.attach(io: URI.open(louison3), filename: 'louison-3-confiturier.jpg', content_type: "image/jpg" )
-furniture21.save
-puts "Louison : ok"
-
 #Sofia
-furniture20.photos.attach(io: URI.open(sofia1), filename: 'sofia-1-confiturier.jpg', content_type: "image/jpg" )
-furniture20.photos.attach(io: URI.open(sofia2), filename: 'sofia-2-confiturier.jpg', content_type: "image/jpg" )
-furniture20.photos.attach(io: URI.open(sofia3), filename: 'sofia-3-confiturier.jpg', content_type: "image/jpg" )
-furniture20.photos.attach(io: URI.open(sofia4), filename: 'sofia-4-confiturier.jpg', content_type: "image/jpg" )
-furniture20.save
+furniture21.photos.attach(io: URI.open(sofia1), filename: 'sofia-1-confiturier.jpg', content_type: "image/jpg" )
+furniture21.photos.attach(io: URI.open(sofia2), filename: 'sofia-2-confiturier.jpg', content_type: "image/jpg" )
+furniture21.photos.attach(io: URI.open(sofia3), filename: 'sofia-3-confiturier.jpg', content_type: "image/jpg" )
+furniture21.photos.attach(io: URI.open(sofia4), filename: 'sofia-4-confiturier.jpg', content_type: "image/jpg" )
+furniture21.save
 puts "Sofia : ok"
 
+#Louison
+furniture20.photos.attach(io: URI.open(louison1), filename: 'louison-1-confiturier.jpg', content_type: "image/jpg" )
+furniture20.photos.attach(io: URI.open(louison2), filename: 'louison-2-confiturier.jpg', content_type: "image/jpg" )
+furniture20.photos.attach(io: URI.open(louison3), filename: 'louison-3-confiturier.jpg', content_type: "image/jpg" )
+furniture20.save
+puts "Louison : ok"
+
 #Chloe
-furniture19.photos.attach(io: URI.open(chloe1), filename: 'chloe-1-enfilade.jpg', content_type: "image/jpg" )
+furniture19.photos.attach(io: URI.open(chloe1), filename: 'chloe-1-enfilade.jpg', content_type: "image/jpg" ) do |attachable|
+  attachable.metadata = { "cloudinary" => { "transformation" => { "height" => 500 } } }
+end
+
 furniture19.photos.attach(io: URI.open(chloe2), filename: 'chloe-2-enfilade.jpg', content_type: "image/jpg" )
 furniture19.photos.attach(io: URI.open(chloe3), filename: 'chloe-3-enfilade.jpg', content_type: "image/jpg" )
 furniture19.photos.attach(io: URI.open(chloe4), filename: 'chloe-4-enfilade.jpg', content_type: "image/jpg" )
@@ -785,7 +788,7 @@ realisation2.photos.attach(io: URI.open(friedland2), filename: "friedland-decora
 realisation2.photos.attach(io: URI.open(friedland3), filename: "friedland-decoration-3", content_type: "image/jpg")
 realisation2.photos.attach(io: URI.open(friedland4), filename: "friedland-decoration-4", content_type: "image/jpg")
 realisation2.photos.attach(io: URI.open(friedland5), filename: "friedland-decoration-5", content_type: "image/jpg")
-realisation2.save 
+realisation2.save  
 
 puts "Seed des realisations photos.attach: OK!"
 

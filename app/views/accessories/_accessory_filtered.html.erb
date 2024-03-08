@@ -1,13 +1,19 @@
-<div data-furniture-search-filter-target="furnitures" > 
+<div data-furniture-search-filter-target="furnitures">
   <div class="galerie" data-add-accessory-target="list">
     <% @accessories.each do |accessory| %>
       <%= link_to accessory_path(accessory) do %>
         <figure>
-          <% accessory.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, alt: "atelier-plinguet-fabrication", class: "object-fit-cover index-photo" %>
-            <% break %>
-          <% end %> 
-          <figcaption><%= accessory.name %></figcaption>
+          <% if accessory.photos.present? %>
+            <% # Only load the first photo, you can modify this logic if needed %>
+            <%= cl_image_tag accessory.photos.first.key, alt: accessory.name, class: "object-fit-cover index-photo-acc", fetch_format: :auto, crop: "scale", quality: "auto", width: 400 %>
+          <% else %>
+            <% # Add a placeholder image or handle the case where there's no photo %>
+            <%= image_tag "placeholder.jpg", alt: "Placeholder Image", class: "object-fit-cover index-photo test", width: 400 %>
+          <% end %>
+          <figcaption>
+            <%= accessory.type_of %>
+            <%= accessory.name %>
+          </figcaption>
         </figure>
       <% end %>
     <% end %>

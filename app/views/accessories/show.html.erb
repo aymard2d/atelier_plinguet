@@ -1,18 +1,19 @@
-<!-- app/views/accessories/show.html.erb -->  
-<% content_for :meta_title, "#{@accessory.type_of} is on #{DEFAULT_META["meta_product_name"]}" %>  
-<% content_for :meta_description, @accessory.description %>  
+<!-- app/views/accessories/show.html.erb -->
+<% content_for :meta_title, "#{@accessory.type_of} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @accessory.description %>
 <%# content_for :meta_image, cl_image_path(@accessory.photo.path) %>
 
 <div data-controller="update-accessory">
   <div class="main-container">
     <div class="galery-container">
       <% @accessory.photos.each do |attachment| %>
-        <div style="<%= "background: url('#{url_for(attachment)}') no-repeat 50% / cover;" %>">
+        <div style="<%= "background: url('#{cl_image_path(attachment.key, fetch_format: :auto, crop: 'fill', quality: 'auto')}') no-repeat 50% / cover;" %>">
+
           <div class="content">
             <h2><%= @accessory.name %></h2>
-            <span><%= @accessory.type_of %></span>
+            <span><%#= @accessory.type_of %></span>
             <% if user_signed_in? && current_user.admin? %>
-              <%= link_to 'Supprimer', purge_attachment_path(attachment), data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?"} %>
+              <%= link_to 'Supprimer', purge_attachment_path(attachment), data: { turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?" } %>
             <% end %>
           </div>
         </div>
@@ -27,24 +28,23 @@
           <div class="furniture-photo">
             <div class="furniture-details-photo">
               <% if @accessory.photos.attached? %>
-                <img src="<%= url_for(@accessory.photos.first) %>" class="tokenImage" alt="Description de l'image">
+                <%# Use cl_image_tag for Cloudinary transformations %>
+                <%= cl_image_tag @accessory.photos.first.key, alt: "Description de l'image", class: "tokenImage", fetch_format: :auto, crop: "fill", quality: "auto" %>
               <% else %>
                 <!-- Gérer le cas où aucune image n'est attachée -->
                 <p>Aucune image disponible</p>
               <% end %>
             </div>
-            <%# <div class="vl"></div> %>
             <div class="furniture-details">
               <ul>
                 <li><i class="fa-solid fa-screwdriver-wrench"></i><span id="bullet">Type de meuble</span> <p> <%= @accessory.type_of %></p></li>
-                <!-- <hr> -->
                 <li><i class="fa-solid fa-gem"></i> <span id="bullet">Matériaux</span><p><%= @accessory.material %></p></li>
-                <!-- <hr> -->
-                <li><i class="fa-solid fa-palette"></i><span id="bullet">Couleurs</span> <p><%= @accessory.color %>
+                <li><i class="fa-solid fa-palette"></i><span id="bullet">Couleurs</span> <p><%= @accessory.color %></li>
                 <% if @accessory.paint_brand.present? %>
                   <li><i class="fa-solid fa-palette"></i><span id="bullet">Marque de peinture</span>
                     <p><%= @accessory.paint_brand %></p>
                     <div>
+                      <%# Using if-elsif block to display brand logos %>
                       <% if @accessory.paint_brand == "Colibri" %>
                         <%= image_tag @colibri, class: "colibri-logo" %>
                       <% elsif @accessory.paint_brand == "Farrow & Ball" %>
@@ -67,6 +67,7 @@
                 <% if @accessory.varnish.present? %>
                   <li><i class="fa-solid fa-paintbrush"></i><span id="bullet">Vernis</span> <p><%= @accessory.varnish %></p>
                     <div>
+                      <%# Using if-elsif block to display varnish brand logos %>
                       <% if @accessory.varnish_brand == "Libéron"%>
                         <%= image_tag @liberon, class: "liberon-logo" %>
                       <% elsif @accessory.varnish_brand == "v33" %>
@@ -80,16 +81,16 @@
                 <% else %>
                   <li> <i class="fa-solid fa-calendar"></i> <span id="bullet">Date de création</span>  <p><%= Time.now.strftime("%d-%m-%Y") %></p></li>
                 <% end %>
-                <li><i class="fa-regular fa-copyright"></i><span id="bullet">Créé par</span> 
-                <p>Atelier Plinguet</p>
-                <div>
-                  <%= image_tag "logo-plinguet-01.png", class: "ap-logo" %>
-                </div>
+                <li><i class="fa-regular fa-copyright"></i><span id="bullet">Créé par</span>
+                  <p>Atelier Plinguet</p>
+                  <div>
+                    <%= image_tag "logo-plinguet-01.png", class: "ap-logo" %>
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="furniture-description">  
+          <div class="furniture-description">
             <p><%= @accessory.description %></p>
           </div>
           <hr>
@@ -97,18 +98,13 @@
         <div style="text-align: center; margin-top: 2rem">
           <% if user_signed_in? && current_user.admin? %>
             <button data-action="click->update-accessory#displayForm" class="btn btn-outline-primary update-button">Modifier <%= @accessory.name %></button>
-            <%= link_to "Supprimer #{@accessory.name}", accessory_path(@accessory), data: {turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?" }, class: "btn btn-outline-primary update-button" %>
+            <%= link_to "Supprimer #{@accessory.name}", accessory_path(@accessory), data: { turbo_method: :delete, turbo_confirm: "T'es sûr mon couz ?" }, class: "btn btn-outline-primary update-button" %>
           <% end %>
           <div>
             <%= render "accessories/update_accessory_form", accessory: @accessory %>
           </div>
         </div>
       </div>
-    </div>         
+    </div>
   </div>
 </div>
-
-
-
-
-
