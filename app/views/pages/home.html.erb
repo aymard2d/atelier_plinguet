@@ -38,7 +38,7 @@
     <%= link_to furniture_path(furniture) do %>
       <figure>
         <% furniture.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto" %>
           <% break %>
         <% end %> 
         <figcaption><%= furniture.name %></figcaption>
@@ -54,7 +54,7 @@
     <%= link_to accessory_path(accessory) do %>
       <figure>
         <% accessory.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto", height: "400" %>
           <% break %>
         <% end %> 
         <figcaption><%= accessory.name %></figcaption>
@@ -71,7 +71,7 @@
     <%= link_to realisation_path(realisation) do %>
       <figure>
         <% realisation.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo" %>
+          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto" %>
           <% break %>
         <% end %> 
         <figcaption><%= realisation.name %></figcaption>
@@ -86,7 +86,7 @@
 <div class="home-last-realisations">
   <%= link_to "https://www.colibripeinture.com/comment-transformer-une-armoire-en-etageres-ouvertes.html", target: "_blank" do %>
     <figure>
-      <%= image_tag "about-ap-colibri.png", class: "object-fit-cover index-photo", alt: "Atelier Plinguet and Colibri" %>
+      <%= image_tag "about-ap-colibri.png", class: "object-fit-cover index-photo", alt: "Atelier Plinguet and Colibri", fetch_format: :auto, crop: "scale", quality: "auto" %>
       <figcaption>Colibri peinture</figcaption>
     </figure>
   <% end %>

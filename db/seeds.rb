@@ -31,6 +31,12 @@ puts "Seed des users : OK !"
 
 puts "Starting seed des meubles"
 
+furniture01 = Furniture.create!(name:"Chloé", material: "Bois", color: "Bleu Hague blue", type_of_furniture: "Enfilade", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "La semaine dernière, l'atelier Plinguet a eu le plaisir de travailler à Paris sur une superbe enfilade scandinave des années 60. Le propriétaire de ce meuble l'avait chiné sur le site Selency qui regorge de pépites pour que nous le restaurions à son goût. De nombreuses heures de travail ont permis de lui donner une seconde jeunesse. Un papier peint intissé au motif floral dans les parties secrétaires ainsi que le bleu Hague Blue de chez Farrow&ball ont permis de rapporter cette sublime enfilade dans notre siècle ")
+#varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "2022-03-21")
+
+furniture02 = Furniture.create!(name:"Chantal", material: "Bois", color: "Vert Cardoom green", type_of_furniture: "Bahut", varnish: "", varnish_brand: "", teint: "Dorée", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "En ce début de mois, nous avons restauré un très joli bahut deux portes pour une cliente Landaise. À la base revêtu d'une teinte chêne foncée très en vogue à l'époque mais moins tendance aujourd'hui, le bahut a été entièrement décapé. Ses pieds, ont été supprimés pour apporter plus de simplicité au meuble, tout comme l'entrée de clé qui ne demandait qu'à être modernisée. Apres quelques réparations sur le bois, et un changement de serrure, notre cliente a opté pour un mélange bois teinte doré et vert #cardroomgreen de chez Farrow and Ball et franchement on adore le résultat!")
+#varnish: "", varnish_brand: "", teint: "Teinte dorée", paint_brand: "Farrow & Ball", date_of_manufacture: "")
+
 furniture2 = Furniture.create!(name:"Anna", material: "Bois", color: "Bleu nuit", type_of_furniture: "Commode", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Restauration : Commode restaurée dans les tons bleu nuit avec poignées cuivrées pour un design chic et épuré")
 #varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "", poignées : "Cuivrées")
 
@@ -68,8 +74,8 @@ furniture13 = Furniture.create!(name:"Victoria", material: "Bois", color: "Bleu 
 furniture14 = Furniture.create!(name:"Prune", material: "Bois", color: "Vert kaki", type_of_furniture: "Bureau d'écolier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "En ce début de semaine, à l'atelier nous sommes repartis à l'école, pour une cliente parisienne qui cherchait pour ses filles un bureau d'école vintage. C'est à l'école de Bias dans les Landes que nous avons trouvé son bonheur : un bureau des années 50. Nous l'avons décapé, restauré le bois qui comportait les marques de ces dernières années et surtout repeint dans un vert qui tire vers le kaki, pour offrir de la modernité à ce bureau.")
 #varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "")
 
-furniture15 = Furniture.create!(name:"Chantal", material: "Bois", color: "Vert Cardoom green", type_of_furniture: "Bahut", varnish: "", varnish_brand: "", teint: "Dorée", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "En ce début de mois, nous avons restauré un très joli bahut deux portes pour une cliente Landaise. À la base revêtu d'une teinte chêne foncée très en vogue à l'époque mais moins tendance aujourd'hui, le bahut a été entièrement décapé. Ses pieds, ont été supprimés pour apporter plus de simplicité au meuble, tout comme l'entrée de clé qui ne demandait qu'à être modernisée. Apres quelques réparations sur le bois, et un changement de serrure, notre cliente a opté pour un mélange bois teinte doré et vert #cardroomgreen de chez Farrow and Ball et franchement on adore le résultat!")
-#varnish: "", varnish_brand: "", teint: "Teinte dorée", paint_brand: "Farrow & Ball", date_of_manufacture: "")
+furniture20 = Furniture.create!(name:"Louison", material: "Bois", color: "Rouge Terracotta", type_of_furniture: "Confiturier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Le confiturier était un des meubles préférés de ma grand mère. À l'époque je le trouvais imposant, trop sombre et sans intérêt. Aujourd'hui, je vois tout le potentiel de ce meuble. Quel joie de retomber sur un similaire à celui de chez ma grand mère. Ce confiturier en chêne massif pese son poids. Il a fallu beaucoup d'efforts pour le ramener dans notre époque, mais revêtue de cette peinture Rouge Terracotta respectueuse de l'environnement avec son bouton laitonné et texturé, il sera parfait dans une entrée, ou un séjour.")
+
 
 furniture16 = Furniture.create!(name:"Louisa", material: "Bois", color: "Rouge Terracotta", type_of_furniture: "Commode", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Voici une nouvelle restauration de l'atelier Plinguet, une commode à l'aspect très « basique » qui après ponçage, réparation de tiroirs cassés et mise en peinture retrouve de sa superbe ! Ce rouge Terracotta de chez Farrow&Ball apporte une touche moderne qui s'allie parfaitement avec les poignées laitonnées.")
 #varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
@@ -81,14 +87,11 @@ furniture18 = Furniture.create!(name:"Eva", material: "Bois", color: "Bleu Nîme
 Son plateau et ses étagères ont eux été laissés bruts puis vernis pour les protéger dans le temps. Enfin de nouvelles poignées complètent son look pour ramener cette pièce vintage à notre époque.") 
 #varnish: "Incolore", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
 
-furniture19 = Furniture.create!(name:"Chloé", material: "Bois", color: "Bleu Hague blue", type_of_furniture: "Enfilade", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "La semaine dernière, l'atelier Plinguet a eu le plaisir de travailler à Paris sur une superbe enfilade scandinave des années 60. Le propriétaire de ce meuble l'avait chiné sur le site Selency qui regorge de pépites pour que nous le restaurions à son goût. De nombreuses heures de travail ont permis de lui donner une seconde jeunesse. Un papier peint intissé au motif floral dans les parties secrétaires ainsi que le bleu Hague Blue de chez Farrow&ball ont permis de rapporter cette sublime enfilade dans notre siècle ")
-#varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "2022-03-21")
 
 furniture21 = Furniture.create!(name:"Sofia", material: "Bois - chène massif", color: "Red Earth", type_of_furniture: "Confiturier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Cette semaine nous vous avons chiné un vieux confiturier vintage comme on les aime! À la base dans une teinte blanc cassé assez abimé, nous avons décidé après avoir effectué un travail sur le bois de le repeindre dans la teinte Red Earth de chez @farrowandball .
 C'est donc dans cette nouvelle couleur et avec de nouvelles poignées que ce confiturier devient un meuble ultra tendance.")
 #varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
 
-furniture20 = Furniture.create!(name:"Louison", material: "Bois", color: "Rouge Terracotta", type_of_furniture: "Confiturier", varnish: "", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Le confiturier était un des meubles préférés de ma grand mère. À l'époque je le trouvais imposant, trop sombre et sans intérêt. Aujourd'hui, je vois tout le potentiel de ce meuble. Quel joie de retomber sur un similaire à celui de chez ma grand mère. Ce confiturier en chêne massif pese son poids. Il a fallu beaucoup d'efforts pour le ramener dans notre époque, mais revêtue de cette peinture Rouge Terracotta respectueuse de l'environnement avec son bouton laitonné et texturé, il sera parfait dans une entrée, ou un séjour.")
 
 furniture22 = Furniture.create!(name:"Philippa", material: "Bois", color: "", type_of_furniture: "Commode", varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "", description: "Cette commode est arrivée à l'atelier dans un bien piteux état. Initialement pourvue d'un rose bonbon plus qu'écaillé, d'un seul bouton central par tiroir et surtout de long pieds sculptés style Louis XV, nous avons décidé de changer totalement son style pour en faire une commode pour enfant.
 Apres un décapage, une réparation du bois à certains endroits, nous avons changé le piétement, pour en fabriquer un en pieds compas teinte acajou, cela a pour but de rabaisser le meuble et de faire ressortir son nouveau rose poudré.
@@ -113,7 +116,6 @@ Aujourd'hui, nous avons un magnifique bahut à deux portes, peint dans un gris b
 
 furniture27 = Furniture.create!(name:"Lola", material: "Bois - Pin", color: "Banc crème", type_of_furniture: "Bahut", varnish: "Incolore", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "", description: "Nous avons chiné dernièrement un bahut en pin assez commun. L'idée était de changer l'utilité de ce meuble. La personne chez qui nous l'avions acheté s'en servait de vaisselier. Apres l'avoir décapé entièrement, nous avons décidé d'enlever les portes pour en faire un bahut ouvert. Apres avoir choisi ce blanc crème de chez Farrow&ball, nous avons laissé sa teinte naturelle au plateau et à l'étagère, que nous avons passée au vernis incolore afin de les protéger. L'association de ces deux couleurs avec ses nouvelles poignées rendent ce meuble unique. Il peut aussi bien séjourner dans un salon, une salle à manger, une entrée ou bien une cuisine et ça c'est quand même pratique")
 #varnish: "Incolore", varnish_brand: "", teint: "", paint_brand: "Farrow & Ball", date_of_manufacture: "")
-
 
 furniture30 = Furniture.create!(name:"Simone", material: "Bois - pin", color: "Rose boréal", type_of_furniture: "Commode", varnish: "Mat", varnish_brand: "Libéron", teint: "", paint_brand: "Envie", date_of_manufacture: "", description: "Aujourd'hui c'est une commode qui est passée à l'atelier pour un relooking.
 Cette commode en pin pouvait paraitre « basique », mais était plutôt en bon état, donc le travail a été moins important que d'habitude. Aussi, nous avons décidé de lui donner plus d'originalité, en y appliquant la teinte « rose boréal » de chez #enviepeinture, mais uniquement sur l'intérieur de la façade des tiroirs et sur les côtés du meuble. Le plateau lui a été protégé au vernis mat de chez @liberon_officiel.
@@ -143,7 +145,7 @@ Les poignées sont d'origine et ont demandé un bon nettoyage pour retrouver leu
 furniture34 = Furniture.create!(name:"Imany", material: "Bois", color: "Bleu Mystere", type_of_furniture: "Armoire", varnish: "", varnish_brand: "", teint: "", paint_brand: "Pure & Paint", date_of_manufacture: "", description: "Imany est une armoire très mignonne. Arrivée à l'atelier dans un vernis vieillissant couleur acajou qui ne lui allait pas spécialement, nous avons décidé de la changer d'époque ! Après un gros décapage, quelques réparations, et le changement des étagères, nous l'avons vêtue du très beau bleu « Mystère » de chez @pure_and_paint . Assortie à un très joli papier peint de la savane, Imany retrouve un cachet fou!")
 #)
 
-furniture35 = Furniture.create!(name:"Alma", material: "Bois", color: "Lin velours", type_of_furniture: "Meuble de rangement / meuble TV / meuble d'enfant", varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "", description: "Cette semaine à l'atelier nous avons chiné un meuble assez atypique qui nous a bien plu. Apres avoir entièrement décapé cette petite merveille, et réparé ses tiroirs qui étaitent bien abimés. Nous avons choisi de peindre ce meuble dans une teinte très belle teinte Lin velours avec de nouvelles poignées et entrée de clé.
+furniture35 = Furniture.create!(name:"Alma", material: "Bois", color: "Lin velours", type_of_furniture: "Meuble TV", varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "", description: "Cette semaine à l'atelier nous avons chiné un meuble assez atypique qui nous a bien plu. Apres avoir entièrement décapé cette petite merveille, et réparé ses tiroirs qui étaitent bien abimés. Nous avons choisi de peindre ce meuble dans une teinte très belle teinte Lin velours avec de nouvelles poignées et entrée de clé.
 Le but étant de prendre une couleur s'accordant avec beaucoup d'autres pour permettre à ce meuble atypique qui peut servir de console, meuble tv, meuble d'enfant, petit meuble de rangement, et on en passe, de s'accorder dans beaucoup de pièces. Une chose est sûre, il aura sa place dans beaucoup de décos différentes")
 #varnish: "", varnish_brand: "", teint: "", paint_brand: "", date_of_manufacture: "")
 
@@ -580,15 +582,15 @@ furniture20.save
 puts "Louison : ok"
 
 #Chloe
-furniture19.photos.attach(io: URI.open(chloe1), filename: 'chloe-1-enfilade.jpg', content_type: "image/jpg" ) do |attachable|
+furniture01.photos.attach(io: URI.open(chloe1), filename: 'chloe-1-enfilade.jpg', content_type: "image/jpg" ) do |attachable|
   attachable.metadata = { "cloudinary" => { "transformation" => { "height" => 500 } } }
 end
 
-furniture19.photos.attach(io: URI.open(chloe2), filename: 'chloe-2-enfilade.jpg', content_type: "image/jpg" )
-furniture19.photos.attach(io: URI.open(chloe3), filename: 'chloe-3-enfilade.jpg', content_type: "image/jpg" )
-furniture19.photos.attach(io: URI.open(chloe4), filename: 'chloe-4-enfilade.jpg', content_type: "image/jpg" )
-furniture19.photos.attach(io: URI.open(chloe5), filename: 'chloe-5-enfilade.jpg', content_type: "image/jpg" )
-furniture19.save
+furniture01.photos.attach(io: URI.open(chloe2), filename: 'chloe-2-enfilade.jpg', content_type: "image/jpg" )
+furniture01.photos.attach(io: URI.open(chloe3), filename: 'chloe-3-enfilade.jpg', content_type: "image/jpg" )
+furniture01.photos.attach(io: URI.open(chloe4), filename: 'chloe-4-enfilade.jpg', content_type: "image/jpg" )
+furniture01.photos.attach(io: URI.open(chloe5), filename: 'chloe-5-enfilade.jpg', content_type: "image/jpg" )
+furniture01.save
 puts "Chloe : ok"
 
 #Eva
@@ -615,10 +617,10 @@ furniture16.save
 puts "Louisa : ok"
 
 #Chantal
-furniture15.photos.attach(io: URI.open(chantal1), filename: 'chantal-1-bahut.png', content_type: "image/png" )
-furniture15.photos.attach(io: URI.open(chantal2), filename: 'chantal-2-bahut.png', content_type: "image/png" )
-furniture15.photos.attach(io: URI.open(chantal3), filename: 'chantal-3-bahut.png', content_type: "image/png" )
-furniture15.save
+furniture02.photos.attach(io: URI.open(chantal1), filename: 'chantal-1-bahut.png', content_type: "image/png" )
+furniture02.photos.attach(io: URI.open(chantal2), filename: 'chantal-2-bahut.png', content_type: "image/png" )
+furniture02.photos.attach(io: URI.open(chantal3), filename: 'chantal-3-bahut.png', content_type: "image/png" )
+furniture02.save
 puts "Chantal : ok"
 
 #Prune
