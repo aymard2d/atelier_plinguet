@@ -10,7 +10,15 @@
   <div class="content"> 
       <h1>Atelier Plinguet</h1>
   </div>
-  <div id="menu">
+
+    <!-- Burger menu icon -->
+  <div class="burger-menu" id="burger-menu">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+
+  <div class="menu" id="menu">
     <div class="menu-work">
       <%= link_to furnitures_path, class: "button-48" do %>
         <h4>Meubles</h4>
@@ -22,6 +30,7 @@
         <h4>Réalisations</h4>
       <% end %>
     </div>
+
     <div class="menu-contact">
       <%= link_to atelier_path, class: "button-48", role: "button" do %>
         <h4>L'atelier</h4>

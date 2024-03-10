@@ -41,16 +41,16 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   color: #b27d4f;
-  font-family: 'Autography';
-  font-size: xx-large;
+  font-family: 'cormorant';
+  font-size: medium;
 }
 .contact-tel {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   color: #b27d4f;
-  font-family: 'Autography';
-  font-size: xx-large;
+  font-family: 'cormorant';
+  font-size: medium;
 }
 
 .contact-signature {
@@ -61,8 +61,8 @@
 }
 
 .contact-message {
-  font-family: 'Autography';
-  font-size: xx-large;
+  font-family: 'cormorant';
+  font-size: medium;
 }
 .contact-form {
     border: solid 3px $blue;
@@ -135,7 +135,7 @@
     border: none;
     border: solid 2px $blue;
     color: $blue;
-    font-size: x-large;
+    font-size: medium;
     font-weight: 400;
     letter-spacing: 1px;
     margin: 2em auto;
@@ -194,7 +194,7 @@
     line-height: 150%;
     height: 90px;
     resize: none;
-    width: 90%;
+    //width: 90%;
   }
   
   ::-webkit-input-placeholder {
@@ -250,13 +250,16 @@
       margin: 20px auto;
       width: 95%;
     }
+    h1 {
+      font-size: medium; /* Change the font size for smaller screens */
+    }
   }
   
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 650px) {
+
     h1 {
-      font-size: 26px;
+      font-size: small; /* Change the font size for even smaller screens */
     }
-    
     .underline {
       width: 68px;
     }
@@ -264,11 +267,38 @@
     #form_button {
       padding: 15px 25px;
     }
+    .contact-infos {
+      display: inline;
+    }
+
+    .contact-tel {
+      display: inline;
+    }
+
+    #form_button {
+      padding: 15px 25px;
+      font-size: 0.675em;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    h1 {
+      font-size: xx-small; /* Change the font size for even smaller screens */
+    }
+    .underline {
+      width: 68px;
+    }
+    
+    #form_button {
+      padding: 15px 25px;
+      font-size: 0.575em;
+    }
   }
   
   @media screen and (max-width: 420px) {
     h1 {
-      font-size: 18px;
+      font-size: 8px;
     }
     
     .icon {
@@ -283,6 +313,7 @@
     input[type='text'], [type='email'], select, textarea {
       font-size: 0.875em;
     }
+
   }
 }
 
