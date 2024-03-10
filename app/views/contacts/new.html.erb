@@ -17,7 +17,7 @@
             </div>
             <div class="contact-tel"> 
               <%= f.input :telephone, label: false, placeholder: "Votre téléphone", class: "telephone" %>
-              <%= f.input :subject, label: false, placeholder: "L'objet de votre message", collection: ["Demande de devis", "Demande de partenariat", "Demande d'informations", "Autre"], include_blank: "Objet de votre message ?", input_html: { class: "subject" } %>
+              <%= f.input :subject, label: false, placeholder: "L'objet de votre message *", collection: ["Demande de devis", "Demande de partenariat", "Demande d'informations", "Autre"], include_blank: "Objet de votre message ? *", input_html: { class: "subject" } %>
             </div>
             <%#= f.input :subject, label: "Subject", class: "subject", collection: ["I'd like to start a project", "I'd like to ask a question", "I'd like to make a proposal"], prompt: "Select a subject", required: true %>
             <div class="contact-message">

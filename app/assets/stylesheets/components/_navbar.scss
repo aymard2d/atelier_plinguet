@@ -6,6 +6,8 @@
   margin: 10px 50px 20px 50px;
   grid-template-columns: 1fr 1fr 1fr;
   box-shadow: 2px 2px 6px 0px #486757;
+  padding: 10px;
+  border-radius: 2px;
 
   h1 {
     font-family: "renitta" ;
@@ -34,21 +36,84 @@
   }
 }
 
-#btn-logo {
-
-}
-
 #logo {
   height: 100px;
 }
 
-
-#menu {
-  height: 100px;
-  justify-content: end;
+/* Burger menu styles */
+.burger-menu {
+  display: none; /* Hide burger menu by default */
+  cursor: pointer;
 }
 
-.menu-work {
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #486757;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.menu-work, .menu-contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* Show burger menu and hide full menu */
+  .burger-menu {
+    display: block;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #333;
+  }
+
+  .menu a:hover {
+    background-color: #ddd;
+  }
+
+  /* Rotate bars for burger menu animation */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+
+/* #menu {
+  height: 100px;
+  justify-content: end;
+} */
+
+/* .menu-work {
   display: grid;
   margin: auto;
   width: 100%;
@@ -59,7 +124,7 @@
   display: flex;
   width: 68%;
   margin: auto;
-}
+} */
 
 .signout {
   text-decoration: none;
