@@ -172,11 +172,6 @@ a{
 
 .fa-brands {
   color: $green;
-  
-}
-
-.fa-solid {
-  
 }
 
 .signin {
@@ -188,3 +183,28 @@ a{
   background: none;
   color: $light-wood;
 }
+
+//RESPONSIV
+@media screen and (max-width: 1050px) {
+  .logo-footer {
+    max-width: 230px;
+  }
+}
+
+@media screen and (max-width: 984px) {
+  .logo-footer {
+    max-width: 170px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .row {
+    display: ruby-text;
+  }
+
+  .col-md-3 {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 650) {
+}
+

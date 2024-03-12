@@ -12,7 +12,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   margin: auto;
-  width: 80%;
+  width: 97%;
   /* margin-top: 80px; */
 
   padding: 20px
@@ -132,4 +132,59 @@ p:not(:last-child) {
   font-size: 0.65em;
   color: $light-wood;
   font-family: 'Cormorant', serif;
+}
+
+//RESPONSIV
+
+
+// ACCESSORY
+
+
+@media screen and (max-width: 1375px) {
+  .index-photo-acc {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .index-photo-acc {
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .index-photo-acc {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 984px) {
+  .galerie {
+    width: 90%;
+  }
+
+  .index-photo-acc {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .galerie {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .galerie {
+    display: block;
+  }
+}
+@media screen and (max-width: 425px) {
+  .category-search {
+    font-size: small;
+  }
+
+  .galerie {
+    width: 85%;
+  }
 }
