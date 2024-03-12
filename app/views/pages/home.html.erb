@@ -49,12 +49,12 @@
 <hr id="home-line">
 
 <h3>Dernieres creations</h3>
-<div class="home-last-creations">
+<div class="home-last-creations" id="access">
 	<% @last_accessories.each do |accessory| %>
     <%= link_to accessory_path(accessory) do %>
       <figure>
         <% accessory.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto", height: "400" %>
+          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto" %>
           <% break %>
         <% end %> 
         <figcaption><%= accessory.name %></figcaption>

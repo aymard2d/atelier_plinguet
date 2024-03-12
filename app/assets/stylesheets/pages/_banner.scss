@@ -59,3 +59,64 @@
     }
   }
 }
+
+
+@media screen and (max-width: 1250px) {
+  .banner-main-container {
+    .banner-description {
+      width: 70%;
+  }
+  }
+}
+@media screen and (max-width: 1050px) {
+  .banner-main-container {
+    .banner-description {
+      width: 70%;
+  }
+}
+
+  .banner-main-container {
+    grid-template-columns: 4fr 1fr 2fr;
+  }
+}
+
+@media screen and (max-width: 984px) {
+  .banner-main-container {
+    .banner-description {
+      width: 80%;
+    }
+  }
+
+  .banner-main-container {
+    grid-template-columns: 3fr 1fr 2fr;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .banner-description {
+    width: 70%;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-description {
+    width: 85%;
+  }
+
+  .banner-main-container {
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-description {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-description {
+    width: 85%;
+  }
+}
