@@ -106,6 +106,21 @@ h3 {
   }
 }
 
+.home-creation {
+  background: rgb(244 210 174 / 55%);
+}
+
+.home-accessory {
+  background: $creme;
+}
+
+.home-realisation {
+  background: $creme;
+}
+
+.home-about-us {
+  background: $creme;
+}
 //RESPONSIV
 
 @media screen and (min-width: 2000px) {
@@ -158,32 +173,80 @@ h3 {
 }
 
 @media screen and (max-width: 640px) {
-  .home-last-creations, .home-last-realisations, #access {
+  .home-last-creations, #access {
     display: block;
+    margin-top: 10px;
 
     img {
-      height: 450px;
+      height: auto;
+      margin: 0 auto;
+      width: 80%;
     }
   }
+
+  h3 {
+    font-size: xx-large;
+  }
+
+  .home-last-realisations {
+    display: block;
+    margin-top: 10px;
+
+    img {
+      height: auto;
+      margin: 0 auto;
+      width: 91%;
+    }
+  }
+
+  .home-description {
+    display: none;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .home-about-us {
+    display: none;
+  }
+
+  .home-creation {
+    background: none;
+  }
+
+  .home-accessory {
+    background: none;
+  }
+
+  .home-realisation {
+    background: none;
+  }
+
+  .home-about-us {
+    background: none;
+  }
+
 }
+
 @media screen and (max-width: 500px) {
   .home-last-creations, .home-last-realisations, #access {
     img {
-      height: 350px;
+      
     }
   }
 }
 @media screen and (max-width: 375px) {
   .home-last-creations, .home-last-realisations, #access {
     img {
-      height: 250px;
+      
     }
   }
 }
 @media screen and (max-width: 320px) {
   .home-last-creations, .home-last-realisations, #access {
     img {
-      height: 200px;
+      
     }
   }
 }
