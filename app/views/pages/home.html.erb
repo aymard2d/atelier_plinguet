@@ -26,70 +26,78 @@
     <%= link_to realisations_path do %>
       <h4>Nos realisations</h4>
     <% end %>
-		<p>Spécialiste de la rénovation de meubles, je redonne vie à tous types de pièces, qu'ils soient vintages, démodés ou abîmés. Transformez votre mobilier avec expertise et élégance.Spécialiste de la rénovation de meubles, je redonne vie à tous types de pièces, qu'ils soient vintages, démodés ou abîmés. Transformez votre mobilier avec expertise et élégance.</p>
+		<p>Spécialiste de la rénovation de meubles, je redonne vie à tous types de pièces, qu'elles soient vintages, démodées ou abîmées. Transformez votre mobilier avec expertise et élégance..</p>
 	</div>
 </div>
 
-<hr id="home-line">
+<!--<hr id="home-line">-->
 
-<h3>Dernieres renovations</h3>
-<div class="home-last-creations">
-	<% @last_furnitures.each do |furniture| %>
-    <%= link_to furniture_path(furniture) do %>
+<div class="home-creation">
+  <h3>Dernieres renovations</h3>
+  <div class="home-last-creations">
+    <% @last_furnitures.each do |furniture| %>
+      <%= link_to furniture_path(furniture) do %>
+        <figure>
+          <% furniture.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= furniture.name %></figcaption>
+        </figure>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<!--<hr id="home-line">-->
+
+<div class="home-accessory">
+  <h3>Dernieres creations</h3>
+  <div class="home-last-creations" id="access">
+    <% @last_accessories.each do |accessory| %>
+      <%= link_to accessory_path(accessory) do %>
+        <figure>
+          <% accessory.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= accessory.name %></figcaption>
+        </figure>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+  <!--<hr id="home-line">-->
+
+<div class="home-realisation">
+  <h3>Dernieres realisations</h3>
+  <div class="home-last-realisations">
+    <% @last_realisations.each do |realisation| %>
+      <%= link_to realisation_path(realisation) do %>
+        <figure>
+          <% realisation.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto" %>
+            <% break %>
+          <% end %> 
+          <figcaption><%= realisation.name %></figcaption>
+        </figure>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<!--<hr id="home-line">-->
+
+<div class="home-about-us">
+  <h3>Ils parlent de nous</h3>
+  <div class="home-last-realisations">
+    <%= link_to "https://www.colibripeinture.com/comment-transformer-une-armoire-en-etageres-ouvertes.html", target: "_blank" do %>
       <figure>
-        <% furniture.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto" %>
-          <% break %>
-        <% end %> 
-        <figcaption><%= furniture.name %></figcaption>
+        <%= image_tag "about-ap-colibri.png", class: "object-fit-cover index-photo", alt: "Atelier Plinguet and Colibri", fetch_format: :auto, crop: "scale", quality: "auto" %>
+        <figcaption>Colibri peinture</figcaption>
       </figure>
     <% end %>
-  <% end %>
+  </div>
 </div>
-<hr id="home-line">
-
-<h3>Dernieres creations</h3>
-<div class="home-last-creations" id="access">
-	<% @last_accessories.each do |accessory| %>
-    <%= link_to accessory_path(accessory) do %>
-      <figure>
-        <% accessory.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto" %>
-          <% break %>
-        <% end %> 
-        <figcaption><%= accessory.name %></figcaption>
-
-      </figure>
-    <% end %>
-  <% end %>
-</div>
-<hr id="home-line">
-
-<h3>Dernieres realisations</h3>
-<div class="home-last-realisations">
-	<% @last_realisations.each do |realisation| %>
-    <%= link_to realisation_path(realisation) do %>
-      <figure>
-        <% realisation.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, alt: "atelier-plinguet-meuble", class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto" %>
-          <% break %>
-        <% end %> 
-        <figcaption><%= realisation.name %></figcaption>
-      </figure>
-    <% end %>
-  <% end %>
-</div>
-
-<hr id="home-line">
-
-<h3>Ils parlent de nous</h3>
-<div class="home-last-realisations">
-  <%= link_to "https://www.colibripeinture.com/comment-transformer-une-armoire-en-etageres-ouvertes.html", target: "_blank" do %>
-    <figure>
-      <%= image_tag "about-ap-colibri.png", class: "object-fit-cover index-photo", alt: "Atelier Plinguet and Colibri", fetch_format: :auto, crop: "scale", quality: "auto" %>
-      <figcaption>Colibri peinture</figcaption>
-    </figure>
-  <% end %>
-</div>
-
 
