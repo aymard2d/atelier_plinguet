@@ -167,10 +167,21 @@ p:not(:last-child) {
     height: 260px;
   }
 }
+@media screen and (max-width: 900px) {
+  .galerie {
+    width: 98%;
+    margin-right: 25px;
+  }
+
+  .index-photo-acc {
+    height: 260px;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .galerie {
     grid-template-columns: 1fr 1fr;
+    margin: auto;
   }
 }
 

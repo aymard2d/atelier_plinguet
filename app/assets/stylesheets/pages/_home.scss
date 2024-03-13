@@ -22,6 +22,8 @@ h3 {
   font-family: "Beyond";
   font-size: xxx-large;
   text-align: center;
+  border-bottom: 1px solid $light-wood;
+  border-bottom-width: 4px;
 }
 
 .home-description {
@@ -33,6 +35,7 @@ h3 {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
   color: white;
+  margin-bottom: 30px;
 
   h2 {
     color: white;
@@ -73,10 +76,9 @@ h3 {
 
 
   img {
-    // height: 350px;
+    height: 350px;
     margin: 10px 8px;
-    //width: -webkit-fill-available;
-    width: 95%;
+    width: -webkit-fill-available;
   }
 }
 
@@ -84,8 +86,8 @@ h3 {
   grid-template-columns: 1fr 1fr 1fr;
 
   img {
-    height: 250px;
-    width: 95%;
+    height: 320px;
+    width: -webkit-fill-available;
   }
 }
 
@@ -100,34 +102,68 @@ h3 {
   margin-bottom: 30px;
 
   img {
-    height: 350px;
+    height: 320px;
     margin: 10px 8px;
     width: -webkit-fill-available;
   }
 }
 
 .home-creation {
-  background: rgb(244 210 174 / 55%);
+  background: $creme;
+  width: 93%;
+  margin: auto;
 }
 
 .home-accessory {
   background: $creme;
+  width: 93%;
+  margin: auto;
 }
 
 .home-realisation {
   background: $creme;
+  width: 93%;
+  margin: auto;
 }
 
 .home-about-us {
   background: $creme;
+  width: 93%;
+  margin: auto;
 }
 //RESPONSIV
 
 @media screen and (min-width: 2000px) {
-  #access {
+  .home-last-creations {
     img {
-      height: 450px;
+      height: 540px;
     }
+  }
+  #access, .home-last-realisations {
+    img {
+      height: 480px;
+    }
+  }
+
+  h3 {
+    font-size: 110px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .home-last-creations {
+    img {
+      height: 420px;
+    }
+  }
+  #access, .home-last-realisations {
+    img {
+      height: 380px;
+    }
+  }
+
+  h3 {
+    font-size: 100px;
   }
 }
 
@@ -137,14 +173,35 @@ h3 {
       font-size: 25px;
     }
   }
+  .home-last-creations {
+    img {
+      height: 300px;
+    }
+  }
+  #access, .home-last-realisations {
+    img {
+      height: 280px;
+    }
+  }
+
+  h3 {
+    font-size: 70px;
+  }
 }
 
 @media screen and (max-width: 1150px) {
-  .home-last-realisations img {
-    height: 270px;
+  .home-last-creations {
+    img {
+      height: 250px;
+    }
   }
-  
+  #access, .home-last-realisations {
+    img {
+    height: 230px;
+    }
+  }
 }
+
 @media screen and (max-width: 900px) {
   .home-description {
     h4 {
@@ -152,8 +209,15 @@ h3 {
     }
   }
 
-  .home-last-realisations img {
-    height: 225px;
+  .home-last-creations {
+    img {
+      height: 210px;
+    }
+  }
+  #access, .home-last-realisations {
+    img {
+    height: 190px;
+    }
   }
 }
 
@@ -167,8 +231,15 @@ h3 {
     width: 85%;
   }
 
-  .home-last-realisations img {
-    height: 200px;
+  .home-last-creations {
+    img {
+      height: 180px;
+    }
+  }
+  #access, .home-last-realisations {
+    img {
+    height: 160px;
+    }
   }
 }
 
