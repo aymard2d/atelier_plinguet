@@ -438,6 +438,7 @@ little_green = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/at
 colibri = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/colibri_logo_cujxhq.png"
 liberon = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707238807/atelier-plinguet/liberon-logo_rvtwfa.jpg"
 
+burger_menu = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1710452088/atelier-plinguet/burger-menu_eekvzp.png"
 puts "Seed des url Logo : OK !"
 
 puts "Seed de toutes les url : OK !"
