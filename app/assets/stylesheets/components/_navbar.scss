@@ -127,7 +127,6 @@
   #navbar {
     h1 {
       font-size: x-large;
-      width: 100%;
     }
     .content {
       justify-content: center;
@@ -241,6 +240,35 @@
   text-decoration: none;
 }
 
-.signout-link {
-  
+.dropdown-menu {
+  border-radius: 6px;
+  padding: 10px;
+  padding-bottom: 0.5px;
+  font-family: Raleway;
+  border: 2px solid $green;
+
+}
+.dropdown-menu-end[data-bs-popper] {
+  right: -44px;
+  left: auto;
+}
+
+.dropdown-item {
+  padding: 5px;
+  color: $light-wood;
+
+  &:hover {
+    background-color:  $green;
+    border-radius: 5px;
+    color: $light-wood;
+  }
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+  right: 10px;
 }
