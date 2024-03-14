@@ -1,23 +1,31 @@
 <div data-controller="add-accessory">
-  <div class="row justify-content-center" data-controller= "furniture-search-filter">
-    <div class="col-sm-8 my-3">
-      <%= form_with url: accessories_path, method: :get, class: "search-bar", data: { furniture_search_filter_target: "filter"} do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control category-search",
-          placeholder: "Rechercher une création",
-          data: { action: "keyup->furniture-search-filter#filter",
-              furniture_search_filter_target: "input" }
-          %>
-        <%= button_tag(type: "submit", class: "btn btn-link text-info") do %>
-        <i class="fa fa-search"></i>
-        <% end %>
+  <div class="row justify-content-center" data-controller="furniture-search-filter">
+    <div class="col-sm-8 my-3 d-flex justify-content-center align-items-center">
+      <%= form_with url: accessories_path, method: :get, class: "search-bar", data: { furniture_search_filter_target: "filter" } do %>
+        <div class="input-group">
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control category-search",
+            placeholder: "Rechercher une création",
+            data: {
+              action: "keyup->furniture-search-filter#filter",
+              furniture_search_filter_target: "input"
+            } %>
+          <div class="input-group-append">
+            <%= button_tag(type: "submit", class: "btn btn-link text-info") do %>
+              <i class="fa fa-search"></i>
+            <% end %>
+          </div>
+        </div>
       <% end %>
     </div>
-    <div class="add-furniture">
-      <% if user_signed_in? && current_user.admin? %>
-        <button data-action="click->add-accessory#displayForm" class="btn btn-add btn-outline-primary">Ajouter une nouvelle création</button>
-      <% end %>
+  </div>
+
+
+  <div class="add-furniture">
+    <% if user_signed_in? && current_user.admin? %>
+      <button data-action="click->add-accessory#displayForm" class="btn btn-add btn-outline-primary">Ajouter une nouvelle création</button>
+    <% end %>
   </div>
   <div>
     <%= render "accessories/add_accessory_form", accessory: @accessory %>

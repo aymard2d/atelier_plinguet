@@ -5,6 +5,7 @@
   grid-template-columns: 2fr 1fr 1fr;
   margin: 10px auto;
   width: 93%;
+  margin: 140px auto 0px;
 
   .banner-photo {
     width: 100%;
@@ -61,15 +62,18 @@
 }
 
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1200px) {
   .banner-main-container {
+      margin: 160px auto 0px;
+
     .banner-description {
       width: 70%;
-  }
+    }
   }
 }
 @media screen and (max-width: 1050px) {
   .banner-main-container {
+    margin: 170px auto 0px;
     .banner-description {
       width: 70%;
   }
@@ -106,6 +110,7 @@
 
   .banner-main-container {
     grid-template-columns: 2fr 1fr 2fr;
+    margin: 110px auto 0px;
   }
 }
 
@@ -113,6 +118,7 @@
   .banner-main-container {
     display: block;
     height: auto;
+    margin: 110px auto 0px;
 
     .banner-photo {
       width: 100%;
@@ -144,6 +150,20 @@
   }
 }
 
-@media screen and (max-width: 375px) {
 
+
+@media screen and (max-width: 500px) {
+  .banner-main-container {
+    display: block;
+    height: auto;
+    margin: 90px auto 0px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .banner-main-container {
+    display: block;
+    height: auto;
+    margin: 80px auto 0px;
+  }
 }

@@ -322,6 +322,29 @@
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .contact-container {
+    margin-top: 110px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-container {
+    margin-top: 140px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact-container {
+    margin-top: 4rem !important;
+  }
+}
 // ALERTES 
 
 .invalid-feedback {

@@ -13,6 +13,10 @@
   }
 }
 
+.my-3 {
+  margin-top: 7rem !important;
+}
+
 .category-search {
   font-family: Cormorant;
   background-image: linear-gradient(to bottom, $creme, $creme);
@@ -37,8 +41,32 @@
 
 // RESPONSIV
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .search-bar {
     width: 70%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .my-3 {
+    margin-top: 8rem !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .my-3 {
+    margin-top: 8.5rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .my-3 {
+    margin-top: 5.5rem !important;
+    margin-bottom: 0px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .my-3 {
+    margin-top: 4rem !important;
   }
 }
