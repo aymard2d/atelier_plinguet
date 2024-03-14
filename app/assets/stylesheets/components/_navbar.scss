@@ -84,6 +84,10 @@
     text-align: center;
     margin: auto;
   }
+
+  .burger-menu img {
+    width: 70px;
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -154,21 +158,6 @@
   .menu a:hover {
     background-color: #ddd;
   }
-  
-  /* Rotate bars for burger menu animation */
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  
-  .change .bar2 {
-    opacity: 0;
-  }
-  
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
 } 
 
 @media screen and (max-width: 650px) {
@@ -206,6 +195,10 @@
     margin: 6px 0;
     transition: 0.4s;
   }
+
+  .burger-menu img {
+    width: 50px;
+  }
 }
 @media screen and (max-width: 425px) {
   #navbar {
@@ -222,6 +215,9 @@
     background-color: #486757;
     margin: 6px 0;
     transition: 0.4s;
+  }
+  .burger-menu img {
+    width: 40px;
   }
 }
 /* .menu-work {
