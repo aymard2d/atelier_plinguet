@@ -30,6 +30,8 @@ class FurnituresController < ApplicationController
     little_green = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/little_green_logo_dardnn.jpg"
     liberon = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707238807/atelier-plinguet/liberon-logo_rvtwfa.jpg"
     v33 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1709209396/atelier-plinguet/v33_uss7pv.png"
+    burger_menu = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1710452088/atelier-plinguet/burger-menu_eekvzp.png"
+
     @pure_and_paint = pure_and_paint
     @farrow_and_ball = farrow_and_ball
     @little_green = little_green
@@ -37,6 +39,8 @@ class FurnituresController < ApplicationController
     @envie = envie
     @liberon = liberon
     @v33 = v33
+    @burger_menu = burger_menu
+    
   end
 
   def create
