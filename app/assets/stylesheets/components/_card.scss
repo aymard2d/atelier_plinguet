@@ -1,11 +1,10 @@
-.index-body {
-  /*   margin: 0;
+/* .index-body {
+    margin: 0;
     min-height: 100vh;
     display: grid;
     grid-auto-flow: column;
-    place-content: center; */
-    
-  }
+    place-content: center;
+  } */
 
 .galerie {
   display: grid;
@@ -14,7 +13,6 @@
   margin: auto;
   width: 97%;
   /* margin-top: 80px; */
-
   padding: 20px
 }
 
@@ -29,8 +27,6 @@
   border-radius: 5px;
   height: 400px;
 }
-
-
 
 figure {
   display: grid;
@@ -66,14 +62,12 @@ figure:hover img {
 }
 @supports not (-webkit-mask-clip: text) {
   figure figcaption {
-   -webkit-mask: none;
-   color: #fff;
+    -webkit-mask: none;
+    color: #fff;
   }
 }
 
-
-
-//polymorphism
+// polymorphism
 :root {
   font-size: 20px;
 }
@@ -134,11 +128,7 @@ p:not(:last-child) {
   font-family: 'Cormorant', serif;
 }
 
-//RESPONSIV
-
-
-// ACCESSORY
-
+// RESPONSIV
 
 @media screen and (max-width: 1375px) {
   .index-photo-acc {
@@ -172,10 +162,6 @@ p:not(:last-child) {
     width: 98%;
     margin-right: 25px;
   }
-
-  .index-photo-acc {
-    height: 260px;
-  }
 }
 
 @media screen and (max-width: 800px) {
@@ -190,6 +176,7 @@ p:not(:last-child) {
     display: block;
   }
 }
+
 @media screen and (max-width: 425px) {
   .category-search {
     font-size: small;

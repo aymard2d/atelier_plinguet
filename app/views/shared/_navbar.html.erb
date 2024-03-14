@@ -12,11 +12,55 @@
   </div>
 
     <!-- Burger menu icon -->
-  <div class="burger-menu" id="burger-menu">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
+<div class="burger-menu" id="navbarDropdown">
+  <div aria-labelledby="navbarDropdown">
+    <div class="bar bar1"></div>
+    <div class="bar bar2"></div>
+    <div class="bar bar3"></div>
+    <div id="dropdownMenuItems" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+      <%= link_to 'Meubles', furnitures_path, class: "dropdown-item tdbord burger-link", style: 'text-decoration: none;' %>
+      <%= link_to 'Créations', accessories_path, class: "dropdown-item burger-link", style: 'text-decoration: none' %>
+      <%= link_to 'Réalisations', realisations_path, class: "dropdown-item tdbord burger-link", style: 'text-decoration: none;' %>
+      <%= link_to "L'atelier", atelier_path, class: "dropdown-item tdbord burger-link", style: 'text-decoration: none;' %>
+      <%= link_to "Contactez-nous", new_contact_path, class: "log-out dropdown-item burger-link" %>
+    </div>
   </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const dropdownMenu = document.getElementById('dropdownMenuItems');
+    const burgerBars = document.querySelectorAll('.bar');
+    const burgerLinks = document.querySelectorAll('.burger-link');
+    const burgerMenu = document.getElementById('navbarDropdown');
+
+    burgerMenu.addEventListener('click', function() {
+      dropdownMenu.classList.toggle('show');
+    });
+
+    burgerLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default behavior of the link
+        const url = this.getAttribute('href');
+        setTimeout(() => {
+          window.location.href = url; // Navigate to the link after a small delay
+        }, 300);
+      });
+    });
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+      if (!event.target.closest('.burger-menu')) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
+  });
+</script>
+
+
+
+
+
 
   <div class="menu">
     <div class="menu-work">
