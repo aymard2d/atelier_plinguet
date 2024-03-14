@@ -89,10 +89,7 @@
     overflow: auto;
   }
   
-  form {
-  }
-  
-  h1 {
+  h2 {
     color: #b27d4f;
     font-size: large;
     /* font-weight: 700; */
@@ -207,11 +204,11 @@
     color: #474544;
   }
   
-.submit {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 10px;
-}
+  .submit {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 
   #form_button {
     background: none;
@@ -242,14 +239,14 @@
       margin: 20px auto;
       width: 95%;
     }
-    h1 {
+    h2 {
       font-size: medium; /* Change the font size for smaller screens */
     }
   }
   
   @media screen and (max-width: 650px) {
 
-    h1 {
+    h2 {
       font-size: small; /* Change the font size for even smaller screens */
     }
     .underline {
@@ -275,7 +272,7 @@
 
   @media screen and (max-width: 500px) {
 
-    h1 {
+    h2 {
       font-size: xx-small; /* Change the font size for even smaller screens */
     }
     .underline {
@@ -289,7 +286,7 @@
   }
   
   @media screen and (max-width: 420px) {
-    h1 {
+    h2 {
       font-size: 8px;
     }
     
@@ -306,16 +303,23 @@
       font-size: 0.875em;
     }
   }
-}
 
-@media screen and (max-width: 385px) {
-  h1 {
-    font-size: 7px;
+  @media screen and (max-width: 385px) {
+    h2 {
+      font-size: 7px;
+    }
   }
-}
-@media screen and (max-width: 361px) {
-  h1 {
-    font-size: 6px;
+
+  @media screen and (max-width: 370px) {
+    h2 {
+      font-size: 6px;
+    }
+  }
+
+  @media screen and (max-width: 355px) {
+    h2 {
+      font-size: 5px;
+    }
   }
 }
 // ALERTES 
