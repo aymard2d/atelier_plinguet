@@ -19,6 +19,21 @@ class RealisationsController < ApplicationController
   end
 
   def show
+    colibri = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234879/Atelier%20Plinguet/Logos/colibri_logo_ffkgxe.png"
+    pure_and_paint = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234884/Atelier%20Plinguet/Logos/pure_and_paint_logo_vqyltm.png"
+    farrow_and_ball = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234879/Atelier%20Plinguet/Logos/farrow_and_ball_logo_xp3m1g.png"
+    envie = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234882/Atelier%20Plinguet/Logos/logo-envie_mkkumd.jpg"
+    little_green = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234881/Atelier%20Plinguet/Logos/little_green_logo_frzesn.jpg"
+    liberon = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234881/Atelier%20Plinguet/Logos/liberon-logo_rzga1q.jpg"
+    v33 = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234883/Atelier%20Plinguet/Logos/v33_lwcdra.png"
+
+    @pure_and_paint = pure_and_paint
+    @farrow_and_ball = farrow_and_ball
+    @little_green = little_green
+    @colibri = colibri
+    @envie = envie
+    @liberon = liberon
+    @v33 = v33
   end
 
   def show_by_type

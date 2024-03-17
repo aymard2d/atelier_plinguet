@@ -19,13 +19,14 @@ class AccessoriesController < ApplicationController
   end
   
   def show
-    colibri = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/colibri_logo_cujxhq.png"
-    pure_and_paint = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/pure_and_paint_logo_qgsn1x.png"
-    farrow_and_ball = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/farrow_and_ball_logo_meo66k.png"
-    envie = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231823/atelier-plinguet/logo-envie_jfziwl.jpg"
-    little_green = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707231822/atelier-plinguet/little_green_logo_dardnn.jpg"
-    liberon = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1707238807/atelier-plinguet/liberon-logo_rvtwfa.jpg"
-    v33 = "https://res.cloudinary.com/dnqkzzqga/image/upload/v1709209396/atelier-plinguet/v33_uss7pv.png"
+    colibri = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234879/Atelier%20Plinguet/Logos/colibri_logo_ffkgxe.png"
+    pure_and_paint = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234884/Atelier%20Plinguet/Logos/pure_and_paint_logo_vqyltm.png"
+    farrow_and_ball = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234879/Atelier%20Plinguet/Logos/farrow_and_ball_logo_xp3m1g.png"
+    envie = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234882/Atelier%20Plinguet/Logos/logo-envie_mkkumd.jpg"
+    little_green = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234881/Atelier%20Plinguet/Logos/little_green_logo_frzesn.jpg"
+    liberon = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234881/Atelier%20Plinguet/Logos/liberon-logo_rzga1q.jpg"
+    v33 = "https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234883/Atelier%20Plinguet/Logos/v33_lwcdra.png"
+    
     @pure_and_paint = pure_and_paint
     @farrow_and_ball = farrow_and_ball
     @little_green = little_green
