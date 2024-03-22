@@ -5,10 +5,10 @@
         <figure>
           <% if furniture.photos.present? %>
             <% # Only load the first photo, you can modify this logic if needed %>
-            <%= cl_image_tag furniture.photos.first.key, alt: furniture.name, class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto", width: 450 %>
+            <%= cl_image_tag furniture.photos.first.key, alt: furniture.name, class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto", width: 450, height: 550 %>
           <% else %>
             <% # Add a placeholder image or handle the case where there's no photo %>
-            <%= image_tag "placeholder.jpg", alt: "Placeholder Image", class: "object-fit-cover index-photo", width: 450, height: 550 %>
+            <%= image_tag "placeholder.jpg", alt: "Placeholder Image", class: "object-fit-cover index-photo", width: 450, height: 450 %>
           <% end %>
           <figcaption>
             <%= furniture.type_of_furniture %>

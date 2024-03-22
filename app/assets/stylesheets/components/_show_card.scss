@@ -18,9 +18,9 @@
 p:not(:last-child) {
   margin-bottom: 1.5em;
 }
+
 .furniture-container {
-  background: url(https://res.cloudinary.com/dnqkzzqga/image/upload/v1706875594/atelier-plinguet/inspi--tableau_bpjinu.png)
-  center / cover no-repeat fixed;
+  background: image-url('inspi-font-vert.jpg') center / cover no-repeat fixed;
   padding: 60px 30px;
 }
 
@@ -166,4 +166,36 @@ p:not(:last-child) {
 .card-footer {
   font-size: 0.65em;
   color: $green-light;
+}
+
+@media screen and (max-width: 768px) {
+  .furniture-container {
+    padding: 15px 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .furniture-container {
+    padding: 15px 10px;
+  }
+
+  .furniture-glass {
+    width: 100%;
+    padding: 2px;
+    border-radius: 0px;
+
+    h2 {
+      font-size: larger;
+    }
+  }
+
+  .furniture-details-photo {
+    display: none;
+  }
+
+  .furniture-details {
+    ul {
+      padding-left: 0;
+    }
+  }
 }

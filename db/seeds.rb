@@ -428,12 +428,12 @@ friedland3 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234768/Atel
 friedland4 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234776/Atelier%20Plinguet/friendland-3-meuble_tipy5t.png'
 friedland5 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710234803/Atelier%20Plinguet/friendland-4-table_edcb3k.png'
 
-almab1 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710999004/Atelier%20Plinguet/alma-1-bibliotheque_cvhayj.jpg'
+almab1 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710998997/Atelier%20Plinguet/alma-6-bibliotheque_rnyv3g.jpg'
 almab2 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710999017/Atelier%20Plinguet/alma-2-bibliotheque_mltkze.jpg'
 almab3 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710998997/Atelier%20Plinguet/alma-3-bibliotheque_b28di5.jpg'
 almab4 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710998997/Atelier%20Plinguet/alma-4-bibliotheque_ovfciw.jpg'
 almab5 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710999007/Atelier%20Plinguet/alma-5-bibliotheque_xbyhw8.jpg'
-almab6 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710998997/Atelier%20Plinguet/alma-6-bibliotheque_rnyv3g.jpg'
+almab6 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710999004/Atelier%20Plinguet/alma-1-bibliotheque_cvhayj.jpg'
 almab7 = 'https://res.cloudinary.com/dmmqaflqm/image/upload/v1710998997/Atelier%20Plinguet/alma-7-bibliotheque_iuzyfx.jpg'
 puts "Seed des url réalisations : OK !"
 

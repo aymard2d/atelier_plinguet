@@ -29,7 +29,7 @@
             <div class="furniture-details-photo">
               <% if @furniture.photos.attached? %>
                 <%# Use cl_image_tag for Cloudinary transformations %>
-                <%= cl_image_tag @furniture.photos.first.key, alt: "Description de l'image", class: "tokenImage index-photo", fetch_format: :auto, crop: "fill", quality: "auto" %>
+                <%= cl_image_tag @furniture.photos.first.key, alt: "Meuble Atelier Plinguet", class: "tokenImage index-photo", fetch_format: :auto, crop: "fill", quality: "auto" %>
               <% else %>
                 <!-- Gérer le cas où aucune image n'est attachée -->
                 <p>Shooting photo en cours !</p>
