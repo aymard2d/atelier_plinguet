@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-.main-container {
+/* .main-container {
   // background: url(https://res.cloudinary.com/dnqkzzqga/image/upload/v1706874593/atelier-plinguet/inspi-7-bois-2_jbsaqh.png) center / cover no-repeat fixed;
-}
+} */
 
 :root {
   font-size: 20px;
@@ -20,8 +20,9 @@ p:not(:last-child) {
 }
 
 .furniture-container {
-  background: image-url('inspi-font-vert.jpg') center / cover no-repeat fixed;
+  background-image: url(inspi-fond-vert.jpg);
   padding: 60px 30px;
+  background-size: cover;
 }
 
 // Glasscard
@@ -41,6 +42,7 @@ p:not(:last-child) {
   font-family: Cormorant-serif;
   font-size: larger;
   align-items: center;
+
   hr {
     width: 100%;
     margin: 20px auto;
@@ -50,6 +52,7 @@ p:not(:last-child) {
     opacity: 1;
     color: $green-light
   }
+
   .fa-solid {
     color:$light-wood;
     display: flex;
@@ -73,7 +76,6 @@ p:not(:last-child) {
   .furniture-card {
     font-family: Cormorant;
   }
-
 }
 
 .title-show {
