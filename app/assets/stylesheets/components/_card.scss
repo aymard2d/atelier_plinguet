@@ -20,7 +20,7 @@
   width: 100%;
   //height: 350px;
   border-radius: 5px;
-  height: auto;
+  height: 550px;
 }
 
 .index-photo-acc {
@@ -175,6 +175,14 @@ p:not(:last-child) {
 @media screen and (max-width: 550px) {
   .galerie {
     display: block;
+  }
+
+  .index-photo {
+    height: auto;
+  }
+
+  .index-photo-acc {
+    height: auto;
   }
 }
 

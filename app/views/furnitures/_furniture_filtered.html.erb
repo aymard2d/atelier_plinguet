@@ -6,7 +6,6 @@
           <% if furniture.photos.present? %>
             <% # Only load the first photo, you can modify this logic if needed %>
             <%= cl_image_tag furniture.photos.first.key, alt: furniture.name, class: "object-fit-cover index-photo", fetch_format: :auto, crop: "scale", quality: "auto" %>
-            hello tanguy
           <% else %>
             <% # Add a placeholder image or handle the case where there's no photo %>
             <%= image_tag "placeholder.jpg", alt: "Placeholder Image", class: "object-fit-cover index-photo", width: 450, height: 450 %>
