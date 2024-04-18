@@ -230,6 +230,12 @@ p:not(:last-child) {
       transition: none;
     }
   }
+
+  .galery-container > div:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
   .ap-logo {
     width: 50px;
   }
