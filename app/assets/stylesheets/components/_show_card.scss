@@ -27,7 +27,7 @@ p:not(:last-child) {
 
 // Glasscard
 .furniture-glass {
-  //border: 1px pink solid;
+  // border: 1px pink solid;
   min-height: 200px;
   width: 60%;
   margin: auto;
@@ -179,17 +179,32 @@ p:not(:last-child) {
   .furniture-container {
     padding: 15px 10px;
   }
+
+  .tokenImage {
+    display: none !important;
+  }
+
+  .furniture-glass {
+    width: 80%;
+  }
+
+  .furniture-photo {
+    grid-template-columns: none;
+  }
 }
 
-@media screen and (max-width: 425px) {
+
+
+@media screen and (max-width: 650px) {
   .furniture-container {
     padding: 15px 10px;
   }
 
   .furniture-glass {
-    width: 100%;
+    width: 90%;
     padding: 2px;
     border-radius: 0px;
+    
 
     h2 {
       font-size: larger;
@@ -204,5 +219,9 @@ p:not(:last-child) {
     ul {
       padding-left: 0;
     }
+  }
+
+  .ap-logo {
+    width: 50px;
   }
 }
