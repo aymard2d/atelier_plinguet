@@ -27,7 +27,7 @@ p:not(:last-child) {
 
 // Glasscard
 .furniture-glass {
-  //border: 1px pink solid;
+  // border: 1px pink solid;
   min-height: 200px;
   width: 60%;
   margin: auto;
@@ -179,20 +179,34 @@ p:not(:last-child) {
   .furniture-container {
     padding: 15px 10px;
   }
+
+  .tokenImage {
+    display: none !important;
+  }
+
+  .furniture-glass {
+    width: 80%;
+  }
+
+  .furniture-photo {
+    grid-template-columns: none;
+  }
 }
 
-@media screen and (max-width: 425px) {
+
+
+@media screen and (max-width: 650px) {
   .furniture-container {
     padding: 15px 10px;
   }
 
   .furniture-glass {
-    width: 100%;
+    width: 90%;
     padding: 2px;
-    border-radius: 0px;
 
     h2 {
       font-size: larger;
+      margin-top: 15px;
     }
   }
 
@@ -203,6 +217,49 @@ p:not(:last-child) {
   .furniture-details {
     ul {
       padding-left: 0;
+    }
+  }
+
+  .furniture-photo {
+    display: block;
+  }
+
+  .galery-container {
+    div {
+      height: 450px;
+      transition: none;
+    }
+  }
+  .ap-logo {
+    width: 50px;
+  }
+
+  .furniture-glass hr {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .furniture-glass {
+    width: 95%;
+  }
+  .furniture-details {
+    img {
+      width: 35px;
+    }
+  }
+
+  .galery-container {
+    div {
+      height: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .galery-container {
+    div {
+      height: 300px;
     }
   }
 }
