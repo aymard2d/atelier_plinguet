@@ -175,6 +175,13 @@ p:not(:last-child) {
   color: $green-light;
 }
 
+@media screen and (max-width: 1440px) {
+  .ap-logo {
+    width:45px;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   .furniture-container {
     padding: 15px 10px;
@@ -234,10 +241,6 @@ p:not(:last-child) {
   .galery-container > div:hover {
     transform: none;
     box-shadow: none;
-  }
-
-  .ap-logo {
-    width: 50px;
   }
 
   .furniture-glass hr {

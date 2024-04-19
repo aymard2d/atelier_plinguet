@@ -69,7 +69,7 @@
                     <div>
                       <%# Using if-elsif block to display varnish brand logos %>
                       <% if @furniture.varnish_brand == "Libéron"%>
-                        <%= image_tag @liberon, class: "liberon-logo" %>
+                        <%= image_tag "liberon-logo.webp", class: "liberon-logo" %>
                       <% elsif @furniture.varnish_brand == "v33" %>
                         <%= image_tag @v33, class: "v33-logo" %>
                       <% end %>
