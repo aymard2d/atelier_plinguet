@@ -13,9 +13,36 @@
     color: $light-wood;
     background-color: rgb(193, 208, 221);
     font-size: larger;
-
 }
 
 .m-1 {
   margin: 10px auto !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .alert {
+    top: 125px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .alert {
+    top: 150px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .alert {
+    top: 80px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .alert {
+    top: 65px;
+    width: 90%;
+  }
 }

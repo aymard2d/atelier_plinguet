@@ -7,6 +7,6 @@ class Furniture < ApplicationRecord
     tsearch: { prefix: true } # <-- now `superman batm` will return something!
   }
 
-  validates :name, :description, :material, :type_of_furniture, presence: true
+  validates :name, :description, :material, :type_of_furniture, presence: {presence: true, message: "Ce champ doit être renseigné !"}
 
 end
