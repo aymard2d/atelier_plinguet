@@ -11,6 +11,12 @@
   background-size: cover;
   display: flex;
   margin-top: 30px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.atelier-background {
+  background: white;
 }
 
 .atelier-gallery {
@@ -21,7 +27,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: var(--g);
   margin-top: 30px;
-  background: #81A8B8;
+  padding: 0 3px;
 }
 .atelier-gallery img {
   width: 100%;
