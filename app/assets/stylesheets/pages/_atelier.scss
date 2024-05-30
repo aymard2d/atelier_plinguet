@@ -5,14 +5,18 @@
 }
 
 .atelier-welcome {
-  background: url(image5.jpeg) center;
+  background: url(image5.jpeg) center / cover no-repeat;
   padding: 60px 30px;
   padding: 60px 30px;
   background-size: cover;
-  display: flex;
   margin-top: 30px;
   margin-left: 3px;
   margin-right: 3px;
+
+  h2 {
+    font-family: autography;
+    color: $mid-wood;
+  }
 }
 
 .atelier-background {
@@ -60,16 +64,16 @@
 
 .furniture-glass-atelier {
     /* min-height: 337px; */
-    width: 90%;
+    width: 80%;
     margin: auto;
-    padding: 0px;
+    padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.45);
     box-shadow: 0 0 10px 1px rgba(250, 250, 250, 0.25);
     -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(3px);
-    color: black;
+    backdrop-filter: blur(4px);
+    color: $mid-wood;
     font-family: Cormorant-serif;
     font-size: larger;
 
@@ -77,65 +81,71 @@
 
 @media screen and (max-width: 2000px) {
   .atelier-container {
-    .furniture-glass {
-      margin-top: 160px;
+    .furniture-glass-atelier {
     }
   }
 }
 
 @media screen and (max-width: 1500px) {
   .atelier-container {
-    .furniture-glass {
-      margin-top: 200px;
+    .furniture-glass-atelier {
     }
   }
 }
 
 @media screen and (max-width: 1200px) {
   .atelier-container {
-    .furniture-glass {
-      margin-top: 150px;
+    display: block ;
+    margin-top: 160px;
+
+    .furniture-glass-atelier {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .atelier-welcome {
+      margin-top: 6px;
     }
   }
 }
 
 @media screen and (max-width: 900px) {
-  .atelier-container {
-    .furniture-glass {
-      margin-top: 130px;
-      width: 80%;
-    }
-  }
+
 }
 
 @media screen and (max-width: 724px) {
   .atelier-container {
-    .furniture-glass {
-      margin-top: 120px;
+    margin-top: 100px;
+
+    .furniture-glass-atelier {
     }
   }
 }
 
 @media screen and (max-width: 650px) {
   .atelier-container {
-    .furniture-glass {
-      margin-top: 100px;
+    .furniture-glass-atelier {
     }
   }
 }
 
+@media screen and (max-width: 500px) {
+  .atelier-container {
+    margin-top: 67px;
+  }
+}
+
+
 @media screen and (max-width: 420px) {
   .atelier-container {
-    .furniture-glass {
-      margin-top: 80px;
+    .furniture-glass-atelier {
     }
   }
 }
 
 @media screen and (max-width: 375px) {
   .atelier-container {
-    .furniture-glass {
-      margin-top: 80px;
+    .furniture-glass-atelier {
       h2 {
         font-size: larger;
       }
