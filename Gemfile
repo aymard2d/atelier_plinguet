@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.1.2"
+ruby "3.1.0"
 gem "cloudinary"
 gem "importmap-rails"
 # gem "jbuilder"
